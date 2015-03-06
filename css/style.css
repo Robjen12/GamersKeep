@@ -4,5 +4,9 @@
 }
 #footer{
 	background-color: red;
+	height: 200px;
+}
+#mitt{
+	background-color: white;
 	height: 400px;
 }
