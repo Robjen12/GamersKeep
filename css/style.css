@@ -16,13 +16,15 @@
 {
 	border: 5px solid black;
 	margin-top: 50px;
-	margin-left: 50px;
 	height: 50px;
-	
 }
-.toplist,
-.latestlist{
-	border: 5px solid black;
-	min-height: 400px;
-	margin-left: 50px;
-}
+	.toplistname,
+	.toplist{
+		margin-left: 50px;
+
+	}
+	.toplist,
+	.latestlist{
+		border: 5px solid black;
+		min-height: 400px;
+	}
