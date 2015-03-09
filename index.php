@@ -3,7 +3,10 @@ include_once("inc/HTMLTemplate.php");
 
 $content = <<<END
 	
-	<div id="mitt"></div>
+	<div id="mitt">
+	<p>Hej pa er.</p>
+	</div>
+
 END;
 
 echo $header;
