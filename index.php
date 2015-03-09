@@ -5,7 +5,7 @@ $content = <<<END
 	
 	<div id="mitt">
 		<div id="container">
-			div class="row">
+			<div class="row">
 				<div class="col-md-4">
 					<div class="toplist"></div>
 				</div>
