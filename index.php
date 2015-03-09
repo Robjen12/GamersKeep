@@ -4,7 +4,20 @@ include_once("inc/HTMLTemplate.php");
 $content = <<<END
 	
 	<div id="mitt">
-	<p>Hej pa er.</p>
+		<div id="container">
+			div class="row">
+				<div class="col-md-4">
+					<div class="toplist"></div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="latestlist">
+
+					</div>
+				</div>
+				<div class="col-md-4"></div>
+			</div>
+		</div>
 	</div>
 
 END;
