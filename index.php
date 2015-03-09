@@ -11,17 +11,14 @@ $content = <<<END
 				</div>
 
 				<div class="col-md-4">
-					<div class="latestlistname">
-
-					</div>
+					<div class="latestlistname"></div>
 				</div>
 
 				<div class="col-md-3">
-					<div class="ads">
-
-					</div>
+					<div class="ads"></div>
 				</div>
 			</div>
+			
 			<div class="row">
 				<div class="col-md-4">
 					<div class="toplist"></div>
@@ -30,9 +27,9 @@ $content = <<<END
 					<div class="latestlist"></div>
 				</div>
 				<div class="col-md-3"></div>
-			</div>
-		</div>
-	</div>
+			</div>	
+		</div> <!-- container -->
+	</div> <!-- news -->
 
 END;
 
