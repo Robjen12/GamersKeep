@@ -18,7 +18,8 @@ $content = <<<END
 		<form action="login.php" method="post" id="login-form">
 			<input type="text" id="keepername" name="keepername" value="" placeholder="Skriv in användarnamn"></br></br>
 			<input type="" id="pw" name="pw" value="" placeholder="Skriv in lösenord"></br></br>
-			<button type="submit" id="submit" value="Logga in">Enter the keep</button>
+			<button type="submit" id="submit" value="Logga in">Logga in</button>
+			<button type="submit" id="submit" value="Registrera sig">Registrera sig</button>
 		</form>
 	</div>
 </body>
