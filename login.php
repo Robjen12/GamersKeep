@@ -1,27 +1,27 @@
 <?php
 
 
+$content = <<<END
 
-
-
-$header = <<<END
-
-
+<!DOCTYPE html>
 <html>
 
 <head>
-
+	<title>GamersKeep - Where gamers meet</title>
+	<link rel="stylesheet" href="">
 </head>
 
 <body>
-
-	<form action="login.php" method="post" id="login-form">
-	<label for="keepername">Användarnamn</label>
-	<input type="text" id="keepername" name="keepername" value="" placeholder="Skriv in användarnamn"></br>
-	<label for="pw">Lösenord</label>
-	<input type="" id="pw" name="pw" value="" placeholder="Skriv in lösenord"></br>
-	<button type="submit" id="submit" value="Logga in">Enter the keep</button>
-	</form>
+	<div="container">
+	<h1>Enter the keep</h1>
+		<form action="login.php" method="post" id="login-form">
+			<label for="keepername">Användarnamn</label>
+			<input type="text" id="keepername" name="keepername" value="" placeholder="Skriv in användarnamn"></br>
+			<label for="pw">Lösenord</label>
+			<input type="" id="pw" name="pw" value="" placeholder="Skriv in lösenord"></br>
+			<button type="submit" id="submit" value="Logga in">Enter the keep</button>
+		</form>
+	</div>
 </body>
 
 
@@ -29,4 +29,7 @@ $header = <<<END
 
 </html>
 END;
+
+
+echo $content;
 ?>
