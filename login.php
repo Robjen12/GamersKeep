@@ -8,6 +8,7 @@ $content = <<<END
 
 <head>
 	<title>GamersKeep - Where gamers meet</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" href="">
 </head>
 
@@ -15,10 +16,8 @@ $content = <<<END
 	<div="container">
 	<h1>Enter the keep</h1>
 		<form action="login.php" method="post" id="login-form">
-			<label for="keepername">Användarnamn</label>
-			<input type="text" id="keepername" name="keepername" value="" placeholder="Skriv in användarnamn"></br>
-			<label for="pw">Lösenord</label>
-			<input type="" id="pw" name="pw" value="" placeholder="Skriv in lösenord"></br>
+			<input type="text" id="keepername" name="keepername" value="" placeholder="Skriv in användarnamn"></br></br>
+			<input type="" id="pw" name="pw" value="" placeholder="Skriv in lösenord"></br></br>
 			<button type="submit" id="submit" value="Logga in">Enter the keep</button>
 		</form>
 	</div>
