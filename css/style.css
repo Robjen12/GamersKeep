@@ -1,5 +1,5 @@
 body{
-	background-image: url(..images/registrering.jpg);
+	background-color: #993300;
 }
 #header{
 	background-color: red;
@@ -31,5 +31,5 @@ body{
 }
 
 .login{
-	margin-top: 400px;
+	margin-top: 200px;
 }
