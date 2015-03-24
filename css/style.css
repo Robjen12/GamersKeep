@@ -24,12 +24,22 @@ body{
 }
 	
 	.toplist,
-	.latestlist{
+	.latestlist
+	{
 		border: 5px solid black;
 		min-height: 400px;
 		margin-left: 50px;
-}
+	}
 
-.login{
+.login
+{
 	margin-top: 200px;
+}
+.register{
+	background-color: white;
+	border-radius: 15px;
+	height: 450px;
+	margin: 100px 100px 100px 100px;
+	padding: 20px 0px 0px 20px;
+
 }
