@@ -13,7 +13,7 @@ $content = <<<END
   	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="login-picture">
 	<div id="container">
 		<div class="row">
 			<div class="col-md-6">

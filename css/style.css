@@ -1,6 +1,10 @@
 body{
 	background-color: #993300;
 }
+.login-picture{
+	background: url(../images/Registrering.jpg) no-repeat center center fixed;
+	background-size: 100%;
+}
 .logo{
 	background-size: 50%;
 }
@@ -36,7 +40,7 @@ body{
 
 .login
 {
-	margin-top: 200px;
+	margin-top: 150px;
 }
 .register{
 	background-color: white;
