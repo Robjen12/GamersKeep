@@ -31,6 +31,7 @@ $content = <<<END
 						<input type="text" id="email" name="email" value=""></br>
 						<label for="pw">Lösenord:</label></br>
 						<input type="password" id="pw" name="pw" value""></br></br>
+						<button><a href="login.php">Bakåt</a></button>
 						<button type="submit" value="submit" value="Skapa konto">Skapa Konto</button>
 					</form>
 				</div>
