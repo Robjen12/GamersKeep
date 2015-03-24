@@ -9,8 +9,8 @@ $content = <<<END
 <head>
 	<title>GamersKeep - Where gamers meet</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
