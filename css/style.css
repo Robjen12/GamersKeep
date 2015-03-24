@@ -21,12 +21,14 @@
 }
 	
 	.toplist,
-	.latestlist{
+	.latestlist
+	{
 		border: 5px solid black;
 		min-height: 400px;
 		margin-left: 50px;
-}
+	}
 
-.login{
+.login
+{
 	margin-top: 200px;
 }
