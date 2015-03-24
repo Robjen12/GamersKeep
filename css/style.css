@@ -1,6 +1,9 @@
 body{
 	background-color: #993300;
 }
+.logo{
+	background-size: 50%;
+}
 #header{
 	background-color: red;
 	height: 80px;

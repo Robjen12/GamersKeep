@@ -2,7 +2,6 @@
 
 $content = <<<END
 
-
 <!DOCTYPE html>
 
 <html>
