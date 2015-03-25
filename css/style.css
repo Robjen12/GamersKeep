@@ -50,3 +50,9 @@ body{
 	padding: 20px 0px 0px 20px;
 
 }
+.toplist,
+.latest
+{
+	height: 500px;
+	background-color: white;
+}

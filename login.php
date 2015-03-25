@@ -26,7 +26,7 @@ $content = <<<END
 						<form action="login.php" method="post" id="login-form">
 							<input type="text" id="keepername" name="keepername" value="" placeholder="Skriv in användarnamn"></br></br>
 							<input type="password" id="pw" name="pw" value="" placeholder="Skriv in lösenord"></br></br>
-							<button type="submit" id="submit" value="Logga in">Logga in</button>
+							<button type="submit" id="submit" name="logintosite" value="Logga in">Logga in</button>
 							<button><a href="register.php">Registrera sig</a></button></br></br>
 						</form>
 						<a href="">Glömt lösenord?</a>
