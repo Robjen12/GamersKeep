@@ -9,7 +9,7 @@ if(isset($_POST['registeraccount']))
 	if(!empty($_POST))
 	{
 		$keepername = $_POST['keepername'];
-		$password = $_POST['pw'];
+		$password = md5($_POST['pw']);
 		$fname = $_POST['fname'];
 		$lname = $_POST['lname'];
 		$email = $_POST['email'];
