@@ -16,7 +16,9 @@ $header = <<<END
 		<div id="header">
 			<div id="container">
 				<div class="row">
-					<div class="col-md-12"></div>
+					<div class="col-md-12">
+					<a href="logout.php">Logga ut</a>
+					</div>
 				</div>
 			</div>
 		</div>
