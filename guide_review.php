@@ -5,7 +5,7 @@ include_once("inc/HTMLTemplate.php");
 
 $table = "guidereviewinfo";
 $keepername = $_SESSION['keepername'];
-
+$feedback = "";
 
 	if(!empty($_POST))
 	{
@@ -16,9 +16,12 @@ $keepername = $_SESSION['keepername'];
 
 		$title = utf8_encode($mysqli->real_escape_string($title));
 		$text  = utf8_encode($mysqli->real_escape_string($text));
+		$grade = utf8_encode($mysqli->real_escape_string($grade));
+
 
 		if(isset($_POST['guide']))
 		{
+
 		$query = <<<END
 
 			INSERT INTO {$table}(title, text, timestamp)
@@ -37,21 +40,32 @@ END;
 		}
 		else if(isset($_POST['review']))
 		{
-		$query = <<<END
 
-			INSERT INTO {$table}(title, text, timestamp, grade)
-			VALUES ('{$title}', '{$text}', CURRENT_TIMESTAMP, '{$grade}' );
+			if($grade == "")
+			{
+				$feedback= "<p class=\"feedback-yellow\">Måste välja betyg</p>";
+			}
+
+			else
+			{
+
+			$query = <<<END
+
+				INSERT INTO {$table}(title, text, timestamp, grade)
+				VALUES ('{$title}', '{$text}', CURRENT_TIMESTAMP, '{$grade}' );
+			
 END;
-		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-        " : " . $mysqli->error);
+			$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	        " : " . $mysqli->error);
 
-        $query = <<<END
+        	$query = <<<END
 
-        	INSERT INTO userguidereview(grid, keepername)
-        	VALUES (LAST_INSERT_ID(), '{$keepername}');
+        		INSERT INTO userguidereview(grid, keepername)
+        		VALUES (LAST_INSERT_ID(), '{$keepername}');
 END;
-		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-        " : " . $mysqli->error);
+			$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	        " : " . $mysqli->error);
+			}
 		}
 	}
 
@@ -74,10 +88,10 @@ $content = <<<END
 							<input type="checkbox" id="reviewcheck" name="review" value="Review">Recension</Br></br>
 							<label for="information">Innehållet:</label>
 							<textarea id="nicEdit" name="nicEdit" cols="80" rows="20"></textarea></br>
+							{$feedback}
 							<label for="grade">Betyg</label><br>
-							<input type="text" id="grade" name="grade" value="" placeholder="Ange betyg här">
+							<input type="number" id="grade" name="grade" min="1" max="5" value="" placeholder="Ange betyg här">
 							<button type="submit" id="publish" name="publish_guide_review" value="Publicera">Publicera innehållet</button>
-
 						</form>
 					</div>
 				</div>
@@ -96,6 +110,7 @@ $content = <<<END
 		$('#reviewcheck').click(function(){
 			$('#grade').show();
 		});
+		
 	});	
 	</script>
 	</body>
