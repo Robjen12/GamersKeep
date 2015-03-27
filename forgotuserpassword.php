@@ -26,7 +26,7 @@ $content = <<<END
 						<form action="forgotuserpassword.php" method="post" id="">
 							<input type="text" id="email" name="email" value="" placeholder="Ange din email här"></br></br>
 							<button type="submit" id="submit" name="retriveuserpass" value="Skicka mail">Skicka mail</button>
-							<button><a href="login.php"><-- Bakåt</a></button>
+							<button><a href="login.php">Bakåt</a></button>
 						</form>
 					</div>
 				</div>
