@@ -56,3 +56,11 @@ body{
 	height: 500px;
 	background-color: white;
 }
+#forgot
+{
+	background-color: white;
+	border-radius: 15px;
+	height: 200px;
+	margin-top: 200px;
+	padding: 20px 50px;
+}

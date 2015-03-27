@@ -89,7 +89,7 @@ $content = <<<END
 							<button type="submit" id="submit" name="logintosite" value="Logga in">Logga in</button>
 							<button><a href="register.php">Registrera sig</a></button></br></br>
 						</form>
-						<a href="">Glömt lösenord?</a>
+						<a href="forgotuserpassword.php">Glömt lösenord?</a>
 					</div>     
 				</div>   
 			</div>
