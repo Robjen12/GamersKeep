@@ -58,7 +58,7 @@ $content = <<<END
 	<meta charset="utf-8">
 </head>
 
-<body class="register-background">
+<body class="register-forgot-background">
 	<div id="container">
 		<div class="row">
 			<div class="col-md-4"></div>
