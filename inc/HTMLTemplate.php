@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $header = <<<END
 <!DOCTYPE html>
 <html>

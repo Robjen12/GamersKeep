@@ -39,14 +39,14 @@ END;
 				if($row->pw == $pwmd5)
 				{
 
-				session_start();
-				session_regenerate_id();
+					session_start();
+					session_regenerate_id();
 
-				$_SESSION["keepername"] =	$keepername;
-				$_SESSION["keeperid"] 	= 	$row->keeperid;
-				$_SESSION["roletype"] 	=	$row->roletype;
+					$_SESSION["keepername"] =	$row->keepername;
+					$_SESSION["keeperid"] 	= 	$row->keeperid;
+					$_SESSION["roletype"] 	=	$row->roletype;
 
-				header("Location: index.php");
+					header("Location: index.php");
 
 				}
 				
