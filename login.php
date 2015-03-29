@@ -31,9 +31,9 @@ if(isset($_POST["logintosite"]))
 			
 END;
 			$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . " : " . $mysqli->error); 
-
 			if($res->num_rows == 1)
 			{
+				
 				$pwmd5 = md5($password);
 				$row = $res->fetch_object();
 				if($row->pw == $pwmd5)
@@ -42,7 +42,7 @@ END;
 				session_start();
 				session_regenerate_id();
 
-				$_SESSION["keepername"] =	$row->keepername;
+				$_SESSION["keepername"] =	$keepername;
 				$_SESSION["keeperid"] 	= 	$row->keeperid;
 				$_SESSION["roletype"] 	=	$row->roletype;
 
@@ -51,7 +51,7 @@ END;
 				}
 				else
 				{
-					$feedback = "<p class=\"feedback-red\">Användarnamn eller lösenord är fel</p>";
+					$feedback .= "<p class=\"feedback-red\">Användarnamn eller lösenord är fel</p>";
 				}
 				$res->close();
 			}

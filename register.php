@@ -9,7 +9,7 @@ if(isset($_POST['registeraccount']))
 	if(!empty($_POST))
 	{
 		$keepername = $_POST['keepername'];
-		$password = md5($_POST['pw']);
+		$password = ($_POST['pw']);
 		$fname = $_POST['fname'];
 		$lname = $_POST['lname'];
 		$email = $_POST['email'];
@@ -27,7 +27,8 @@ if(isset($_POST['registeraccount']))
 			$lname = $mysqli->real_escape_string($lname);
 			$email = $mysqli->real_escape_string($email);
 			$about = $mysqli->real_escape_string($about);
-
+			$password = md5($password);
+			
 			$query = <<<END
 			INSERT INTO user (keepername, fname, lname, email, about)
 			VALUES ('$keepername', '$fname', '$lname', '$email', '$about');
