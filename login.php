@@ -39,23 +39,25 @@ END;
 				if($row->pw == $pwmd5)
 				{
 
-				session_start();
-				session_regenerate_id();
+					session_start();
+					session_regenerate_id();
+
 
 				$_SESSION["keepername"] =	$keepername;
 				$_SESSION["keeperid"] 	= 	$row->keeperid;
 				$_SESSION["roletype"] 	=	$row->roletype;
 
-				header("Location: index.php");
+					header("Location: index.php");
 
 				}
+
 				else
 				{
 					$feedback .= "<p class=\"feedback-red\">Användarnamn eller lösenord är fel</p>";
 				}
 				$res->close();
 			}
-			$mysqli->close();
+			
 		}
 
 	}

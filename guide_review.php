@@ -72,11 +72,6 @@ END;
 
 $content = <<<END
 
-<!DOCTYPE html>
-<html>
-
-	<head></head>
-	<body>
 		<div id="container">
 			<div class="row">
 				<div class="col-md-4">
@@ -113,8 +108,7 @@ $content = <<<END
 		
 	});	
 	</script>
-	</body>
-</html>
+
 
 END;
 

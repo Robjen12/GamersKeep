@@ -59,7 +59,7 @@ $content = <<<END
 	<meta charset="utf-8">
 </head>
 
-<body>
+<body class="register-forgot-background">
 	<div id="container">
 		<div class="row">
 			<div class="col-md-4"></div>
