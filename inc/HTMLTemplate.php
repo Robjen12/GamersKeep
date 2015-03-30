@@ -30,7 +30,7 @@ $header = <<<END
 				<!-- meny ikoner -->	
 				<img src="images/profil2.png" class="img header-icons pull-right" alt="Profil">
 				<img src="images/swords.png" class="img header-icons pull-right">
-				<img src="images/pen.png" class="img header-icons pull-right">
+				<a href="guide_review.php"><img src="images/pen.png" class="img header-icons pull-right"></a>
 				<img src="images/home.png" class="img header-icons pull-right">
 				<img src="images/search.png" class="img header-icons pull-right">
 			</div><!-- meny right -->

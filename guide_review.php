@@ -10,6 +10,7 @@ $feedback = "";
 	if(!empty($_POST))
 	{
 
+
 		$title	= $_POST['title'];
 		$text 	= $_POST['nicEdit'];
 		$grade	= $_POST['grade'];
@@ -18,53 +19,62 @@ $feedback = "";
 		$text  = utf8_encode($mysqli->real_escape_string($text));
 		$grade = utf8_encode($mysqli->real_escape_string($grade));
 
-
 		if(isset($_POST['guide']))
 		{
 
-		$query = <<<END
+			if($title == "" || $text == "")
+			{
+				$feedback = "<p class=\"feedback-yellow\">Fyll i alla fält</p>";
+			}
+			
+			else
+			{
 
-			INSERT INTO {$table}(title, text, timestamp)
-			VALUES ('{$title}', '{$text}', CURRENT_TIMESTAMP);
+				$query = <<<END
+
+					INSERT INTO {$table}(title, text, timestamp)
+					VALUES ('{$title}', '{$text}', CURRENT_TIMESTAMP);
 END;
-		 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-        " : " . $mysqli->error);
+				 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
 
-		 $query = <<<END
+				 $query = <<<END
 
-		 	INSERT INTO userguidereview(grid, keepername)
-		 	VALUES (LAST_INSERT_ID(), '{$keepername}');
+				 	INSERT INTO userguidereview(grid, keepername)
+				 	VALUES (LAST_INSERT_ID(), '{$keepername}');
 END;
-		 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-        " : " . $mysqli->error);
+				 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+			}
 		}
+
 		else if(isset($_POST['review']))
 		{
 
-			if($grade == "")
+			if($title == "" || $text == "" || $grade == "")
 			{
-				$feedback= "<p class=\"feedback-yellow\">Måste välja betyg</p>";
+				$feedback= "<p class=\"feedback-yellow\">Fyll i alla fält</p>";
 			}
 
 			else
 			{
 
-			$query = <<<END
+				$query = <<<END
 
-				INSERT INTO {$table}(title, text, timestamp, grade)
-				VALUES ('{$title}', '{$text}', CURRENT_TIMESTAMP, '{$grade}' );
-			
+					INSERT INTO {$table}(title, text, timestamp, grade)
+					VALUES ('{$title}', '{$text}', CURRENT_TIMESTAMP, '{$grade}' );
+				
 END;
-			$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-	        " : " . $mysqli->error);
+				$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
 
-        	$query = <<<END
+	        	$query = <<<END
 
-        		INSERT INTO userguidereview(grid, keepername)
-        		VALUES (LAST_INSERT_ID(), '{$keepername}');
+	        		INSERT INTO userguidereview(grid, keepername)
+	        		VALUES (LAST_INSERT_ID(), '{$keepername}');
 END;
-			$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-	        " : " . $mysqli->error);
+				$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
 			}
 		}
 	}
@@ -78,14 +88,14 @@ $content = <<<END
 					<div id="guide_review">
 						<form action="guide_review.php" method="post" id="guide_review_form">
 							<label for="title">Titel</label></Br>
-							<input type="text" id="title" name="title" value="" placeholder="Ange titeln"><br></br>
+							<input type="text" id="title" name="title" value="" placeholder="Ange titeln"></br></br>
 							<input type="radio" id="guidecheck" name="guide" value="Guide">Guide
-							<input type="radio" id="reviewcheck" name="review" value="Review">Recension</Br></br>
+							<input type="radio" id="reviewcheck" name="review" value="Review">Recension</br></br>
+							{$feedback}
 							<label for="information">Innehållet:</label>
 							<textarea id="nicEdit" name="nicEdit" cols="80" rows="20"></textarea></br>
-							{$feedback}
-							<label for="grade" id="grade">Betyg</label><br>
-							<input type="number" id="grade" name="grade" min="1" max="5" value="" placeholder="Ange betyg här">
+							<label for="grade" id="gradescale">Betyg (1-5)</label></br>
+							<input type="number" id="grade" name="grade" min="1" max="5" value="">
 							<button type="submit" id="publish" name="publish_guide_review" value="Publicera">Publicera innehållet</button>
 						</form>
 					</div>
@@ -102,10 +112,15 @@ $content = <<<END
 
 	$(document).ready(function(){
 		$('#grade').hide();
+		$('#gradescale').hide();
 		$('#reviewcheck').click(function(){
 			$('#grade').show();
+			$('#gradescale').show();
 		});
-		
+		$('#guidecheck').click(function(){
+			$('#grade').hide();
+			$('#gradescale').hide();
+		});
 	});	
 	</script>
 
