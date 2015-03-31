@@ -9,6 +9,9 @@ if(isset($_SESSION['keepername']) && isset($_SESSION['roletype'])){
 	if($_SESSION["roletype"] == 1)
 	{
 	$adminText = " (Admin)";
+	$admindelete = <<<END
+	<button type="submit" id="delete" name="delete" value="delete">Delete</button>
+END;
 	}	
 }
 
@@ -96,4 +99,5 @@ $footer = <<<END
 	</body>
 </html>
 END;
+
 ?>

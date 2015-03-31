@@ -7,6 +7,7 @@ $table = "guidereviewinfo";
 $keepername = $_SESSION['keepername'];
 $feedback = "";
 
+
 	if(!empty($_POST))
 	{
 
@@ -97,6 +98,7 @@ $content = <<<END
 							<label for="grade" id="gradescale">Betyg (1-5)</label></br>
 							<input type="number" id="grade" name="grade" min="1" max="5" value="">
 							<button type="submit" id="publish" name="publish_guide_review" value="Publicera">Publicera innehållet</button>
+							{$admindelete}
 						</form>
 					</div>
 				</div>
