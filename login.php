@@ -43,9 +43,9 @@ END;
 					session_regenerate_id();
 
 
-				$_SESSION["keepername"] =	$keepername;
-				$_SESSION["keeperid"] 	= 	$row->keeperid;
-				$_SESSION["roletype"] 	=	$row->roletype;
+					$_SESSION["keepername"] =	$keepername;
+					$_SESSION["keeperid"] 	= 	$row->keeperid;
+					$_SESSION["roletype"] 	=	$row->roletype;
 
 					header("Location: index.php");
 

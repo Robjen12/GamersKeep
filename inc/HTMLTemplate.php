@@ -2,6 +2,17 @@
 
 session_start();
 
+$adminText = "";
+
+if(isset($_SESSION['keepername']) && isset($_SESSION['roletype'])){
+
+	if($_SESSION["roletype"] == 1)
+	{
+	$adminText = " (Admin)";
+	}	
+}
+
+
 $header = <<<END
 <!DOCTYPE html>
 <html>
@@ -23,6 +34,9 @@ $header = <<<END
 			
 			<!-- Meny center -->
 			<div class="col-md-4 column-center">
+
+			<p>Inloggad som: {$_SESSION["keepername"]}{$adminText}
+
 			</div>
 			<!-- Meny right -->
 			<div class="col-md-4 column-right pull-right margin-right-zero">

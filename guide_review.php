@@ -53,7 +53,7 @@ END;
 
 			if($title == "" || $text == "" || $grade == "")
 			{
-				$feedback= "<p class=\"feedback-yellow\">Fyll i alla fält</p>";
+				$feedback = "<p class=\"feedback-yellow\">Fyll i alla fält</p>";
 			}
 
 			else
