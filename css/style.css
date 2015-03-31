@@ -70,12 +70,6 @@
 }
 
 
-
-#admintest
-{
-  display: none;
-}
-
 body {
 	overflow-x: hidden;        /* Hide horizontal overflow */
 	overflow-y: auto;          /* Show vertical overflow */
