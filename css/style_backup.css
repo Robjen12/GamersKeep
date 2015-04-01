@@ -8,10 +8,6 @@
 .logo{
 	background-size: 50%;
 }
-
-/* Behovs inte eftersom vi använder bootstrap definitioner */
-
-/*
 #header{
 	background-color: red;
 	height: 80px;
@@ -41,7 +37,7 @@
 		min-height: 400px;
 		margin-left: 50px;
 	}
-*/
+
 .login
 {
 	margin-top: 150px;
@@ -298,34 +294,3 @@ body {
 .panel-default > .panel-heading::after {
     right: 0;
 }
-
-/* Marias torn */
-
-/*
-#trapez {
-  border-bottom: 100px solid red;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  height: 0;
-  width: 100px;
-  margin-top: 100px;
-  margin-left: 85px;
-
-}
-
-#rectangle {
-  position: absolute;
-  background-color: blue;
-  height:250px;
-  width: 200px;
-  margin-left: 100px;
-  margin-top: 200px;
-}
-
-#square {
-  width: 50px;
-  height: 50px;
-  background-color: yellow;
-}
-*/
-
