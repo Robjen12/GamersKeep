@@ -64,10 +64,12 @@ $header = <<<END
 			
 		</div> <!-- header -->
 END;
+
 $content = <<<END
 <div class="row">
 </div>
 END;
+
 $footer = <<<END
 		<div id="footer" class="bg-gradient-brown">
 			

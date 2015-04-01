@@ -299,6 +299,23 @@ body {
     right: 0;
 }
 
+/* Dortes torn */
+
+.profil > .column-left-top {
+  height: 60px;
+  background-color: red;
+}
+
+.profil > .column-left-center {
+  height: 60px;
+  background-color: blue;
+}
+
+.profil > .column-left-bottom {
+  height: 60px;
+  background-color: gray;
+}
+
 /* Marias torn */
 
 /*
