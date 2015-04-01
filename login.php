@@ -26,7 +26,7 @@ if(isset($_POST["logintosite"]))
 
 			
 			SELECT keepername, pw, keeperid, roletype
-			FROM account
+			FROM user
 			WHERE keepername = '{$keepername}';
 			
 END;

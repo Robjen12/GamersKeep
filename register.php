@@ -30,17 +30,12 @@ if(isset($_POST['registeraccount']))
 			$password = md5($password);
 			
 			$query = <<<END
-			INSERT INTO user (keepername, fname, lname, email, about)
-			VALUES ('$keepername', '$fname', '$lname', '$email', '$about');
+			INSERT INTO user (keepername, fname, lname, email, about, pw)
+			VALUES ('$keepername', '$fname', '$lname', '$email', '$about', '$password');
 		
 END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . " : " . $mysqli->error);
 
-			$query = <<<END
-			INSERT INTO account (keepername, pw)
-			VALUES ('$keepername','$password');
-END;
-		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . " : " . $mysqli->error); 
 		}
 	}
 }
