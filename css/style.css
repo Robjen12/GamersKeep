@@ -306,23 +306,36 @@ body {
 /* Profil torn */
 
 .profil {
-  margin-left: 15px;
+  margin-left: -15px;
   text-align: center;
 }
 
 .profil > .column-left-top {
-  height: 120px;
-  background-image: url("../images/profil_torn1.png"); 
-
+  height: 100px;
+  background-image: url("../images/profil_torn1.png");
+  background-position: top center;
+  background-size: 290px auto; 
+  background-repeat: no-repeat;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: white;
 }
 
 .profil > .column-left-center {
   height: 120px;
-  background-color: blue;
+  width: 260px;
+  
+  background-position: top center;
+  background-size: 260px auto; 
+  background-repeat: no-repeat;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: gray;
 }
 
 .profil > .column-left-bottom {
   height: 200px;
+  width:250px;
   background-color: gray;
 }
 

@@ -12,9 +12,6 @@ $content = <<<END
 	  						<div class="column-left-top">
 	  							<p>sat in overste del av torn i bakgrund har med en class i column left top</p>
   	  						</div>	  					
-	  					</div><!-- row profil left top -->
-
-	  					<div class="row profil">  							
 	  						<div class="column-left-center">
 	  							<p>left center</p>
 	  						</div>
