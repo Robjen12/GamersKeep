@@ -52,7 +52,7 @@ $content = <<<END
 			
 					<div class="col-md-4 col-sm-4 panel panel-default">
 
-	  					<div class="panel-heading">Toplist Rubrik</div>
+	  					<div class="panel-heading">Topplista guider</div>
 
 		  					<div class="panel-body">
 
@@ -70,7 +70,7 @@ $content = <<<END
 
 					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
 
-	  					<div class="panel-heading">Senaste listorna</div>
+	  					<div class="panel-heading">Senaste guiderna</div>
 
 		  					<div class="panel-body">
 
