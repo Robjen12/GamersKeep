@@ -40,16 +40,25 @@ $header = <<<END
 
 			<p>Inloggad som: {$_SESSION["keepername"]}{$adminText}
 
+
+			<form action="search.php" method="GET">
+			<input type="text" id="searchfield" name="search" placeholder="Sök..">
+			<input type="Submit" value="Sök">
+			</form>
+
+
+
 			</div>
 			<!-- Meny right -->
 			<div class="col-md-4 column-right pull-right margin-right-zero">
 			
 				<!-- meny ikoner -->	
-				<img src="images/profil2.png" class="img header-icons pull-right" alt="Profil">
+				<a href="profile.php"><img src="images/profil2.png" class="img header-icons pull-right" alt="Profil"></a>
 				<img src="images/swords.png" class="img header-icons pull-right">
 				<a href="guide_review.php"><img src="images/pen.png" class="img header-icons pull-right"></a>
-				<img src="images/home.png" class="img header-icons pull-right">
+				<a href="index.php"><img src="images/home.png" class="img header-icons pull-right"></a>
 				<img src="images/search.png" class="img header-icons pull-right">
+				
 			</div><!-- meny right -->
 			<!-- Meny left row2 -->
 			<div class="col-md-4 column-left-row2 bg-white height-20px transparent-bg">			

@@ -4,7 +4,7 @@ include_once("inc/Connstring.php");
 include_once("inc/HTMLTemplate.php");
 
 $table = "guidereviewinfo";
-$keepername = $_SESSION['keepername'];
+$keeper = $_SESSION['keeperid'];
 $feedback = "";
 
 
@@ -41,8 +41,8 @@ END;
 
 				 $query = <<<END
 
-				 	INSERT INTO userguidereview(grid, keepername)
-				 	VALUES (LAST_INSERT_ID(), '{$keepername}');
+				 	INSERT INTO userguidereview(grid, keeperid)
+				 	VALUES (LAST_INSERT_ID(), '{$keeper}');
 END;
 				 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
@@ -71,8 +71,8 @@ END;
 
 	        	$query = <<<END
 
-	        		INSERT INTO userguidereview(grid, keepername)
-	        		VALUES (LAST_INSERT_ID(), '{$keepername}');
+	        		INSERT INTO userguidereview(grid, keeperid)
+	        		VALUES (LAST_INSERT_ID(), '{$keeper}');
 END;
 				$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
@@ -85,9 +85,10 @@ $content = <<<END
 
 		<div id="container">
 			<div class="row margin-top-100">
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<div id="guide_review">
 						<form action="guide_review.php" method="post" id="guide_review_form">
+							<h1>Skriva recension eller guide</h1>
 							<label for="title">Titel</label></Br>
 							<input type="text" id="title" name="title" value="" placeholder="Ange titeln"></br></br>
 							<input type="radio" id="guidecheck" name="guide" value="Guide">Guide
@@ -102,8 +103,7 @@ $content = <<<END
 						</form>
 					</div>
 				</div>
-				<div class="col-md-4"></div>
-				<div class="col-md-4"></div>
+				<div class="col-md-6"></div>
 			</div>
 		</div>
 		

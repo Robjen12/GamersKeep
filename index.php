@@ -1,5 +1,49 @@
 <?php
+
 include_once("inc/HTMLTemplate.php");
+include_once("inc/Connstring.php");
+
+$grid = "";
+$latest = "";
+$title = "";
+$text = "";
+
+$title	= htmlspecialchars($title);
+$text	= htmlspecialchars($text);
+
+
+$query = <<<END
+
+	SELECT  grid, title, text, timestamp
+	FROM guidereviewinfo
+	ORDER BY timestamp DESC
+	LIMIT 5;
+
+END;
+
+$res = $mysqli->query($query) or die();
+
+date_default_timezone_set("Europe/Stockholm");
+
+
+while($row = $res->fetch_object())
+{
+	$grid 	= $row->grid;
+	$title	= utf8_decode(htmlspecialchars($row->title));
+	$text 	= utf8_decode(htmlspecialchars($row->text));
+	$date 	= strtotime($row->timestamp);
+	$date	= date("d M Y H:i", $date);
+
+
+$latest .= <<<END
+
+	
+		<a href="profile.php?grid={$grid}">{$title}</a></br>
+		<i>{$text}</i><br><br>
+	
+END;
+}
+
 
 $content = <<<END
 				
@@ -30,21 +74,7 @@ $content = <<<END
 
 		  					<div class="panel-body">
 
-		  						<p>Senaste listorna innehall: No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but
-		  						because those who do not know
-		  						how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
-		  						loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances
-		  						occur in which toil and pain can procure him some great pleasure.</p>
-
-		  						<p>Senaste listorna innehall: No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but
-		  						because those who do not know
-		  						how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
-		  						loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances
-		  						occur in which toil and pain can procure him some great pleasure.</p>
-
-		  						<p>Senaste listorna innehall: No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but
-		  						because those who do not know
-		  						how to pursue pleasure rationally encounter consequences that are extremely painful. </p>
+		  						{$latest}
 
 		  					</div>
 						
