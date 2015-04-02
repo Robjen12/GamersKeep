@@ -86,9 +86,11 @@ $content = <<<END
 		<div id="container">
 			<div class="row margin-top-100">
 				<div class="col-md-6">
+					<div class="panel panel-default">
+						<div class="panel-heading margin-left-100">Skriva recension eller guide</div>
+					</div>
 					<div id="guide_review">
 						<form action="guide_review.php" method="post" id="guide_review_form">
-							<h1>Skriva recension eller guide</h1>
 							<label for="title">Titel</label></Br>
 							<input type="text" id="title" name="title" value="" placeholder="Ange titeln"></br></br>
 							<input type="radio" id="guidecheck" name="guide" value="Guide">Guide
