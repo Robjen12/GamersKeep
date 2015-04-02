@@ -2,7 +2,7 @@
 	background-color: #993300;
 }
 .login-picture{
-	background: url(../images/Registrering.jpg) no-repeat center center fixed;
+	background: url("../images/Registrering.jpg") no-repeat center center fixed;
 	background-size: 100%;
 }
 .logo{
@@ -46,6 +46,7 @@
 {
 	margin-top: 150px;
 }
+
 .register{
 	background-color: white;
 	border-radius: 15px;
@@ -54,6 +55,8 @@
 	padding: 20px 0px 0px 20px;
 
 }
+
+/*
 .toplist,
 .latest
 {
@@ -73,6 +76,7 @@
 	margin-left: 50px;
 }
 
+*/
 
 body {
 	overflow-x: hidden;        /* Hide horizontal overflow */
@@ -299,20 +303,26 @@ body {
     right: 0;
 }
 
-/* Dortes torn */
+/* Profil torn */
+
+.profil {
+  margin-left: 15px;
+  text-align: center;
+}
 
 .profil > .column-left-top {
-  height: 60px;
-  background-color: red;
+  height: 120px;
+  background-image: url("../images/profil_torn1.png"); 
+
 }
 
 .profil > .column-left-center {
-  height: 60px;
+  height: 120px;
   background-color: blue;
 }
 
 .profil > .column-left-bottom {
-  height: 60px;
+  height: 200px;
   background-color: gray;
 }
 
