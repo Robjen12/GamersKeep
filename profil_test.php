@@ -22,6 +22,7 @@ $content = <<<END
 	  							<p>left bottom</p>
 	  						</div>
 						</div><!-- row -->
+						
 					</div>
 
 						
