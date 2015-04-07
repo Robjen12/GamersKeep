@@ -24,6 +24,8 @@ $header = <<<END
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+		
 		<!-- Satter tecken till utf-8 sa svenska tecken visas ratt -->
 		<meta charset="utf-8">
 	</head>

@@ -10,9 +10,12 @@ $content = <<<END
 
 	  					<div class="row profil">
 	  						<div class="column-left-top">
-	  							<p>sat in overste del av torn i bakgrund har med en class i column left top</p>
+	  							<p>Välkommen</p>
   	  						</div>	  					
 	  						<div class="column-left-center">
+<img src="images/profil_bild.png">	  							
+
+	  							<p><b>Keepername</b></p>
 	  							<p>left center</p>
 	  						</div>
 	  					</div><!-- row profil left top -->

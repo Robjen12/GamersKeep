@@ -46,7 +46,7 @@ $content = <<<END
 
 					<div class="col-md-6 col-sm-6 panel panel-700 panel-default pull-left width-col-5">
 
-	  					<div class="panel-700 panel-heading width-col-5">Senaste listorna</div>
+	  					<div class="panel-700 panel-heading width-col-6">Senaste listorna</div>
 
 		  					<div class="panel-body">
  
