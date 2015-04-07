@@ -48,7 +48,7 @@ $content = <<<END
 						
 						<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default pull-left">
 
-	  					<div class="panel-heading panel-heading-560px">Din Profil</div>
+	  					<div class="panel-heading panel-heading-560px">Din Profil <img src="images/pen.png" width="30px" class="pull-right"></div>
 
 		  					<div class="panel-body">
 
