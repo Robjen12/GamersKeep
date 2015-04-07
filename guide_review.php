@@ -103,7 +103,7 @@ $content = <<<END
 										<textarea id="nicEdit" name="nicEdit" cols="80" rows="15"></textarea></br>
 										<label for="grade" id="gradescale">Betyg (1-5)</label></br>
 										<input type="number" id="grade" name="grade" min="1" max="5" value="">
-										<button type="submit" id="publish" name="publish_guide_review" value="Publicera">Publicera innehållet</button>
+										<button type="submit" id="publish" name="publish_guide_review" value="Publicera">Publicera innehållet</button><br><br>
 										{$admindelete}
 										</div>
 									</div>
