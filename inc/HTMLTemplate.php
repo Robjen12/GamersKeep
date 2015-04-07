@@ -61,10 +61,10 @@ $header = <<<END
 				
 			</div><!-- meny right -->
 			<!-- Meny left row2 -->
-			<div class="col-md-4 column-left-row2 bg-white height-20px transparent-bg">			
+			<div class="col-md-4 column-left-row2 bg-black height-20px transparent-bg">			
 			</div><!-- -->
 			<!-- Meny center row2 -->
-			<div class="col-md-4 column-center-row2 bg-white height-20px">
+			<div class="col-md-4 column-center-row2 bg-black height-20px">
 			</div><!-- -->
 			<!-- Meny right row2 -->
 			<div class="col-md-4 column-right-row2 margin-horizontal-zero height-20px">
@@ -82,12 +82,12 @@ $footer = <<<END
 			
 			<!-- Meny left with logo -->
 			
-			<div class="col-md-4 column-left-row2 bg-white height-20px">
+			<div class="col-md-4 column-left-row2 bg-black height-20px">
 			</div>
 			
 			<!-- Meny center -->
 			
-			<div class="col-md-4 column-center-row2 bg-white height-20px">
+			<div class="col-md-4 column-center-row2 bg-black height-20px">
 			</div>
 			<!-- Meny right -->
 			<div class="col-md-4 column-right-row2 margin-horizontal-zero height-20px">

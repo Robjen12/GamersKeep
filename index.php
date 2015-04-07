@@ -130,7 +130,7 @@ $content = <<<END
 
 
 
-					<div class="col-md-3 col-sm-3 ads">
+					<div class="col-md-3 col-sm-3 ads pull-right">
 
 					<!-- Reklam karusel -->
 					

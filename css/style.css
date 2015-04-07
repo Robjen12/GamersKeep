@@ -33,7 +33,7 @@
 }
 .toplistname,
 .latestlistname,
-.ads
+
 {
 	margin-left: 50px;
 	border: 5px solid black;
@@ -89,14 +89,14 @@
 body {
 	overflow-x: hidden;        /* Hide horizontal overflow */
 	overflow-y: auto;          /* Show vertical overflow */
-	background-color: #fff;    /* Set background color to white */
+	background-color: darkgrey;    /* Set background color to white */
 }
 #header {
   margin-left: 0;            /* Sets left margin to zero */
   margin-top: 0;             /* Sets top margin to zero */
 	height: 81px;              /* Sets height to 80 pixels */ 
 	width: 100%;
-  border-bottom: #f7f7f7 solid 1px;
+  border-bottom: darkgrey solid 1px;
 }
 /* left column in the header */
 #header > .column-left {
@@ -140,7 +140,7 @@ body {
     height: 0;
     border-style: solid;
     border-width: 20px 0 0 20px;
-    border-color: transparent transparent transparent #ffffff;
+    border-color: transparent transparent transparent darkgrey;
     line-height: 0;
 }
 /* clears white triangel at the right side */
@@ -192,7 +192,7 @@ body {
     height: 0;
     border-style: solid;
     border-width: 0 20px 20px 20px;
-    border-color: transparent transparent transparent #ffffff;
+    border-color: transparent transparent transparent darkgrey;
     line-height: 0;
 }
 /* clears white triangel at the right side */
@@ -201,6 +201,9 @@ body {
 } 
 .bg-white {
     background-color: #fff;    /* Set background color to white */
+}
+.bg-black {
+    background-color: darkgrey;    /* Set background color to white */
 }
 
 .margin-right-50px{
@@ -248,15 +251,6 @@ body {
 .panel-default {
   border-color: #ddd;
   margin-left: 25px;
-}
-.ads {
-  border-color: #ddd;
-  border-radius: 3px;
-  margin-left: 50px;
-  margin-top: 15px;
-  width: 200px;
-  margin-right: 50px;
-  float: right;
 }
 .ads > img {
     border-radius: 3px;
