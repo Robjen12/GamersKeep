@@ -1,7 +1,12 @@
 <?php
 include_once("inc/HTMLTemplate.php");
 
+
+
+
 $content = <<<END
+
+		<link href='css/style_profil.css' rel='stylesheet' type='text/css'>
 				
 			<div class="container">
 				<div class="row margin-top-100">
