@@ -312,7 +312,7 @@ body {
 
 .profil > .column-left-top {
   height: 60px;
-  background-image: url("../images/torn1.png");
+  background-image: url("../images/profil_torn1.png");
   background-position: top center;
   background-size: 290px auto; 
   background-repeat: no-repeat;
@@ -323,7 +323,8 @@ body {
 
 .profil > .column-left-center {
   height: 150px;
-  background-image: url("../images/torn2.png");
+  width: 290px;
+  background-image: url("../images/profil_torn2.png");
   background-position: top center;
   background-size: 290px auto; 
   background-repeat: no-repeat;
