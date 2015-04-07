@@ -83,27 +83,33 @@ END;
 
 $content = <<<END
 
-		<div id="container">
+	<head>
+			<link rel="stylesheet" href="css/guide_panel_style.css">
+		</head>
+
+		<div class="container">
 			<div class="row margin-top-100">
-				<div class="col-md-6">
-					<div class="panel panel-default">
-						<div class="panel-heading margin-left-100">Skriva recension eller guide</div>
-					</div>
-					<div id="guide_review">
-						<form action="guide_review.php" method="post" id="guide_review_form">
-							<label for="title">Titel</label></Br>
-							<input type="text" id="title" name="title" value="" placeholder="Ange titeln"></br></br>
-							<input type="radio" id="guidecheck" name="guide" value="Guide">Guide
-							<input type="radio" id="reviewcheck" name="review" value="Review">Recension</br></br>
-							{$feedback}
-							<label for="information">Innehållet:</label>
-							<textarea id="nicEdit" name="nicEdit" cols="80" rows="20"></textarea></br>
-							<label for="grade" id="gradescale">Betyg (1-5)</label></br>
-							<input type="number" id="grade" name="grade" min="1" max="5" value="">
-							<button type="submit" id="publish" name="publish_guide_review" value="Publicera">Publicera innehållet</button>
-							{$admindelete}
-						</form>
-					</div>
+				<div class="col-md-6"> 
+							<div id="guide_review">
+								<form action="guide_review.php" method="post" id="guide_review_form">
+									<div class="panel panel-default">
+										<div class="panel-heading">Skriva recension eller guide</div><br>
+										<label for="title">Titel</label></Br>
+										<input type="text" id="title" name="title" value="" placeholder="Ange titeln"></br></br>
+										<input type="radio" id="guidecheck" name="guide" value="Guide">Guide
+										<input type="radio" id="reviewcheck" name="review" value="Review">Recension</br></br>
+										{$feedback}
+										<label for="information">Innehållet:</label>
+										<textarea id="nicEdit" name="nicEdit" cols="80" rows="15"></textarea></br>
+										<label for="grade" id="gradescale">Betyg (1-5)</label></br>
+										<input type="number" id="grade" name="grade" min="1" max="5" value="">
+										<button type="submit" id="publish" name="publish_guide_review" value="Publicera">Publicera innehållet</button>
+										{$admindelete}
+										</div>
+									</div>
+								</form>			
+							</div>
+						
 				</div>
 				<div class="col-md-6"></div>
 			</div>
@@ -144,6 +150,7 @@ $content = <<<END
 
 
 END;
+
 
 echo $header;
 echo $content;
