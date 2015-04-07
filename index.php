@@ -47,7 +47,7 @@ END;
 
 $content = <<<END
 				
-			<div class="container">
+			<div id="container">
 				<div class="row margin-top-100">
 			
 					<div class="col-md-4 col-sm-4 panel panel-default">
@@ -93,6 +93,43 @@ $content = <<<END
 					</div><!-- kolumn 2 -->
 
 				</div><!-- row -->
+
+
+
+				<div class="row">
+					<div class="col-md-4 col-sm-4 panel panel-default">
+
+		  					<div class="panel-heading">Topplista guider</div>
+
+			  					<div class="panel-body">
+
+				  					<p>Toplist innehall.</p> <p>But I must explain to you how all this mistaken idea of denouncing pleasure
+				  					and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of
+				  					the great explorer of the truth, the master-builder of human happiness.</p>
+				  					<p> Master-builder without using THE KRAGGLE!</p>
+				  						  			
+			  					</div><!-- panel body -->
+
+							</div><!-- panel heading -->
+
+							
+						
+
+						<div class="col-md-4 col-sm-4 panel panel-default pull-left">
+
+		  					<div class="panel-heading">Senaste guiderna</div>
+
+			  					<div class="panel-body">
+
+			  						{$latest}
+
+			  					</div>
+							
+						
+							</div><!-- panel heading -->
+						</div>
+					</div>
+				</div>
 			</div><!-- container -->
 
   
