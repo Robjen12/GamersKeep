@@ -6,46 +6,49 @@ include_once("inc/Connstring.php");
 $keeper = $_SESSION['keeperid'];
 $grid = isset($_GET['grid']) ? $_GET['grid'] : '';
 
-if(isset($_GET['grid']))
-{
 
 	$query = <<<END
 
 		INSERT INTO userclick (grid, keeperid)
 		VALUES ('{$grid}', '{$keeper}');
 END;
-}
+
 $res = $mysqli->query($query);
+
+$query = <<<END
+
+	SELECT title, text, timestamp
+	FROM guidereviewinfo
+	WHERE grid = '{$grid}';
+END;
+$res = $mysqli->query($query);
+
+$row = $res->fetch_object();
+
+$title = utf8_decode(htmlspecialchars($row->title));
+$text  = utf8_decode(htmlspecialchars($row->text));
+$timestamp = strtotime($row->timestamp);
+$timestamp = date("d M Y H:i", $timestamp);
 
 $content = <<<END
 
-<!DOCTYPE html>
-<html>
-
-	<body>
-
-		<div id="container">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="latest">
-						
+<head>
+	<link rel="stylesheet" href="css/guide_panel_style.css">
+</head>
+		<div class="container">
+			<div class="row margin-top-100">
+				<div class="col-md-6">
+					<div class="panel panel-default">
+						<div class="grinfo">
+							<div class="panel-heading">Titel: {$title}</div></br></br>
+							Upplagd den: {$timestamp}<br>
+							{$text}<br>	
+						</div>
 					</div>
-
 				</div>
-				<div class="col-md-4">
-					<div class="toplist"></div>
-
-				</div>
-				<div class="col-md-4">
-
-
-				</div>
+				<div class="col-md-6"></div>
 			</div>
 		</div>
-
-	</body>
-
-</html>
 END;
 
 echo $header;

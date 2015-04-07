@@ -222,7 +222,6 @@ body {
 	margin-top: 100px;
   
 }
-
 .panel {
     margin-top: 5px;
     width: 350px;
@@ -301,4 +300,9 @@ body {
 }
 .panel-default > .panel-heading::after {
     right: 0;
+}
+.grinfo
+{
+  min-height: 600px;
+  height: auto;
 }
