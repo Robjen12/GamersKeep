@@ -217,8 +217,13 @@ body {
 	padding-left: 0px;
 	padding-right: 0px;
 }
-.margin-top-100 {
-	margin-top: 100px;
+.margin-top-50
+{
+	margin-top: 50px;
+  margin-left: 60px;
+}
+.margin-left-60{
+  margin-left: 60px;  
 }
 .panel {
     margin-top: 5px;
