@@ -83,7 +83,7 @@ END;
 
 $content = <<<END
 
-	<head>
+		<head>
 			<link rel="stylesheet" href="css/guide_panel_style.css">
 		</head>
 
