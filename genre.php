@@ -38,13 +38,14 @@ $content = <<<END
 		<div class="container">
 			<div class="row margin-top-100">
 				<div class="col-md-6">
-					<div class="panel panel-default">
 						<div class="grinfo">
-							<div class="panel-heading">Titel: {$title}</div></br></br>
-							Upplagd den: {$timestamp}<br>
-							{$text}<br>	
+							<div class="panel panel-default">
+								<div class="panel-heading">Titel: {$title}</div></br>
+								Skriven av:</br>
+								Publicerad: {$timestamp}<br><br>
+								{$text}<br>	
+							</div>
 						</div>
-					</div>
 				</div>
 				<div class="col-md-6"></div>
 			</div>

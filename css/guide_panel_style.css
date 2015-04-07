@@ -65,4 +65,6 @@
 .panel-default {
   border-color: #ddd;
   margin-left: 25px;
+  min-height: 600px;
+  height: auto;
 }
