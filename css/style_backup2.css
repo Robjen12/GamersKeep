@@ -2,16 +2,12 @@
 	background-color: #993300;
 }
 .login-picture{
-	background: url("../images/Registrering.jpg") no-repeat center center fixed;
+	background: url(../images/Registrering.jpg) no-repeat center center fixed;
 	background-size: 100%;
 }
 .logo{
 	background-size: 50%;
 }
-
-/* Behovs inte eftersom vi använder bootstrap definitioner */
-
-/*
 #header{
 	background-color: red;
 	height: 80px;
@@ -41,12 +37,11 @@
 		min-height: 400px;
 		margin-left: 50px;
 	}
-*/
+
 .login
 {
 	margin-top: 150px;
 }
-
 .register{
 	background-color: white;
 	border-radius: 15px;
@@ -55,8 +50,6 @@
 	padding: 20px 0px 0px 20px;
 
 }
-
-/*
 .toplist,
 .latest
 {
@@ -75,8 +68,12 @@
 {
 	margin-left: 50px;
 }
+#searchresult
+{
+  margin-top: 100px;
+  min-height: 400px;
 
-*/
+}
 
 body {
 	overflow-x: hidden;        /* Hide horizontal overflow */
@@ -220,16 +217,9 @@ body {
 	padding-left: 0px;
 	padding-right: 0px;
 }
-
-.margin-top-50 {
-  margin-top: 50px;
-  margin-left: 60px;
+.margin-top-100 {
+	margin-top: 100px;
 }
-
-.margin-left-60 {
-  margin-left: 60px;  
-}
-
 .panel {
     margin-top: 5px;
     width: 350px;
@@ -309,141 +299,3 @@ body {
 .panel-default > .panel-heading::after {
     right: 0;
 }
-
-/* Profil torn */
-
-.profil {
-
-
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-}
-
-.profil > .column-left-top {
-
-  height: 60px;
-  background-image: url("../images/profil_torn1.png");
-  background-position: top center;
-  background-size: 280px auto;
-  background-repeat: no-repeat;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: white;
-}
-
-.profil > .column-left-center {
-
-  height: 150px;
-  background-image: url("../images/profil_torn2.png");
-  background-position: top center;
-  background-size: 280px auto; 
-  background-repeat: no-repeat;
-  margin-top: 61px;
-  margin-bottom: 0;
-  background-color: white;
-
-}
-
-.profil > .column-left-bottom {
-  width: 280px;
-  min-height: 210px;
-  margin-left: auto;
-  margin-right: auto; 
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: #c7ccc8;
-
-}
-
-/* Profil torn */
-
-.profil {
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-}
-
-.profil > .column-left-top {
-  height: 75px;
-  background-image: url("../images/profil_torn1.png");
-  background-position: top center;
-  background-size: 290px auto; 
-  background-repeat: no-repeat;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: white;
-  text-align: center;
-  padding-top: 40px;
-}
-
-.profil > .column-left-center {
-  height: 218px;
-  background-image: url("../images/profil_torn2.png");
-  background-position: top center;
-  background-size: 290px auto; 
-  background-repeat: no-repeat;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: white;
-  padding-top: 20px;
-
-}
-
-.profil > .column-left-bottom {
-  width: 262px;
-  min-height: 210px;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: #c7ccc8;
-}
-
-
-p {
-  font-size: 12px;
-}
-
-/* profil bild */
-.column-left-center > img {
-    margin: 0 auto;
-    width: 85px;
-    margin-left: 0;
-    margin-right: 0;
-  
-}
-
-/* friend bild */
-.column-left-bottom > img {
-    width: 35px;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin: 0 auto;
-  
-}
-
-p.profil-vanner {
-    width: 35px;
-    padding-left: 5px;
-    padding-right: 5px;
-    text-align: center;
-    font-size: 8px;
-  
-}
-
-
-.profil-right > .column-top-right {
-  background-color: red;
-  min-height: 200px;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.profil-right > .info {
-  background-color: green;
-}
-
-.profil-right > .reklam {
-  background-color: blue;
-}
-
-

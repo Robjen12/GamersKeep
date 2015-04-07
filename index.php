@@ -3,7 +3,7 @@ include_once("inc/HTMLTemplate.php");
 
 $content = <<<END
 				
-			<div class="container">
+			<div id="container">
 				<div class="row margin-top-100">
 			
 					<div class="col-md-4 col-sm-4 panel panel-default">
