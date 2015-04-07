@@ -251,6 +251,8 @@ body {
 .panel-default {
   border-color: #ddd;
   margin-left: 25px;
+  min-height: 300px;
+  height: auto;
 }
 .ads > img {
     border-radius: 3px;
