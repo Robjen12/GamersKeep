@@ -79,7 +79,7 @@ $content = <<<END
 			<div class="row">
 				<div class="col-md-6">
 					<img src="images/logo.png">
-					<h3 class="login-font"><i>En community för gamers by gamers :)</i></h3>
+					<h3 class="login-font"><i>En community för gamers by gamers</i></h3>
 				</div>
 				<div class="col-md-2"></div>
 				<div class="col-md-4">
