@@ -8,6 +8,17 @@
 .logo{
 	background-size: 50%;
 }
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
+.login-font
+{
+  font-family: 'Quicksand';
+  margin-left: 20px;
+  color: white;
+}
+.login-copyright
+{
+  margin-top: 200px;
+}
 #header{
 	background-color: red;
 	height: 80px;
