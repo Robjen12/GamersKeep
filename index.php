@@ -4,17 +4,18 @@ include_once("inc/HTMLTemplate.php");
 include_once("inc/Connstring.php");
 
 $grid = "";
-$latest = "";
+$latestguide = "";
+$latestreview = "";
 $title = "";
 $text = "";
-
+$grade = "";
 $title	= htmlspecialchars($title);
 $text	= htmlspecialchars($text);
 
 
 $query = <<<END
 
-	SELECT  grid, title, text, timestamp
+	SELECT  grid, title, text, timestamp, grade
 	FROM guidereviewinfo
 	ORDER BY timestamp DESC
 	LIMIT 5;
@@ -31,17 +32,25 @@ while($row = $res->fetch_object())
 	$grid 	= $row->grid;
 	$title	= utf8_decode(htmlspecialchars($row->title));
 	$text 	= utf8_decode(htmlspecialchars($row->text));
+	$grade  = $row->grade;
 	$date 	= strtotime($row->timestamp);
 	$date	= date("d M Y H:i", $date);
 
-
-$latest .= <<<END
-
+if($grade == NULL){
+$latestguide .= <<<END
 	
-		<a href="profile.php?grid={$grid}">{$title}</a></br>
-		<i>{$text}</i><br><br>
-	
+			<a href="profile.php?grid={$grid}">{$title}</a></br>
+			<i>{$text}</i><br><br>	
+			
 END;
+}
+else{
+$latestreview .= <<<END
+
+			<a href="profile.php?grid={$grid}">{$title}</a></br>
+			<i>{$text}</i><br><br>
+END;
+}
 }
 
 
@@ -74,7 +83,7 @@ $content = <<<END
 
 		  					<div class="panel-body">
 
-		  						{$latest}
+		  						{$latestguide}
 
 		  					</div>
 						
@@ -89,8 +98,7 @@ $content = <<<END
 	  					<img src="http://placehold.it/200x350">
 	  					
 					</div><!-- reklam kolumn -->
-					</div><!-- kolumn 2 -->
-					</div><!-- kolumn 2 -->
+					
 
 				</div><!-- row -->
 
@@ -99,7 +107,7 @@ $content = <<<END
 				<div class="row">
 					<div class="col-md-4 col-sm-4 panel panel-default">
 
-		  					<div class="panel-heading">Topplista guider</div>
+		  					<div class="panel-heading">Topplista recensionerna</div>
 
 			  					<div class="panel-body">
 
@@ -117,11 +125,11 @@ $content = <<<END
 
 						<div class="col-md-4 col-sm-4 panel panel-default pull-left">
 
-		  					<div class="panel-heading">Senaste guiderna</div>
+		  					<div class="panel-heading">Senaste recensionerna</div>
 
 			  					<div class="panel-body">
 
-			  						{$latest}
+			  						{$latestreview}
 
 			  					</div>
 							
