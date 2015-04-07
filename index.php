@@ -3,9 +3,11 @@
 include_once("inc/HTMLTemplate.php");
 include_once("inc/Connstring.php");
 
+$keeper = $_SESSION['keeperid'];
 $grid = "";
 $latestguide = "";
 $latestreview = "";
+$toplistguide = "";
 $title = "";
 $text = "";
 $grade = "";
@@ -37,23 +39,63 @@ while($row = $res->fetch_object())
 	$date	= date("d M Y H:i", $date);
 
 if($grade == NULL){
-$latestguide .= <<<END
+	$latestguide .= <<<END
 	
-			<a href="profile.php?grid={$grid}">{$title}</a></br>
+			<a href="genre.php?grid={$grid}">{$title}</a></br>
 			<i>{$text}</i><br><br>	
 			
 END;
 }
-else{
-$latestreview .= <<<END
+else
+{
+	$latestreview .= <<<END
 
-			<a href="profile.php?grid={$grid}">{$title}</a></br>
+				<a href="genre.php?grid={$grid}">{$title}</a></br>
+				<i>{$text}</i><br><br>
+END;
+}
+
+}
+/*
+$query = <<<END
+
+	SELECT COUNT('keeperid') FROM userclick
+	WHERE grid = '{$grid}'
+	ORDER BY keeperid DESC
+	LIMIT 5;
+END;
+$res = $mysqli->query($query);
+
+$query = <<<END
+
+	SELECT  grid, title, text, timestamp, grade
+	FROM guidereviewinfo
+
+END;
+
+$res = $mysqli->query($query) or die();
+while($row = $res->fetch_object())
+{
+	$grid 	= $row->grid;
+	$title	= utf8_decode(htmlspecialchars($row->title));
+	$text 	= utf8_decode(htmlspecialchars($row->text));
+	$grade  = $row->grade;
+	$date 	= strtotime($row->timestamp);
+	$date	= date("d M Y H:i", $date);
+
+if($grade == NULL)
+{
+$toplistguide .= <<<END
+
+			<a href="genre.php?grid={$grid}">{$title}</a></br>
 			<i>{$text}</i><br><br>
 END;
 }
+else
+{
+
 }
-
-
+}*/
 $content = <<<END
 				
 			<div id="container">
@@ -65,11 +107,8 @@ $content = <<<END
 
 		  					<div class="panel-body">
 
-			  					<p>Toplist innehall.</p> <p>But I must explain to you how all this mistaken idea of denouncing pleasure
-			  					and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of
-			  					the great explorer of the truth, the master-builder of human happiness.</p>
-			  					<p> Master-builder without using THE KRAGGLE!</p>
-			  						  			
+			  					
+
 		  					</div><!-- panel body -->
 
 						</div><!-- panel heading -->

@@ -1,6 +1,7 @@
 <?php
 include_once("inc/HTMLTemplate.php");
 
+
 $content = <<<END
 				
 			<div class="container">

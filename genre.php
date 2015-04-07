@@ -1,6 +1,21 @@
 <?php
 
 include_once("inc/HTMLTemplate.php");
+include_once("inc/Connstring.php");
+
+$keeper = $_SESSION['keeperid'];
+$grid = isset($_GET['grid']) ? $_GET['grid'] : '';
+
+if(isset($_GET['grid']))
+{
+
+	$query = <<<END
+
+		INSERT INTO userclick (grid, keeperid)
+		VALUES ('{$grid}', '{$keeper}');
+END;
+}
+$res = $mysqli->query($query);
 
 $content = <<<END
 
