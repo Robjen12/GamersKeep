@@ -1,13 +1,31 @@
 <?php
 include_once("inc/HTMLTemplate.php");
+include_once("inc/Connstring.php");
 
+$keepername = $_SESSION['keepername'];
+$keeperid = $_SESSION['keeperid'];
+$profilename = '';
+$profileabout = '';
 
+$profileinfo = <<<END
 
+	SELECT fname, lname, about
+	FROM user
+	WHERE keepername = '{$keepername}';
+END;
+$res = $mysqli->query($profileinfo) or die();
+
+if($res->num_rows == 1){
+	$row = $res->fetch_object();
+	$profilename = $row->fname;
+	$profilelastname = $row->lname;
+	$profileabout = $row->about;
+
+}
 
 $content = <<<END
 
 		
-				
 			<div class="container">
 				<div class="row margin-top-100">
 			
@@ -26,7 +44,7 @@ $content = <<<END
 	  					
 	  								<img src="images/profil_bild.png">	  							
 
-	  							<p><b>Keepername</b></p>
+	  							<p><b>{$keepername}</b></p>
 	  					
 	  						</div>
 
@@ -54,10 +72,8 @@ $content = <<<END
 
 		  					<div class="panel-body">
 
-			  					<p>Namn</p> <p>But I must explain to you how all this mistaken idea of denouncing pleasure
-			  					and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of
-			  					the great explorer of the truth, the master-builder of human happiness.</p>
-			  					<p> Master-builder without using THE KRAGGLE!</p>
+			  					<p>Namn: {$profilename} {$profilelastname}</p> 
+			  					{$profileabout}
 			  						  			
 		  					</div><!-- panel body -->
 
