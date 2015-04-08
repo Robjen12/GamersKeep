@@ -6,7 +6,7 @@ include_once("inc/HTMLTemplate.php");
 
 $content = <<<END
 
-		<link rel="stylesheet" href="css/style.css">
+		
 				
 			<div class="container">
 				<div class="row margin-top-100">
@@ -16,6 +16,7 @@ $content = <<<END
 	  					<div class="row profil">
 	  					
 	  						<div class="column-left-top">
+	  						<br>
 	  					
 	  							<p>Välkommen</p>
   	  					
@@ -29,7 +30,8 @@ $content = <<<END
 	  					
 	  						</div>
 
-	  						<div class="column-left-bottom">
+	  						<div class="column-left-bottom text-center">
+
 	  							<p>Senaste nytt</p>
 
 	  							<p>Sociala Medier</p>
