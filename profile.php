@@ -6,7 +6,6 @@ include_once("inc/HTMLTemplate.php");
 
 $content = <<<END
 
-		<link href='css/style_profil.css' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/style.css">
 				
 			<div class="container">
@@ -31,7 +30,7 @@ $content = <<<END
 	  						</div>
 
 	  						<div class="column-left-bottom">
-	  							<p>Sista nytt</p>
+	  							<p>Senaste nytt</p>
 
 	  							<p>Sociala Medier</p>
 	  							
@@ -49,7 +48,7 @@ $content = <<<END
 						
 						<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default pull-left">
 
-	  					<div class="panel-heading panel-heading-560px">Din Profil <img src="images/pen.png" width="30px" class="pull-right"></div>
+	  					<div class="panel-heading panel-heading-560px">Om mig <img src="images/pen.png" width="30px" class="pull-right"></div>
 
 		  					<div class="panel-body">
 
@@ -73,7 +72,7 @@ $content = <<<END
 
 					<div class="col-md-3 col-sm-3 panel-width-330px panel panel-default pull-left">
 
-	  					<div class="panel-heading panel-heading-340px">Datorspecifikationer</div>
+	  					<div class="panel-heading panel-heading-340px">Övrigt</div>
 
 		  					<div class="panel-body">
  

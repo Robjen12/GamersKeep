@@ -310,3 +310,93 @@ body {
   min-height: 600px;
   height: auto;
 }
+.panel-default > .panel-heading-560px {
+  width: 560px;
+}
+
+.panel-default > .panel-heading-300px{
+  width: 360px;
+}
+
+.panel-width-550px {
+  width: 550px;
+}
+
+.width-360px {
+  width: 360px;
+}
+
+.panel-width-330px {
+  width: 330px;
+}
+
+.panel-default > .panel-heading-340px {
+  width: 340px;
+}
+
+.panel-width-190px {
+  width: 190px;
+}
+
+.panel-default > .panel-heading-200px {
+  width: 200px;
+}
+
+/ Profil torn /
+
+.profil {
+
+  text-align: center;
+}
+
+.profil > .column-left-top {
+  height: 74px;
+  background-image: url("../images/profil_torn1.png");
+  background-position: top center;
+  background-size: 290px auto; 
+  background-repeat: no-repeat;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: white;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.profil > .column-left-center {
+  height: 218px;
+  width: 290px;
+  background-image: url("../images/profil_torn2.png");
+  background-position: top center;
+  background-size: 290px auto; 
+  background-repeat: no-repeat;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: white;
+  padding-top: 25px;
+
+}
+
+.profil > .column-left-bottom {
+  min-height: 210px;
+  padding: 15px;
+  width: 290px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #c7ccc8;
+}
+
+/ profil bild /
+.column-left-center > img {
+    margin: 0 auto;
+    width: 85px;
+  
+}
+
+/ friend bild /
+.column-left-bottom > img {
+    width: 35px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0 auto;
+  
+}
