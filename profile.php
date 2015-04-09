@@ -7,6 +7,7 @@ $keeperid = $_SESSION['keeperid'];
 $profilename = '';
 $profileabout = '';
 
+// Hämtar ut om användaren
 $profileinfo = <<<END
 
 	SELECT fname, lname, about
@@ -21,6 +22,46 @@ if($res->num_rows == 1){
 	$profilelastname = $row->lname;
 	$profileabout = $row->about;
 
+}
+
+// Hämtar ut senaste aktiviteterna för anvnändaren
+$latestact = <<<END
+
+	SELECT guidereviewinfo.grid, guidereviewinfo.title, guidereviewinfo.timestamp, userguidereview.grid
+	FROM guidereviewinfo
+	INNER JOIN userguidereview
+	ON guidereviewinfo.grid = userguidereview.grid
+	ORDER BY timestamp
+	LIMIT 3;
+END;
+$res = $mysqli->query($latestact) or die();
+
+while($row = $res->fetch_object())
+{
+	$keeperid = $_SESSION['keeperid'];
+	$grid = $row->grid;
+	$title = utf8_decode(htmlspecialchars($row->title));
+	$timestamp = strtotime($row->timestamp);
+	$timestamp = date("d M Y H:i", $timestamp);
+
+	$latestactivity .= <<<END
+
+		<a href="genre.php?grid={$grid}">{$title}</a></br>
+END;
+}
+
+// Hämtar ut övrigt om användaren
+$other = <<<END
+
+	SELECT other 
+	FROM user
+	WHERE keepername = '{$keepername}'
+END;
+$res = $mysqli->query($other) or die();
+
+if($res->num_rows == 1){
+	$row = $res->fetch_object();
+	$profileother = $row->other;
 }
 
 $content = <<<END
@@ -51,7 +92,7 @@ $content = <<<END
 	  						<div class="column-left-bottom text-center">
 
 	  							<p>Senaste nytt</p>
-
+	  							
 	  							<p>Sociala Medier</p>
 	  							
 	  							<p>Vanner</p>	  							
@@ -93,38 +134,18 @@ $content = <<<END
 	  					<div class="panel-heading panel-heading-340px">Övrigt</div>
 
 		  					<div class="panel-body">
- 
-		  						<p>Senaste listorna innehall: No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but
-		  						because those who do not know
-		  						how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
-		  						loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances
-		  						occur in which toil and pain can procure him some great pleasure.</p>
-
-		  						<p>Senaste listorna innehall: No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but
-		  						because those who do not know
-		  						how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
-		  						loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances
-		  						occur in which toil and pain can procure him some great pleasure.</p>
-
-		  						<p>Senaste listorna innehall: No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but
-		  						because those who do not know
-		  						how to pursue pleasure rationally encounter consequences that are extremely painful. </p>
-
+ 								{$profileother}
 		  					</div>
 						
 						</div><!-- panel heading -->
 
 						<div class="col-md-3 col-sm-3 panel-width-190px panel panel-default pull-left">
 
-	  					<div class="panel-heading panel-heading-200px">Länkar</div>
+	  					<div class="panel-heading panel-heading-200px">Senaste aktiviteter</div>
 
 		  					<div class="panel-body">
  
-		  						<p>Senaste listorna innehall: No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but
-		  						because those who do not know
-		  						how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
-		  						loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances
-		  						occur in which toil and pain can procure him some great pleasure.</p>
+		  						{$latestactivity}
 
 		  					</div>
 						
