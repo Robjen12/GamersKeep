@@ -89,7 +89,7 @@ $content = <<<END
 
 		<div class="container">
 			<div class="row margin-top-100">
-				<div class="col-md-6"> 
+				<div class="col-md-12"> 
 							<div id="guide_review">
 								<form action="guide_review.php" method="post" id="guide_review_form">
 									<div class="panel panel-default">
@@ -111,7 +111,6 @@ $content = <<<END
 							</div>
 						
 				</div>
-				<div class="col-md-6"></div>
 			</div>
 		</div>
 		

@@ -4,6 +4,7 @@ include_once("inc/Connstring.php");
 include_once("inc/HTMLTemplate.php");
 
 $content = "";
+$feedback = "";
 
 if(isset($_GET['search'])){
 
@@ -17,11 +18,13 @@ END;
 
 	if($result->num_rows > 0)
 	{
+		
 		while($row = $result->fetch_object())
 		{
-			$users .= <<<END
+			$keeperid = $row->keeperid;
+			$users = <<<END
 			
-			Användarnamn: <a href="profile.php">{$row->keepername}</a><br>
+			Användarnamn: <a href="profileothers.php?keeperid={$keeperid}">{$row->keepername}</a><br>
 			Namn: {$row->fname}{$row->lname}<br>
 			Email: {$row->email}<br>
 END;

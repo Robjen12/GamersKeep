@@ -2,22 +2,27 @@
 include_once("inc/HTMLTemplate.php");
 include_once("inc/Connstring.php");
 
-$keepername = $_SESSION['keepername'];
-$keeperid = $_SESSION['keeperid'];
+
+$keepername = "";
 $profilename = '';
+$profilelname = "";
 $profileabout = '';
+$profileother = "";
+
+$keeperid = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
 
 // Hämtar ut om användaren
 $profileinfo = <<<END
 
-	SELECT fname, lname, about, other
+	SELECT keepername, fname, lname, about, other
 	FROM user
-	WHERE keepername = '{$keepername}';
+	WHERE keeperid = '{$keeperid}';
 END;
 $res = $mysqli->query($profileinfo) or die();
 
 if($res->num_rows == 1){
 	$row = $res->fetch_object();
+	$profilekeepername = $row->keepername;
 	$profilename = $row->fname;
 	$profilelastname = $row->lname;
 	$profileabout = $row->about;
@@ -39,7 +44,6 @@ $res = $mysqli->query($latestact) or die();
 
 while($row = $res->fetch_object())
 {
-	$keeperid = $_SESSION['keeperid'];
 	$grid = $row->grid;
 	$title = utf8_decode(htmlspecialchars($row->title));
 	$timestamp = strtotime($row->timestamp);
@@ -72,7 +76,8 @@ $content = <<<END
 	  					
 	  								<img src="images/profil_bild.png">	  							
 
-	  							<p><b>{$keepername}</b></p>
+	  							<p><b>{$profilekeepername}</b></p>
+	  							<button type="submit" id="submit" value"Lägg till">Lägg till fläskesvålsvän</button>
 	  					
 	  						</div>
 
@@ -96,7 +101,7 @@ $content = <<<END
 						
 						<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default pull-left">
 
-	  					<div class="panel-heading panel-heading-560px">Om mig <img src="images/pen.png" width="30px" class="pull-right"></div>
+	  					<div class="panel-heading panel-heading-560px">Om mig </div>
 
 		  					<div class="panel-body">
 
