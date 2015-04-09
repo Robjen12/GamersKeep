@@ -5,13 +5,18 @@ include_once("inc/HTMLTemplate.php");
 
 $content = "";
 $feedback = "";
+$keeperid = $_SESSION['keeperid'];
 
 if(isset($_GET['search'])){
 
-	$query = <<<END
+	if(!empty($_GET))
+	{
+		
+		
+			$query = <<<END
 
-		SELECT * FROM user
-		WHERE keepername LIKE '%{$_GET['search']}%';
+				SELECT * FROM user
+				WHERE keepername LIKE '%{$_GET['search']}%';
 END;
 	
 	$result = $mysqli->query($query);
@@ -34,7 +39,10 @@ END;
 	{
 		$feedback = "<p class=\"feedback-yellow\">Det finns ingen i databasen med det användarnamnet</p>";
 	}
-}
+		}
+
+		
+	}
 
 $content = <<<END
 
