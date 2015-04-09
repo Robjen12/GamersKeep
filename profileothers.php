@@ -2,21 +2,21 @@
 include_once("inc/HTMLTemplate.php");
 include_once("inc/Connstring.php");
 
-
+$keeperid = $_SESSION['keeperid'];
 $keepername = "";
 $profilename = '';
 $profilelname = "";
 $profileabout = '';
 $profileother = "";
 
-$keeperid = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
+$keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
 
 // Hämtar ut om användaren
 $profileinfo = <<<END
 
 	SELECT keepername, fname, lname, about, other
 	FROM user
-	WHERE keeperid = '{$keeperid}';
+	WHERE keeperid = '{$keeperid2}';
 END;
 $res = $mysqli->query($profileinfo) or die();
 
@@ -55,6 +55,15 @@ while($row = $res->fetch_object())
 END;
 }
 
+if(isset($_POST['keeperfr'])){
+
+	$query = <<<END
+	INSERT INTO keeperfriend(keeperid, keeperid2, accept) 
+	VALUES ('$keeperid', '$keeperid2', ' ');
+END;
+$res = $mysqli->query($query) or die();
+
+}
 $content = <<<END
 
 		
@@ -77,7 +86,7 @@ $content = <<<END
 	  								<img src="images/profil_bild.png">	  							
 
 	  							<p><b>{$profilekeepername}</b></p>
-	  							<button type="submit" id="submit" value"Lägg till">Lägg till fläskesvålsvän</button>
+	  							<button type="submit" id="submit" name="keeperfr" value"Lägg till">Lägg till fläskesvålsvän</button>
 	  					
 	  						</div>
 

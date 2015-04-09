@@ -30,7 +30,8 @@ END;
 END;
 		}
 	}
-	else{
+	else
+	{
 		$feedback = "<p class=\"feedback-yellow\">Det finns ingen i databasen med det användarnamnet</p>";
 	}
 }
