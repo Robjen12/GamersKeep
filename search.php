@@ -24,7 +24,7 @@ END;
 			$keeperid = $row->keeperid;
 			$users = <<<END
 			
-			Användarnamn: <a href="profileothers.php?keeperid={$keeperid}">{$row->keepername}</a><br>
+			Användarnamn: <a href="profile.php?keeperid={$keeperid}">{$row->keepername}</a><br>
 			Namn: {$row->fname}{$row->lname}<br>
 			Email: {$row->email}<br>
 END;

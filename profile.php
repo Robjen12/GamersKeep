@@ -6,7 +6,77 @@ $keepername = $_SESSION['keepername'];
 $keeperid = $_SESSION['keeperid'];
 $profilename = '';
 $profileabout = '';
+$button = "";
 
+if(!empty($_GET))
+{
+	$keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
+
+// Hämtar ut om användaren
+	$profileinfo = <<<END
+
+		SELECT keepername, fname, lname, about, other
+		FROM user
+		WHERE keeperid = '{$keeperid2}';
+END;
+	$res = $mysqli->query($profileinfo) or die();
+
+if($res->num_rows == 1){
+	$row = $res->fetch_object();
+	$profilekeepername = $row->keepername;
+	$profilename = $row->fname;
+	$profilelastname = $row->lname;
+	$profileabout = $row->about;
+	$profileother = $row->other;
+
+}
+
+// Hämtar ut senaste aktiviteterna för anvnändaren
+$latestact = <<<END
+
+	SELECT guidereviewinfo.grid, guidereviewinfo.title, guidereviewinfo.timestamp, userguidereview.grid
+	FROM guidereviewinfo
+	INNER JOIN userguidereview
+	ON guidereviewinfo.grid = userguidereview.grid
+	ORDER BY timestamp
+	LIMIT 3;
+END;
+$res = $mysqli->query($latestact) or die();
+
+while($row = $res->fetch_object())
+{
+	$grid = $row->grid;
+	$title = utf8_decode(htmlspecialchars($row->title));
+	$timestamp = strtotime($row->timestamp);
+	$timestamp = date("d M Y H:i", $timestamp);
+
+	$latestactivity .= <<<END
+
+		<a href="genre.php?grid={$grid}">{$title}</a></br>
+END;
+}
+
+// Lägger till "lägg till vän" knapp om man är inne på en annan användares profil
+$button = <<<END
+	<button type="submit" name="keeperfr" value="Lägg till">Lägg till fläskesvålsvän</button>
+END;
+
+if(isset($_POST['keeperfr'])){
+
+	$query = <<<END
+	INSERT INTO keeperfriend(keeperid, keeperid2, accept) 
+	VALUES ('{$keeperid}', '{$keeperid2}', );
+END;
+$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+
+}
+
+}
+
+else
+{
+	
 // Hämtar ut om användaren
 $profileinfo = <<<END
 
@@ -18,6 +88,7 @@ $res = $mysqli->query($profileinfo) or die();
 
 if($res->num_rows == 1){
 	$row = $res->fetch_object();
+	$profilekeepername = $row->keepername;
 	$profilename = $row->fname;
 	$profilelastname = $row->lname;
 	$profileabout = $row->about;
@@ -50,7 +121,7 @@ while($row = $res->fetch_object())
 		<a href="genre.php?grid={$grid}">{$title}</a></br>
 END;
 }
-
+}
 $content = <<<END
 
 		
@@ -72,8 +143,8 @@ $content = <<<END
 	  					
 	  								<img src="images/profil_bild.png">	  							
 
-	  							<p><b>{$keepername}</b></p>
-	  					
+	  							<p><b>{$profilekeepername}</b></p>
+	  							{$button}
 	  						</div>
 
 	  						<div class="column-left-bottom text-center">

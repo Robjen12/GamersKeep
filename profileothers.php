@@ -58,10 +58,11 @@ END;
 if(isset($_POST['keeperfr'])){
 
 	$query = <<<END
-	INSERT INTO keeperfriend(keeperid, keeperid2, accept) 
-	VALUES ('$keeperid', '$keeperid2', ' ');
+	INSERT INTO keeperfriend(keeperid, keeperid2) 
+	VALUES ('{$keeperid}', '{$keeperid2}');
 END;
-$res = $mysqli->query($query) or die();
+$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
 
 }
 $content = <<<END
@@ -86,7 +87,7 @@ $content = <<<END
 	  								<img src="images/profil_bild.png">	  							
 
 	  							<p><b>{$profilekeepername}</b></p>
-	  							<button type="submit" id="submit" name="keeperfr" value"Lägg till">Lägg till fläskesvålsvän</button>
+	  							<button type="submit" name="keeperfr" value="Lägg till">Lägg till fläskesvålsvän</button>
 	  					
 	  						</div>
 
