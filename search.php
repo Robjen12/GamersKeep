@@ -7,7 +7,8 @@ $content = "";
 $feedback = "";
 $keeperid = $_SESSION['keeperid'];
 
-if(isset($_GET['search'])){
+if(isset($_GET['search']))
+{
 
 	if(!empty($_GET))
 	{
@@ -39,10 +40,10 @@ END;
 	{
 		$feedback = "<p class=\"feedback-yellow\">Det finns ingen i databasen med det användarnamnet</p>";
 	}
-		}
+	}
 
 		
-	}
+}
 
 $content = <<<END
 
