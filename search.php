@@ -10,9 +10,6 @@ $keeperid = $_SESSION['keeperid'];
 if(isset($_GET['search']))
 {
 
-	if(!empty($_GET))
-	{
-		
 		
 			$query = <<<END
 
@@ -27,22 +24,35 @@ END;
 		
 		while($row = $result->fetch_object())
 		{
-			$keeperid = $row->keeperid;
-			$users = <<<END
+
+			$keeperid2 = $row->keeperid;
+
+			if($keeperid2 == $keeperid){
+				$users = <<<END
 			
-			Användarnamn: <a href="profile.php?keeperid={$keeperid}">{$row->keepername}</a><br>
+			Användarnamn: <a href="profile.php">{$row->keepername}</a><br>
 			Namn: {$row->fname}{$row->lname}<br>
 			Email: {$row->email}<br>
 END;
+				
+			}
+			else
+			{
+					$users = <<<END
+			
+			Användarnamn: <a href="profile.php?keeperid={$keeperid2}">{$row->keepername}</a><br>
+			Namn: {$row->fname}{$row->lname}<br>
+			Email: {$row->email}<br>
+END;
+
+			}
+
 		}
 	}
 	else
 	{
 		$feedback = "<p class=\"feedback-yellow\">Det finns ingen i databasen med det användarnamnet</p>";
 	}
-	}
-
-		
 }
 
 $content = <<<END
