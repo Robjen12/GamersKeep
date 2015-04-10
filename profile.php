@@ -121,6 +121,7 @@ while($row = $res->fetch_object())
 		<a href="genre.php?grid={$grid}">{$title}</a></br>
 END;
 }
+
 }
 $content = <<<END
 
