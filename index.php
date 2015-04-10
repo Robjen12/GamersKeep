@@ -98,7 +98,7 @@ else
 }*/
 $content = <<<END
 				
-			<div class="container">
+			
 				<div class="row margin-top-100">
 			
 					<div class="col-md-4 col-sm-4 panel panel-default">
@@ -133,20 +133,24 @@ $content = <<<END
 
 
 
-					<div class="col-md-3 col-sm-3 ads pull-right">
+					<div class="col-md-3 col-sm-3 pull-right profil-right">
 
-					<!-- Reklam karusel -->
-					
-	  					<img src="http://placehold.it/200x350">
-	  					
-					</div><!-- reklam kolumn -->
-					
+							<div class="ads profil-right pull-right">
 
-				</div><!-- row -->
+		  					
+							<!-- Reklam karusel -->
+							
+		  						<img src="http://placehold.it/290x290" class="ads">
 
+		  						<br><br><br>
 
+		  						<img src="http://placehold.it/290x290" class="ads">
 
-				<div class="row">
+		  					
+							</div><!-- reklam kolumn -->
+
+						</div><!-- col -->				
+				
 					<div class="col-md-4 col-sm-4 panel panel-default">
 
 		  					<div class="panel-heading">Topplista recensionerna</div>
@@ -160,10 +164,7 @@ $content = <<<END
 				  						  			
 			  					</div><!-- panel body -->
 
-							</div><!-- panel heading -->
-
-							
-						
+							</div><!-- panel heading -->						
 
 						<div class="col-md-4 col-sm-4 panel panel-default pull-left">
 
