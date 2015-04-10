@@ -42,6 +42,7 @@ a.text-primary:hover {
   background-color: #993300;
 }
 
+/* roströd knapp */
 .btn-danger {
   color: #fff;
   background-color: #993300;
@@ -55,14 +56,33 @@ a.text-primary:hover {
 .btn-danger.active,
 .open > .dropdown-toggle.btn-danger {
   color: #fff;
-  background-color: #c9302c;
-  border-color: #ac2925;
+  background-color: #cc3300;
+  border-color: #ff6600;
 }
 .btn-danger:active,
 .btn-danger.active,
 .open > .dropdown-toggle.btn-danger {
   background-image: none;
 }
+
+/* gul knapp */
+.btn-warning {
+  color: #fff;
+  background-color: #cc6600;
+  border-color: #d58512;
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning.focus,
+.btn-warning:active,
+.btn-warning.active,
+.open > .dropdown-toggle.btn-warning {
+  color: #fff;
+  background-color: #e48900;
+  border-color: #eea236;
+}
+
 
 .login-cloud {
   margin-right: auto;
