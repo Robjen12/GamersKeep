@@ -123,14 +123,15 @@ while($row = $res->fetch_object())
 END;
 }
 }
-$content .= <<<END
+$content = <<<END
 
 		
+
 				<div class="row margin-top-100">
 			
 					<div class="col-md-3 col-sm-3 pull-left">
 
-	  					<div class="row profil">
+	  					<div class="row profil margin-left-15px">
 	  					
 	  						<div class="column-left-top">
 	  						<br>
@@ -169,6 +170,7 @@ $content .= <<<END
 
 	  					<div class="panel-heading panel-heading-560px">Om mig <img src="images/pen.png" width="30px" class="pull-right"></div>
 
+
 		  					<div class="panel-body">
 
 			  					<p>Namn: {$profilename} {$profilelastname}</p> 
@@ -178,13 +180,23 @@ $content .= <<<END
 
 						</div><!-- panel heading -->
 
-						<div class="col-md-3 col-sm-3 ads">
+						<div class="col-md-3 col-sm-3 pull-right profil-right">
 
-					<!-- Reklam karusel -->
-					
-	  					<img src="http://placehold.it/200x350">
+						<div class="ads profil-right pull-right">
+
 	  					
-					</div><!-- reklam kolumn -->
+						<!-- Reklam karusel -->
+						
+	  						<img src="http://placehold.it/290x290" class="ads">
+
+	  						<br><br><br>
+
+	  						<img src="http://placehold.it/290x290" class="ads">
+
+	  					
+						</div><!-- reklam kolumn -->
+
+						</div><!-- col -->
 					
 
 					<div class="col-md-3 col-sm-3 panel-width-330px panel panel-default pull-left">
@@ -216,7 +228,13 @@ $content .= <<<END
 					</div><!-- kolumn 2 -->
 
 				</div><!-- row -->
+
+
+  
+  
 END;
+
+
 
 echo $header;
 echo $content;

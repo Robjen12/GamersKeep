@@ -29,7 +29,6 @@ $header = <<<END
 		<meta charset="utf-8">
 	</head>
 	<body>
-	<div class="container-fluid">
 		<div id="header" class="bg-gradient-black navbar navbar-default navbar-fixed-top">
 			
 			<!-- Meny left with logo -->
@@ -74,9 +73,10 @@ $header = <<<END
 			</div><!-- -->
 			
 		</div> <!-- header -->
+
 END;
 $content = <<<END
-
+		<div class="container-fluid">
 END;
 $footer = <<<END
 		<div id="footer" class="bg-gradient-brown">

@@ -206,12 +206,6 @@ body {
 .margin-right-50px{
 	margin-right: 3em;
 }
-/*.margin-horizontal-zero{
-  margin-left: -15px;
-  margin-right: -15px;
-}
-*/
-
 .margin-horizontal-zero{
   margin-left: -15px;
   margin-right: -15px;
@@ -260,6 +254,7 @@ body {
 }
 .ads > img {
     border-radius: 3px;
+    width:290px;
 }
 .panel-default > .panel-heading {
   border-color: #ddd;
@@ -349,9 +344,16 @@ body {
   width: 200px;
 }
 
-/ Profil torn /
+/* Profil torn */
 
 .profil {
+
+  text-align: center;
+}
+
+.profil-right {
+  margin-right: 10px;
+  margin-left: auto;
 
   text-align: center;
 }
@@ -410,4 +412,14 @@ body {
     padding-right: 5px;
     margin: 0 auto;
   
+}
+
+.margin-left-15px {
+  margin-left: 15px;
+  margin-right: auto;
+}
+
+.margin-right-15px{
+  margin-right: 0px;
+  margin-left: auto;
 }
