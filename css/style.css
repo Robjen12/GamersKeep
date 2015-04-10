@@ -10,6 +10,13 @@ h2.login-font
     font-family: 'Quicksand';
 }
 
+p {
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+}
+
 .text-black {
   color: black;
 }
@@ -21,6 +28,27 @@ h2.login-font
 }
 
 /* sätter länk färger till roströd */
+
+/* unvisited link */
+a:link {
+    color: #993300;
+}
+
+/* visited link */
+a:visited {
+    color: #663300;
+}
+
+/* mouse over link */
+a:hover {
+    color: #000;
+}
+
+/* selected link */
+a:active {
+    color: #cc3300;
+}
+
 a.text-primary {
   color: #993300;
 }
@@ -453,7 +481,7 @@ body {
 }
 
 .profil-right {
-  margin-right: 10px;
+  margin-right: 15px;
   margin-left: auto;
 
   text-align: center;

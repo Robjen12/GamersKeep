@@ -215,7 +215,7 @@ $content = <<<END
 
 		  					<div class="panel-body">
  
-		  						{$latestactivity}
+		  						<a href class="text-primary">{$latestactivity}</a>
 
 		  					</div>
 						

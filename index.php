@@ -101,13 +101,27 @@ $content = <<<END
 			
 				<div class="row margin-top-100">
 			
-					<div class="col-md-4 col-sm-4 panel panel-default">
+					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
 
 	  					<div class="panel-heading">Topplista guider</div>
 
 		  					<div class="panel-body">
 
-			  					<p>Toplist innehall.</p> <p>But I must explain to you how all this mistaken idea of denouncing pleasure
+		  						<ul class="media-list">
+  									<li class="media">
+    									<div class="media-left">
+      										<a href="#">
+        									<img class="media-object" src="http://placehold.it/64x64" class="ads" alt="...">
+      										</a>
+    									</div>
+    									<div class="media-body">
+      										<h4 class="media-heading">Media heading</h4>
+      										...
+    									</div>
+  									</li>
+								</ul>
+
+			  					<p>guider 1</p> <p>But I must explain to you how all this mistaken idea of denouncing pleasure
 				  					and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of
 				  					the great explorer of the truth, the master-builder of human happiness.</p>
 				  					<p> Master-builder without using THE KRAGGLE!</p>
@@ -124,9 +138,10 @@ $content = <<<END
 	  					<div class="panel-heading">Senaste guiderna</div>
 
 		  					<div class="panel-body">
+		  						<p>
 
 		  						{$latestguide}
-
+		  						</p>
 		  					</div>
 						
 						</div><!-- panel heading -->

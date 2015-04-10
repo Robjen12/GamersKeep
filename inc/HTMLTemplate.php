@@ -20,13 +20,24 @@ $header = <<<END
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>GamersKeep - Where Gamers Meet</title>
-
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/style.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<!-- Satter tecken till utf-8 sa svenska tecken visas ratt -->
 		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Gamers Keep - Där Gamers Möts</title>
+
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<!-- gamerskeep style -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    	<!--[if lt IE 9]>
+      	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		
 	</head>
 	<body>
 		<div id="header" class="bg-gradient-black navbar navbar-default navbar-fixed-top">
@@ -39,17 +50,15 @@ $header = <<<END
 			<!-- Meny center -->
 			<div class="col-md-4 column-center">
 
-			<p>Inloggad som: {$_SESSION["keepername"]}{$adminText}
+				<p>Inloggad som: {$_SESSION["keepername"]}{$adminText}
 
+				<form action="search.php" method="GET">
+				<input type="text" id="searchfield" name="search" placeholder="Sök..">
+				<input type="Submit" value="Sök">
+				</form>
 
-			<form action="search.php" method="GET">
-			<input type="text" id="searchfield" name="search" placeholder="Sök..">
-			<input type="Submit" value="Sök">
-			</form>
+			</div><!-- column center -->
 
-
-
-			</div>
 			<!-- Meny right -->
 			<div class="col-md-4 column-right pull-right margin-right-zero">
 			
