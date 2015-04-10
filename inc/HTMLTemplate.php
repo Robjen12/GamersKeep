@@ -21,6 +21,7 @@ $header = <<<END
 <html>
 	<head>
 		<title>GamersKeep - Where Gamers Meet</title>
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -72,10 +73,10 @@ $header = <<<END
 			</div><!-- -->
 			
 		</div> <!-- header -->
+
 END;
 $content = <<<END
-<div class="row">
-</div>
+		<div class="container-fluid">
 END;
 $footer = <<<END
 		<div id="footer" class="bg-gradient-brown">
@@ -105,6 +106,7 @@ $footer = <<<END
 			</div><!-- -->
 			
 		</div> <!-- footer -->
+	</div><!-- container -->
 	</body>
 </html>
 END;

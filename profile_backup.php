@@ -7,7 +7,6 @@ $keeperid = $_SESSION['keeperid'];
 $profilename = '';
 $profileabout = '';
 $button = "";
-$latestactivity = "";
 
 if(!empty($_GET))
 {
@@ -59,24 +58,22 @@ END;
 
 // Lägger till "lägg till vän" knapp om man är inne på en annan användares profil
 $button = <<<END
-	<form method="post">
 	<button type="submit" name="keeperfr" value="Lägg till">Lägg till fläskesvålsvän</button>
-	</form>
 END;
 
-// Skickar in vänförfrågan i databasen
 if(isset($_POST['keeperfr'])){
 
 	$query = <<<END
 	INSERT INTO keeperfriend(keeperid, keeperid2, accept) 
-	VALUES ('{$keeperid}', '{$keeperid2}', '');
+	VALUES ('{$keeperid}', '{$keeperid2}', );
 END;
-	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 
 }
 
 }
+
 else
 {
 	
@@ -85,7 +82,7 @@ $profileinfo = <<<END
 
 	SELECT keepername, fname, lname, about, other
 	FROM user
-	WHERE keeperid = '{$keeperid}';
+	WHERE keepername = '{$keepername}';
 END;
 $res = $mysqli->query($profileinfo) or die();
 
@@ -125,16 +122,15 @@ while($row = $res->fetch_object())
 END;
 }
 }
-
 $content = <<<END
 
 		
-
+			<div class="container">
 				<div class="row margin-top-100">
 			
 					<div class="col-md-3 col-sm-3 pull-left">
 
-	  					<div class="row profil margin-left-15px">
+	  					<div class="row profil">
 	  					
 	  						<div class="column-left-top">
 	  						<br>
@@ -171,8 +167,7 @@ $content = <<<END
 						
 						<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default pull-left">
 
-	  					<div class="panel-heading panel-heading-560px">Om mig </div>
-
+	  					<div class="panel-heading panel-heading-560px">Om mig <img src="images/pen.png" width="30px" class="pull-right"></div>
 
 		  					<div class="panel-body">
 
@@ -183,23 +178,13 @@ $content = <<<END
 
 						</div><!-- panel heading -->
 
-						<div class="col-md-3 col-sm-3 pull-right profil-right">
+						<div class="col-md-3 col-sm-3 ads">
 
-						<div class="ads profil-right pull-right">
-
+					<!-- Reklam karusel -->
+					
+	  					<img src="http://placehold.it/200x350">
 	  					
-						<!-- Reklam karusel -->
-						
-	  						<img src="http://placehold.it/290x290" class="ads">
-
-	  						<br><br><br>
-
-	  						<img src="http://placehold.it/290x290" class="ads">
-
-	  					
-						</div><!-- reklam kolumn -->
-
-						</div><!-- col -->
+					</div><!-- reklam kolumn -->
 					
 
 					<div class="col-md-3 col-sm-3 panel-width-330px panel panel-default pull-left">
@@ -231,7 +216,7 @@ $content = <<<END
 					</div><!-- kolumn 2 -->
 
 				</div><!-- row -->
-
+			</div><!-- container -->
 
   
   

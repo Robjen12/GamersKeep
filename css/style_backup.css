@@ -2,13 +2,13 @@
 	background-color: #993300;
 }
 .login-picture{
-	background: url("../images/Registrering.jpg") no-repeat center center fixed;
+	background: url(../images/Registrering.jpg) no-repeat center center fixed;
 	background-size: 100%;
 }
 .logo{
 	background-size: 50%;
 }
-@import url("http://fonts.googleapis.com/css?family=Quicksand:400,700");
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
 .login-font
 {
   font-family: 'Quicksand';
@@ -210,7 +210,6 @@ body {
   margin-left: -15px;
   margin-right: -15px;
 }
-
 .margin-left-50px{
 	margin-left: 3em;
 }
@@ -254,7 +253,6 @@ body {
 }
 .ads > img {
     border-radius: 3px;
-    width:290px;
 }
 .panel-default > .panel-heading {
   border-color: #ddd;
@@ -344,23 +342,15 @@ body {
   width: 200px;
 }
 
-/* Profil torn */
+/ Profil torn /
 
 .profil {
 
   text-align: center;
 }
 
-.profil-right {
-  margin-right: 10px;
-  margin-left: auto;
-
-  text-align: center;
-}
-
 .profil > .column-left-top {
   height: 74px;
-  width: 290px;
   background-image: url("../images/profil_torn1.png");
   background-position: top center;
   background-size: 290px auto; 
@@ -372,9 +362,6 @@ body {
   padding-top: 40px;
 }
 
-.margin-left-15px {
-  margin-left: 0;
-}
 .profil > .column-left-center {
   height: 241px;
   width: 290px;
@@ -412,14 +399,4 @@ body {
     padding-right: 5px;
     margin: 0 auto;
   
-}
-
-.margin-left-15px {
-  margin-left: 15px;
-  margin-right: auto;
-}
-
-.margin-right-15px{
-  margin-right: 0px;
-  margin-left: auto;
 }
