@@ -58,22 +58,24 @@ END;
 
 // Lägger till "lägg till vän" knapp om man är inne på en annan användares profil
 $button = <<<END
+	<form method="post">
 	<button type="submit" name="keeperfr" value="Lägg till">Lägg till fläskesvålsvän</button>
+	</form>
 END;
 
+// Skickar in vänförfrågan i databasen
 if(isset($_POST['keeperfr'])){
 
 	$query = <<<END
 	INSERT INTO keeperfriend(keeperid, keeperid2, accept) 
-	VALUES ('{$keeperid}', '{$keeperid2}', );
+	VALUES ('{$keeperid}', '{$keeperid2}', '');
 END;
-$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 
 }
 
 }
-
 else
 {
 	
@@ -82,7 +84,7 @@ $profileinfo = <<<END
 
 	SELECT keepername, fname, lname, about, other
 	FROM user
-	WHERE keepername = '{$keepername}';
+	WHERE keeperid = '{$keeperid}';
 END;
 $res = $mysqli->query($profileinfo) or die();
 
@@ -122,6 +124,7 @@ while($row = $res->fetch_object())
 END;
 }
 }
+
 $content = <<<END
 
 		
