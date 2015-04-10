@@ -7,7 +7,6 @@ $keeperid = $_SESSION['keeperid'];
 $profilename = '';
 $profileabout = '';
 $button = "";
-$latestactivity = "";
 
 if(!empty($_GET))
 {
@@ -123,9 +122,10 @@ while($row = $res->fetch_object())
 END;
 }
 }
-$content .= <<<END
+$content = <<<END
 
 		
+			<div class="container">
 				<div class="row margin-top-100">
 			
 					<div class="col-md-3 col-sm-3 pull-left">
@@ -216,7 +216,13 @@ $content .= <<<END
 					</div><!-- kolumn 2 -->
 
 				</div><!-- row -->
+			</div><!-- container -->
+
+  
+  
 END;
+
+
 
 echo $header;
 echo $content;

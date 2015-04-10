@@ -123,7 +123,7 @@ while($row = $res->fetch_object())
 END;
 }
 }
-$content .= <<<END
+$content = <<<END
 
 		
 				<div class="row margin-top-100">

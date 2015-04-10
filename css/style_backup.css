@@ -2,13 +2,13 @@
 	background-color: #993300;
 }
 .login-picture{
-	background: url("../images/Registrering.jpg") no-repeat center center fixed;
+	background: url(../images/Registrering.jpg) no-repeat center center fixed;
 	background-size: 100%;
 }
 .logo{
 	background-size: 50%;
 }
-@import url("http://fonts.googleapis.com/css?family=Quicksand:400,700");
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
 .login-font
 {
   font-family: 'Quicksand';
@@ -206,17 +206,10 @@ body {
 .margin-right-50px{
 	margin-right: 3em;
 }
-/*.margin-horizontal-zero{
-  margin-left: -15px;
-  margin-right: -15px;
-}
-*/
-
 .margin-horizontal-zero{
   margin-left: -15px;
   margin-right: -15px;
 }
-
 .margin-left-50px{
 	margin-left: 3em;
 }
@@ -358,7 +351,6 @@ body {
 
 .profil > .column-left-top {
   height: 74px;
-  width: 290px;
   background-image: url("../images/profil_torn1.png");
   background-position: top center;
   background-size: 290px auto; 
@@ -370,9 +362,6 @@ body {
   padding-top: 40px;
 }
 
-.margin-left-15px {
-  margin-left: 0;
-}
 .profil > .column-left-center {
   height: 241px;
   width: 290px;
