@@ -80,7 +80,7 @@ else
 // Hämtar ut om användaren
 $profileinfo = <<<END
 
-	SELECT fname, lname, about, other
+	SELECT keepername, fname, lname, about, other
 	FROM user
 	WHERE keepername = '{$keepername}';
 END;
