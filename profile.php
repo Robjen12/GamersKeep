@@ -121,7 +121,6 @@ while($row = $res->fetch_object())
 		<a href="genre.php?grid={$grid}">{$title}</a></br>
 END;
 }
-
 }
 $content = <<<END
 
@@ -168,7 +167,7 @@ $content = <<<END
 						
 						<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default pull-left">
 
-	  					<div class="panel-heading panel-heading-560px">Om mig <img src="images/pen.png" width="30px" class="pull-right"></div>
+	  					<div class="panel-heading panel-heading-560px">Om mig </div>
 
 		  					<div class="panel-body">
 
