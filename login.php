@@ -84,7 +84,7 @@ $content = <<<END
 				<div class="col-md-2"></div>
 				<div class="col-md-3 login-cloud quicksand text-bold text-16px">
 					<div class="login">
-						<h2 class="quicksand text-bold">Gå ind i Keepet</h2>
+						<h2 class="quicksand text-bold">Enter the Keep</h2>
 						{$feedback}
 						<form action="login.php" method="post" id="login-form" class="quicksand">
 							Användarnamn<br>
