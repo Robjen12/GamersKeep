@@ -115,7 +115,7 @@ $footer = <<<END
 			</div><!-- -->
 			
 		</div> <!-- footer -->
-	</div><!-- container -->
+	</div><!-- container fluid -->
 	</body>
 </html>
 END;

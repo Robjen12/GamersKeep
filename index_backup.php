@@ -202,11 +202,7 @@ $content = <<<END
   
 END;
 
-//Stänger resultaten
-$res->close();
 
-//Stänger ned uppkoblingen med databasen
-$mysqli->close();
 
 echo $header;
 echo $content;

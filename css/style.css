@@ -1,4 +1,15 @@
 @import url("http://fonts.googleapis.com/css?family=Quicksand:400,700");
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 h2.login-font
 {
   font-family: 'Quicksand';
@@ -337,6 +348,22 @@ body {
   margin-right: -15px;
 }
 
+.margin-horizontal-25px{
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.margin-left-25px{
+  margin-left: 25px;
+  margin-right: auto;
+}
+
+
+.margin-right-25px{
+  margin-right: 25px;
+  margin-left: auto;
+}
+
 .margin-left-50px{
 	margin-left: 3em;
 }
@@ -362,8 +389,9 @@ body {
 }
 .panel {
     margin-top: 5px;
+    margin-bottom: 10px;
     width: 350px;
-    margin-left: 100px;
+  /*  margin-left: 100px; */
     padding: 0 10px 0;
     position: relative;
     color: #111;
@@ -372,9 +400,24 @@ body {
     border-radius: 3px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.1);
 }
+
+.panel {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 350px;
+  /*  margin-left: 100px; */
+    padding: 0 10px 0;
+    position: relative;
+    color: #111;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
 .panel-default {
   border-color: #ddd;
-  margin-left: 25px;
+/*  margin-left: 25px; */
   min-height: 300px;
   height: auto;
 }
@@ -473,6 +516,14 @@ body {
   width: 200px;
 }
 
+.panel-width-240px {
+  width: 340px;
+}
+
+.panel-default > .panel-heading-250px {
+  width: 350px;
+}
+
 /* Profil torn */
 
 .profil {
@@ -502,7 +553,7 @@ body {
 }
 
 .margin-left-15px {
-  margin-left: 0;
+  margin-left: 15px;
 }
 .profil > .column-left-center {
   height: 241px;
@@ -549,7 +600,7 @@ body {
 }
 
 .margin-right-15px{
-  margin-right: 0px;
+  margin-right: 15px;
   margin-left: auto;
 }
 
@@ -557,3 +608,36 @@ body {
 .form-control {
   width: 220px;
 }
+
+/* nytt grid-system */
+
+.index-left {
+  background-color: yellow;
+}
+
+.wrapper {
+  .make-row();
+}
+
+.content-left {
+  .make-lg-column(4);
+width: 30%;
+/* background-color: red; */
+}
+
+.content-center {
+  .make-lg-column(4);
+width: 30%;
+/*  background-color: green; */
+
+
+}
+.content-right {
+  .make-lg-column(4);
+width: 30%;
+/*  background-color: yellow; */
+
+/*  .make-lg-column-offset(1); */
+}
+
+
