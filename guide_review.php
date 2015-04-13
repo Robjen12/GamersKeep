@@ -6,7 +6,7 @@ include_once("inc/HTMLTemplate.php");
 $table = "guidereviewinfo";
 $keeper = $_SESSION['keeperid'];
 $feedback = "";
-
+$admindelete = "";
 
 	if(!empty($_POST))
 	{
@@ -47,6 +47,7 @@ END;
 				 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 			}
+			$feedback = "<p class=\"feedback-yellow\">Inlägget har publicerats</p>";
 		}
 
 		else if(isset($_POST['review']))
@@ -77,6 +78,7 @@ END;
 				$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 			}
+			$feedback = "<p class=\"feedback-yellow\">Inlägget har publicerats</p>";
 		}
 	}
 
