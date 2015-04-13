@@ -41,6 +41,11 @@ END;
 
 				 $query = <<<END
 
+				 	INSERT INTO genreguidereview(grid, genretype)
+				 	VALUES (LAST_INSERT_ID, )
+END;
+				 $query = <<<END
+
 				 	INSERT INTO userguidereview(grid, keeperid)
 				 	VALUES (LAST_INSERT_ID(), '{$keeper}');
 END;
@@ -83,6 +88,27 @@ END;
 	}
 
 
+$query = <<<END
+
+ 	SELECT * FROM genre
+
+END;
+ $result = $mysqli->query($query) or die();
+
+$dropdown = '<select name="genretype">';
+
+while($row = $result->fetch_assoc())
+{
+ $genretype = $row['genretype'];
+ 
+ $dropdown .= <<<END
+ <option value="{$genretype}">{$genretype}</option>
+END;
+
+}
+$dropdown .= '</select>';
+
+
 $content = <<<END
 
 		<head>
@@ -101,6 +127,8 @@ $content = <<<END
 										<input type="radio" id="guidecheck" name="guide" value="Guide">Guide
 										<input type="radio" id="reviewcheck" name="review" value="Review">Recension</br></br>
 										{$feedback}
+										<label for="genretype">Genre</label><br>
+										{$dropdown}<br><br>
 										<label for="information">Innehållet:</label>
 										<textarea id="nicEdit" name="nicEdit" cols="80" rows="15"></textarea></br>
 										<label for="grade" id="gradescale">Betyg (1-5)</label></br>
