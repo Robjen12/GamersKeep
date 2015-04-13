@@ -56,32 +56,35 @@ END;
 }
 
 }
-/*
+
+/*$query = <<<END
+
+	SELECT userclick.keeperid, userclick.grid, guidereviewinfo.title, guidereviewinfo.grid, guidereviewinfo.grade, guidereviewinfo.text, COUNT(*)
+	FROM userclick, guidereviewinfo
+	WHERE userclick.grid = guidereviewinfo.grid
+	ORDER BY userclick.keeperid DESC
+	LIMIT 5;
+END;*/
 $query = <<<END
 
-	SELECT COUNT('keeperid') FROM userclick
-	WHERE grid = '{$grid}'
-	ORDER BY keeperid DESC
+	SELECT userclick.keeperid, userclick.grid, guidereviewinfo.title, guidereviewinfo.grid, guidereviewinfo.grade, guidereviewinfo.text, COUNT(userclick.grid)
+	FROM userclick
+	INNER JOIN guidereviewinfo
+	ON userclick.grid = guidereviewinfo.grid
+	GROUP BY userclick.grid
+	ORDER BY userclick.grid DESC
 	LIMIT 5;
 END;
+
 $res = $mysqli->query($query);
 
-$query = <<<END
-
-	SELECT  grid, title, text, timestamp, grade
-	FROM guidereviewinfo
-
-END;
-
-$res = $mysqli->query($query) or die();
 while($row = $res->fetch_object())
 {
+	
 	$grid 	= $row->grid;
 	$title	= utf8_decode(htmlspecialchars($row->title));
 	$text 	= utf8_decode(htmlspecialchars($row->text));
 	$grade  = $row->grade;
-	$date 	= strtotime($row->timestamp);
-	$date	= date("d M Y H:i", $date);
 
 if($grade == NULL)
 {
@@ -93,9 +96,13 @@ END;
 }
 else
 {
+$toplistreview .= <<<END
 
+		<a href="genre.php?grid={$grid}">{$title}</a></br>
+			<i>{$text}</i><br><br>
+END;
 }
-}*/
+}
 $content = <<<END
 				
 			<div class="container">
@@ -107,10 +114,7 @@ $content = <<<END
 
 		  					<div class="panel-body">
 
-			  					<p>Toplist innehall.</p> <p>But I must explain to you how all this mistaken idea of denouncing pleasure
-				  					and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of
-				  					the great explorer of the truth, the master-builder of human happiness.</p>
-				  					<p> Master-builder without using THE KRAGGLE!</p>
+			  					{$toplistguide}
 
 		  					</div><!-- panel body -->
 
@@ -153,10 +157,7 @@ $content = <<<END
 
 			  					<div class="panel-body">
 
-				  					<p>Toplist innehall.</p> <p>But I must explain to you how all this mistaken idea of denouncing pleasure
-				  					and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of
-				  					the great explorer of the truth, the master-builder of human happiness.</p>
-				  					<p> Master-builder without using THE KRAGGLE!</p>
+				  					{$toplistreview}
 				  						  			
 			  					</div><!-- panel body -->
 
