@@ -81,6 +81,16 @@ END;
 				$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 
+				$genre = $_POST["genretype"];
+				 
+				 $query = <<<END
+
+				 	INSERT INTO genreguidereview(grid, genretype)
+				 	VALUES (LAST_INSERT_ID(), '{$genre}')
+END;
+				$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+		        
 	        	$query = <<<END
 
 	        		INSERT INTO userguidereview(grid, keeperid)
