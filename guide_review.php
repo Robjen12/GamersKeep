@@ -8,6 +8,7 @@ $keeper = $_SESSION['keeperid'];
 $feedback = "";
 $admindelete = "";
 
+
 	if(!empty($_POST))
 	{
 
@@ -39,11 +40,16 @@ END;
 				 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 
+				 $genre = $_POST["genretype"];
+				 
 				 $query = <<<END
 
 				 	INSERT INTO genreguidereview(grid, genretype)
-				 	VALUES (LAST_INSERT_ID, )
+				 	VALUES (LAST_INSERT_ID(), '{$genre}')
 END;
+				$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+		        
 				 $query = <<<END
 
 				 	INSERT INTO userguidereview(grid, keeperid)
@@ -99,10 +105,10 @@ $dropdown = '<select name="genretype">';
 
 while($row = $result->fetch_assoc())
 {
- $genretype = $row['genretype'];
- 
- $dropdown .= <<<END
- <option value="{$genretype}">{$genretype}</option>
+	 $genretype = $row['genretype'];
+	 
+	 $dropdown .= <<<END
+	 	<option value="{$genretype}">{$genretype}</option>
 END;
 
 }
