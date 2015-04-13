@@ -18,8 +18,7 @@ $text	= htmlspecialchars($text);
 
 $query = <<<END
 
-	SELECT  grid, title, text, timestamp, grade
-	FROM guidereviewinfo
+	SELECT * FROM guidereviewinfo
 	ORDER BY timestamp DESC
 	LIMIT 5;
 
@@ -48,30 +47,31 @@ if($grade == NULL){
 END;
 }
 }
+
 $query = <<<END
 
-	SELECT  grid, title, text, timestamp, grade
-	FROM guidereviewinfo
+	SELECT * FROM guidereviewinfo
+	WHERE grade > 0
 	ORDER BY timestamp DESC
 	LIMIT 5;
 
 END;
 
-$res = $mysqli->query($query) or die();
+$res2 = $mysqli->query($query) or die();
 
 date_default_timezone_set("Europe/Stockholm");
 
 
-while($row = $res->fetch_object())
+while($row2 = $res2->fetch_object())
 {
-	$grid 	= $row->grid;
-	$title	= utf8_decode(htmlspecialchars($row->title));
-	$text 	= utf8_decode(htmlspecialchars($row->text));
-	$grade  = $row->grade;
-	$date 	= strtotime($row->timestamp);
+	$grid 	= $row2->grid;
+	$title	= utf8_decode(htmlspecialchars($row2->title));
+	$text 	= utf8_decode(htmlspecialchars($row2->text));
+	$grade  = $row2->grade;
+	$date 	= strtotime($row2->timestamp);
 	$date	= date("d M Y H:i", $date);
 
-if($grade > 0){
+if($grade != NULL){
 	$latestreview .= <<<END
 
 				<a href="genre.php?grid={$grid}">{$title}</a></br>
