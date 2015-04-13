@@ -41,7 +41,7 @@ while($row = $res->fetch_object())
 if($grade == NULL){
 	$latestguide .= <<<END
 	
-			<a href="genre.php?grid={$grid}">{$title}</a></br>
+			<a class="text-bold" href="genre.php?grid={$grid}">{$title}</a></br>
 			<i>{$text}</i><br><br>	
 			
 END;
@@ -126,11 +126,11 @@ $content = <<<END
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
-								<div class="panel-heading panel-heading-250px">Topplista recensioner</div>
+								<div class="panel-heading panel-heading-250px">Senaste guider</div>
 
 				  					<div class="panel-body">
 
-				  							<p>guider 1</p>
+				  							<p>{$latestguide}</p>
 				  					</div><!-- panel body -->
 
 								</div><!-- panel heading -->
@@ -161,11 +161,11 @@ $content = <<<END
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
-								<div class="panel-heading panel-heading-250px">Senaste guider</div>
+								<div class="panel-heading panel-heading-250px">Topplista recensioner</div>
 
 				  					<div class="panel-body">
 
-				  							<p>guider 1</p>
+				  							<p>Topplista recensioner</p>
 				  					</div><!-- panel body -->
 
 								</div><!-- panel heading -->
@@ -181,7 +181,7 @@ $content = <<<END
 
 				  					<div class="panel-body">
 
-				  							<p>guider 1</p>
+				  							<p>{$latestreview}</p>
 				  					</div><!-- panel body -->
 
 								</div><!-- panel heading -->
