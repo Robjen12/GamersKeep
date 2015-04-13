@@ -7,6 +7,7 @@ $keeper = $_SESSION['keeperid'];
 $grid = "";
 $latestguide = "";
 $latestreview = "";
+$toplistreview = "";
 $toplistguide = "";
 $title = "";
 $text = "";
@@ -46,8 +47,31 @@ if($grade == NULL){
 			
 END;
 }
-else
+}
+$query = <<<END
+
+	SELECT  grid, title, text, timestamp, grade
+	FROM guidereviewinfo
+	ORDER BY timestamp DESC
+	LIMIT 5;
+
+END;
+
+$res = $mysqli->query($query) or die();
+
+date_default_timezone_set("Europe/Stockholm");
+
+
+while($row = $res->fetch_object())
 {
+	$grid 	= $row->grid;
+	$title	= utf8_decode(htmlspecialchars($row->title));
+	$text 	= utf8_decode(htmlspecialchars($row->text));
+	$grade  = $row->grade;
+	$date 	= strtotime($row->timestamp);
+	$date	= date("d M Y H:i", $date);
+
+if($grade > 0){
 	$latestreview .= <<<END
 
 				<a href="genre.php?grid={$grid}">{$title}</a></br>
@@ -55,16 +79,9 @@ else
 END;
 }
 
+
 }
 
-/*$query = <<<END
-
-	SELECT userclick.keeperid, userclick.grid, guidereviewinfo.title, guidereviewinfo.grid, guidereviewinfo.grade, guidereviewinfo.text, COUNT(*)
-	FROM userclick, guidereviewinfo
-	WHERE userclick.grid = guidereviewinfo.grid
-	ORDER BY userclick.keeperid DESC
-	LIMIT 5;
-END;*/
 $query = <<<END
 
 	SELECT userclick.keeperid, userclick.grid, guidereviewinfo.title, guidereviewinfo.grid, guidereviewinfo.grade, guidereviewinfo.text, COUNT(userclick.grid)
@@ -105,7 +122,7 @@ END;
 }
 $content = <<<END
 				
-			<div class="container">
+
 				<div class="row margin-top-100">
 			
 					<div class="col-md-4 col-sm-4 panel panel-default">
@@ -181,7 +198,7 @@ $content = <<<END
 						</div>
 					</div>
 				</div>
-			</div><!-- container -->
+	
 
   
   
