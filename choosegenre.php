@@ -26,10 +26,13 @@ if(!empty($_GET))
 	ORDER BY timestamp DESC
 	LIMIT 5;
 END;
+
 	$result = $mysqli->query($query) or die();
 
+	date_default_timezone_set("Europe/Stockholm");
 
-	while($row = $result->fetch_object()){
+	while($row = $result->fetch_object())
+	{
 		
 		$grid = $row->grid;
 		$title	= utf8_decode(htmlspecialchars($row->title));
@@ -48,7 +51,36 @@ END;
 
 	}
 
+	$query = <<<END
 
+	SELECT * FROM guidereviewinfo, genreguidereview
+	WHERE grade > 0
+	AND genretype = '{$genretype}'
+	ORDER BY timestamp DESC
+	LIMIT 5;
+
+END;
+
+	$result = $mysqli->query($query) or die();
+
+	date_default_timezone_set("Europe/Stockholm");
+
+	while($row = $result->fetch_object())
+	{
+		$grid = $row->grid;
+		$title	= utf8_decode(htmlspecialchars($row->title));
+		$text 	= utf8_decode(htmlspecialchars($row->text));
+		$grade = $row->grade;
+		$date 	= strtotime($row->timestamp);
+		$date	= date("d M Y H:i", $date);
+		$genre = $row->genretype;	
+
+		$latestgenrereview .= <<<END
+
+			<a href="genre.php?grid={$grid}">{$title}</a></br>
+			{$text}<br><br>
+END;
+	}
 
 }
 
@@ -106,6 +138,7 @@ $content = <<<END
 
 			  					<div class="panel-body">
 
+									
 				  					
 				  						  			
 			  					</div><!-- panel body -->
@@ -121,6 +154,7 @@ $content = <<<END
 
 			  					<div class="panel-body">
 
+			  						{$latestgenrereview}
 			  						
 			  					</div>
 							
