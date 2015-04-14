@@ -10,6 +10,7 @@ $text = "";
 $grade = "";
 $genre = "";
 $latestgenreguide = "";
+$latestgenrereview = "";
 $title	= htmlspecialchars($title);
 $text	= htmlspecialchars($text);
 
@@ -155,7 +156,7 @@ $content = <<<END
 			  					<div class="panel-body">
 
 			  						{$latestgenrereview}
-			  						
+
 			  					</div>
 							
 						
