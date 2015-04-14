@@ -15,6 +15,38 @@ $grade = "";
 $title	= htmlspecialchars($title);
 $text	= htmlspecialchars($text);*/
 
+if(!empty($_GET))
+{
+
+	$genretype = isset($_GET['genretype']) & $_GET['genretype'] : "")
+
+	$query = <<<END
+	SELECT * FROM guidereviewinfo
+	INNER JOIN genreguidereview
+	ON guidereviewinfo.grid = genreguidereview.grid
+	WHERE genretype = '{$genretype}'
+	ORDER BY timestamp DESC;
+END;
+	$result = $mysqli->query($query) or die();
+
+	while($result->num_rows > 0){
+		$row = $result->fetch_object();
+		$grid = $row->grid;
+		$title =$row->title;
+		$text = $row->text;
+		$grade = $row->grade;
+		$genre = $row->genretype;
+
+	$latestgenreguide .= <<<END
+
+		<a href="choosegenre.php?grid={$grid}">{$title}</a>
+		{$text}
+
+END;
+
+	}
+
+}
 
 $content = <<<END
 				
