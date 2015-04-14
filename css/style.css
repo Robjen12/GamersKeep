@@ -423,3 +423,7 @@ body {
   margin-right: 0px;
   margin-left: auto;
 }
+.views{
+  float: right;
+  list-style: none;
+}

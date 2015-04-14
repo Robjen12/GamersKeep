@@ -104,7 +104,7 @@ if($result->num_rows > 0)
 
                 $toplistguide .=<<<END
                
-                <a href="genre.php?grid={$grid}">{$title}</a>{$row->counter}</br>
+                <a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$row->counter}</li></br>
                 <i>{$text}</i><br><br> 
 END;
         }
@@ -134,7 +134,7 @@ if($res->num_rows > 0){
 
 	$toplistreview .= <<<END
 
-		<a href="genre.php?grid={$grid}">{$title}</a>{$row->counter}</br>
+		<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$row->counter}</li></br>
 			<i>{$text}</i><br><br>
 END;
 
