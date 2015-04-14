@@ -64,28 +64,10 @@ $header = <<<END
 			
 				<!-- meny ikoner -->	
 				<a href="profile.php"><img src="images/profil2.png" class="img header-icons pull-right" alt="Profil"></a>
-
-				<div class="dropdown">
-  					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
-  					 aria-expanded="true"><img src="images/swords.png" class="img header-icons pull-right">
-
-  				</ul>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-  </ul>
-</div>
-				
-
+				<img src="images/swords.png" class="img header-icons pull-right">
 				<a href="guide_review.php"><img src="images/pen.png" class="img header-icons pull-right"></a>
-				
 				<a href="index.php"><img src="images/home.png" class="img header-icons pull-right"></a>
-				
 				<img src="images/search.png" class="img header-icons pull-right">
-
-
 				
 			</div><!-- meny right -->
 			<!-- Meny left row2 -->

@@ -1,6 +1,11 @@
 @import url("http://fonts.googleapis.com/css?family=Quicksand:400,700");
 @import url("http://fonts.googleapis.com/css?family=Droid+Sans:400,700");
 
+.show {
+  visibility: visible;
+}
+
+
 .row {
   margin-right: 0px;
   margin-left: 0px;
@@ -57,6 +62,34 @@ a:visited {
 /* mouse over link */
 a:hover {
     color: #000;
+}
+
+.dropdown-hover .a:hover {
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  visibility: visible;
+}
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  /*background-image: none; */
 }
 
 /* selected link */
