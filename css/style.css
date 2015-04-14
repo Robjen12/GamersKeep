@@ -16,6 +16,10 @@
   margin-right: auto;
 }
 
+li {
+  list-style-type: none;
+}
+
 h2.login-font
 {
   font-family: 'Quicksand';

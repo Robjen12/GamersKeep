@@ -60,18 +60,16 @@ $header = <<<END
 			</div><!-- column center -->
 
 			<!-- Meny right -->
-			<div class="col-md-4 column-right pull-right margin-right-zero nav nav-pills pull-right">
+			<div class="col-md-4 column-right pull-right margin-right-zero nav">
 			
-				<ul>
-					<li><a href="profile.php"><img src="images/profil2.png" class="img header-icons pull-right" alt="Profil">
-					</a>
-					</li>
-					<li class="li-icons"><a href="index.php"><img src="images/home.png" class="img header-icons pull-right"></a></li>
+				<ul class="dropdown-menu-right" role="menu">
+					<li><a href="#"><img src="images/search.png" class="img header-icons pull-right"></a></li>
+					<li><a href="index.php"><img src="images/home.png" class="img header-icons pull-right"></a></li>
 					<li><a href="guide_review.php"><img src="images/pen.png" class="img header-icons pull-right"></a></li>
 					
 						<div class="dropdown">
 		  					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
-		  					 aria-expanded="true"><img src="images/swords.png" class="img header-icons pull-right">
+		  					 aria-expanded="true"><img src="images/swords.png" class="img header-icons pull-left">
 			  				</ul>
 		  					<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
 			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
@@ -82,9 +80,20 @@ $header = <<<END
 						</div><!-- dropdown -->
 						
 					</li>
-					
-					<li class="li-icons"><a href="#"><img src="images/search.png" class="img header-icons pull-right"></a></li>
+
+					<li class="list-group-item"><li class="list-group-item"><a href="profile.php"><img src="images/profil2.png"
+					class="img header-icons pull-right" alt="Profil"></a></li>
 				</ul>
+					<!-- meny ikoner -->	
+				
+
+				
+				
+				
+				
+				
+
+
 				
 			</div><!-- meny right -->
 			<!-- Meny left row2 -->
