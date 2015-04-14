@@ -15,6 +15,9 @@ $grade = "";
 $title	= htmlspecialchars($title);
 $text	= htmlspecialchars($text);
 
+//test
+$genretype = "";
+$genre = "";
 
 $query = <<<END
 
@@ -140,6 +143,25 @@ END;
 
 	}
 }
+
+$test = <<<END
+
+	SELECT genretype FROM genre
+END;
+$res = $mysqli->query($test) or die();
+
+if($res->num_rows > 0){
+
+	while($row = $res->fetch_object())
+	{
+
+		$genretype = $row->genretype;
+
+		$genre .= <<<END
+		<button><a href="choosegenre.php?genretype={$genretype}">{$genretype}<a/></button>
+END;
+	}
+}
 $content = <<<END
 				
 
@@ -217,6 +239,7 @@ $content = <<<END
 							</div><!-- panel heading -->
 						</div>
 					</div>
+					{$genre}
 				</div>
 	
 
