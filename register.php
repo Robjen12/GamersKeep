@@ -37,6 +37,7 @@ END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . " : " . $mysqli->error);
 
 		}
+		$feedback = "<p class=\"feedback-yellow\">Konto skapat</p>";
 	}
 }
 
