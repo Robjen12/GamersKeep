@@ -8,7 +8,7 @@ $profilename = '';
 $profileabout = '';
 $button = "";
 $latestactivity = "";
-
+$keeperid2 = "";
 if(!empty($_GET))
 {
 	$keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
