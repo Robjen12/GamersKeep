@@ -3,48 +3,52 @@
 include_once("inc/HTMLTemplate.php");
 include_once("inc/Connstring.php");
 
-/*$keeper = $_SESSION['keeperid'];
+$keeper = $_SESSION['keeperid'];
 $grid = "";
-$latestguide = "";
-$latestreview = "";
-$toplistreview = "";
-$toplistguide = "";
 $title = "";
 $text = "";
 $grade = "";
+$genre = "";
+$latestgenreguide = "";
 $title	= htmlspecialchars($title);
-$text	= htmlspecialchars($text);*/
+$text	= htmlspecialchars($text);
 
 if(!empty($_GET))
 {
 
-	$genretype = isset($_GET['genretype']) & $_GET['genretype'] : "")
+	$genretype = isset($_GET['genretype']) ? $_GET['genretype'] : "";
 
 	$query = <<<END
-	SELECT * FROM guidereviewinfo
-	INNER JOIN genreguidereview
-	ON guidereviewinfo.grid = genreguidereview.grid
-	WHERE genretype = '{$genretype}'
-	ORDER BY timestamp DESC;
+
+	SELECT * FROM guidereviewinfo, genreguidereview
+	WHERE grade IS NULL
+	AND genretype = '{$genretype}'
+	ORDER BY timestamp DESC
+	LIMIT 5;
 END;
 	$result = $mysqli->query($query) or die();
 
-	while($result->num_rows > 0){
-		$row = $result->fetch_object();
+
+	while($row = $result->fetch_object()){
+		
 		$grid = $row->grid;
-		$title =$row->title;
-		$text = $row->text;
+		$title	= utf8_decode(htmlspecialchars($row->title));
+		$text 	= utf8_decode(htmlspecialchars($row->text));
 		$grade = $row->grade;
+		$date 	= strtotime($row->timestamp);
+		$date	= date("d M Y H:i", $date);
 		$genre = $row->genretype;
 
-	$latestgenreguide .= <<<END
+		$latestgenreguide .= <<<END
 
-		<a href="choosegenre.php?grid={$grid}">{$title}</a>
-		{$text}
+			<a href="genre.php?grid={$grid}">{$title}</a></br>
+			{$text}<br><br>
 
 END;
 
 	}
+
+
 
 }
 
@@ -74,7 +78,7 @@ $content = <<<END
 
 		  					<div class="panel-body">
 
-		  						
+		  						{$latestgenreguide}
 
 		  					</div>
 						
