@@ -98,6 +98,84 @@ END;
 
 }
 
+$query = <<<END
+
+	SELECT *, COUNT(userclick.grid) AS counter 
+	FROM userclick
+	JOIN guidereviewinfo
+	ON userclick.grid = guidereviewinfo.grid
+	JOIN genreguidereview
+	ON userclick.grid = genreguidereview.grid
+	WHERE genretype = '{$genretype}'
+	AND grade IS NULL
+	GROUP BY userclick.grid
+	ORDER BY counter DESC
+	LIMIT 5;
+END;
+
+$result = $mysqli->query($query) or die();
+
+if($result->num_rows > 0)
+{
+
+	while($row = $result->fetch_object())
+	{
+		$grid = $row->grid;
+		$title = utf8_decode(htmlspecialchars($row->title));
+		$text = utf8_decode(htmlspecialchars($row->text));
+		$grade = $row->grade;
+
+		$toplistgenreguide .= <<<END
+
+			<a href="genre.php?grid={$grid}">{$title}</a><br>
+			<i>{$text}</i><br><br>
+END;
+
+	}
+
+}
+
+$query = <<<END
+	
+	SELECT *, COUNT(userclick.grid) AS counter
+	FROM userclick
+	JOIN guidereviewinfo
+	ON userclick.grid = guidereviewinfo.grid
+	JOIN genreguidereview
+	ON userclick.grid = genreguidereview.grid
+	WHERE genretype = '{$genretype}'
+	AND grade > 0
+	GROUP BY userclick.grid
+	ORDER BY counter DESC
+	LIMIT 5;
+END;
+
+$result = $mysqli->query($query) or die();
+
+if($result->num_rows >0)
+{
+
+	while($row = $result->fetch_object())
+	{
+
+		$grid = $row->grid;
+		$title = utf8_decode(htmlspecialchars($row->title));
+		$text = utf8_decode(htmlspecialchars($row->text));
+		$grade = $row->grade;
+
+		$toplistgenrereview .= <<<END
+
+		<a href="genre.php?grid={$grid}">{$title}</a><br>
+		<i>{$text}</i><br><br>
+END;
+
+	}
+}
+
+
+
+
+	
 }
 
 $content = <<<END
@@ -111,7 +189,7 @@ $content = <<<END
 
 		  					<div class="panel-body">
 
-			  					
+			  					{$toplistgenreguide}
 
 		  					</div><!-- panel body -->
 
@@ -154,8 +232,8 @@ $content = <<<END
 
 			  					<div class="panel-body">
 
-									
-				  					
+										
+				  				{$toplistgenrereview}
 				  						  			
 			  					</div><!-- panel body -->
 
