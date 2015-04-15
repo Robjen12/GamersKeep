@@ -174,8 +174,6 @@ END;
 
 
 
-
-	
 }
 
 $content = <<<END
