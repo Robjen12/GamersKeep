@@ -73,7 +73,7 @@ $header = <<<END
 		  					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
 		  					 aria-expanded="true"><img src="images/swords.png" class="img header-icons pull-right">
 			  				</ul>
-		  					<ul class="dropdown-menu margin-top-110 text-center pull-right" role="menu" aria-labelledby="dropdownMenu1">
+		  					<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
 			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
 			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
 			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
