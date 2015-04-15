@@ -144,11 +144,11 @@ END;
 	}
 }
 
-$test = <<<END
+$query = <<<END
 
 	SELECT genretype FROM genre
 END;
-$res = $mysqli->query($test) or die();
+$res = $mysqli->query($query) or die();
 
 if($res->num_rows > 0){
 
