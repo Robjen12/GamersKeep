@@ -1,4 +1,7 @@
 <?php
+
+/* master profile.php */
+
 include_once("inc/HTMLTemplate.php");
 include_once("inc/Connstring.php");
 
@@ -125,6 +128,7 @@ while($row = $res->fetch_object())
 END;
 }
 }
+
 $content = <<<END
 
 		
@@ -170,7 +174,7 @@ $content = <<<END
 						
 						<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default pull-left">
 
-	  					<div class="panel-heading panel-heading-560px">Om mig <img src="images/pen.png" width="30px" class="pull-right"></div>
+	  					<div class="panel-heading panel-heading-560px">Om mig </div>
 
 
 		  					<div class="panel-body">
@@ -184,19 +188,19 @@ $content = <<<END
 
 						<div class="col-md-3 col-sm-3 pull-right profil-right">
 
-							<div class="ads profil-right pull-right">
+						<div class="ads profil-right pull-right">
 
-		  					
-							<!-- Reklam karusel -->
-							
-		  						<img src="http://placehold.it/290x290" class="ads">
+	  					
+						<!-- Reklam karusel -->
+						
+	  						<img src="http://placehold.it/290x290" class="ads">
 
-		  						<br><br><br>
+	  						<br><br><br>
 
-		  						<img src="http://placehold.it/290x290" class="ads">
+	  						<img src="http://placehold.it/290x290" class="ads">
 
-		  					
-							</div><!-- reklam kolumn -->
+	  					
+						</div><!-- reklam kolumn -->
 
 						</div><!-- col -->
 					
@@ -213,11 +217,11 @@ $content = <<<END
 
 						<div class="col-md-3 col-sm-3 panel-width-190px panel panel-default pull-left">
 
-	  					<div class="panel-heading panel-heading-200px">Aktiviteter</div>
+	  					<div class="panel-heading panel-heading-200px">Senaste aktiviteter</div>
 
 		  					<div class="panel-body">
  
-		  						<a href class="text-primary">{$latestactivity}</a>
+		  						{$latestactivity}
 
 		  					</div>
 						

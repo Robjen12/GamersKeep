@@ -1,42 +1,60 @@
 <?php
 
-include_once("inc/Connstring.php");
+include_once("inc/HTMLTemplate.php");
+include_once("inc/Connstring.php");/* master forgotuserpassword.php */
+
+
+$keeper = $_SESSION['keeperid'];
+$grid = isset($_GET['grid']) ? $_GET['grid'] : '';
+
+
+	$query = <<<END
+
+		INSERT INTO userclick (grid, keeperid)
+		VALUES ('{$grid}', '{$keeper}');
+END;
+
+$res = $mysqli->query($query);
+
+$query = <<<END
+
+	SELECT title, text, timestamp
+	FROM guidereviewinfo
+	WHERE grid = '{$grid}';
+END;
+$res = $mysqli->query($query);
+
+$row = $res->fetch_object();
+
+$title = utf8_decode(htmlspecialchars($row->title));
+$text  = utf8_decode(htmlspecialchars($row->text));
+$timestamp = strtotime($row->timestamp);
+$timestamp = date("d M Y H:i", $timestamp);
 
 $content = <<<END
 
-
-<!DOCTYPE html>
-<html>
-
-	<head>
-		<title>GamersKeep - Where gamers meet</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/style.css">
-		<meta charset="utf-8">
-	</head>
-
-	<body class="register-forgot-background">
-		<div id="container">
-			<div class="row">
-				<div class="col-md-3"></div>
+<head>
+	<link rel="stylesheet" href="css/guide_panel_style.css">
+</head>
+		<div class="container">
+			<div class="row margin-top-100">
 				<div class="col-md-6">
-					<div id="forgot">
-						<h3>Hämta ditt användarnamn och lösenord</h3>
-						<h6>Ange emailen som du angav vid registrering</h6>
-						<form action="forgotuserpassword.php" method="post" id="">
-							<input type="text" id="email" name="email" value="" placeholder="Ange din email här"></br></br>
-							<button type="submit" id="submit" name="retriveuserpass" value="Skicka mail">Skicka mail</button>
-							<button><a href="login.php">Bakåt</a></button>
-						</form>
-					</div>
+						<div class="grinfo">
+							<div class="panel panel-default">
+								<div class="panel-heading">Titel: {$title}</div></br>
+								Skriven av:</br>
+								Publicerad: {$timestamp}<br><br>
+								{$text}<br>	
+							</div>
+						</div>
 				</div>
-				<div class="col-md-3"></div>
+				<div class="col-md-6"></div>
 			</div>
 		</div>
-	</body>
-
-</html>
 END;
 
+echo $header;
 echo $content;
+echo $footer;
+
 ?>

@@ -1,3 +1,5 @@
+/* master guide_panel_style.css */
+
 .panel-default > .panel-heading {
   border-color: #ddd;
   display: block;
@@ -53,7 +55,7 @@
 .panel {
     margin-top: 5px;
     width: 750px;
-    margin-left: 50px;
+    margin-left: 100px;
     padding: 0 10px 0;
     position: relative;
     color: #111;

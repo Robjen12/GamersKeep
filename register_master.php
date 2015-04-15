@@ -1,5 +1,6 @@
 <?php
 
+/* register.php */
 include_once("inc/Connstring.php");
 
 $feedback = '';

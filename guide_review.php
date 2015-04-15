@@ -1,11 +1,14 @@
 <?php
 
+/* master guide_review.php */
+
 include_once("inc/Connstring.php");
 include_once("inc/HTMLTemplate.php");
 
 $table = "guidereviewinfo";
 $keeper = $_SESSION['keeperid'];
 $feedback = "";
+$admindelete = "";
 
 
 	if(!empty($_POST))
@@ -39,6 +42,16 @@ END;
 				 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 
+				 $genre = $_POST["genretype"];
+				 
+				 $query = <<<END
+
+				 	INSERT INTO genreguidereview(grid, genretype)
+				 	VALUES (LAST_INSERT_ID(), '{$genre}')
+END;
+				$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+		        
 				 $query = <<<END
 
 				 	INSERT INTO userguidereview(grid, keeperid)
@@ -47,6 +60,7 @@ END;
 				 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 			}
+			$feedback = "<p class=\"feedback-yellow\">Inlägget har publicerats</p>";
 		}
 
 		else if(isset($_POST['review']))
@@ -69,6 +83,16 @@ END;
 				$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 
+				$genre = $_POST["genretype"];
+				 
+				 $query = <<<END
+
+				 	INSERT INTO genreguidereview(grid, genretype)
+				 	VALUES (LAST_INSERT_ID(), '{$genre}')
+END;
+				$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+		        
 	        	$query = <<<END
 
 	        		INSERT INTO userguidereview(grid, keeperid)
@@ -77,8 +101,30 @@ END;
 				$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 			}
+			$feedback = "<p class=\"feedback-yellow\">Inlägget har publicerats</p>";
 		}
 	}
+
+
+$query = <<<END
+
+ 	SELECT * FROM genre
+
+END;
+ $result = $mysqli->query($query) or die();
+
+$dropdown = '<select name="genretype">';
+
+while($row = $result->fetch_assoc())
+{
+	 $genretype = $row['genretype'];
+	 
+	 $dropdown .= <<<END
+	 	<option value="{$genretype}">{$genretype}</option>
+END;
+
+}
+$dropdown .= '</select>';
 
 
 $content = <<<END
@@ -87,10 +133,10 @@ $content = <<<END
 			<link rel="stylesheet" href="css/guide_panel_style.css">
 		</head>
 
-		
+		<div class="container">
 			<div class="row margin-top-100">
-				<div class="col-md-9"> 
-							
+				<div class="col-md-12"> 
+							<div id="guide_review">
 								<form action="guide_review.php" method="post" id="guide_review_form">
 									<div class="panel panel-default">
 										<div class="panel-heading">Skriva recension eller guide</div><br>
@@ -99,6 +145,8 @@ $content = <<<END
 										<input type="radio" id="guidecheck" name="guide" value="Guide">Guide
 										<input type="radio" id="reviewcheck" name="review" value="Review">Recension</br></br>
 										{$feedback}
+										<label for="genretype">Genre</label><br>
+										{$dropdown}<br><br>
 										<label for="information">Innehållet:</label>
 										<textarea id="nicEdit" name="nicEdit" cols="80" rows="15"></textarea></br>
 										<label for="grade" id="gradescale">Betyg (1-5)</label></br>
@@ -112,7 +160,7 @@ $content = <<<END
 						
 				</div>
 			</div>
-		
+		</div>
 		
 		<script type="text/javascript" src="js/nicEdit.js"></script>
 		<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>

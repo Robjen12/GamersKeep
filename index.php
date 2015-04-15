@@ -19,6 +19,7 @@ $text	= htmlspecialchars($text);
 $query = <<<END
 
 	SELECT * FROM guidereviewinfo
+	WHERE grade IS NULL
 	ORDER BY timestamp DESC
 	LIMIT 5;
 
@@ -38,7 +39,6 @@ while($row = $res->fetch_object())
 	$date 	= strtotime($row->timestamp);
 	$date	= date("d M Y H:i", $date);
 
-if($grade == NULL){
 	$latestguide .= <<<END
 
 								<ul class="media-list">
@@ -59,9 +59,8 @@ if($grade == NULL){
 			
 			
 END;
-}
-}
 
+}
 $query = <<<END
 
 	SELECT * FROM guidereviewinfo
@@ -71,21 +70,20 @@ $query = <<<END
 
 END;
 
-$res2 = $mysqli->query($query) or die();
+$res = $mysqli->query($query) or die();
 
 date_default_timezone_set("Europe/Stockholm");
 
 
-while($row2 = $res2->fetch_object())
+while($row = $res->fetch_object())
 {
-	$grid 	= $row2->grid;
-	$title	= utf8_decode(htmlspecialchars($row2->title));
-	$text 	= utf8_decode(htmlspecialchars($row2->text));
-	$grade  = $row2->grade;
-	$date 	= strtotime($row2->timestamp);
+	$grid 	= $row->grid;
+	$title	= utf8_decode(htmlspecialchars($row->title));
+	$text 	= utf8_decode(htmlspecialchars($row->text));
+	$grade  = $row->grade;
+	$date 	= strtotime($row->timestamp);
 	$date	= date("d M Y H:i", $date);
 
-if($grade != NULL){
 	$latestreview .= <<<END
 
 								<ul class="media-list">
@@ -109,32 +107,31 @@ END;
 }
 
 
-}
+
+
 
 $query = <<<END
 
-	SELECT userclick.keeperid, userclick.grid, guidereviewinfo.title, guidereviewinfo.grid, guidereviewinfo.grade, guidereviewinfo.text, COUNT(userclick.grid)
-	FROM userclick
-	INNER JOIN guidereviewinfo
-	ON userclick.grid = guidereviewinfo.grid
-	GROUP BY userclick.grid
-	ORDER BY userclick.grid DESC
-	LIMIT 5;
+	SELECT userclick.grid, count(userclick.grid) AS counter, guidereviewinfo.title, guidereviewinfo.text, guidereviewinfo.grade
+  	FROM userclick, guidereviewinfo
+	WHERE userclick.grid = guidereviewinfo.grid
+	AND guidereviewinfo.grade IS NULL
+ 	GROUP by userclick.grid
+ 	ORDER BY counter DESC
+ 	LIMIT 5;
+
 END;
+$result = $mysqli->query($query);
 
-$res = $mysqli->query($query);
-
-while($row = $res->fetch_object())
+if($result->num_rows > 0)
 {
-	
-	$grid 	= $row->grid;
-	$title	= utf8_decode(htmlspecialchars($row->title));
-	$text 	= utf8_decode(htmlspecialchars($row->text));
-	$grade  = $row->grade;
+        while($row = $result->fetch_object())
+        {
+        	$grid 	= $row->grid;
+			$title	= utf8_decode(htmlspecialchars($row->title));
+			$text 	= utf8_decode(htmlspecialchars($row->text));
 
-if($grade == NULL)
-{
-$toplistguide .= <<<END
+                $toplistguide .=<<<END
 
 								<ul class="media-list">
   									<li class="media">
@@ -154,10 +151,34 @@ $toplistguide .= <<<END
 
 			
 END;
+        }
 }
-else
-{
-$toplistreview .= <<<END
+
+$query = <<<END
+
+	SELECT userclick.grid, count(userclick.grid) AS counter, guidereviewinfo.title, guidereviewinfo.text, guidereviewinfo.grade
+  	FROM userclick, guidereviewinfo
+  	WHERE userclick.grid = guidereviewinfo.grid
+ 	GROUP by grid
+	ORDER BY counter DESC
+	LIMIT 5;
+END;
+
+$res = $mysqli->query($query);
+
+if($res->num_rows > 0){
+
+	while($row = $res->fetch_object())
+	{
+	
+	$grid 	= $row->grid;
+	$title	= utf8_decode(htmlspecialchars($row->title));
+	$text 	= utf8_decode(htmlspecialchars($row->text));
+	$grade  = $row->grade;
+
+	$toplistreview .= <<<END
+	<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$row->counter}</li></br>
+			<i>{$text}</i><br><br>
 
 								<ul class="media-list">
   									<li class="media">
@@ -175,7 +196,8 @@ $toplistreview .= <<<END
   									</li>
 								</ul>			
 END;
-}
+
+	}
 }
 
 $content = <<<END
