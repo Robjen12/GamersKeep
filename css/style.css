@@ -125,6 +125,10 @@ body {
     float:right;
     margin-left: auto;
 }
+
+/* hit har jag kommit */
+/* kl 16 05 */
+
 /* left second row in the header */
 .height-20px {
     height: 20px;
@@ -426,4 +430,149 @@ body {
 .views{
   float: right;
   list-style: none;
+}
+
+/* dortes andringar från dorte2 branch */
+
+@import url("http://fonts.googleapis.com/css?family=Droid+Sans:400,700");
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2.login-font
+{
+  font-family: 'Quicksand';
+  margin-left: 20px;
+  color: white;
+}
+.quicksand {
+    font-family: 'Quicksand';
+}
+.droid {
+    font-family: 'Droid Sans', sans-serif;
+}
+p {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/* unvisited link */
+a:link {
+    color: #993300;
+}
+/* visited link */
+a:visited {
+    color: #663300;
+}
+
+/* mouse over link */
+a:hover {
+    color: #000;
+}
+
+.dropdown-hover .a:hover {
+  visibility: visible;
+}
+/* selected link */
+a:active {
+    color: #cc3300;
+}
+
+a.text-primary {
+  color: #993300;
+}
+
+/* ändrar länkfärg från roströd till svart när musen förs över länkan */
+a.text-primary:hover {
+  color: black;
+}
+
+.text-16px {
+  font-size: 16px;
+}
+
+.text-10px {
+  font-size: 10px;
+}
+
+.btn-danger {
+  background-color: #993300;
+}
+
+/* roströd knapp */
+.btn-danger {
+  color: #fff;
+  background-color: #993300;
+  border-color: #663300;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger.focus,
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-danger {
+  color: #fff;
+  background-color: #cc3300;
+  border-color: #ff6600;
+}
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-danger {
+  background-image: none;
+}
+
+/* gul knapp */
+.btn-warning {
+  color: #fff;
+  background-color: #cc6600;
+  border-color: #d58512;
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning.focus,
+.btn-warning:active,
+.btn-warning.active,
+.open > .dropdown-toggle.btn-warning {
+  color: #fff;
+  background-color: #e48900;
+  border-color: #eea236;
+}
+.login-cloud {
+  margin-right: auto;
+  margin-left: -30px;
+}
+
+/* saetter faerg på forms att lysa rostrott naer anvaendaren fyller i forms */
+
+.form-control:focus {
+  border-color: #993300;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(153, 51, 0, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(153, 51, 0, .6);
 }
