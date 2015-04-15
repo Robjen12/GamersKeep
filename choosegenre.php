@@ -21,9 +21,11 @@ if(!empty($_GET))
 
 	$query = <<<END
 
-	SELECT * FROM guidereviewinfo, genreguidereview
-	WHERE grade IS NULL
-	AND genretype = '{$genretype}'
+	SELECT * FROM guidereviewinfo
+	JOIN genreguidereview
+	ON guidereviewinfo.grid = genreguidereview.grid
+	WHERE genretype = '{$genretype}'
+	AND grade IS NULL
 	ORDER BY timestamp DESC
 	LIMIT 5;
 END;
@@ -31,6 +33,10 @@ END;
 	$result = $mysqli->query($query) or die();
 
 	date_default_timezone_set("Europe/Stockholm");
+
+if($result->num_rows > 0)
+{
+
 
 	while($row = $result->fetch_object())
 	{
@@ -51,10 +57,12 @@ END;
 END;
 
 	}
-
+}
 	$query = <<<END
 
-	SELECT * FROM guidereviewinfo, genreguidereview
+	SELECT * FROM guidereviewinfo
+	JOIN genreguidereview
+	ON guidereviewinfo.grid = genreguidereview.grid
 	WHERE grade > 0
 	AND genretype = '{$genretype}'
 	ORDER BY timestamp DESC
@@ -65,6 +73,10 @@ END;
 	$result = $mysqli->query($query) or die();
 
 	date_default_timezone_set("Europe/Stockholm");
+
+if($result->num_rows > 0)
+{
+
 
 	while($row = $result->fetch_object())
 	{
@@ -82,6 +94,9 @@ END;
 			{$text}<br><br>
 END;
 	}
+
+
+}
 
 }
 
