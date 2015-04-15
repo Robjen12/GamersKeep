@@ -111,7 +111,7 @@ $latestact = <<<END
 	JOIN userguidereview
 	ON guidereviewinfo.grid = userguidereview.grid
 	WHERE keeperid = '{$keeperid}'
-	ORDER BY timestamp
+	ORDER BY timestamp DESC
 	
 END;
 $res = $mysqli->query($latestact) or die();
@@ -127,7 +127,7 @@ while($row = $res->fetch_object())
 
 	$r = "R";
 	$g = "G";
-	
+
 	if($grade > 0)
 	{
 
