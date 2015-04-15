@@ -143,7 +143,7 @@ if($result->num_rows > 0)
     									</div>
     									<div class="media-body">
       										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
-      										class="text-bold">{$title}</a></br>
+      										class="text-bold">{$title}</a><li class="views">{$row->counter}</li></br>
 											<i>{$text}</i><br></h4>
     									</div>
   									</li>
@@ -177,9 +177,7 @@ if($res->num_rows > 0){
 	$grade  = $row->grade;
 
 	$toplistreview .= <<<END
-	<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$row->counter}</li></br>
-			<i>{$text}</i><br><br>
-
+	
 								<ul class="media-list">
   									<li class="media">
     									<div class="media-left">
@@ -190,7 +188,7 @@ if($res->num_rows > 0){
     									</div>
     									<div class="media-body">
       										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
-      										class="text-bold">{$title}</a></br>
+      										class="text-bold">{$title}</a><li class="views">{$row->counter}</li></br>
 											<i>{$text}</i><br></h4>
     									</div>
   									</li>
