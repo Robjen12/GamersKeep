@@ -553,20 +553,22 @@ body {
   width: 360px;
 }
 
-.panel-width-330px {
-  width: 330px;
+.ovrigt {
+  width: 310px;
 }
 
-.panel-default > .panel-heading-340px {
-  width: 340px;
+.panel-default > .ovrigt-heading {
+  width: 320px;
 }
 
-.panel-width-190px {
-  width: 190px;
+.aktiviteter {
+  width: 213px;
+
 }
 
-.panel-default > .panel-heading-200px {
-  width: 200px;
+.panel-default > .aktiviteter-heading {
+  width: 223px;
+
 }
 
 .panel-width-240px {
@@ -585,7 +587,7 @@ body {
 }
 
 .profil-right {
-  margin-right: 15px;
+  margin-right: 5px;
   margin-left: auto;
 
   text-align: center;
@@ -608,6 +610,18 @@ body {
 .margin-left-15px {
   margin-left: 15px;
 }
+
+.margin-left-profile {
+  margin-left: 10px;
+}
+
+.margin-left-25px {
+  margin-left: 25px;
+}
+.margin-left-guide {
+  margin-left: -30px;
+}
+
 .profil > .column-left-center {
   height: 241px;
   width: 290px;
@@ -654,6 +668,11 @@ body {
 
 .margin-right-15px{
   margin-right: 15px;
+  margin-left: auto;
+}
+
+.margin-right-profile{
+  margin-right: 10px;
   margin-left: auto;
 }
 

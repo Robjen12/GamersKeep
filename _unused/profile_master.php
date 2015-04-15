@@ -1,4 +1,7 @@
 <?php
+
+/* master profile.php */
+
 include_once("inc/HTMLTemplate.php");
 include_once("inc/Connstring.php");
 
@@ -125,6 +128,7 @@ while($row = $res->fetch_object())
 END;
 }
 }
+
 $content = <<<END
 
 		
@@ -133,7 +137,7 @@ $content = <<<END
 			
 					<div class="col-md-3 col-sm-3 pull-left">
 
-	  					<div class="row profil margin-left-profile">
+	  					<div class="row profil margin-left-15px">
 	  					
 	  						<div class="column-left-top">
 	  						<br>
@@ -170,7 +174,7 @@ $content = <<<END
 						
 						<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default pull-left">
 
-	  					<div class="panel-heading panel-heading-560px">Om mig <img src="images/pen.png" width="30px" class="pull-right"></div>
+	  					<div class="panel-heading panel-heading-560px">Om mig </div>
 
 
 		  					<div class="panel-body">
@@ -184,26 +188,26 @@ $content = <<<END
 
 						<div class="col-md-3 col-sm-3 pull-right profil-right">
 
-							<div class="ads profil-right pull-right">
+						<div class="ads profil-right pull-right">
 
-		  					
-							<!-- Reklam karusel -->
-							
-		  						<img src="http://placehold.it/290x290" class="ads">
+	  					
+						<!-- Reklam karusel -->
+						
+	  						<img src="http://placehold.it/290x290" class="ads">
 
-		  						<br><br><br>
+	  						<br><br><br>
 
-		  						<img src="http://placehold.it/290x290" class="ads">
+	  						<img src="http://placehold.it/290x290" class="ads">
 
-		  					
-							</div><!-- reklam kolumn -->
+	  					
+						</div><!-- reklam kolumn -->
 
 						</div><!-- col -->
 					
 
-					<div class="col-md-3 col-sm-3 ovrigt panel panel-default pull-left">
+					<div class="col-md-3 col-sm-3 panel-width-330px panel panel-default pull-left">
 
-	  					<div class="panel-heading ovrigt-heading">Övrigt</div>
+	  					<div class="panel-heading panel-heading-340px">Övrigt</div>
 
 		  					<div class="panel-body">
  								{$profileother}
@@ -211,13 +215,13 @@ $content = <<<END
 						
 						</div><!-- panel heading -->
 
-						<div class="col-md-3 col-sm-3 aktiviteter panel panel-default pull-left margin-left-25px">
+						<div class="col-md-3 col-sm-3 panel-width-190px panel panel-default pull-left">
 
-	  					<div class="panel-heading aktiviteter-heading">Aktiviteter</div>
+	  					<div class="panel-heading panel-heading-200px">Senaste aktiviteter</div>
 
 		  					<div class="panel-body">
  
-		  						<a href class="text-primary">{$latestactivity}</a>
+		  						{$latestactivity}
 
 		  					</div>
 						

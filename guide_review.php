@@ -133,10 +133,11 @@ $content = <<<END
 			<link rel="stylesheet" href="css/guide_panel_style.css">
 		</head>
 
-		<div class="container">
+
+		<div class="container-fluid">
 			<div class="row margin-top-100">
-				<div class="col-md-12"> 
-							<div id="guide_review">
+				<div class="col-md-12 margin-left-guide"> 
+												
 								<form action="guide_review.php" method="post" id="guide_review_form">
 									<div class="panel panel-default">
 										<div class="panel-heading">Skriva recension eller guide</div><br>
@@ -156,7 +157,7 @@ $content = <<<END
 										</div>
 									</div>
 								</form>			
-							</div>
+							
 						
 				</div>
 			</div>
