@@ -11,6 +11,8 @@ $grade = "";
 $genre = "";
 $latestgenreguide = "";
 $latestgenrereview = "";
+$toplistgenreguide = "";
+$toplistgenrereview = "";
 $title	= htmlspecialchars($title);
 $text	= htmlspecialchars($text);
 
@@ -183,7 +185,7 @@ $content = <<<END
 			
 					<div class="col-md-4 col-sm-4 panel panel-default">
 
-	  					<div class="panel-heading">Topplista guider</div>
+	  					<div class="panel-heading">Topplista guider<li class="views">{$genretype}</li></div>
 
 		  					<div class="panel-body">
 
@@ -198,7 +200,7 @@ $content = <<<END
 
 					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
 
-	  					<div class="panel-heading">Senaste guiderna</div>
+	  					<div class="panel-heading">Senaste guiderna<li class="views">{$genretype}</li></div>
 
 		  					<div class="panel-body">
 
@@ -226,7 +228,7 @@ $content = <<<END
 				<div class="row">
 					<div class="col-md-4 col-sm-4 panel panel-default">
 
-		  					<div class="panel-heading">Topplista recensionerna</div>
+		  					<div class="panel-heading">Topplista recensionerna<li class="views">{$genretype}</li></div>
 
 			  					<div class="panel-body">
 
@@ -242,7 +244,7 @@ $content = <<<END
 
 						<div class="col-md-4 col-sm-4 panel panel-default pull-left">
 
-		  					<div class="panel-heading">Senaste recensionerna</div>
+		  					<div class="panel-heading">Senaste recensionerna<li class="views">{$genretype}</li></div>
 
 			  					<div class="panel-body">
 
