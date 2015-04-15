@@ -8,6 +8,10 @@ $profilename = '';
 $profileabout = '';
 $button = "";
 $latestactivity = "";
+$g = "";
+$r = "";
+$grade = "";
+
 
 if(!empty($_GET))
 {
@@ -102,12 +106,13 @@ if($res->num_rows == 1){
 // Hämtar ut senaste aktiviteterna för anvnändaren
 $latestact = <<<END
 
-	SELECT guidereviewinfo.grid, guidereviewinfo.title, guidereviewinfo.timestamp, userguidereview.grid
+	SELECT guidereviewinfo.grid, guidereviewinfo.title, guidereviewinfo.timestamp, guidereviewinfo.grade, userguidereview.grid
 	FROM guidereviewinfo
-	INNER JOIN userguidereview
+	JOIN userguidereview
 	ON guidereviewinfo.grid = userguidereview.grid
+	WHERE keeperid = '{$keeperid}'
 	ORDER BY timestamp
-	LIMIT 3;
+	
 END;
 $res = $mysqli->query($latestact) or die();
 
@@ -116,14 +121,36 @@ while($row = $res->fetch_object())
 	$keeperid = $_SESSION['keeperid'];
 	$grid = $row->grid;
 	$title = utf8_decode(htmlspecialchars($row->title));
+	$grade = $row->grade;
 	$timestamp = strtotime($row->timestamp);
 	$timestamp = date("d M Y H:i", $timestamp);
 
-	$latestactivity .= <<<END
+	$r = "R";
+	$g = "G";
+	
+	if($grade > 0)
+	{
 
-		<a href="genre.php?grid={$grid}">{$title}</a></br>
+		$latestactivity .= <<<END
+		 
+			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$r}</li></br><br>
+		
+
 END;
+	}
+	else
+	{
+
+		$latestactivity .= <<<END
+		 
+			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$g}</li></br><br>
+		
+
+END;
+	}
+	
 }
+
 }
 
 $content = <<<END
@@ -215,11 +242,10 @@ $content = <<<END
 						<div class="col-md-3 col-sm-3 panel-width-190px panel panel-default pull-left">
 
 	  					<div class="panel-heading panel-heading-200px">Senaste aktiviteter</div>
-
 		  					<div class="panel-body">
- 
-		  						{$latestactivity}
-
+ 								
+ 									{$latestactivity}
+								
 		  					</div>
 						
 						</div><!-- panel heading -->
