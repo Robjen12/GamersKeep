@@ -177,7 +177,46 @@ $toplistreview .= <<<END
 END;
 }
 }
+/*
+$query = <<<END
 
+	SELECT COUNT('keeperid') FROM userclick
+	WHERE grid = '{$grid}'
+	ORDER BY keeperid DESC
+	LIMIT 5;
+END;
+$res = $mysqli->query($query);
+
+$query = <<<END
+
+	SELECT  grid, title, text, timestamp, grade
+	FROM guidereviewinfo
+
+END;
+
+$res = $mysqli->query($query) or die();
+while($row = $res->fetch_object())
+{
+	$grid 	= $row->grid;
+	$title	= utf8_decode(htmlspecialchars($row->title));
+	$text 	= utf8_decode(htmlspecialchars($row->text));
+	$grade  = $row->grade;
+	$date 	= strtotime($row->timestamp);
+	$date	= date("d M Y H:i", $date);
+
+if($grade == NULL)
+{
+$toplistguide .= <<<END
+
+			<a href="genre.php?grid={$grid}">{$title}</a></br>
+			<i>{$text}</i><br><br>
+END;
+}
+else
+{
+
+}
+}*/
 $content = <<<END
 				
 			
@@ -276,9 +315,8 @@ $content = <<<END
 							<div class ="ads">
 
 								<img src="http://placehold.it/290x300" class="ads pull-right">
-								<br><br>
 
-							</div><!-- ads -->	
+							</div><!-- ads -->
 
 		  				</div><!-- content right kolumn row 2 -->
 
@@ -288,9 +326,14 @@ $content = <<<END
 
 					</div><!-- row -->
 
-				</div><!-- wrapper --> 
+				</div><!-- wrapper -->
+		
+
+  
   
 END;
+
+
 
 echo $header;
 echo $content;

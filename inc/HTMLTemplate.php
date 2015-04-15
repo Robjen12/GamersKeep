@@ -60,24 +60,47 @@ $header = <<<END
 			</div><!-- column center -->
 
 			<!-- Meny right -->
-			<div class="col-md-4 column-right pull-right margin-right-zero nav nav-pills pull-right">
+			<div class="col-md-4 column-right pull-right margin-right-zero nav nav-pills">
 			
 				<ul>
-					<li><a href="profile.php"><img src="images/profil2.png" class="img header-icons pull-right" alt="Profil">
+					<!-- drop down menu for profil -->
+						<div class="dropdown text-bold droid">
+		  					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
+		  					 aria-expanded="true">
+		  					 <li><a href="profile.php"><img src="images/profil2.png" class="img header-icons pull-right" alt="Profil">
 					</a>
 					</li>
+			  				</ul>
+		  					<ul class="dropdown-menu dropdown-menu-left margin-top-110 text-center pull-right" role="menu" aria-labelledby="dropdownMenu1">
+			    				<li role="presentation" class="dropdown-header quicksand text-black text-16px">Profil</li>
+			    				
+			    				<!-- logga in enbart enabled när man INTE är inloggat -->
+			    				<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Logga in</a></li>
+			    				
+			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fighting</a></li>
+			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">FPS</a></li>
+								
+								<!-- logga ut enbart enabled när man är inloggat -->
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Logga ut</a></li>
+			  				</ul>
+
+						</div><!-- dropdown -->
+
+					
 					<li class="li-icons"><a href="index.php"><img src="images/home.png" class="img header-icons pull-right"></a></li>
 					<li><a href="guide_review.php"><img src="images/pen.png" class="img header-icons pull-right"></a></li>
 					
-						<div class="dropdown">
+					<!-- drop down menu for genrer -->
+						<div class="dropdown text-bold droid">
 		  					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
 		  					 aria-expanded="true"><img src="images/swords.png" class="img header-icons pull-right">
 			  				</ul>
-		  					<ul class="dropdown-menu margin-top-110 text-center pull-right" role="menu" aria-labelledby="dropdownMenu1">
+		  					<ul class="dropdown-menu dropdown-menu-left margin-top-110 text-center pull-right" role="menu" aria-labelledby="dropdownMenu1">
+			    				<li role="presentation" class="dropdown-header quicksand text-black text-16px">Genrer</li>
 			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fighting</a></li>
+			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">FPS</a></li>
+			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Link</a></li>
 			  				</ul>
 						</div><!-- dropdown -->
 						
