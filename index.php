@@ -44,9 +44,23 @@ while($row = $res->fetch_object())
 
 	$latestguide .= <<<END
 	
-			<a href="genre.php?grid={$grid}">{$title}</a></br>
-			<i>{$text}</i><br><br>	
-			
+								<ul class="media-list">
+  									<li class="media">
+    									<div class="media-left">
+      										<a href="genre.php?grid={$grid}">
+	        									<img class="media-object" src="http://placehold.it/64x64" class="ads"
+	        									alt="senaste guide image">
+      										</a>
+    									</div>
+    									<div class="media-body">
+      										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
+      										class="text-bold">{$title}</a></br>
+											<i>{$text}</i></h4><br>
+    									</div>
+  									</li>
+								</ul>
+
+						
 END;
 
 }
@@ -75,8 +89,26 @@ while($row = $res->fetch_object())
 
 	$latestreview .= <<<END
 
-				<a href="genre.php?grid={$grid}">{$title}</a></br>
-				<i>{$text}</i><br><br>
+								<ul class="media-list">
+  									<li class="media">
+    									<div class="media-left">
+      										<a href="genre.php?grid={$grid}">
+	        									<img class="media-object" src="http://placehold.it/64x64" class="latest review image"
+	        									alt="senaste guide image">
+      										</a>
+    									</div>
+    									<div class="media-body">
+      										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
+      										class="text-bold">{$title}</a></br>
+											<i>{$text}</i><br></h4>
+    									</div>
+  									</li>
+								</ul>			
+
+
+
+
+		
 END;
 }
 
@@ -106,9 +138,25 @@ if($result->num_rows > 0)
 			$text 	= utf8_decode(htmlspecialchars($row->text));
 
                 $toplistguide .=<<<END
+
+                <ul class="media-list">
+  									<li class="media">
+    									<div class="media-left">
+      										<a href="genre.php?grid={$grid}">
+	        									<img class="media-object" src="http://placehold.it/64x64" class="toplist guide image"
+	        									alt="toplist guide image">
+      										</a>
+    									</div>
+    									<div class="media-body">
+      										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
+      										class="text-bold">{$title}</a><li class="views">{$row->counter}</li></br>
+											<i>{$text}</i><br></h4>
+    									</div>
+  									</li>
+								</ul>			
+
                
-                <a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$row->counter}</li></br>
-                <i>{$text}</i><br><br> 
+           
 END;
         }
 }
@@ -137,8 +185,23 @@ if($res->num_rows > 0){
 
 	$toplistreview .= <<<END
 
-		<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$row->counter}</li></br>
-			<i>{$text}</i><br><br>
+	<ul class="media-list">
+  									<li class="media">
+    									<div class="media-left">
+      										<a href="genre.php?grid={$grid}">
+	        									<img class="media-object" src="http://placehold.it/64x64" class="toplist review image"
+	        									alt="Toplist review image">
+      										</a>
+    									</div>
+    									<div class="media-body">
+      										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
+      										class="text-bold">{$title}</a></br><li class="views">{$row->counter}</li>
+											<i>{$text}</i><br></h4>
+    									</div>
+  									</li>
+								</ul>
+
+		
 END;
 
 	}
@@ -164,83 +227,122 @@ END;
 }
 $content = <<<END
 				
-
-				<div class="row margin-top-100">
 			
-					<div class="col-md-4 col-sm-4 panel panel-default">
+				<div class="wrapper margin-top-100">
 
-	  					<div class="panel-heading">Topplista guider</div>
+					<div class="row">
 
-		  					<div class="panel-body">
+						<!-- left column -->
+						<div class="content-left pull-left">
 
-			  					{$toplistguide}
+							<div class ="panel panel-default panel-width-240px pull-left">
 
-		  					</div><!-- panel body -->
+								<div class="panel-heading panel-heading-250px quicksand">Topplista guider</div>
 
-						</div><!-- panel heading -->
+				  					<div class="panel-body">
 
-						
+				  							<p>{$toplistguide}</p>
+				  					</div><!-- panel body -->
+
+								</div><!-- panel heading -->
+
+							</div><!-- panel -->
+
+
 					
+		  				<!-- center column -->
+						<div class="content-center margin-left-25px pull-left">
 
-					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
+							<div class ="panel panel-default panel-width-240px pull-left">
 
-	  					<div class="panel-heading">Senaste guiderna</div>
+								<div class="panel-heading panel-heading-250px">Senaste guider</div>
 
-		  					<div class="panel-body">
+				  					<div class="panel-body">
 
-		  						{$latestguide}
+				  							<p>{$latestguide}</p>
+				  					</div><!-- panel body -->
 
-		  					</div>
-						
-						</div><!-- panel heading -->
+								</div><!-- panel heading -->
 
+							</div><!-- panel -->		  				
 
+		  				<!-- right column -->
+						<div class="content-right margin-right-25px pull-right">
 
-					<div class="col-md-3 col-sm-3 ads pull-right">
+							<div class ="ads">
 
-					<!-- Reklam karusel -->
+								<img src="http://placehold.it/290x300" class="ads pull-right">
+
+							</div><!-- ads -->
+
+		  				</div><!-- content left kolumn -->
+
+		  				</div><!-- content center kolumn -->
+		  				
+		  				</div><!-- content right kolumn -->
+
+					</div><!-- row -->
+
+					<div class="row">
+
+						<!-- left column row 2 -->
+						<div class="content-left pull-left">
+
+							<div class ="panel panel-default panel-width-240px pull-left">
+
+								<div class="panel-heading panel-heading-250px">Topplista recensioner</div>
+
+				  					<div class="panel-body">
+
+				  							<p>{$toplistreview}</p>
+				  					</div><!-- panel body -->
+
+								</div><!-- panel heading -->
+
+							</div><!-- panel -->
 					
-	  					<img src="http://placehold.it/200x350">
-	  					
-					</div><!-- reklam kolumn -->
-					
+		  				<!-- center column  row 2 -->
+						<div class="content-center margin-left-25px pull-left">
 
-				</div><!-- row -->
+							<div class ="panel panel-default panel-width-240px pull-left">
 
+								<div class="panel-heading panel-heading-250px">Senaste recensioner</div>
 
+				  					<div class="panel-body">
 
-				<div class="row">
-					<div class="col-md-4 col-sm-4 panel panel-default">
+				  							<p>{$latestreview}</p>
+				  					</div><!-- panel body -->
 
-		  					<div class="panel-heading">Topplista recensionerna</div>
+								</div><!-- panel heading -->
 
-			  					<div class="panel-body">
+							</div><!-- panel -->		  				
 
-				  					{$toplistreview}
-				  						  			
-			  					</div><!-- panel body -->
+		  				<!-- right column row 2 -->
+						<div class="content-right margin-right-25px pull-right">
 
-							</div><!-- panel heading -->
+							<div class ="ads">
+
+								<img src="http://placehold.it/290x300" class="ads pull-right">
+								<br><br>
+
+							</div><!-- ads -->	
+
+		  				</div><!-- content right kolumn row 2 -->
+
+		  				</div><!-- content center kolumn row 2 -->
+		  				
+		  				</div><!-- content left kolumn row 2 -->
+
+		  				{$genre}
+
+					</div><!-- row -->
+
+				</div><!-- wrapper --> 
 
 							
 						
-
-						<div class="col-md-4 col-sm-4 panel panel-default pull-left">
-
-		  					<div class="panel-heading">Senaste recensionerna</div>
-
-			  					<div class="panel-body">
-
-			  						{$latestreview}
-
-			  					</div>
-							
-						
-							</div><!-- panel heading -->
-						</div>
-					</div>
-					{$genre}
-				</div>
+					
+	
 	
 
   
