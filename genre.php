@@ -5,7 +5,7 @@ include_once("inc/Connstring.php");
 
 $keeper = $_SESSION['keeperid'];
 $grid = isset($_GET['grid']) ? $_GET['grid'] : '';
-
+$showgrade = "";
 
 	$query = <<<END
 
@@ -31,6 +31,11 @@ $timestamp = strtotime($row->timestamp);
 $timestamp = date("d M Y H:i", $timestamp);
 $grade = $row->grade;
 
+if($grade > 0){
+	$showgrade = <<<END
+	Betyg: {$grade}
+END;
+}
 $content = <<<END
 
 <head>
@@ -41,7 +46,7 @@ $content = <<<END
 				<div class="col-md-6">
 						<div class="grinfo">
 							<div class="panel panel-default">
-								<div class="panel-heading">Titel: {$title} <li class="views">Betyg: {$grade}</li></div></br>
+								<div class="panel-heading">Titel: {$title} <li class="views">{$showgrade}</li></div></br>
 								Skriven av:</br>
 								Publicerad: {$timestamp}<br><br>
 								{$text}<br>	
