@@ -96,7 +96,10 @@ $content = <<<END
 													
 							<button type="submit" class="btn btn-danger btn-sm pull-left text-bold" id="submit" name="logintosite" value="Logga in">Logga in</button>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="register.php"><button class="btn btn-warning btn-sm text-bold">Registrera dig</button></a></br>
+
+							
+
+							<a href="register.php" class="btn btn-warning btn-sm text-bold login-text" role="button" text-white>Registrera dig</button></a></br>
 						</form>
 						<a href="forgotuserpassword.php" class="text-10px text-primary">Glömt lösenord?</a>
 					</div>     

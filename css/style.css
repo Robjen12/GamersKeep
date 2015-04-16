@@ -730,3 +730,22 @@ width: 30%;
 .panel-width-550px {
   width: 550px;
 }
+
+/* unvisited link */
+a:link .login-text {
+    color: #fff;
+}
+/* visited link */
+a:visited .login-text {
+    color: #fff;
+}
+
+/* mouse over link */
+a:hover .login-text {
+    color: #fff;
+}
+
+/* selected link */
+a:active {
+    color: #fff;
+}
