@@ -17,7 +17,7 @@ $res = $mysqli->query($query);
 
 $query = <<<END
 
-	SELECT title, text, timestamp
+	SELECT title, text, timestamp, grade
 	FROM guidereviewinfo
 	WHERE grid = '{$grid}';
 END;
@@ -29,6 +29,7 @@ $title = utf8_decode(htmlspecialchars($row->title));
 $text  = utf8_decode(htmlspecialchars($row->text));
 $timestamp = strtotime($row->timestamp);
 $timestamp = date("d M Y H:i", $timestamp);
+$grade = $row->grade;
 
 $content = <<<END
 
@@ -40,7 +41,7 @@ $content = <<<END
 				<div class="col-md-6">
 						<div class="grinfo">
 							<div class="panel panel-default">
-								<div class="panel-heading">Titel: {$title}</div></br>
+								<div class="panel-heading">Titel: {$title} <li class="views">Betyg: {$grade}</li></div></br>
 								Skriven av:</br>
 								Publicerad: {$timestamp}<br><br>
 								{$text}<br>	

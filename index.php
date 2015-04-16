@@ -166,6 +166,7 @@ $query = <<<END
 	SELECT userclick.grid, count(userclick.grid) AS counter, guidereviewinfo.title, guidereviewinfo.text, guidereviewinfo.grade
   	FROM userclick, guidereviewinfo
   	WHERE userclick.grid = guidereviewinfo.grid
+  	AND grade > 0
  	GROUP by grid
 	ORDER BY counter DESC
 	LIMIT 5;
