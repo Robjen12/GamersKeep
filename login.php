@@ -79,32 +79,36 @@ $content = <<<END
 			<div class="row">
 				<div class="col-md-6">
 					<img src="images/logo.png">
-					<h3 class="login-font"><i>En community för gamers by gamers</i></h3>
+					<h2 class="login-font"><b>Ett community för gamers av gamers</b></h2>
 				</div>
 				<div class="col-md-2"></div>
-				<div class="col-md-4">
+				<div class="col-md-3 login-cloud quicksand text-bold text-16px">
 					<div class="login">
-						<h1>Enter the keep</h1>
+						<h2 class="quicksand text-bold">Enter the Keep</h2>
 						{$feedback}
-						<form action="login.php" method="post" id="login-form">
-							<input type="text" id="keepername" name="keepername" value="" placeholder="Skriv in användarnamn"></br></br>
-							<input type="password" id="pw" name="pw" value="" placeholder="Skriv in lösenord"></br></br>
-							<button type="submit" id="submit" name="logintosite" value="Logga in">Logga in</button>
-							<button><a href="register.php">Registrera sig</a></button></br></br>
+						<form action="login.php" method="post" id="login-form" class="quicksand">
+							Användarnamn<br>
+							<input type="text" class="form-control" id="keepername" name="keepername" value="" placeholder="Skriv in användarnamn">
+							</br>
+							Lösenord</br>
+							<input type="password" class="form-control" id="pw" name="pw" value="" placeholder="Skriv in lösenord">
+							</br>
+													
+							<button type="submit" class="btn btn-danger btn-sm pull-left text-bold" id="submit" name="logintosite" value="Logga in">Logga in</button>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+							
+
+							<a href="register.php" class="btn btn-warning btn-sm text-bold login-text" role="button" text-white>Registrera dig</button></a></br>
 						</form>
-						<a href="forgotuserpassword.php">Glömt lösenord?</a>
+						<a href="forgotuserpassword.php" class="text-10px text-primary">Glömt lösenord?</a>
 					</div>     
 				</div>   
 			</div>
 		</div>
 	</body>
-
-
-
-
 </html>
 END;
-
 
 echo $content;
 ?>

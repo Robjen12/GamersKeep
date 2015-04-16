@@ -1,3 +1,6 @@
+@import url("http://fonts.googleapis.com/css?family=Quicksand:400,700");
+@import url("http://fonts.googleapis.com/css?family=Droid+Sans:400,700");
+
 .register-forgot-background{
 	background-color: #993300;
 }
@@ -8,7 +11,7 @@
 .logo{
 	background-size: 50%;
 }
-@import url("http://fonts.googleapis.com/css?family=Quicksand:400,700");
+
 .login-font
 {
   font-family: 'Quicksand';
@@ -125,6 +128,10 @@ body {
     float:right;
     margin-left: auto;
 }
+
+/* hit har jag kommit */
+/* kl 16 05 */
+
 /* left second row in the header */
 .height-20px {
     height: 20px;
@@ -312,17 +319,12 @@ body {
   min-height: 600px;
   height: auto;
 }
-.panel-default > .panel-heading-560px {
-  width: 560px;
-}
 
 .panel-default > .panel-heading-300px{
   width: 360px;
 }
 
-.panel-width-550px {
-  width: 550px;
-}
+
 
 .width-360px {
   width: 360px;
@@ -426,4 +428,324 @@ body {
 .views{
   float: right;
   list-style: none;
+}
+
+/* dortes andringar från dorte2 branch */
+
+
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2.login-font
+{
+  font-family: 'Quicksand';
+  margin-left: 20px;
+  color: white;
+}
+.quicksand {
+    font-family: 'Quicksand';
+}
+.droid {
+    font-family: 'Droid Sans', sans-serif;
+}
+p {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/* unvisited link */
+a:link {
+    color: #993300;
+}
+/* visited link */
+a:visited {
+    color: #663300;
+}
+
+/* mouse over link */
+a:hover {
+    color: #000;
+}
+
+.dropdown-hover .a:hover {
+  visibility: visible;
+}
+/* selected link */
+a:active {
+    color: #cc3300;
+}
+
+a.text-primary {
+  color: #993300;
+}
+
+/* ändrar länkfärg från roströd till svart när musen förs över länkan */
+a.text-primary:hover {
+  color: black;
+}
+
+.text-16px {
+  font-size: 16px;
+}
+
+.text-10px {
+  font-size: 10px;
+}
+
+.btn-danger {
+  background-color: #993300;
+}
+
+/* roströd knapp */
+.btn-danger {
+  color: #fff;
+  background-color: #993300;
+  border-color: #663300;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger.focus,
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-danger {
+  color: #fff;
+  background-color: #cc3300;
+  border-color: #ff6600;
+}
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-danger {
+  background-image: none;
+}
+
+/* gul knapp */
+.btn-warning {
+  color: #fff;
+  background-color: #cc6600;
+  border-color: #d58512;
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning.focus,
+.btn-warning:active,
+.btn-warning.active,
+.open > .dropdown-toggle.btn-warning {
+  color: #fff;
+  background-color: #e48900;
+  border-color: #eea236;
+}
+.login-cloud {
+  margin-right: auto;
+  margin-left: -30px;
+}
+
+/* saetter faerg på forms att lysa rostrott naer anvaendaren fyller i forms */
+
+.form-control:focus {
+  border-color: #993300;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(153, 51, 0, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(153, 51, 0, .6);
+}
+
+.margin-horizontal-25px{
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.margin-left-25px{
+  margin-left: 25px;
+  margin-right: auto;
+}
+.margin-right-25px{
+  margin-right: 25px;
+  margin-left: auto;
+}
+
+.margin-top-110
+{
+  margin-top: 51px;
+  
+}
+
+.panel {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 350px;
+  /*  margin-left: 100px; */
+    padding: 0 10px 0;
+    position: relative;
+    color: #111;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.panel-default {
+  border-color: #ddd;
+/*  margin-left: 25px; */
+  min-height: 300px;
+  height: auto;
+}
+.panel-default > .panel-heading {
+  border-color: #ddd;
+  display: block;
+  font-family: 'Quicksand';
+  font-weight: bold;
+  font-size: 1.4em;
+  height: 35px;
+  line-height: 1.3;
+  width: 360px;
+  margin: 0;
+  padding: 3px 10px;
+  position: relative;
+  left: -16px;
+  top: 5px;
+  
+  color: #fff;
+  text-shadow: 0 1px 1px #333;
+  border-top: 1px solid #363636;
+  border-bottom: 1px solid #202020;
+  background: -webkit-linear-gradient(#000, #993300); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#000, #993300); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#000, #993300); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#000, #993300); /* Standard syntax (must be last) */
+  border-radius: 2px 2px 0 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.ovrigt {
+  width: 310px;
+}
+
+.panel-default > .ovrigt-heading {
+  width: 320px;
+}
+.aktiviteter {
+  width: 213px;
+
+}
+.panel-default > .aktiviteter-heading {
+  width: 223px;
+
+}
+.panel-width-240px {
+  width: 400px;
+}
+.panel-default > .panel-heading-250px {
+  width: 410px;
+}
+
+.profil-right {
+  margin-right: 5px;
+  margin-left: auto;
+
+  text-align: center;
+}
+
+.margin-left-15px {
+  margin-left: 15px;
+}
+.margin-left-profile {
+  margin-left: 10px;
+}
+.margin-left-guide {
+  margin-left: -30px;
+}
+.margin-right-15px{
+  margin-right: 15px;
+  margin-left: auto;
+}
+.margin-right-profile{
+  margin-right: 10px;
+  margin-left: auto;
+}
+/* forms */
+.form-control {
+  width: 220px;
+}
+/* nytt grid-system */
+
+.index-left {
+  background-color: yellow;
+}
+.wrapper {
+  .make-row();
+}
+.content-left {
+  .make-lg-column(4);
+width: 30%;
+/* background-color: red; */
+}
+.content-center {
+  .make-lg-column(4);
+width: 30%;
+/*  background-color: green; */
+
+
+}
+.content-right {
+  .make-lg-column(4);
+width: 30%;
+/*  background-color: yellow; */
+
+/*  .make-lg-column-offset(1); */
+}
+.views {
+  float: right;
+  list-style: none;
+}
+.panel-default > .panel-heading-560px {
+  width: 560px;
+}
+
+.panel-width-550px {
+  width: 550px;
+}
+
+/* unvisited link */
+a:link .login-text {
+    color: #fff;
+}
+/* visited link */
+a:visited .login-text {
+    color: #fff;
+}
+
+/* mouse over link */
+a:hover .login-text {
+    color: #fff;
+}
+
+/* selected link */
+a:active {
+    color: #fff;
 }
