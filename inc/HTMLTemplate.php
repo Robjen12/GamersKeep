@@ -63,15 +63,15 @@ $header = <<<END
 			<div class="col-md-4 column-right pull-right margin-right-zero nav nav-pills pull-right">
 			
 				<ul>
-					<li><a href="profile.php"><img src="images/profil2.png" class="img header-icons pull-right" alt="Profil">
+					<li><a href="profile.php"><img src="images/profil2.png" class="img header-icons pull-right" alt="Profil" title="Profil">
 					</a>
 					</li>
-					<li class="li-icons"><a href="index.php"><img src="images/home.png" class="img header-icons pull-right"></a></li>
-					<li><a href="guide_review.php"><img src="images/pen.png" class="img header-icons pull-right"></a></li>
+					<li class="li-icons"><a href="index.php"><img src="images/home.png" class="img header-icons pull-right" title="Nyheter"></a></li>
+					<li><a href="guide_review.php"><img src="images/pen.png" class="img header-icons pull-right" title="Skriv recension/guide"></a></li>
 					
 						<div class="dropdown">
 		  					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
-		  					 aria-expanded="true"><img src="images/swords.png" class="img header-icons pull-right">
+		  					 aria-expanded="true"><img src="images/swords.png" class="img header-icons pull-right" title="Genre">
 			  				</ul>
 		  					<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
 			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
@@ -83,7 +83,7 @@ $header = <<<END
 						
 					</li>
 					
-					<li class="li-icons"><a href="#"><img src="images/search.png" class="img header-icons pull-right"></a></li>
+					<li class="li-icons"><a href="#"><img src="images/search.png" class="img header-icons pull-right" title="Sök"></a></li>
 				</ul>
 				
 			</div><!-- meny right -->
