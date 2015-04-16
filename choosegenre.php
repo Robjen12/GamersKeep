@@ -183,7 +183,7 @@ $content = <<<END
 
 				<div class="row margin-top-100">
 					<form action="search.php" method="get" id="searchgenrer">
-					<h3 class="">Sök efter en specifik titel</h3>
+					<h3>Sök efter en specifik titel</h3>
 						<input type="text" id="searchgenre" name="searchgenre">
 						<input type="submit" value="Sök"><br><br>
 					</form>
