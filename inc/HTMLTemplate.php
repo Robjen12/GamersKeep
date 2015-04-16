@@ -70,14 +70,18 @@ $header = <<<END
 					<li><a href="guide_review.php"><img src="images/pen.png" class="img header-icons pull-right" title="Skriv recension/guide"></a></li>
 					
 						<div class="dropdown">
-		  					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
+						
+		  					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="menu"
 		  					 aria-expanded="true"><img src="images/swords.png" class="img header-icons pull-right" title="Genre">
 			  				</ul>
-		  					<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
-			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+				 							
+		  					<ul class="dropdown-menu pull-right dropdown-top-margin Droid Sans" role="menu" aria-labelledby="dropdownMenu1">
+			    				<li role="presentation" class="dropdown-header quicksand text-black">Genrer</li>
+								<!-- laesa in genrer från db har -->
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Shes back</a></li>
+			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Looking for vengeance</a></li>
+			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Over the fcked up</a></li>
+			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Computers in her life</a></li>
 			  				</ul>
 						</div><!-- dropdown -->
 						

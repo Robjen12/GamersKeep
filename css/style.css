@@ -677,6 +677,7 @@ a.text-primary:hover {
 .margin-left-profile {
   margin-left: 10px;
 }
+.margin-left-genre,
 .margin-left-guide {
   margin-left: -30px;
 }
@@ -748,4 +749,10 @@ a:hover .login-text {
 /* selected link */
 a:active {
     color: #fff;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+ }
+.dropdown-top-margin {
+	margin-top: 51px;
 }
