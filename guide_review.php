@@ -14,7 +14,7 @@ $admindelete = "";
 
 
 		$title	= $_POST['title'];
-		$text 	= $_POST['nicEdit'];
+		$text 	= ($_POST['nicEdit']);
 		$grade	= $_POST['grade'];
 
 		$title = utf8_encode($mysqli->real_escape_string($title));
