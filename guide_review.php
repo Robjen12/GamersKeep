@@ -161,7 +161,14 @@ $content = <<<END
 		</div>
 		
 		<script type="text/javascript" src="js/nicEdit.js"></script>
-		<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+		<script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> <script type="text/javascript">
+
+ 		 bkLib.onDomLoaded(function() {
+       		 new nicEditor({fullPanel : true}).panelInstance('nicEdit');
+       
+  });
+ 
+  </script>
 
 	<script>
 
