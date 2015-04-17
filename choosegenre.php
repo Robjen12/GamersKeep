@@ -1,3 +1,4 @@
+/* master choosegenre */
 <?php
 
 include_once("inc/HTMLTemplate.php");
@@ -9,6 +10,8 @@ $title = "";
 $text = "";
 $grade = "";
 $genre = "";
+$genre = "";
+
 $latestgenreguide = "";
 $latestgenrereview = "";
 $toplistgenreguide = "";
@@ -182,7 +185,12 @@ $content = <<<END
 				
 
 				<div class="row margin-top-100">
-			
+					<form action="search.php" method="get" id="searchgenrer">
+					<h3>Sök efter en specifik titel</h3>
+						<input type="text" id="searchgenre" name="searchgenre">
+						<input type="submit" value="Sök"><br><br>
+					</form>
+
 					<div class="col-md-4 col-sm-4 panel panel-default">
 
 	  					<div class="panel-heading">Topplista guider<li class="views">{$genretype}</li></div>
