@@ -2,6 +2,9 @@
 
 session_start();
 
+include_once("inc/Connstring.php");
+
+$genre = "";
 $adminText = "";
 
 if(isset($_SESSION['keepername']) && isset($_SESSION['roletype'])){
@@ -15,6 +18,25 @@ END;
 	}	
 }
 
+$query = <<<END
+
+	SELECT genretype FROM genre
+END;
+$res = $mysqli->query($query) or die();
+
+if($res->num_rows > 0){
+
+	while($row = $res->fetch_object())
+	{
+
+		$genretype = $row->genretype;
+
+		$genre .= <<<END
+		
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="choosegenre.php?genretype={$genretype}">{$genretype}</a></li>	
+END;
+	}
+}
 
 $header = <<<END
 <!DOCTYPE html>
@@ -78,10 +100,7 @@ $header = <<<END
 		  					<ul class="dropdown-menu pull-right dropdown-top-margin Droid Sans" role="menu" aria-labelledby="dropdownMenu1">
 			    				<li role="presentation" class="dropdown-header quicksand text-black">Genrer</li>
 								<!-- laesa in genrer från db har -->
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Shes back</a></li>
-			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Looking for vengeance</a></li>
-			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Over the fcked up</a></li>
-			    				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Computers in her life</a></li>
+								{$genre}
 			  				</ul>
 						</div><!-- dropdown -->
 						

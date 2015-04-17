@@ -208,24 +208,6 @@ END;
 	}
 }
 
-$query = <<<END
-
-	SELECT genretype FROM genre
-END;
-$res = $mysqli->query($query) or die();
-
-if($res->num_rows > 0){
-
-	while($row = $res->fetch_object())
-	{
-
-		$genretype = $row->genretype;
-
-		$genre .= <<<END
-		<button><a href="choosegenre.php?genretype={$genretype}">{$genretype}<a/></button>
-END;
-	}
-}
 $content = <<<END
 				
 			
