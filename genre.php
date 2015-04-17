@@ -38,24 +38,37 @@ END;
 }
 $content = <<<END
 
-<head>
-	<link rel="stylesheet" href="css/guide_panel_style.css">
-</head>
-		<div class="container">
-			<div class="row margin-top-100">
-				<div class="col-md-6">
-						<div class="grinfo">
-							<div class="panel panel-default">
-								<div class="panel-heading">Titel: {$title} <li class="views">{$showgrade}</li></div></br>
-								Skriven av:</br>
-								Publicerad: {$timestamp}<br><br>
-								{$text}<br>	
-							</div>
-						</div>
-				</div>
-				<div class="col-md-6"></div>
-			</div>
-		</div>
+		<div class="wrapper margin-top-100">
+
+			<div class="row">
+
+				<div class="content-genre col-md-8 margin-genre pull-left">
+				
+					<div class="grinfo">
+
+						<div class ="panel panel-default panel-genre pull-left">
+
+							<div class="panel-heading panel-heading-genre quicksand">{$title}
+							<li class="views">{$showgrade}</li></div></br>
+
+				  				<div class="panel-body">
+
+									Skriven av: keepername</br>
+									Publicerad: {$timestamp}<br><br>
+									{$text}<br>	
+							
+								</div><!-- panel body -->
+
+							</div><!-- panel heading -->
+
+						</div><!-- panel -->
+						
+					</div><!-- grinfo -->
+					
+				</div><!-- content genre -->
+								
+			</div><!-- row -->
+
 END;
 
 echo $header;

@@ -94,7 +94,7 @@ $content = <<<END
 							<input type="password" class="form-control" id="pw" name="pw" value="" placeholder="Skriv in lösenord">
 							</br>
 													
-							<button type="submit" class="btn btn-danger btn-sm pull-left text-bold" id="submit" name="logintosite" value="Logga in">Logga in</button>
+							<button type="submit" class="btn btn-danger btn-sm pull-left text-bold login-text text-white" id="submit" name="logintosite" value="Logga in">Logga in</button>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 							

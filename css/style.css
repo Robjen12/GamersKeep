@@ -316,7 +316,7 @@ body {
 }
 .grinfo
 {
-  min-height: 600px;
+  min-height: 400px;
   height: auto;
 }
 
@@ -478,13 +478,15 @@ p {
   font-weight: bold;
 }
 
+/* lankfarger genrellt satt till svart */
+
 /* unvisited link */
 a:link {
-    color: #993300;
+    color: #000;
 }
 /* visited link */
 a:visited {
-    color: #663300;
+    color: #000;
 }
 
 /* mouse over link */
@@ -492,6 +494,10 @@ a:hover {
     color: #000;
 }
 
+/* active link */
+a:active {
+	color: #000;
+}
 .dropdown-hover .a:hover {
   visibility: visible;
 }
@@ -644,10 +650,12 @@ a.text-primary:hover {
 
 .ovrigt {
   width: 310px;
+  
 }
 
 .panel-default > .ovrigt-heading {
   width: 320px;
+ 
 }
 .aktiviteter {
   width: 213px;
@@ -747,7 +755,7 @@ a:hover .login-text {
 }
 
 /* selected link */
-a:active {
+a:active .login-text {
     color: #fff;
 }
 
@@ -824,8 +832,66 @@ background: -webkit-linear-gradient(90deg, orange, #993300); /* For Safari 5.1 t
 
 /* transparent gradient */
 .transparent-gradient {
-background: -webkit-linear-gradient(left, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Safari 5.1 to 6.0 */
+	background: -webkit-linear-gradient(left, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* Standard syntax (must be last) */
+}
+
+.panel-genre {
+    width: 750px;
+ }
+.panel-default > .panel-heading-genre {
+	width: 760px;
+}
+
+.content-genre {
+	.make-lg-column(8);
+	width: 70%;
+
+}
+/* listed bullet lankfarger */
+li > a:link,
+li > a:hover,
+li > a:focus,
+li > a:visited {
+	color: #000;
+	text-decoration: none;
+}
+/* unvisited link */
+
+btn > a:link,
+btn > a:hover,
+btn > a:active,
+btn > a:visited  {
+    color: #fff;
+	text-decoration: none;
+}
+
+/* visited link */
+.login-text {
+	color: black;
+}
+.login-text > a:link,
+.login-text > a:active,
+.login-text > a:hover,
+.login-text > a:visited {
+    color: #fff;
+}
+
+a:link,
+a:active,
+a:active {
+    color: #993300;
+	text-decoration: none;
+}
+
+a:hover {
+	color: orange;
+
+}
+
+/* satter margin vaenster till minus 15px i paa genre sidan */
+.margin-genre {
+	margin-left: -15px;
 }
