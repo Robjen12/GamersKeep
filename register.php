@@ -76,6 +76,7 @@ $content = <<<END
 						<input type="text" id="about" name="about" value=""></br>
 						<label for="pw">Lösenord:</label></br>
 						<input type="password" id="pw" name="pw" value""></br></br>
+						<input type="checkbox" name="policy"> Jag har läst och accepterat <a href="policy.php">vilkoren</a> för sidan<br><br>
 						<button><a href="login.php">Bakåt</a></button>
 						<button type="submit" value="submit" name="registeraccount" value="Skapa konto">Skapa Konto</button>
 					</form>
