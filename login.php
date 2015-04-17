@@ -99,7 +99,7 @@ $content = <<<END
 
 							
 
-							<a href="register.php" class="btn btn-warning btn-sm text-bold login-text" role="button" text-white>Registrera dig</button></a></br>
+							<a href="register.php" class="btn btn-warning btn-sm text-bold login-text text-white" role="button">Registrera dig</button></a></br>
 						</form>
 						<a href="forgotuserpassword.php" class="text-10px text-primary">Glömt lösenord?</a>
 					</div>     
