@@ -756,3 +756,50 @@ a:active {
 .dropdown-top-margin {
 	margin-top: 51px;
 }
+
+
+
+.dropdown li > a:link, a:hover, a:active, a:visited {
+color: #fff;
+}
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #fff;
+  text-decoration: none;
+  background: -webkit-linear-gradient(90deg, #e48900, #993300); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(90deg, #e48900, #993300); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(90deg, #e48900, #993300); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(90deg, #e48900, #993300); /* Standard syntax (must be last) */
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #337ab7;
+  outline: 0;
+}
+
+@dropdown-link-hover-bg {
+background: -webkit-linear-gradient(90deg, orange, #993300); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, orange, #993300); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, orange, #993300); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(90deg, orange, #993300); /* Standard syntax (must be last) */
+}
+
+/* transparent gradient */
+.transparent-gradient {
+background: -webkit-linear-gradient(left, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* Standard syntax (must be last) */
+}
