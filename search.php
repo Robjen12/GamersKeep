@@ -6,6 +6,13 @@ include_once("inc/HTMLTemplate.php");
 $content = "";
 $feedback = "";
 $keeperid = $_SESSION['keeperid'];
+$grid = "";
+$title = "";
+$text = "";
+$title	= htmlspecialchars($title);
+$text	= htmlspecialchars($text);
+$article = "";
+$users = "";
 
 if(isset($_GET['search']))
 {
@@ -54,7 +61,34 @@ END;
 		$feedback = "<p class=\"feedback-yellow\">Det finns ingen i databasen med det användarnamnet</p>";
 	}
 }
+if(isset($_GET['searchgenre']))
+{
 
+	$query = <<<END
+		SELECT * FROM guidereviewinfo
+		WHERE title LIKE '%{$_GET['searchgenre']}%';
+END;
+	$result = $mysqli->query($query) or die();
+
+	if($result->num_rows > 0)
+	{
+		while($row = $result->fetch_object())
+		{
+			$grid = $row->grid;
+			$title = utf8_decode(htmlspecialchars($row->title));
+			$text = utf8_decode(htmlspecialchars($row->text));
+			
+			$article .= <<<END
+				Titel: <a href="genre.php?grid={$grid}">{$title}</a><br>
+				<i>{$text}</i><br><br>
+END;
+		}
+	}
+	else
+	{
+		$feedback = "<p class=\"feedback-yellow\">Det finns ingen artikel i databasen med det namnet</p>";
+	}
+}
 $content = <<<END
 
 	<div id="container">
@@ -63,6 +97,7 @@ $content = <<<END
 			<div class="col-md-4">
 				<div id="searchresult">
 				{$users}
+				{$article}
 				{$feedback}
 				</div>
 			</div>

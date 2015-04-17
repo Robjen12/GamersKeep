@@ -750,9 +750,20 @@ a:hover .login-text {
 a:active {
     color: #fff;
 }
+
 .dropdown:hover .dropdown-menu {
     display: block;
  }
 .dropdown-top-margin {
 	margin-top: 51px;
+}
+#searchgenrer
+{
+  margin-left: 25px;
+  font-family: 'Quicksand';
+}
+#searchgenre
+{
+  width: 300px;
+
 }
