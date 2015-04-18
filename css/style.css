@@ -898,3 +898,12 @@ a:hover {
 .margin-genre {
 	margin-left: -15px;
 }
+
+.comments {
+	min-height: 300px;
+	color: red;
+	}
+.showcomments {
+	min-height: 200px;
+	color: green;
+}

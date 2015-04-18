@@ -1,4 +1,3 @@
-/* master choosegenre */
 <?php
 
 include_once("inc/HTMLTemplate.php");
@@ -10,8 +9,6 @@ $title = "";
 $text = "";
 $grade = "";
 $genre = "";
-$genre = "";
-
 $latestgenreguide = "";
 $latestgenrereview = "";
 $toplistgenreguide = "";
