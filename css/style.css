@@ -840,6 +840,8 @@ background: -webkit-linear-gradient(90deg, orange, #993300); /* For Safari 5.1 t
 
 .panel-genre {
     width: 750px;
+	min-height: 100px;
+	height: auto;
  }
 .panel-default > .panel-heading-genre {
 	width: 760px;
@@ -900,10 +902,12 @@ a:hover {
 }
 
 .comments {
-	min-height: 300px;
-	color: red;
+	margin-left: 15px;
+	height: auto;
+
 	}
 .showcomments {
 	min-height: 200px;
 	color: green;
+	height: auto;
 }

@@ -78,9 +78,12 @@ END;
 		$date = date("d M Y H:i", $date);
 
 		$comments .=  <<<END
-		Skriven av:</br>
+		
+		Skriven av: keepername <!-- flagga --><a href="#" alt="Markera stötande innehåll">
+		<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a><br>
 		Publicerad: {$date}<br>
-		{$comment}<br><br>
+		{$comment}
+		<hr>
 END;
 	}
 
@@ -91,9 +94,9 @@ $content = <<<END
 				<div class="content-genre col-md-8 margin-genre pull-left">
 						<div class="grinfo">
 							<div class="panel panel-default panel-genre pull-left">
-								<div class="panel-heading panel-heading-genre quicksand">Titel: {$title}
+								<div class="panel-heading panel-heading-genre quicksand">{$title}
 								<li class="views">{$showgrade}</li></div></br>
-								<div class="panel-body">									
+								<div class="panel-body">								
 									
 									Skriven av: keepername <!-- flagga --><a href="#" alt="Markera stötande innehåll">
 									<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a>
@@ -104,15 +107,32 @@ $content = <<<END
 								{$text}<br>	
 							</div>
 							<div class="comments">
-								<form action="genre.php?grid={$grid}" method="post">
-									<h3>Kommentarer</h3>
-									<textarea id="comment" name="comment" cols="80" rows="3"></textarea>
-									<input type="submit" id="submit" name="publishcomment" value="Kommentera">
+								<form action="genre.php?grid={$grid}" method="post" class="quicksand text-bold">
+									<h3>Kommentera</h3>
+									<textarea id="comment" name="comment" cols="80" rows="6"></textarea>
+									</br>
+									
+									<button type="submit" class="btn btn-danger btn-sm pull-left text-bold login-text
+									text-white" id="submit" name="publishcomment" value="Kommentera">Kommentera
+									</button>
+									</br></br></br>
 								</form>
 							</div>
+						</div>
+							
+							
 							<div class="showcomments">
-								<div class="panel panel-default">
+								<div class="panel panel-default panel-genre pull-left">
+									<div class="panel-heading panel-heading-genre quicksand">
+										Kommentarer
+									</div><!-- panel heading -->
+								
+								<div class="panel-body">
+									
 									{$comments}
+								</div><!-- panel body -->
+									
+								
 								</div>
 							</div>
 						</div>
