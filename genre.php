@@ -96,9 +96,11 @@ $content = <<<END
 								<li class="views">{$showgrade}</li>
 								</div><!-- panel heading -->
 								</br>
+								<div class="panel-body">
 								Skriven av:</br>
 								Publicerad: {$timestamp}<br><br>
-								{$text}<br>	
+								{$text}<br>
+								
 							</div>
 							<div class="comments">
 								<form action="genre.php?grid={$grid}" method="post">
