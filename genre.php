@@ -97,30 +97,28 @@ $content = <<<END
 								<div class="panel-heading panel-heading-genre quicksand">{$title}
 								<li class="views">{$showgrade}</li>
 								</div><!-- panel heading -->
+								</br>
 								
-								<div class="panel-body">
-								
+								<div class="panel-body">								
+									
 									Skriven av: keepername <!-- flagga --><a href="#" alt="Markera stötande innehåll">
-										<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a>
-										</br>
-									Publicerad: {$timestamp}<br><br>
-									{$text}<br>
+									<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a>
+									</br>
+									
 								
-							</div><!-- panel -->
+								Publicerad: {$timestamp}<br><br>
+								{$text}<br>	
+								</div><!-- panel body --> 
 							
-							<div class="comments">
-								<form action="genre.php?grid={$grid}" method="post">
-									<h3>Kommentarer</h3>
-									<textarea id="comment" name="comment" cols="80" rows="5"></textarea>
-									<input type="submit" id="submit" name="publishcomment" value="Kommentera">
-								</form>
+							
+												
 							</div><!-- comments -->
 							
 							<div class="showcomments">
 								<div class="panel panel-default">
 									{$comments}
-									
-									<form action="genre.php?grid={$grid}" method="post" class="quicksand text-bold">
+
+								<form action="genre.php?grid={$grid}" method="post" class="quicksand text-bold">
 									<h3>Kommentera</h3>
 									<textarea id="comment" name="comment" cols="80" rows="6"></textarea>
 									</br>
@@ -129,13 +127,26 @@ $content = <<<END
 									text-white" id="submit" name="publishcomment" value="Kommentera">Kommentera
 									</button>
 									</br></br></br>
-									</form>
+								</form>
+							</div><!-- showcomments form -->
+						</div>
+							
+							
+							<div class="showcomments">
+								<div class="panel panel-default panel-genre pull-left">
+									<div class="panel-heading panel-heading-genre quicksand">
+										Kommentarer
+									</div><!-- panel heading -->
+								
+								<div class="panel-body">
 									
-								</div><!-- panel -->
-							</div><!-- show comments -->
-						</div><!-- grinfo -->
+									{$comments}
+								</div><!-- panel body -->								
+
+								</div>
+							</div>
+						</div>
 				</div>
-				<div class="col-md-6"></div>
 			</div>
 		</div>
 END;
