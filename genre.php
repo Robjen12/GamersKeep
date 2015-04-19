@@ -94,18 +94,18 @@ $content = <<<END
 							<div class="panel panel-default panel-genre pull-left">
 								<div class="panel-heading panel-heading-genre quicksand">{$title}
 								<li class="views">{$showgrade}</li>
-								</div><!-- panel heading -->
-								
+								</div><!-- panel heading -->								
 								
 								<div class="panel-body">
 								
-								Skriven av: keepername <!-- flagga --><a href="#" alt="Markera stötande innehåll">
-									<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a>
-									</br>
-								Publicerad: {$timestamp}<br><br>
-								{$text}<br>
+									Skriven av: keepername <!-- flagga --><a href="#" alt="Markera stötande innehåll">
+										<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a>
+										</br>
+									Publicerad: {$timestamp}<br><br>
+									{$text}<br>
 								
-							</div>
+							</div><!-- panel -->
+							
 							<div class="comments">
 								<form action="genre.php?grid={$grid}" method="post">
 									<h3>Kommentarer</h3>
