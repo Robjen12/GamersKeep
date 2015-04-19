@@ -182,15 +182,20 @@ $content = <<<END
 				
 
 				<div class="row margin-top-100">
+					<form class="form-inline margin-left-25px">
+					<div class="form-group">
 					<form action="search.php" method="get" id="searchgenrer">
-					<h3>Sök efter en specifik titel</h3>
-						<input type="text" id="searchgenre" name="searchgenre">
-						<input type="submit" value="Sök"><br><br>
+					<h3 class="text-bold">Sök efter en specifik titel</h3>
+						<input type="text" class="form-control droid" id="searchgenre" name="searchgenre" placeholder="Titel">
+						<button type="submit" class="btn btn-danger text-bold login-text quicksand text-white pull-right" value="Sök"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button><br>
 					</form>
-
+					</div><!-- form group -->
+					
 					<div class="col-md-4 col-sm-4 panel panel-default">
 
-	  					<div class="panel-heading">Topplista guider<li class="views">{$genretype}</li></div>
+	  					<div class="panel-heading">
+							Topplista guider <li class="views">{$genretype}</li>
+						</div><!-- panel heading -->
 
 		  					<div class="panel-body">
 
@@ -198,42 +203,36 @@ $content = <<<END
 
 		  					</div><!-- panel body -->
 
-						</div><!-- panel heading -->
-
-						
-					
+						</div><!-- panel heading -->					
 
 					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
 
-	  					<div class="panel-heading">Senaste guiderna<li class="views">{$genretype}</li></div>
-
-		  					<div class="panel-body">
-
-		  						{$latestgenreguide}
-
-		  					</div>
-						
+	  					<div class="panel-heading">
+							Senaste guider<li class="views">{$genretype}</li>
 						</div><!-- panel heading -->
 
+		  				<div class="panel-body">
 
+		  					{$latestgenreguide}
+
+		  				</div><!-- panel body -->
+						
+					</div><!-- col md 4 -->
 
 					<div class="col-md-3 col-sm-3 ads pull-right">
 
 					<!-- Reklam karusel -->
 					
-	  					<img src="http://placehold.it/200x350">
-	  					
+	  					<img src="http://placehold.it/300x300">			
+							  					
 					</div><!-- reklam kolumn -->
 					
-
 				</div><!-- row -->
 
-
-
 				<div class="row">
-					<div class="col-md-4 col-sm-4 panel panel-default">
+					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
 
-		  					<div class="panel-heading">Topplista recensionerna<li class="views">{$genretype}</li></div>
+		  					<div class="panel-heading">Topplista recensioner<li class="views">{$genretype}</li></div>
 
 			  					<div class="panel-body">
 
@@ -242,26 +241,34 @@ $content = <<<END
 				  						  			
 			  					</div><!-- panel body -->
 
-							</div><!-- panel heading -->
-
-							
+							</div><!-- panel heading -->							
 						
 
-						<div class="col-md-4 col-sm-4 panel panel-default pull-left">
+					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
 
-		  					<div class="panel-heading">Senaste recensionerna<li class="views">{$genretype}</li></div>
+		  				<div class="panel-heading">
+							Senaste recensioner<li class="views">{$genretype}</li>
+						</div><!-- panel heading -->
 
-			  					<div class="panel-body">
+			  				<div class="panel-body">
+		  						{$latestgenrereview}
 
-			  						{$latestgenrereview}
-
-			  					</div>
-							
+		  					</div>							
 						
-							</div><!-- panel heading -->
-						</div>
-					</div>
-				</div>
+						</div><!-- panel heading -->
+						
+					<div class="col-md-3 col-sm-3 ads pull-right">
+
+						<!-- Reklam karusel -->
+								
+						<img src="http://placehold.it/300x300">									
+															
+					</div><!-- reklam kolumn -->
+												
+					</div><!-- col md 4 -->
+					</div><!-- col md 4 -->
+
+				</div><!-- row -->
 	
 
   

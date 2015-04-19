@@ -68,7 +68,7 @@ $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno
 $content = <<<END
 
 		
-			<div class="container">
+		
 				<div class="row margin-top-100">
 			
 					<div class="col-md-3 col-sm-3 pull-left">
