@@ -86,9 +86,7 @@ END;
 
 $content = <<<END
 
-<head>
-	<link rel="stylesheet" href="css/guide_panel_style.css">
-</head>
+
 		<div class="container">
 			<div class="row margin-top-100">
 				<div class="col-md-6">
