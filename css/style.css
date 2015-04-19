@@ -89,7 +89,7 @@
 body {
 	overflow-x: hidden;        /* Hide horizontal overflow */
 	overflow-y: auto;          /* Show vertical overflow */
-	background-color: darkgrey;    /* Set background color to white */
+	background-color: brown;    /* Set background color to white */
 	background: url("../images/bg.jpg") no-repeat center center fixed;	/* bakgrundsbild */
 	background-size: 100%;
 }
