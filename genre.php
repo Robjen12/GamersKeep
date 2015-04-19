@@ -89,7 +89,6 @@ END;
 
 $content = <<<END
 
-
 		<div class="wrapper margin-top-100">
 			<div class="row">
 				<div class="content-genre col-md-8 margin-genre pull-left">
@@ -97,7 +96,7 @@ $content = <<<END
 							<div class="panel panel-default panel-genre pull-left">
 								<div class="panel-heading panel-heading-genre quicksand">{$title}
 								<li class="views">{$showgrade}</li>
-								</div><!-- panel heading -->								
+								</div><!-- panel heading -->
 								
 								<div class="panel-body">
 								
@@ -115,7 +114,8 @@ $content = <<<END
 									<textarea id="comment" name="comment" cols="80" rows="5"></textarea>
 									<input type="submit" id="submit" name="publishcomment" value="Kommentera">
 								</form>
-							</div>
+							</div><!-- comments -->
+							
 							<div class="showcomments">
 								<div class="panel panel-default">
 									{$comments}
