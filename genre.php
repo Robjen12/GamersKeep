@@ -78,6 +78,7 @@ END;
 		$date = date("d M Y H:i", $date);
 
 		$comments .=  <<<END
+
 		Skriven av:</br>
 		Publicerad: {$date}<br>
 		{$comment}<br><br>
