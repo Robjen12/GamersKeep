@@ -120,6 +120,16 @@ $content = <<<END
 								<div class="panel panel-default">
 									{$comments}
 									
+									<form action="genre.php?grid={$grid}" method="post" class="quicksand text-bold">
+									<h3>Kommentera</h3>
+									<textarea id="comment" name="comment" cols="80" rows="6"></textarea>
+									</br>
+									
+									<button type="submit" class="btn btn-danger btn-sm pull-left text-bold login-text
+									text-white" id="submit" name="publishcomment" value="Kommentera">Kommentera
+									</button>
+									</br></br></br>
+									</form>
 									
 								</div><!-- panel -->
 							</div><!-- show comments -->
