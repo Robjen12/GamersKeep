@@ -105,19 +105,11 @@ $content = <<<END
 									<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a>
 									</br>
 									
-								
+								Skriven av:</br>
 								Publicerad: {$timestamp}<br><br>
 								{$text}<br>	
-								</div><!-- panel body --> 
-							
-							
-												
-							</div><!-- comments -->
-							
-							<div class="showcomments">
-								<div class="panel panel-default">
-									{$comments}
-
+							</div>
+							<div class="comments">
 								<form action="genre.php?grid={$grid}" method="post" class="quicksand text-bold">
 									<h3>Kommentera</h3>
 									<textarea id="comment" name="comment" cols="80" rows="6"></textarea>
@@ -128,7 +120,7 @@ $content = <<<END
 									</button>
 									</br></br></br>
 								</form>
-							</div><!-- showcomments form -->
+							</div>
 						</div>
 							
 							
@@ -141,8 +133,9 @@ $content = <<<END
 								<div class="panel-body">
 									
 									{$comments}
-								</div><!-- panel body -->								
-
+								</div><!-- panel body -->
+									
+								
 								</div>
 							</div>
 						</div>
