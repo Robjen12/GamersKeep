@@ -89,7 +89,7 @@ $content = <<<END
 
 		<div class="wrapper margin-top-100">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="content-genre col-md-8 margin-genre pull-left">
 						<div class="grinfo">
 							<div class="panel panel-default">
 								<div class="panel-heading">Titel: {$title} <li class="views">{$showgrade}</li></div></br>
