@@ -639,7 +639,7 @@ a.text-primary:hover {
   
   color: #fff;
   text-shadow: 0 1px 1px #333;
-  border-top: 1px solid #363636;
+	border-top: 1px solid #993300;
   border-bottom: 1px solid #202020;
   background: -webkit-linear-gradient(#000, #993300); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#000, #993300); /* For Opera 11.1 to 12.0 */

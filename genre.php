@@ -118,7 +118,7 @@ $content = <<<END
 									<button type="submit" class="btn btn-danger btn-sm pull-left text-bold login-text
 									text-white" id="submit" name="publishcomment" value="Kommentera">Kommentera
 									</button>
-									</br></br></br>
+									</br></br>
 								</form>
 							</div>
 						</div>
