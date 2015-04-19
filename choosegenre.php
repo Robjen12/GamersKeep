@@ -207,24 +207,19 @@ $content = <<<END
 
 		  					</div><!-- panel body -->
 
-						</div><!-- panel heading -->
-
-						
-					
+						</div><!-- panel heading -->					
 
 					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
 
-	  					<div class="panel-heading">Senaste guiderna<li class="views">{$genretype}</li></div>
-
-		  					<div class="panel-body">
-
-		  						{$latestgenreguide}
-
-		  					</div>
-						
+	  					<div class="panel-heading">
+							Senaste guider<li class="views">{$genretype}</li>
 						</div><!-- panel heading -->
 
-
+		  				<div class="panel-body">
+		  					{$latestgenreguide}
+		  				</div><!-- panel body -->
+						
+					</div><!-- col md 4 -->
 
 					<div class="col-md-3 col-sm-3 ads pull-right">
 
@@ -232,41 +227,33 @@ $content = <<<END
 					
 	  					<img src="http://placehold.it/200x350">
 	  					
-					</div><!-- reklam kolumn -->
-					
+					</div><!-- reklam kolumn -->					
 
 				</div><!-- row -->
 
-
-
 				<div class="row">
-					<div class="col-md-4 col-sm-4 panel panel-default">
+					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
 
-		  					<div class="panel-heading">Topplista recensionerna<li class="views">{$genretype}</li></div>
-
-			  					<div class="panel-body">
-
-										
-				  				{$toplistgenrereview}
-				  						  			
-			  					</div><!-- panel body -->
-
+		  					<div class="panel-heading">
+								Topplista recensionerna <li class="views">{$genretype}</li>
 							</div><!-- panel heading -->
 
-							
-						
+			  				<div class="panel-body">										
+				  				{$toplistgenrereview}		  			
+			  				</div><!-- panel body -->
 
-						<div class="col-md-4 col-sm-4 panel panel-default pull-left">
+					</div><!-- col md 4 -->						
 
-		  					<div class="panel-heading">Senaste recensionerna<li class="views">{$genretype}</li></div>
+					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
 
-			  					<div class="panel-body">
+		  					<div class="panel-heading">
+								Senaste recensionerna<li class="views">{$genretype}</li>
+							</div><!-- panel heading -->
 
+			  				<div class="panel-body">
 			  						{$latestgenrereview}
-
-			  					</div>
-							
-						
+		  					</div><!-- panel body -->
+													
 							</div><!-- panel heading -->
 						</div>
 					</div>
