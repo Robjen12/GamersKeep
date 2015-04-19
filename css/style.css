@@ -836,7 +836,20 @@ background: -webkit-linear-gradient(90deg, orange, #993300); /* For Safari 5.1 t
     background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* Standard syntax (must be last) */
 }
+.panel-genre {
+    width: 750px;
+	min-height: 100px;
+	height: auto;
+ }
+.panel-default > .panel-heading-genre {
+	width: 760px;
+}
 
+.content-genre {
+	.make-lg-column(8);
+	width: 70%;
+
+}
 /* satter margin vaenster till minus 15px i paa genre sidan */
 .margin-genre {
 	margin-left: -15px;
