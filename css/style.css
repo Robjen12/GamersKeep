@@ -478,18 +478,25 @@ p {
   font-weight: bold;
 }
 
+/* lankfarger genrellt satt till svart */
+
 /* unvisited link */
 a:link {
-    color: #993300;
+    color: #000;
 }
 /* visited link */
 a:visited {
-    color: #663300;
+    color: #000;
 }
 
 /* mouse over link */
 a:hover {
     color: #000;
+}
+
+/* active link */
+a:active {
+	color: #000;
 }
 
 .dropdown-hover .a:hover {
@@ -751,8 +758,10 @@ a:active {
     color: #fff;
 }
 
+/* placering av genre dropdown menu */
 .dropdown:hover .dropdown-menu {
     display: block;
+	margin-right: 75px;
  }
 .dropdown-top-margin {
 	margin-top: 51px;
