@@ -776,6 +776,22 @@ a:active {
   width: 300px;
 
 }
+
+.dropdown li > a:link, a:hover, a:active, a:visited {
+color: #fff;
+}
+/* dropdown meny aktiva lankar farg mm */
+.dropdown-menu > li > a {
+
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #e48900;						/* satter besokta lankor till fargen orange */
+  white-space: nowrap;
+}
+
 /* satter margin vaenster till minus 15px i paa genre sidan */
 .margin-genre {
 	margin-left: -15px;
