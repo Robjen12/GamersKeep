@@ -792,6 +792,36 @@ color: #fff;
   white-space: nowrap;
 }
 
+/* dropdown menu bakgrundsfarg och lankfarg */
+.dropdown-menu > li > a:active,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus
+.dropdown-menu > li > a:visited {
+  color: #fff;
+  text-decoration: none;
+  background: -webkit-linear-gradient(90deg, #e48900, #993300); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(90deg, #e48900, #993300); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(90deg, #e48900, #993300); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(90deg, #e48900, #993300); /* Standard syntax (must be last) */
+}
+
+/* hover farg på dropdown meny nar den ar aktiv */
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:visited {
+  color: #fff;
+  text-decoration: none;
+  background-color: #337ab7;
+  outline: 0;
+}
+
+/* farg och stil pa genre header */
+.dropdown-header {
+	background-color: #000;
+	color: #fff;
+}
+
 /* satter margin vaenster till minus 15px i paa genre sidan */
 .margin-genre {
 	margin-left: -15px;
