@@ -771,9 +771,17 @@ a:active {
 .margin-genre {
 	margin-left: -15px;
 }
-
+.panel-genre {
+    width: 750px;
+	min-height: 100px;
+	height: auto;
+ }
+.panel-default > .panel-heading-genre {
+	width: 760px;
+}
 .content-genre {
 	.make-lg-column(8);
 	width: 70%;
 
 }
+
