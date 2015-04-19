@@ -99,7 +99,7 @@ body {
   margin-top: 0;             /* Sets top margin to zero */
 	height: 81px;              /* Sets height to 80 pixels */ 
 	width: 100%;
-  border-bottom: brown 1px transparent;
+  border: none;
 }
 /* left column in the header */
 #header > .column-left {
@@ -120,6 +120,18 @@ body {
   background: -moz-linear-gradient(#000, #993300); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#000, #993300); /* Standard syntax (must be last) */
 }
+/* Sets background to black translucent */
+.bg-gradient-black-trans {
+background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 1%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(1%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 1%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 1%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 1%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 1%,rgba(0,0,0,0.65) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+border: none;
+}
+
 /* center column in the header */
 #header > .column-center {
     height: 60px;
