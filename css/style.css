@@ -97,9 +97,10 @@ body {
 #header {
   margin-left: 0;            /* Sets left margin to zero */
   margin-top: 0;             /* Sets top margin to zero */
-	height: 81px;              /* Sets height to 80 pixels */ 
+	height: 80px;              /* Sets height to 80 pixels */ 
 	width: 100%;
   border: none;
+
 }
 /* left column in the header */
 #header > .column-left {

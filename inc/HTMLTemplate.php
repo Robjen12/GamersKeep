@@ -111,7 +111,7 @@ $header = <<<END
 				
 			</div><!-- meny left -->
 			<!-- Meny left row2 -->
-			<div class="col-md-4 column-left-row2 bg-gradient-black-trans height-20px">			
+			<div class="col-md-4 column-left-row2 bg-black height-20px">			
 			</div><!-- -->
 			<!-- Meny center row2 -->
 			<div class="col-md-4 column-center-row2 bg-black height-20px">
