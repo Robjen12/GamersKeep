@@ -119,9 +119,11 @@ $content = <<<END
 							<div class="showcomments">
 								<div class="panel panel-default">
 									{$comments}
-								</div>
-							</div>
-						</div>
+									
+									
+								</div><!-- panel -->
+							</div><!-- show comments -->
+						</div><!-- grinfo -->
 				</div>
 				<div class="col-md-6"></div>
 			</div>
