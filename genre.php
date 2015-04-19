@@ -95,9 +95,13 @@ $content = <<<END
 								<div class="panel-heading panel-heading-genre quicksand">{$title}
 								<li class="views">{$showgrade}</li>
 								</div><!-- panel heading -->
-								</br>
+								
+								
 								<div class="panel-body">
-								Skriven av:</br>
+								
+								Skriven av: keepername <!-- flagga --><a href="#" alt="Markera stötande innehåll">
+									<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a>
+									</br>
 								Publicerad: {$timestamp}<br><br>
 								{$text}<br>
 								
