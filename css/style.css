@@ -148,7 +148,7 @@ body {
     border-style: solid;
     border-width: 20px 0 0 20px;
 	
-    border-color: transparent transparent transparent darkgrey;
+    border-color: transparent transparent transparent black;
     line-height: 0;
 }
 
@@ -160,12 +160,13 @@ body {
     border-style: solid;
     border-width: 20px 0 0 20px;
 	
-    border-color: transparent transparent transparent darkgrey;
+    border-color: transparent transparent transparent black;
     line-height: 0;
 }
 .top-to-bottom {
     border-width: auto;
-	border: repeat-x; 
+	border: repeat-x;
+	height: 20px;
     border-style: solid;
     -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
     -webkit-border-image: 
@@ -227,7 +228,7 @@ body {
     height: 0;
     border-style: solid;
     border-width: 0 20px 20px 20px;
-    border-color: transparent transparent transparent darkgrey;
+    border-color: transparent transparent transparent black;
     line-height: 0;
 }
 /* clears white triangel at the right side */
@@ -238,7 +239,7 @@ body {
     background-color: #fff;    /* Set background color to white */
 }
 .bg-black {
-    background-color: darkgrey;    /* Set background color to white */
+    background-color: #000;    /* Set background color to white */
 }
 
 .margin-right-50px{
