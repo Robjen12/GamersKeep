@@ -87,8 +87,8 @@ END;
 $content = <<<END
 
 
-		<div class="container">
-			<div class="row margin-top-100">
+		<div class="wrapper margin-top-100">
+			<div class="row">
 				<div class="col-md-6">
 						<div class="grinfo">
 							<div class="panel panel-default">
