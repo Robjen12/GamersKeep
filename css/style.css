@@ -767,3 +767,13 @@ a:active {
   width: 300px;
 
 }
+/* satter margin vaenster till minus 15px i paa genre sidan */
+.margin-genre {
+	margin-left: -15px;
+}
+
+.content-genre {
+	.make-lg-column(8);
+	width: 70%;
+
+}
