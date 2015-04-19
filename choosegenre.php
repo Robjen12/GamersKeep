@@ -182,11 +182,18 @@ $content = <<<END
 				
 
 				<div class="row margin-top-100">
+				
+					<form class="form-inline margin-left-25px">
+					<div class="form-group">
 					<form action="search.php" method="get" id="searchgenrer">
-					<h3>Sök efter en specifik titel</h3>
-						<input type="text" id="searchgenre" name="searchgenre">
-						<input type="submit" value="Sök"><br><br>
+					<h3 class="text-bold">Sök efter en specifik titel</h3>
+						<input type="text" class="form-control droid" id="searchgenre" name="searchgenre" placeholder="Titel">
+						<button type="submit" class="btn btn-danger text-bold login-text quicksand text-white pull-right" value="Sök">
+						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</button>
+						<br>
 					</form>
+					</div><!-- form group -->
 
 					<div class="col-md-4 col-sm-4 panel panel-default">
 
