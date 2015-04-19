@@ -79,9 +79,11 @@ END;
 
 		$comments .=  <<<END
 
-		Skriven av:</br>
+		Skriven av: keepername <!-- flagga --><a href="#" alt="Markera stötande innehåll">
+		<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a><br>
 		Publicerad: {$date}<br>
-		{$comment}<br><br>
+		{$comment}
+		<hr>
 END;
 	}
 
