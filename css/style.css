@@ -90,13 +90,16 @@ body {
 	overflow-x: hidden;        /* Hide horizontal overflow */
 	overflow-y: auto;          /* Show vertical overflow */
 	background-color: darkgrey;    /* Set background color to white */
+	background: url("../images/bg.jpg") no-repeat center center fixed;	/* bakgrundsbild */
+	background-size: 100%;
+}
 }
 #header {
   margin-left: 0;            /* Sets left margin to zero */
   margin-top: 0;             /* Sets top margin to zero */
 	height: 81px;              /* Sets height to 80 pixels */ 
 	width: 100%;
-  border-bottom: darkgrey solid 1px;
+  border-bottom: brown 1px transparent;
 }
 /* left column in the header */
 #header > .column-left {
@@ -144,9 +147,37 @@ body {
     height: 0;
     border-style: solid;
     border-width: 20px 0 0 20px;
+	
     border-color: transparent transparent transparent darkgrey;
     line-height: 0;
 }
+
+#header > .column-right-row2::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 0 20px;
+	
+    border-color: transparent transparent transparent darkgrey;
+    line-height: 0;
+}
+.top-to-bottom {
+    border-width: auto;
+	border: repeat-x; 
+    border-style: solid;
+    -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+    -webkit-border-image: 
+      -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+    -moz-border-image:
+      -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;    
+    -o-border-image:
+      -o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+    border-image:
+      linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%;
+}
+
 /* clears white triangel at the right side */
 #header > .column-right-row2::before {
     right: 0;
@@ -764,6 +795,7 @@ a:active {
 	margin-right: 75px;
 	border-top: none;
 	padding-top: 0;
+
  }
 .dropdown-top-margin {
 	margin-top: 51px;

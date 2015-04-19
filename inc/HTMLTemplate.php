@@ -109,9 +109,9 @@ $header = <<<END
 					<li class="li-icons"><a href="#"><img src="images/search.png" class="img header-icons pull-right" title="Sök"></a></li>
 				</ul>
 				
-			</div><!-- meny right -->
+			</div><!-- meny left -->
 			<!-- Meny left row2 -->
-			<div class="col-md-4 column-left-row2 bg-black height-20px transparent-bg">			
+			<div class="col-md-4 column-left-row2 bg-black height-20px transparent-bg top-to-bottom">			
 			</div><!-- -->
 			<!-- Meny center row2 -->
 			<div class="col-md-4 column-center-row2 bg-black height-20px">

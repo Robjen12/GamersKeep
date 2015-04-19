@@ -254,7 +254,7 @@ $content = <<<END
 
 							<div class ="ads">
 
-								<img src="http://placehold.it/290x300" class="ads pull-right">
+								<img src="images/ad_req" class="ads pull-right" width="300px">
 
 							</div><!-- ads -->
 
