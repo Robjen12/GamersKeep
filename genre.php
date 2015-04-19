@@ -92,7 +92,8 @@ $content = <<<END
 				<div class="content-genre col-md-8 margin-genre pull-left">
 						<div class="grinfo">
 							<div class="panel panel-default panel-genre pull-left">
-								<div class="panel-heading">Titel: {$title} <li class="views">{$showgrade}</li></div></br>
+								<div class="panel-heading panel-heading-genre quicksand">{$title} <li class="views">{$showgrade}</li>
+								</div></br>
 								Skriven av:</br>
 								Publicerad: {$timestamp}<br><br>
 								{$text}<br>	
