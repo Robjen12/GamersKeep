@@ -97,11 +97,11 @@ $header = <<<END
 		  					 aria-expanded="true"><img src="images/swords.png" class="img header-icons pull-right" title="Genre">
 			  				</ul>
 				 							
-		  					<ul class="dropdown-menu pull-right dropdown-top-margin Droid Sans" role="menu" aria-labelledby="dropdownMenu1">
-			    				<li role="presentation" class="dropdown-header quicksand text-black">Genrer</li>
+		  					<ul class="dropdown-menu pull-right dropdown-top-margin Droid bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">
+			    				<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px">Genrer</li>
 								<!-- laesa in genrer från db har -->
 								{$genre}
-			  				</ul>
+			    			</ul>
 						</div><!-- dropdown -->
 						
 					</li>
