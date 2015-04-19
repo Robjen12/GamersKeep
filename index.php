@@ -196,7 +196,8 @@ if($res->num_rows > 0){
     									</div>
     									<div class="media-body">
       										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
-      										class="text-bold">{$title}</a></br><li class="views">{$row->counter}</li>
+      										class="text-bold">{$title}</a><li class="views pull-right">{$row->counter}</li>
+											<br>
 											<i>{$text}</i><br></h4>
     									</div>
   									</li>
@@ -220,12 +221,13 @@ $content = <<<END
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
-								<div class="panel-heading panel-heading-250px quicksand">Topplista guider</div>
+								<div class="panel-heading panel-heading-250px quicksand">
+									Topplista guider
+								</div><!-- panel heading -->
 
-				  					<div class="panel-body">
-
-				  							<p>{$toplistguide}</p>
-				  					</div><!-- panel body -->
+				  				<div class="panel-body">
+				  					<p>{$toplistguide}</p>
+				  				</div><!-- panel body -->
 
 								</div><!-- panel heading -->
 
@@ -273,16 +275,17 @@ $content = <<<END
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
-								<div class="panel-heading panel-heading-250px">Topplista recensioner</div>
-
-				  					<div class="panel-body">
-
-				  							<p>{$toplistreview}</p>
-				  					</div><!-- panel body -->
-
+								<div class="panel-heading panel-heading-250px">
+									Topplista recensioner
 								</div><!-- panel heading -->
 
+				  				<div class="panel-body">
+				  					<p>{$toplistreview}</p>
+				  				</div><!-- panel body -->
+								
 							</div><!-- panel -->
+							
+						</div><!-- row -->
 					
 		  				<!-- center column  row 2 -->
 						<div class="content-center margin-left-25px pull-left">
