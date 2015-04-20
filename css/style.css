@@ -979,4 +979,12 @@ padding-right: 15px;
 	
 	
 }
+p .success {
+background-color: green;
+color: white;
+}
 
+p .danger {
+background-color: red;
+color: white;
+}

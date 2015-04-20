@@ -17,7 +17,7 @@ if(isset($_POST['registeraccount']))
 
 		if($keepername == '' || $password == '' || $fname == '' || $lname == '' || $email == '' )
 		{
-			$feedback = "<p class=\"feedback-yellow\">Fyll i fälten</p>";
+			$feedback = "<p class=\"danger\">Fyll i fälten</p>";
 		}
 		else
 		{
@@ -37,7 +37,7 @@ END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . " : " . $mysqli->error);
 
 		}
-		$feedback = "<p class=\"feedback-yellow\">Konto skapat</p>";
+		$feedback = "<p class=\"success\">Konto skapat</p>";
 	}
 }
 
@@ -61,11 +61,11 @@ $content = <<<END
 			<div class="col-md-4"></div>
 			<div class="col-md-8">
 				<div class="register">
-					<h1>Registrering</h1>
+					<h3 class="">Registrering</h3>
 					{$feedback}
 					<form action="register.php" method="post" id="register-form">
-						<label for="keepername">Användarnamn:</label></br>
-						<input type="text" id="keepername" name="keepername" value=""></br>
+						<label for="keepername">Användarnamn</label></br>
+						<input type="text" class="form-control" id="keepername" name="keepername" value="" placeholder="Användarnamn"></br>
 						<label for="fname">Förnamn:</label></br>
 						<input type="text" id="fname" name="fname" value""></br>
 						<label for="lname">Efternamn:</label></br>
@@ -80,7 +80,10 @@ $content = <<<END
 						<button><a href="login.php">Bakåt</a></button>
 						<button type="submit" value="submit" name="registeraccount" value="Skapa konto">Skapa Konto</button>
 					</form>
-				</div>
+				</div><!-- register -->
+				<div class="policy">
+				Policy
+				</div><!-- policy -->
 			</div>
 		</div>
 	</div>
