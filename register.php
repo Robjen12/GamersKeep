@@ -37,7 +37,7 @@ END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . " : " . $mysqli->error);
 
 		header("Location: login.php");
-		
+
 		}
 		$feedback = "<p class=\"success\">Konto skapat</p>";
 	}
