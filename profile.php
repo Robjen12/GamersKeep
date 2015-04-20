@@ -64,7 +64,7 @@ END;
 // Lägger till "lägg till vän" knapp om man är inne på en annan användares profil
 $button = <<<END
 	<form method="post">
-	<button type="submit" name="keeperfr" value="Lägg till">Lägg till fläskesvålsvän</button>
+	<button type="submit" name="keeperfr" value="Lägg till">Lägg till vän</button>
 	</form>
 END;
 
