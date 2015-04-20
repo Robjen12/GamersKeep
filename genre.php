@@ -38,6 +38,7 @@ if($res->num_rows ==1)
 {
 	$row = $res->fetch_object();
 
+	$keeperid = $row->keeperid;
 	$keepername = $row->keepername;
 	$title = utf8_decode(htmlspecialchars($row->title));
 	$text  = utf8_decode(htmlspecialchars($row->text));
@@ -82,6 +83,7 @@ END;
 
 	while($row = $res->fetch_object())
 	{
+		$commentkeeperid = $row->keeperid;
 		$commentkeepername = $row->keepername;
 		$comment = utf8_decode(htmlspecialchars($row->comment));
 		$date = strtotime($row->timestamp);
@@ -89,7 +91,7 @@ END;
 
 		$comments .=  <<<END
 
-		Skriven av: {$commentkeepername} <!-- flagga --><a href="#" alt="Markera stötande innehåll">
+		Skriven av: <a href="profile.php?keeperid={$keeperid}">{$commentkeepername}</a> <!-- flagga --><a href="#" alt="Markera stötande innehåll">
 		<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a><br>
 		Publicerad: {$date}<br>
 		{$comment}
@@ -111,7 +113,7 @@ $content = <<<END
 								
 								<div class="panel-body">								
 									
-									Skriven av: {$keepername} <!-- flagga --><a href="#" alt="Markera stötande innehåll">
+									Skriven av: <a href="profile.php?keeperid={$keeperid}">{$keepername}</a> <!-- flagga --><a href="#" alt="Markera stötande innehåll">
 									<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a>
 									</br>
 									
