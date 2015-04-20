@@ -23,7 +23,7 @@
   margin-top: 200px;
 }
 #header{
-	background-color: red;
+	background-color: black;
 	height: 80px;
 }
 #footer{
@@ -104,6 +104,7 @@ body {
 	height: 80px;              /* Sets height to 80 pixels */ 
 	width: 100%;
   border: none;
+  background-color: #000;
 
 }
 /* left column in the header */
@@ -169,17 +170,6 @@ border: none;
     line-height: 0;
 }
 
-#header > .column-right-row2::before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 20px 0 0 20px;
-	
-    border-color: transparent transparent transparent black;
-    line-height: 0;
-}
 .top-to-bottom {
     border-width: auto;
 	border: repeat-x;
