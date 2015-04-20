@@ -21,12 +21,14 @@ $res = $mysqli->query($query);
 
 $query = <<<END
 
-	SELECT user.keepername, user.keeperid, userguidereview.keeperid, userguidereview.grid, guidereviewinfo.grid, guidereviewinfo.title, guidereviewinfo.text, guidereviewinfo.timestamp, guidereviewinfo.grade
-	FROM userguidereview, user, guidereviewinfo 
-	WHERE userguidereview.grid = '{$grid}'
-	AND user.keeperid = userguidereview.keeperid
-	GROUP BY userguidereview.grid;
-
+	SELECT *
+	FROM guidereviewinfo
+    JOIN userguidereview
+    ON guidereviewinfo.grid = userguidereview.grid
+    JOIN user
+    ON userguidereview.keeperid = user.keeperid
+	WHERE guidereviewinfo.grid = '{$grid}'
+    GROUP BY guidereviewinfo.grid;
 END;
 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
