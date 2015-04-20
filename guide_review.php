@@ -132,10 +132,14 @@ $content = <<<END
 				<div class="col-md-12 margin-left-guide"> 
 							<div id="guide_review">
 								<form action="guide_review.php" method="post" id="guide_review_form">
-									<div class="panel panel-default">
-										<div class="panel-heading">Skriva recension eller guide</div><br>
-										<label for="title">Titel</label></Br>
-										<input type="text" id="title" name="title" value="" placeholder="Ange titeln"></br></br>
+									<div class="panel panel-default panel-genre">
+										<div class="panel-heading panel-heading-genre">Skriva recension eller guide
+										</div><!-- panel heading -->
+						
+										<div class="panel body panel-genre margin-skriva skriva">
+										<label for="title"><h3 class="quicksand">Titel</h3></label>
+										<br>
+										<input type="text" class="" id="title" name="title" value="" placeholder="Ange titeln"></br></br>
 										<input type="radio" id="guidecheck" name="guide" value="Guide">Guide
 										<input type="radio" id="reviewcheck" name="review" value="Review">Recension</br></br>
 										{$feedback}
@@ -144,7 +148,7 @@ $content = <<<END
 										<label for="information">Innehållet:</label>
 										<textarea id="nicEdit" name="nicEdit" cols="80" rows="15"></textarea></br>
 										<label for="grade" id="gradescale">Betyg (1-5)</label></br>
-										<input type="number" id="grade" name="grade" min="1" max="5" value="">
+										<input type="number" class="text-black" id="grade" name="grade" min="1" max="5" value="1">
 										<button type="submit" id="publish" name="publish_guide_review" value="Publicera">Publicera innehållet</button><br><br>
 										{$admindelete}
 										</div>

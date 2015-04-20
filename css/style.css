@@ -955,6 +955,13 @@ a:hover {
 .margin-genre {
 	margin-left: -15px;
 }
+.margin-skriva {
+	margin-left: -11px;
+}
+
+.skriva {
+border: none;
+}
 
 .comments {
 	margin-left: 15px;
@@ -966,14 +973,7 @@ a:hover {
 	color: green;
 	height: auto;
 }
-.panel-genre {
-    width: 750px;
-	min-height: 100px;
-	height: auto;
- }
-.panel-default > .panel-heading-genre {
-	width: 760px;
-}
+
 .content-genre {
 	.make-lg-column(8);
 	width: 70%;
