@@ -21,17 +21,23 @@ $res = $mysqli->query($query);
 
 $query = <<<END
 
-	SELECT title, text, timestamp, grade
+	SELECT *
 	FROM guidereviewinfo
-	WHERE grid = '{$grid}';
+    JOIN userguidereview
+    ON guidereviewinfo.grid = userguidereview.grid
+    JOIN user
+    ON userguidereview.keeperid = user.keeperid
+	WHERE guidereviewinfo.grid = '{$grid}'
+    GROUP BY guidereviewinfo.grid;
 END;
-$res = $mysqli->query($query);
-
+$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
 
 if($res->num_rows ==1)
 {
 	$row = $res->fetch_object();
 
+	$keepername = $row->keepername;
 	$title = utf8_decode(htmlspecialchars($row->title));
 	$text  = utf8_decode(htmlspecialchars($row->text));
 	$timestamp = strtotime($row->timestamp);
@@ -101,11 +107,11 @@ $content = <<<END
 								
 								<div class="panel-body">								
 									
-									Skriven av: keepername <!-- flagga --><a href="#" alt="Markera stötande innehåll">
+									Skriven av: {$keepername} <!-- flagga --><a href="#" alt="Markera stötande innehåll">
 									<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a>
 									</br>
 									
-								Skriven av:</br>
+								
 								Publicerad: {$timestamp}<br><br>
 								{$text}<br>	
 							</div>
