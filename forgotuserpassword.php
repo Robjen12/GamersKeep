@@ -27,9 +27,9 @@ $content = <<<END
 						<h3 class="quicksand">Hämta ditt användarnamn och lösenord</h3>
 						<h6>Ange emailen som du angav vid registrering</h6>
 						<form action="forgotuserpassword.php" method="post" id="" class="quicksand">
-							<input type="text" class="form-control" id="email" name="email" value="" placeholder="Ange din mejl här"></br></br>
-							<button class="btn btn-danger" type="submit" id="submit" name="retriveuserpass" value="Skicka mail">Skicka mail</button>
-							<button><a href="login.php">Bakåt</a></button>
+							<input type="text" class="form-control" id="email" name="email" value="" placeholder="Ange din mejl här"><br>
+							<button class="btn btn-danger btn-sm text-bold" type="submit" id="submit" name="retriveuserpass" value="Skicka mail">Skicka mail</button>
+							<button class="btn btn-warning btn-sm text-bold text-white pull-right"><a class="text-bold text-white" href="login.php">Bakåt</a></button>
 						</form>
 					</div><!-- forgot -->
 				</div><!-- col md 6 -->
@@ -38,9 +38,7 @@ $content = <<<END
 				</div><!-- col md 3 -->
 				
 			</div><!-- row -->
-		</div><!-- container fluid -->
-		
-		
+		</div><!-- container fluid -->		
 	</div><!-- register forgot background -->
 		
 	</body>
