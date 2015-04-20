@@ -11,12 +11,12 @@ $latestactivity = "";
 $g = "";
 $r = "";
 $grade = "";
+$keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
 
 
 if(!empty($_GET))
 {
-	$keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
-
+	
 // Hämtar ut om användaren
 	$profileinfo = <<<END
 
@@ -36,7 +36,6 @@ if($res->num_rows == 1){
 
 }
 
-// Hämtar ut senaste aktiviteterna för anvnändaren
 // Hämtar ut senaste aktiviteterna för anvnändaren
 $latestact = <<<END
 
@@ -107,32 +106,6 @@ END;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 else
 {
 	
@@ -187,7 +160,6 @@ while($row = $res->fetch_object())
 		 
 			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$r}</li></br><br>
 		
-
 END;
 	}
 	else
@@ -196,12 +168,30 @@ END;
 		$latestactivity .= <<<END
 		 
 			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$g}</li></br><br>
-		
-
+	
 END;
 	}
 	
 }
+
+
+}
+
+if(!empty($_POST))
+{
+
+	if(isset($_POST['friendmessage']))
+	{
+		$reply = $_POST['reply'];
+
+		$query = <<<END
+
+			INSERT INTO chatcom (keeperid, keeperid2, reply, timestamp, flag)
+			VALUES ('{$keeperid}', '{$keeperid2}', '{$reply}', CURRENT_TIMESTAMP, '');
+END;
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+	}
 
 }
 
@@ -310,8 +300,19 @@ $content = <<<END
 					</div><!-- kolumn 2 -->
 
 				</div><!-- row -->
-
-
+<!-- NYA GREJER -->
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-6">
+						<div class="guestbook">
+							<form action="profile.php?keeperid={$keeperid2}" method="post">
+								<label for="reply">Meddelande</label><br>
+								<textarea id="reply" name="reply" cols="80" rows="15"></textarea></br>
+								<input type="submit" id="submit" name="friendmessage" value="Skicka">
+							</form>
+						</div>
+					</div>
+				</div>	
   
   
 END;
