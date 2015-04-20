@@ -36,6 +36,8 @@ if(isset($_POST['registeraccount']))
 END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . " : " . $mysqli->error);
 
+		header("Location: login.php");
+		
 		}
 		$feedback = "<p class=\"success\">Konto skapat</p>";
 	}
@@ -76,28 +78,12 @@ $content = <<<END
 						<label for="about">Om dig</label></br>
 						<input type="text" class="form-control" id="about" name="about" value="" placeholder="Om dig"></br>
 						<label for="pw">Lösenord</label></br>
-						<input type="password" class="form-control" id="pw" name="pw" value"" placeholder="Lösenord">
-						
-						<!-- policy -->
-							<h3 class="quicksand text-bold">Policy</h3>
-							<p>För allas trivsel har vi skapat en policy, som innehåller några enkla regler. Detta för att vi gärna vill
-							dela vår spelglädje med andra likasinnade. Vi förväntar därför att våra användare delar med sig av sin spelglädje
-							på ett sätt som</p>
-							
-							<p>
-							1) Gynnar alla gamers</br>
-								2) Ömsesidigt respekt</br>
-								3) erfarna användare utmanas att välkomma nybörjare</br>
-								4) Din e-post address distribuerar vi ej vidare till tredje part, utan den används enbart som åtkomst till GamersKeep.</br>
-							
-							</p>						
-						
-						<input type="checkbox" name="policy"> Jag har läst och accepterat <a href="#">vilkoren</a> för sidan
-						<br><br>
-						<button class="btn btn-warning btn-sm pull-right text-bold"><a href="login.php">Bakåt</a></button>
+						<input type="password" class="form-control" id="pw" name="pw" value"" placeholder="Lösenord"><br><br>
+						<input type="checkbox" name="policy"> Jag har läst och accepterat <A HREF="popup.html" onClick="return popup(this, 'stevie')">vilkoren</a> för sidan<br>
+						<br>
 						<button type="submit" class="btn btn-danger btn-sm pull-left text-bold" value="submit" name="registeraccount" value="Skapa konto">Skapa Konto</button>
-						</div><!-- form group -->
-					</form>
+						</div><!-- form group -->	
+				</form>
 				</div><!-- register -->
 				
 			</div>
@@ -107,6 +93,22 @@ $content = <<<END
 
 
 </html>
+
+<SCRIPT TYPE="text/javascript">
+
+function popup(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=600,height=250,scrollbars=yes');
+return false;
+}
+
+</SCRIPT>
 END;
 
 echo $content;
