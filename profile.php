@@ -37,28 +37,52 @@ if($res->num_rows == 1){
 }
 
 // Hämtar ut senaste aktiviteterna för anvnändaren
+// Hämtar ut senaste aktiviteterna för anvnändaren
 $latestact = <<<END
 
-	SELECT guidereviewinfo.grid, guidereviewinfo.title, guidereviewinfo.timestamp, userguidereview.grid
+	SELECT guidereviewinfo.grid, guidereviewinfo.title, guidereviewinfo.timestamp, guidereviewinfo.grade, userguidereview.grid
 	FROM guidereviewinfo
-	INNER JOIN userguidereview
+	JOIN userguidereview
 	ON guidereviewinfo.grid = userguidereview.grid
-	ORDER BY timestamp
-	LIMIT 3;
+	WHERE keeperid = '{$keeperid2}'
+	ORDER BY timestamp DESC
+	
 END;
 $res = $mysqli->query($latestact) or die();
 
 while($row = $res->fetch_object())
 {
+	$keeperid = $_SESSION['keeperid'];
 	$grid = $row->grid;
 	$title = utf8_decode(htmlspecialchars($row->title));
+	$grade = $row->grade;
 	$timestamp = strtotime($row->timestamp);
 	$timestamp = date("d M Y H:i", $timestamp);
 
-	$latestactivity .= <<<END
+	$r = "R";
+	$g = "G";
 
-		<a href="genre.php?grid={$grid}">{$title}</a></br>
+	if($grade > 0)
+	{
+
+		$latestactivity .= <<<END
+		 
+			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$r}</li></br><br>
+		
+
 END;
+	}
+	else
+	{
+
+		$latestactivity .= <<<END
+		 
+			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$g}</li></br><br>
+		
+
+END;
+	}
+	
 }
 
 // Lägger till "lägg till vän" knapp om man är inne på en annan användares profil
@@ -81,6 +105,34 @@ END;
 }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 else
 {
 	
