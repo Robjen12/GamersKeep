@@ -18,8 +18,8 @@ $content = <<<END
 	<body class="register-forgot-background">
 		<div id="container">
 			<div class="row">
-				<div class="col-md-3"></div>
-				<div class="col-md-6">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
 					<div id="forgot">
 						<h3>Hämta ditt användarnamn och lösenord</h3>
 						<h6>Ange emailen som du angav vid registrering</h6>
@@ -30,7 +30,7 @@ $content = <<<END
 						</form>
 					</div>
 				</div>
-				<div class="col-md-3"></div>
+				<div class="col-md-4"></div>
 			</div>
 		</div>
 	</body>

@@ -74,9 +74,10 @@
 {
 	background-color: white;
 	border-radius: 15px;
-	height: 200px;
+	height: auto;
 	margin-top: 200px;
-	padding: 20px 50px;
+	padding: 25px;
+	
 }
 
 #searchresult
