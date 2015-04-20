@@ -58,7 +58,7 @@ END;
 				 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 			}
-			$feedback = "<p class=\"feedback-yellow\">Inlägget har publicerats</p>";
+			$feedback = "<p class=\"success\">Inlägget har publicerats</p>";
 		}
 
 		else if(isset($_POST['review']))
@@ -66,7 +66,7 @@ END;
 
 			if($title == "" || $text == "" || $grade == "")
 			{
-				$feedback = "<p class=\"feedback-yellow\">Fyll i alla fält</p>";
+				$feedback = "<p class=\"danger\">Fyll i alla fält</p>";
 			}
 
 			else
@@ -126,10 +126,6 @@ $dropdown .= '</select>';
 
 
 $content = <<<END
-
-		<head>
-			<link rel="stylesheet" href="css/guide_panel_style.css">
-		</head>
 
 		<div class="container-fluid">
 			<div class="row margin-top-100">
