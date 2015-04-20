@@ -62,7 +62,7 @@ $header = <<<END
 		
 	</head>
 	<body>
-		<div id="header" class="bg-gradient-black navbar navbar-default navbar-fixed-top">
+		<div id="header" class=" navbar navbar-default navbar-fixed-top">
 			
 			<!-- Meny left with logo -->
 			<div class="col-md-4 column-left">
@@ -111,10 +111,10 @@ $header = <<<END
 				
 			</div><!-- meny left -->
 			<!-- Meny left row2 -->
-			<div class="col-md-4 column-left-row2 bg-black height-20px">			
+			<div class="col-md-4 column-left-row2 height-20px">			
 			</div><!-- -->
 			<!-- Meny center row2 -->
-			<div class="col-md-4 column-center-row2 bg-black height-20px">
+			<div class="col-md-4 column-center-row2 height-20px">
 			</div><!-- -->
 			<!-- Meny right row2 -->
 			<div class="col-md-4 column-right-row2 margin-horizontal-zero height-20px">
