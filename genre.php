@@ -10,7 +10,7 @@ $text = "";
 $title = "";
 $timestamp = "";
 $comments = "";
-
+$commmentkeepername = "";
 	$query = <<<END
 
 		INSERT INTO userclick (grid, keeperid)
@@ -30,6 +30,7 @@ $query = <<<END
 	WHERE guidereviewinfo.grid = '{$grid}'
     GROUP BY guidereviewinfo.grid;
 END;
+
 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 
@@ -71,6 +72,8 @@ END;
 $query = <<<END
 	
 	SELECT * FROM comment
+	JOIN user
+	ON comment.keeperid = user.keeperid
 	WHERE grid = '{$grid}'
 	ORDER BY timestamp DESC;
 END;
@@ -79,13 +82,14 @@ END;
 
 	while($row = $res->fetch_object())
 	{
+		$commentkeepername = $row->keepername;
 		$comment = utf8_decode(htmlspecialchars($row->comment));
 		$date = strtotime($row->timestamp);
 		$date = date("d M Y H:i", $date);
 
 		$comments .=  <<<END
 
-		Skriven av: keepername <!-- flagga --><a href="#" alt="Markera stötande innehåll">
+		Skriven av: {$commentkeepername} <!-- flagga --><a href="#" alt="Markera stötande innehåll">
 		<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a><br>
 		Publicerad: {$date}<br>
 		{$comment}
