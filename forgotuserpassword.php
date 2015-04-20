@@ -16,23 +16,33 @@ $content = <<<END
 	</head>
 
 	<body class="register-forgot-background">
-		<div id="container">
+		<div id="container-fluid">
 			<div class="row">
-				<div class="col-md-4"></div>
-				<div class="col-md-4">
+				
+				<div class="col-md-3">
+				</div><!-- col md 3 -->
+				
+				<div class="col-md-6">
 					<div id="forgot">
-						<h3>Hämta ditt användarnamn och lösenord</h3>
+						<h3 class="quicksand">Hämta ditt användarnamn och lösenord</h3>
 						<h6>Ange emailen som du angav vid registrering</h6>
-						<form action="forgotuserpassword.php" method="post" id="">
-							<input type="text" id="email" name="email" value="" placeholder="Ange din email här"></br></br>
-							<button type="submit" id="submit" name="retriveuserpass" value="Skicka mail">Skicka mail</button>
+						<form action="forgotuserpassword.php" method="post" id="" class="quicksand">
+							<input type="text" class="form-control" id="email" name="email" value="" placeholder="Ange din mejl här"></br></br>
+							<button class="btn btn-danger" type="submit" id="submit" name="retriveuserpass" value="Skicka mail">Skicka mail</button>
 							<button><a href="login.php">Bakåt</a></button>
 						</form>
-					</div>
-				</div>
-				<div class="col-md-4"></div>
-			</div>
-		</div>
+					</div><!-- forgot -->
+				</div><!-- col md 6 -->
+
+				<div class="col-md-3">
+				</div><!-- col md 3 -->
+				
+			</div><!-- row -->
+		</div><!-- container fluid -->
+		
+		
+	</div><!-- register forgot background -->
+		
 	</body>
 
 </html>
