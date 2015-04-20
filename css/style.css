@@ -951,6 +951,8 @@ a:hover {
 
 .skriva {
 border: none;
+padding-left: 15px;
+padding-right: 15px;
 }
 
 .comments {

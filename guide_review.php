@@ -139,7 +139,7 @@ $content = <<<END
 										<div class="panel body panel-genre margin-skriva skriva">
 										<label for="title"><h3 class="quicksand">Titel</h3></label>
 										<br>
-										<input type="text" class="" id="title" name="title" value="" placeholder="Ange titeln"></br></br>
+										<input type="text" class="form-control" id="title" name="title" value="" placeholder="Ange titeln"></br></br>
 										<input type="radio" id="guidecheck" name="guide" value="Guide">Guide
 										<input type="radio" id="reviewcheck" name="review" value="Review">Recension</br></br>
 										{$feedback}
