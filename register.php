@@ -56,34 +56,50 @@ $content = <<<END
 </head>
 
 <body class="register-forgot-background">
-	<div id="container">
+	<div id="container-fluid">
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-8">
 				<div class="register">
 					<h3 class="">Registrering</h3>
 					{$feedback}
-					<form action="register.php" method="post" id="register-form">
+					<form action="register.php" method="post" id="register-form" class="form-inline">
+					<div class="form-group">
 						<label for="keepername">Användarnamn</label></br>
 						<input type="text" class="form-control" id="keepername" name="keepername" value="" placeholder="Användarnamn"></br>
-						<label for="fname">Förnamn:</label></br>
-						<input type="text" id="fname" name="fname" value""></br>
-						<label for="lname">Efternamn:</label></br>
-						<input type="lname" id="lname" name="lname" value=""></br>
-						<label for="email">E-postadress:</label></br>
-						<input type="text" id="email" name="email" value=""></br>
+						<label for="fname">Förnamn</label></br>
+						<input type="text" class="form-control" id="fname" name="fname" value"" placeholder="Förnamn"></br>
+						<label for="lname">Efternamn</label></br>
+						<input type="lname" class="form-control" id="lname" name="lname" value="" placeholder="Efternamn"></br>
+						<label for="email">E-post</label></br>
+						<input type="text" class="form-control" id="email" name="email" value="" placeholder="E-post"></br>
 						<label for="about">Om dig</label></br>
-						<input type="text" id="about" name="about" value=""></br>
-						<label for="pw">Lösenord:</label></br>
-						<input type="password" id="pw" name="pw" value""></br></br>
-						<input type="checkbox" name="policy"> Jag har läst och accepterat <a href="policy.php">vilkoren</a> för sidan<br><br>
-						<button><a href="login.php">Bakåt</a></button>
-						<button type="submit" value="submit" name="registeraccount" value="Skapa konto">Skapa Konto</button>
+						<input type="text" class="form-control" id="about" name="about" value="" placeholder="Om dig"></br>
+						<label for="pw">Lösenord</label></br>
+						<input type="password" class="form-control" id="pw" name="pw" value"" placeholder="Lösenord">
+						
+						<!-- policy -->
+							<h3 class="quicksand text-bold">Policy</h3>
+							<p>För allas trivsel har vi skapat en policy, som innehåller några enkla regler. Detta för att vi gärna vill
+							dela vår spelglädje med andra likasinnade. Vi förväntar därför att våra användare delar med sig av sin spelglädje
+							på ett sätt som</p>
+							
+							<p>
+							1) Gynnar alla gamers</br>
+								2) Ömsesidigt respekt</br>
+								3) erfarna användare utmanas att välkomma nybörjare</br>
+								4) Din e-post address distribuerar vi ej vidare till tredje part, utan den används enbart som åtkomst till GamersKeep.</br>
+							
+							</p>						
+						
+						<input type="checkbox" name="policy"> Jag har läst och accepterat <a href="#">vilkoren</a> för sidan
+						<br><br>
+						<button class="btn btn-warning btn-sm pull-right text-bold"><a href="login.php">Bakåt</a></button>
+						<button type="submit" class="btn btn-danger btn-sm pull-left text-bold" value="submit" name="registeraccount" value="Skapa konto">Skapa Konto</button>
+						</div><!-- form group -->
 					</form>
 				</div><!-- register -->
-				<div class="policy">
-				Policy
-				</div><!-- policy -->
+				
 			</div>
 		</div>
 	</div>
