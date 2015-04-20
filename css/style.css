@@ -59,7 +59,8 @@
 .register{
 	background-color: white;
 	border-radius: 15px;
-	height: 450px;
+  min-height: 525px;
+	height: auto;
 	margin: 100px 100px 100px 100px;
 	padding: 20px 0px 0px 20px;
 
