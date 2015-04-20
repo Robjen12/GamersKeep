@@ -221,13 +221,15 @@ $content = <<<END
 						
 					</div><!-- col md 4 -->
 
-					<div class="col-md-3 col-sm-3 ads pull-right">
+					<div class="col-md-4 content-right pull-right">
 
-					<!-- Reklam karusel -->
-					
-	  					<img src="http://placehold.it/200x350">
-	  					
-					</div><!-- reklam kolumn -->					
+							<div class ="ads">
+
+								<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
+
+							</div><!-- ads -->
+							<br>
+					</div><!-- ads right row 1 -->					
 
 				</div><!-- row -->
 
@@ -254,10 +256,18 @@ $content = <<<END
 			  						{$latestgenrereview}
 		  					</div><!-- panel body -->
 													
-							</div><!-- panel heading -->
-						</div>
-					</div>
-				</div>
+							
+					</div><!-- col md 4 -->
+							
+						<div class="col-md-4">
+						
+							
+						</div><!-- content right -->
+												
+					</div><!-- col md 4 -->
+					</div><!-- col md 4 -->
+
+				</div><!-- row -->
 	
 
   

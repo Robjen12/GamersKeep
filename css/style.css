@@ -306,7 +306,13 @@ border: none;
 }
 .ads > img {
     border-radius: 3px;
-    width:290px;
+    width:300px;
+	margin-bottom: 25px;
+	margin-right: 10px;
+}
+
+.margin-right-7px {
+	margin-right: 10px;
 }
 .panel-default > .panel-heading {
   border-color: #ddd;
