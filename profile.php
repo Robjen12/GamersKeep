@@ -106,7 +106,7 @@ END;
 }
 
 $sendmessage = <<<END
-	<button><a href="chatcom.php">Skicka meddelande</a></button>
+	<button><a href="chatcom.php?keeperid={$keeperid2}">Skicka meddelande</a></button>
 END;
 }
 
@@ -346,22 +346,6 @@ $content = <<<END
 					</div><!-- kolumn 2 -->
 
 				</div><!-- row -->
-<!-- NYA GREJER -->
-				<div class="row">
-					<div class="col-md-3"></div>
-					<div class="col-md-6">
-						<div class="guestbook">
-							<form action="profile.php?keeperid={$keeperid2}" method="post">
-								<label for="reply">Meddelande</label><br>
-								<textarea id="reply" name="reply" cols="80" rows="15"></textarea></br>
-								<input type="submit" id="submit" name="friendmessage" value="Skicka">
-							</form>
-						</div>
-					</div>
-				</div>
-
-
-  
   
 END;
 
