@@ -1002,3 +1002,9 @@ color: white;
   padding-top: 10px;
   padding-left: 10px;
 }
+.latestmessage
+ {
+  overflow-y: auto;
+  height: 100px;
+
+ }

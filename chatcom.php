@@ -32,7 +32,6 @@ if($res->num_rows > 0)
 		$date	= date("d M Y H:i", $date);
 
 		$guestbook .= <<<END
-		<h3>Gästbok</h3>
 		<b>{$keepername}</b><br>
 		Skickat den: {$date}<br>
 		{$replys}<br>
@@ -51,7 +50,7 @@ $content = <<<END
 				<div class="col-md-8">
 
 					<div class="guestbook">
-
+						<h3>Meddelande</3>
 						{$guestbook}
 
 

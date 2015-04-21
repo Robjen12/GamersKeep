@@ -13,7 +13,7 @@ $g = "";
 $r = "";
 $grade = "";
 $chatmess = "";
-$keeper = "";
+$sendmessage = "";
 
 if(!empty($_GET))
 {
@@ -105,9 +105,15 @@ END;
 
 }
 
-
-
+$sendmessage = <<<END
+	<button><a href="chatcom.php">Skicka meddelande</a></button>
+END;
 }
+
+
+
+
+
 
 
 else
@@ -120,17 +126,18 @@ $profileinfo = <<<END
 	FROM user
 	WHERE keeperid = '{$keeperid}';
 END;
-$res = $mysqli->query($profileinfo) or die();
+	$res = $mysqli->query($profileinfo) or die();
 
-if($res->num_rows == 1){
-	$row = $res->fetch_object();
-	$profilekeepername = $row->keepername;
-	$profilename = $row->fname;
-	$profilelastname = $row->lname;
-	$profileabout = $row->about;
-	$profileother = $row->other;
+	if($res->num_rows == 1)
+	{
+		$row = $res->fetch_object();
+		$profilekeepername = $row->keepername;
+		$profilename = $row->fname;
+		$profilelastname = $row->lname;
+		$profileabout = $row->about;
+		$profileother = $row->other;
 
-}
+	}
 
 // Hämtar ut senaste aktiviteterna för anvnändaren
 $latestact = <<<END
@@ -255,8 +262,14 @@ $content = <<<END
 
 	  						<div class="column-left-bottom text-center">
 
+	  							{$sendmessage}
+
+	  						<div class="latestmessage">
 	  							<p>Senaste inläggen</p>
 	  								{$chatmess}
+	  						</div>
+
+
 	  							<p>Sociala Medier</p>
 	  							
 	  							<p>Vanner</p>	  							
