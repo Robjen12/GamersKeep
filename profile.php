@@ -15,6 +15,7 @@ $grade = "";
 $chatmess = "";
 $sendmessage = "";
 
+
 if(!empty($_GET))
 {
 	
@@ -216,24 +217,6 @@ END;
 
 }
 
-if(!empty($_POST))
-{
-
-	if(isset($_POST['friendmessage']))
-	{
-		$reply = $_POST['reply'];
-
-		$query = <<<END
-
-			INSERT INTO chatcom (keeperid, keeperid2, reply, timestamp, flag)
-			VALUES ('{$keeperid}', '{$keeperid2}', '{$reply}', CURRENT_TIMESTAMP, '');
-END;
-		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-		        " : " . $mysqli->error);
-	}
-	
-}
-
 
 $content = <<<END
 
@@ -258,16 +241,15 @@ $content = <<<END
 
 	  							<p><b>{$profilekeepername}</b></p>
 	  							{$button}
+	  							{$sendmessage}
 	  						</div>
 
 	  						<div class="column-left-bottom text-center">
 
-	  							{$sendmessage}
-
-	  						<div class="latestmessage">
-	  							<p>Senaste inläggen</p>
-	  								{$chatmess}
-	  						</div>
+		  						<div class="latestmessage">
+		  							<p>Senaste inläggen</p>
+		  								{$chatmess}
+		  						</div>
 
 
 	  							<p>Sociala Medier</p>
