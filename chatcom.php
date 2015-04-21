@@ -53,7 +53,6 @@ $content = <<<END
 						<h3>Meddelande</3>
 						{$guestbook}
 
-
 					</div>
 
 				</div>
