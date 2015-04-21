@@ -12,7 +12,8 @@ $g = "";
 $r = "";
 $grade = "";
 $keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
-
+$chatmess = "";
+$keeper = "";
 
 if(!empty($_GET))
 {
@@ -192,36 +193,49 @@ END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 	}
-
+	
 }
 
-$query = <<<END
-	SELECT *
-	FROM chatcom, user
-	WHERE chatcom.keeperid = user.keeperid
-	AND chatcom.keeperid2 = user.keeperid
+	$query = <<<END
+	SELECT chatcomid, reply, keeperid, keeperid2 FROM chatcom
+	WHERE chatcom.keeperid = '{$keeperid}'
+	OR chatcom.keeperid2 = '{$keeperid}';
 END;
-$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-		        " : " . $mysqli->error);
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
 
-if($res->num_rows > 0)
-{
-	if($row = $res->fetch_object())
+	if($res->num_rows > 0)
 	{
-		$guestbookkeeperid = $row->keeperid;
-		$guestbookkeeperid2 = $row->keeperid2;
-		$keepername1 = $row->keepername;
-		$keepername2 = $row->keepername;
-		$replys = $row->reply;
-		$date 	= strtotime($row->timestamp);
-		$date	= date("d M Y H:i", $date);
+			while($row = $res->fetch_object())
+			{
 
-		$guestbook = <<<END
-
-		{$keepername1}
+				$chatcomid = $row->chatcomid;
+				$reply = $row->reply;
+			
+				if(isset($_SESSION['keeperid']))
+				{
+				$chatmess .= <<<END
+					<a href="chatcom.php?chatcomid={$chatcomid}">{$reply}</a><br>
+					
 END;
+				}
+				else
+				{
+					$chatmess .= <<<END
+					
+					
+END;
+				}
+		
+			}
+		
+	
 	}
-}
+
+
+
+
+
 $content = <<<END
 
 		
@@ -249,8 +263,8 @@ $content = <<<END
 
 	  						<div class="column-left-bottom text-center">
 
-	  							<p>Senaste nytt</p>
-	  							
+	  							<p>Senaste inläggen</p>
+	  								{$chatmess}
 	  							<p>Sociala Medier</p>
 	  							
 	  							<p>Vanner</p>	  							
@@ -341,12 +355,7 @@ $content = <<<END
 					</div>
 				</div>
 
-				<div class="row">
-					<div class="col-md-6">
 
-						{$guestbook}
-					</div>
-				</div>
   
   
 END;

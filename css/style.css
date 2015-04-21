@@ -993,3 +993,12 @@ p .danger {
 background-color: red;
 color: white;
 }
+.guestbook
+{
+  min-height: 500px;
+  height: auto;
+  background-color: white;
+  border-radius: 15px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
