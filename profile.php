@@ -4,6 +4,7 @@ include_once("inc/Connstring.php");
 
 $keepername = $_SESSION['keepername'];
 $keeperid = $_SESSION['keeperid'];
+$keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
 $profilename = '';
 $profileabout = '';
 $button = "";
@@ -11,7 +12,6 @@ $latestactivity = "";
 $g = "";
 $r = "";
 $grade = "";
-$keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
 $chatmess = "";
 $keeper = "";
 
@@ -27,15 +27,16 @@ if(!empty($_GET))
 END;
 	$res = $mysqli->query($profileinfo) or die();
 
-if($res->num_rows == 1){
-	$row = $res->fetch_object();
-	$profilekeepername = $row->keepername;
-	$profilename = $row->fname;
-	$profilelastname = $row->lname;
-	$profileabout = $row->about;
-	$profileother = $row->other;
+	if($res->num_rows == 1)
+	{
+		$row = $res->fetch_object();
+		$profilekeepername = $row->keepername;
+		$profilename = $row->fname;
+		$profilelastname = $row->lname;
+		$profileabout = $row->about;
+		$profileother = $row->other;
 
-}
+	}
 
 // Hämtar ut senaste aktiviteterna för anvnändaren
 $latestact = <<<END
@@ -103,6 +104,8 @@ END;
 		        " : " . $mysqli->error);
 
 }
+
+
 
 }
 
@@ -175,6 +178,34 @@ END;
 	
 }
 
+$query = <<<END
+	SELECT chatcomid, reply, keeperid, keeperid2 FROM chatcom
+	WHERE chatcom.keeperid = '{$keeperid}'
+	OR chatcom.keeperid2 = '{$keeperid}';
+END;
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+
+	if($res->num_rows > 0)
+	{
+			while($row = $res->fetch_object())
+			{
+
+				$chatcomid = $row->chatcomid;
+				$reply = $row->reply;
+				$keeper = $row->keeperid;
+				$keeper2 = $row->keeperid2;
+
+				$chatmess .= <<<END
+					<a href="chatcom.php?chatcomid={$chatcomid}">{$reply}</a><br>
+					
+END;
+				
+				
+			}
+		
+	
+	}
 
 }
 
@@ -195,45 +226,6 @@ END;
 	}
 	
 }
-
-	$query = <<<END
-	SELECT chatcomid, reply, keeperid, keeperid2 FROM chatcom
-	WHERE chatcom.keeperid = '{$keeperid}'
-	OR chatcom.keeperid2 = '{$keeperid}';
-END;
-	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-	  " : " . $mysqli->error);
-
-	if($res->num_rows > 0)
-	{
-			while($row = $res->fetch_object())
-			{
-
-				$chatcomid = $row->chatcomid;
-				$reply = $row->reply;
-			
-				if(isset($_SESSION['keeperid']))
-				{
-				$chatmess .= <<<END
-					<a href="chatcom.php?chatcomid={$chatcomid}">{$reply}</a><br>
-					
-END;
-				}
-				else
-				{
-					$chatmess .= <<<END
-					
-					
-END;
-				}
-		
-			}
-		
-	
-	}
-
-
-
 
 
 $content = <<<END
