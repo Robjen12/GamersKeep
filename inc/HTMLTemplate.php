@@ -66,7 +66,7 @@ $header = <<<END
 			
 			<!-- Meny left with logo -->
 			<div class="col-md-4 column-left">
-				<img src="images/logo.png" class="img header-logo">
+				<a href="index.php"><img src="images/logo.png" class="img header-logo"></a>
 			</div>
 			
 			<!-- Meny center -->

@@ -195,6 +195,33 @@ END;
 
 }
 
+$query = <<<END
+	SELECT *
+	FROM chatcom, user
+	WHERE chatcom.keeperid = user.keeperid
+	AND chatcom.keeperid2 = user.keeperid
+END;
+$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+
+if($res->num_rows > 0)
+{
+	if($row = $res->fetch_object())
+	{
+		$guestbookkeeperid = $row->keeperid;
+		$guestbookkeeperid2 = $row->keeperid2;
+		$keepername1 = $row->keepername;
+		$keepername2 = $row->keepername;
+		$replys = $row->reply;
+		$date 	= strtotime($row->timestamp);
+		$date	= date("d M Y H:i", $date);
+
+		$guestbook = <<<END
+
+		{$keepername1}
+END;
+	}
+}
 $content = <<<END
 
 		
@@ -312,7 +339,14 @@ $content = <<<END
 							</form>
 						</div>
 					</div>
-				</div>	
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+
+						{$guestbook}
+					</div>
+				</div>
   
   
 END;
