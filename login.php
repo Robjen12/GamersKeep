@@ -74,9 +74,8 @@ $content = <<<END
 	  	<link rel="stylesheet" href="css/style.css">
 	</head>
 
-	<body class="login-picture">
-		<div id="container">
-			<div class="row">
+	<body>
+			<div class="row login-picture">
 				<div class="col-md-6">
 					<img src="images/logo.png">
 					<h2 class="login-font"><b>Ett community för gamers av gamers</b></h2>

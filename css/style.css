@@ -5,8 +5,10 @@
 	background-color: #993300;
 }
 .login-picture{
-	background: url("../images/Registrering.jpg") no-repeat center center fixed;
+	background: url("../images/registrering.png") no-repeat center center fixed;
 	background-size: 100%;
+	height:100%;
+	min-height: 643px;
 }
 .logo{
 	background-size: 50%;
@@ -54,7 +56,7 @@
 
 .login
 {
-	margin-top: 150px;
+	margin-top: 135px;
 }
 .register{
 	background-color: white;
@@ -486,6 +488,7 @@ border: none;
 .row {
   margin-right: 0px;
   margin-left: 0px;
+  height: auto;
 }
 
 .container-fluid {
@@ -619,7 +622,7 @@ a.text-primary:hover {
 }
 .login-cloud {
   margin-right: auto;
-  margin-left: -30px;
+  margin-left: -20px;
 }
 
 /* saetter faerg på forms att lysa rostrott naer anvaendaren fyller i forms */
