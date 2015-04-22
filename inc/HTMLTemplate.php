@@ -62,7 +62,7 @@ $header = <<<END
 		
 	</head>
 	<body>
-		<div id="header" class="bg-gradient-black navbar navbar-default navbar-fixed-top">
+		<div id="header" class="header-bg navbar navbar-default navbar-fixed-top no-border">
 			
 			<!-- Meny left with logo -->
 			<div class="col-md-4 column-left">
