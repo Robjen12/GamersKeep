@@ -5,7 +5,7 @@
 	background-color: #993300;
 }
 .login-picture{
-	background: url("../images/Registrering.jpg") no-repeat center center fixed;
+	background: url("../images/registrering.jpg") no-repeat center center fixed;
 	background-size: 100%;
 }
 .logo{
@@ -29,7 +29,7 @@
 }
 */
 #footer{
-	background-color: red;
+
 	min-height: 200px;
 }
 #news{
@@ -110,19 +110,21 @@ body {
   margin-top: 0;             /* Sets top margin to zero */
 	height: 80px;              /* Sets height to 80 pixels */ 
 	width: 100%;
-  border: none;
-  background-color: #000;
 
-}
-/* left column in the header */
-#header > .column-left {
-    margin-left: 0;
-    height: 60px;
 }
 
 .header-bg {
 	background: url("../images/header_bg_l.png") repeat-x top left;	/* header bakgrundsbild */}
 }
+
+/* left column in the header */
+#header > .column-left {
+    margin-left: 0;
+    height: 60px;
+	border: none;
+}
+
+
 
 .no-border {
 	border: none;
@@ -155,15 +157,20 @@ border: none;
 }
 
 /* center column in the header */
+/*
 #header > .column-center {
     height: 60px;
+	border: none;
 }
+*/
+
 /* right column in the header */
 #header > .column-right {
     margin-right: 0;
     height: 60px;
     float:right;
     margin-left: auto;
+	border:none;
 }
 
 /* left second row in the header */
@@ -220,7 +227,6 @@ border: none;
 	height: 20px;
 	margin-right: 0;
 	margin-left: 0;
-	background-color: red;
 }
  
 /* image icons in the header */
@@ -260,7 +266,9 @@ border: none;
     float:right;
     margin-left: auto;
 }
+
 /* puts white triangel as css3 fgfx in right column second row in the footer */
+
 #footer > .column-right-row2::before {
     content: '';
     display: block;

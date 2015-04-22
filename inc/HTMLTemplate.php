@@ -66,7 +66,6 @@ $header = <<<END
 			
 			<!-- Meny left with logo -->
 			<div class="col-md-9 column-left margin-right-zero">
-			
 				<img src="images/logo.png" class="img header-logo">
 				<div class="pull-right">
 				
@@ -79,7 +78,7 @@ $header = <<<END
 
 				</div><!-- pull right -->
 			</div><!-- col md 9 -->
-			
+
 			<!-- Meny right -->
 			<div class="col-md-3 column-right pull-right margin-right-zero nav nav-pills pull-right">
 			
@@ -96,7 +95,7 @@ $header = <<<END
 		  					 aria-expanded="true"><img src="images/swords.png" class="img header-icons pull-right" title="Genre">
 			  				</ul>
 				 							
-		  					<ul class="dropdown-menu pull-right dropdown-top-margin Droid" role="menu" aria-labelledby="dropdownMenu1">
+		  					<ul class="dropdown-menu pull-right dropdown-top-margin Droid bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">
 			    				<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px">Genrer</li>
 								<!-- laesa in genrer från db har -->
 								{$genre}
@@ -111,12 +110,12 @@ $header = <<<END
 			</div><!-- meny right -->
 			
 			<!-- Meny left row2 -->
-			<div class="col-md-9 column-left-row2 margin-left-zero">
+			<div class="col-md-9 column-left-row2 margin-left-zero no-border">
 			<a href="logout.php" class="pull-right">Logga ut</a>	
 			</div><!-- col md 9 -->
 			
 			<!-- Meny left row2 -->
-			<div class="col-md-3 column-right-row2">
+			<div class="col-md-3 column-right-row2 no-border">
 			
 			</div><!-- meny left row 2 -->
 			
