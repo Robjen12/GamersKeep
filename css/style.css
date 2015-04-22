@@ -29,7 +29,7 @@
 }
 */
 #footer{
-	background-color: red;
+
 	min-height: 200px;
 }
 #news{
@@ -111,8 +111,6 @@ body {
 	height: 80px;              /* Sets height to 80 pixels */ 
 	width: 100%;
   border: none;
-  background-color: #000;
-
 }
 /* left column in the header */
 #header > .column-left {
@@ -220,7 +218,6 @@ border: none;
 	height: 20px;
 	margin-right: 0;
 	margin-left: 0;
-	background-color: red;
 }
  
 /* image icons in the header */
