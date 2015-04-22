@@ -14,7 +14,8 @@ $r = "";
 $grade = "";
 $chatmess = "";
 $sendmessage = "";
-
+$penbutton = "";
+$form = "";
 
 if(!empty($_GET))
 {
@@ -95,7 +96,7 @@ $button = <<<END
 END;
 
 // Skickar in vänförfrågan i databasen
-if(isset($_POST['keeperfr'])){
+/*if(isset($_POST['keeperfr'])){
 
 	$query = <<<END
 	INSERT INTO keeperfriend(keeperid, keeperid2, accept) 
@@ -104,7 +105,7 @@ END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 
-}
+}*/
 
 $sendmessage = <<<END
 	<button><a href="chatcom.php?keeperid={$keeperid2}">Skicka meddelande</a></button>
@@ -112,9 +113,38 @@ END;
 }
 
 
+
+
+
+
+
+// Hämtar ut all information om ens egen profil
 else
 {
-	
+	$penbutton = <<<END
+	<a href="#"><img src="images/pen.png" width="30px" id="pen" class="pull-right"></a>
+END;
+
+	$form = <<<END
+
+		<form action="profile.php" method="post" id="updateform">
+			<textarea id="updateinfo" name="updateinfo" cols="60" row="10">{$profileabout}</textarea>
+			<input type="submit" id="submit" name="update" value="Uppdatera info">
+		</form>
+END;
+
+if(isset($_POST['update']))
+{
+	$about = $_POST['updateinfo'];
+	$query = <<<END
+
+		UPDATE user SET about ='$about'
+		WHERE keeperid = '{$keeperid}'
+END;
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+
+}
 // Hämtar ut om användaren
 $profileinfo = <<<END
 
@@ -211,6 +241,7 @@ END;
 	
 	}
 
+
 }
 
 $content = <<<END
@@ -263,14 +294,17 @@ $content = <<<END
 						
 						<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default pull-left">
 
-	  					<div class="panel-heading panel-heading-560px">Om mig <img src="images/pen.png" width="30px" class="pull-right"></div>
+	  					<div class="panel-heading panel-heading-560px">Om mig {$penbutton}</div>
 
 
 		  					<div class="panel-body">
 
 			  					<p>Namn: {$profilename} {$profilelastname}</p> 
 			  					{$profileabout}
-			  						  			
+			  						
+			  					{$form}
+
+
 		  					</div><!-- panel body -->
 
 						</div><!-- panel heading -->
@@ -323,6 +357,15 @@ $content = <<<END
 					</div><!-- kolumn 2 -->
 
 				</div><!-- row -->
+<script>
+$(document).ready(function(){
+	$('#updateform').hide();
+		$('#pen').click(function(){
+			$('#updateform').show();
+		});
+});
+
+</script>
   
 END;
 
