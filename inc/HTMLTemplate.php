@@ -65,19 +65,24 @@ $header = <<<END
 		<div id="header" class="header-bg navbar navbar-default navbar-fixed-top no-border">
 			
 			<!-- Meny left with logo -->
-			<div class="col-md-4 column-left">
-				<a href="index.php"><img src="images/logo.png" class="img header-logo"></a>
-			</div>
+			<div class="col-md-9 column-left margin-right-zero">
+				<img src="images/logo.png" class="img header-logo">
+				<div class="pull-right">
+				
+					<p>Inloggad som: {$_SESSION["keepername"]}{$adminText}
+
+					<form action="search.php" method="GET">
+					<input type="text" id="searchfield" name="search" placeholder="Sök..">
+					<input type="Submit" value="Sök">
+					</form>
+
+				</div><!-- pull right -->
+			</div><!-- col md 9 -->
 			
 			<!-- Meny center -->
 			<div class="col-md-4 column-center">
 
-				<p>Inloggad som: {$_SESSION["keepername"]}{$adminText}
-
-				<form action="search.php" method="GET">
-				<input type="text" id="searchfield" name="search" placeholder="Sök..">
-				<input type="Submit" value="Sök">
-				</form>
+				
 
 			</div><!-- column center -->
 

@@ -122,6 +122,10 @@ body {
 	background: url("../images/header_bg_l.png") repeat-x top left;	/* header bakgrundsbild */}
 }
 
+.no-border {
+	border: none;
+}
+
 /* Sets background color to gradient between the rust red in the bottom to the black color at the top */
 .bg-gradient-brown {
   background: -webkit-linear-gradient(#993300, #000);
