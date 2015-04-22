@@ -112,11 +112,6 @@ END;
 }
 
 
-
-
-
-
-
 else
 {
 	
@@ -165,13 +160,14 @@ while($row = $res->fetch_object())
 	$r = "R";
 	$g = "G";
 
+	
 	if($grade > 0)
 	{
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$r}</li></br><br>
-		
+			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$r}<button class=delete><a href="delete.php?grid={$grid}">x</a></button></li></br><br>
+			
 END;
 	}
 	else
@@ -179,8 +175,8 @@ END;
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$g}</li></br><br>
-	
+			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$g}<button class=delete><a href="delete.php?grid={$grid}">x</a></button></li></br><br>
+		
 END;
 	}
 	
@@ -216,7 +212,6 @@ END;
 	}
 
 }
-
 
 $content = <<<END
 
