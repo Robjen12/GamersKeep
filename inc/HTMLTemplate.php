@@ -66,6 +66,7 @@ $header = <<<END
 			
 			<!-- Meny left with logo -->
 			<div class="col-md-9 column-left margin-right-zero">
+			
 				<img src="images/logo.png" class="img header-logo">
 				<div class="pull-right">
 				
@@ -79,15 +80,8 @@ $header = <<<END
 				</div><!-- pull right -->
 			</div><!-- col md 9 -->
 			
-			<!-- Meny center -->
-			<div class="col-md-4 column-center">
-
-				
-
-			</div><!-- column center -->
-
 			<!-- Meny right -->
-			<div class="col-md-4 column-right pull-right margin-right-zero nav nav-pills pull-right">
+			<div class="col-md-3 column-right pull-right margin-right-zero nav nav-pills pull-right">
 			
 				<ul>
 					<li><a href="profile.php"><img src="images/profil2.png" class="img header-icons pull-right" alt="Profil" title="Profil">
