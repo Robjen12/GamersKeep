@@ -22,10 +22,12 @@
 {
   margin-top: 200px;
 }
+/*
 #header{
 	background-color: black;
 	height: 80px;
 }
+*/
 #footer{
 	background-color: red;
 	min-height: 200px;
@@ -164,14 +166,12 @@ border: none;
     margin-left: auto;
 }
 
-/* hit har jag kommit */
-/* kl 16 05 */
-
 /* left second row in the header */
 .height-20px {
     height: 20px;
 }
 /* puts white triangel as css3 fgfx in right column second row in the header */
+/*
 #header > .column-right-row2::before {
     content: '';
     display: block;
@@ -183,7 +183,7 @@ border: none;
     border-color: transparent transparent transparent black;
     line-height: 0;
 }
-
+*/
 .top-to-bottom {
     border-width: auto;
 	border: repeat-x;
@@ -201,9 +201,28 @@ border: none;
 }
 
 /* clears white triangel at the right side */
+/*
 #header > .column-right-row2::before {
     right: 0;
-} 
+}
+*/
+
+#header > .column-left-row2 {
+	background: url("../images/header_bg_tri.png") no-repeat bottom right;	/* trekant bild */
+	height: 20px;
+	margin-right: 0;
+	margin-left: 0;
+
+}
+
+#header > .column-right-row2 {
+	background: url("../images/header_bg_r2.png") repeat-x bottom left;	/* left row 2 background img */
+	height: 20px;
+	margin-right: 0;
+	margin-left: 0;
+	background-color: red;
+}
+ 
 /* image icons in the header */
 .img.header-icons {
     height: 30px;

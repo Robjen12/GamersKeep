@@ -96,7 +96,7 @@ $header = <<<END
 		  					 aria-expanded="true"><img src="images/swords.png" class="img header-icons pull-right" title="Genre">
 			  				</ul>
 				 							
-		  					<ul class="dropdown-menu pull-right dropdown-top-margin Droid bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">
+		  					<ul class="dropdown-menu pull-right dropdown-top-margin Droid" role="menu" aria-labelledby="dropdownMenu1">
 			    				<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px">Genrer</li>
 								<!-- laesa in genrer från db har -->
 								{$genre}
@@ -108,17 +108,17 @@ $header = <<<END
 					<li class="li-icons"><a href="#"><img src="images/search.png" class="img header-icons pull-right" title="Sök"></a></li>
 				</ul>
 				
-			</div><!-- meny left -->
+			</div><!-- meny right -->
+			
 			<!-- Meny left row2 -->
-			<div class="col-md-4 column-left-row2 bg-black height-20px">			
-			</div><!-- -->
-			<!-- Meny center row2 -->
-			<div class="col-md-4 column-center-row2 bg-black height-20px">
-			</div><!-- -->
-			<!-- Meny right row2 -->
-			<div class="col-md-4 column-right-row2 margin-horizontal-zero height-20px">
-			<a href="logout.php" class="pull-right">Logga ut</a>
-			</div><!-- -->
+			<div class="col-md-9 column-left-row2 margin-left-zero">
+			<a href="logout.php" class="pull-right">Logga ut</a>	
+			</div><!-- col md 9 -->
+			
+			<!-- Meny left row2 -->
+			<div class="col-md-3 column-right-row2">
+			
+			</div><!-- meny left row 2 -->
 			
 		</div> <!-- header -->
 
