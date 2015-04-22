@@ -15,7 +15,9 @@ $grade = "";
 $chatmess = "";
 $sendmessage = "";
 $penbutton = "";
-$form = "";
+$penbutton2 = "";
+$formabout = "";
+$formother = "";
 
 if(!empty($_GET))
 {
@@ -124,12 +126,23 @@ else
 	$penbutton = <<<END
 	<a href="#"><img src="images/pen.png" width="30px" id="pen" class="pull-right"></a>
 END;
+	$penbutton2 = <<<END
+	<a href="#"><img src="images/pen.png" width="30px" id="pen2" class="pull-right"></a>
+END;
 
-	$form = <<<END
+	$formabout = <<<END
 
 		<form action="profile.php" method="post" id="updateform">
 			<textarea id="updateinfo" name="updateinfo" cols="60" row="10">{$profileabout}</textarea>
 			<input type="submit" id="submit" name="update" value="Uppdatera info">
+		</form>
+END;
+
+	$formother = <<<END
+
+		<form action="profile.php" method="post" id="updateformother">
+			<textarea id="updateother" name="updateother" cols="30" row="10">{$profileabout}</textarea>
+			<input type="submit" id="submit" name="updateothers" value="Uppdatera info">
 		</form>
 END;
 
@@ -143,7 +156,18 @@ if(isset($_POST['update']))
 END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 	  " : " . $mysqli->error);
+}
+if(isset($_POST['updateothers']))
+{
+	$other = $_POST['updateother'];
 
+	$query = <<<END
+
+		UPDATE user SET other = '$other'
+		WHERE keeperid = '{$keeperid}';
+END;
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
 }
 // Hämtar ut om användaren
 $profileinfo = <<<END
@@ -302,7 +326,7 @@ $content = <<<END
 			  					<p>Namn: {$profilename} {$profilelastname}</p> 
 			  					{$profileabout}
 			  						
-			  					{$form}
+			  					{$formabout}
 
 
 		  					</div><!-- panel body -->
@@ -330,10 +354,11 @@ $content = <<<END
 
 					<div class="col-md-3 col-sm-3 ovrigt panel panel-default pull-left">
 
-	  					<div class="panel-heading ovrigt-heading">Övrigt</div>
+	  					<div class="panel-heading ovrigt-heading">Övrigt {$penbutton2}</div>
 
 		  					<div class="panel-body">
  								{$profileother}
+ 								{$formother}
 		  					</div>
 						
 						</div><!-- panel heading -->
@@ -362,6 +387,16 @@ $(document).ready(function(){
 	$('#updateform').hide();
 		$('#pen').click(function(){
 			$('#updateform').show();
+		});
+});
+
+</script>
+
+<script>
+$(document).ready(function(){
+	$('#updateformother').hide();
+		$('#pen2').click(function(){
+			$('#updateformother').show();
 		});
 });
 
