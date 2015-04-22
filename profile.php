@@ -124,10 +124,10 @@ END;
 else
 {
 	$penbutton = <<<END
-	<a href="#"><img src="images/pen.png" width="30px" id="pen" class="pull-right"></a>
+	<a href="#"><img src="images/pen.png" width="30px" id="pen" class="pull-right" title="Redigera"></a>
 END;
 	$penbutton2 = <<<END
-	<a href="#"><img src="images/pen.png" width="30px" id="pen2" class="pull-right"></a>
+	<a href="#"><img src="images/pen.png" width="30px" id="pen2" class="pull-right" title="Redigera"></a>
 END;
 
 	$formabout = <<<END
@@ -220,7 +220,7 @@ while($row = $res->fetch_object())
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$r}<button class=delete><a href="delete.php?grid={$grid}">x</a></button></li></br><br>
+			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$r} <button class=delete><a href="delete.php?grid={$grid}">x</a></button></li></br><br>
 			
 END;
 	}
@@ -229,7 +229,7 @@ END;
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$g}<button class=delete><a href="delete.php?grid={$grid}">x</a></button></li></br><br>
+			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$g} <button class=delete><a href="delete.php?grid={$grid}">x</a></button></li></br><br>
 		
 END;
 	}
