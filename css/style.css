@@ -5,7 +5,7 @@
 	background-color: #993300;
 }
 .login-picture{
-	background: url("../images/Registrering.jpg") no-repeat center center fixed;
+	background: url("../images/registrering.jpg") no-repeat center center fixed;
 	background-size: 100%;
 }
 .logo{
@@ -110,8 +110,13 @@ body {
   margin-top: 0;             /* Sets top margin to zero */
 	height: 80px;              /* Sets height to 80 pixels */ 
 	width: 100%;
-  border: none;
+
 }
+
+.header-bg {
+	background: url("../images/header_bg_l.png") repeat-x top left;	/* header bakgrundsbild */}
+}
+
 /* left column in the header */
 #header > .column-left {
     margin-left: 0;
@@ -119,9 +124,7 @@ body {
 	border: none;
 }
 
-.header-bg {
-	background: url("../images/header_bg_l.png") repeat-x top left;	/* header bakgrundsbild */}
-}
+
 
 .no-border {
 	border: none;
@@ -160,6 +163,7 @@ border: none;
 	border: none;
 }
 */
+
 /* right column in the header */
 #header > .column-right {
     margin-right: 0;
@@ -262,7 +266,9 @@ border: none;
     float:right;
     margin-left: auto;
 }
+
 /* puts white triangel as css3 fgfx in right column second row in the footer */
+
 #footer > .column-right-row2::before {
     content: '';
     display: block;
