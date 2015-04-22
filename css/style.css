@@ -154,9 +154,12 @@ border: none;
 }
 
 /* center column in the header */
+/*
 #header > .column-center {
     height: 60px;
+	border: none;
 }
+*/
 /* right column in the header */
 #header > .column-right {
     margin-right: 0;

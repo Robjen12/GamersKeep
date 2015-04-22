@@ -66,7 +66,6 @@ $header = <<<END
 			
 			<!-- Meny left with logo -->
 			<div class="col-md-9 column-left margin-right-zero">
-			
 				<img src="images/logo.png" class="img header-logo">
 				<div class="pull-right">
 				
@@ -79,7 +78,7 @@ $header = <<<END
 
 				</div><!-- pull right -->
 			</div><!-- col md 9 -->
-			
+
 			<!-- Meny right -->
 			<div class="col-md-3 column-right pull-right margin-right-zero nav nav-pills pull-right">
 			
@@ -111,13 +110,12 @@ $header = <<<END
 			</div><!-- meny right -->
 			
 			<!-- Meny left row2 -->
-			<div class="col-md-8 column-left-row2 margin-left-zero">
-			test
+			<div class="col-md-9 column-left-row2 margin-left-zero no-border">
 			<a href="logout.php" class="pull-right">Logga ut</a>	
-			</div><!-- col md 8 -->
+			</div><!-- col md 9 -->
 			
-			<!-- Meny right row2 -->
-			<div class="col-md-4 column-right-row2 margin-right-zero">
+			<!-- Meny left row2 -->
+			<div class="col-md-3 column-right-row2 no-border">
 			
 			</div><!-- meny left row 2 -->
 			
