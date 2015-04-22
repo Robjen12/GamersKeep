@@ -116,6 +116,7 @@ body {
 #header > .column-left {
     margin-left: 0;
     height: 60px;
+	border: none;
 }
 
 .header-bg {
@@ -162,6 +163,7 @@ border: none;
     height: 60px;
     float:right;
     margin-left: auto;
+	border:none;
 }
 
 /* left second row in the header */
