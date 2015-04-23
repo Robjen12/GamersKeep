@@ -124,6 +124,17 @@ $header = <<<END
 END;
 $content = <<<END
 		<div class="container-fluid">
+		
+		<!-- right column -->
+						<div class="content-right margin-right-25px pull-right">
+
+							<div class ="ads">
+
+								<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
+
+							</div><!-- ads -->
+
+		  				</div><!-- content left kolumn -->
 END;
 $footer = <<<END
 <div id="footer" class="footer_bg">

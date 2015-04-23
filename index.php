@@ -301,16 +301,7 @@ $content = <<<END
 							</div><!-- panel -->		  				
 
 		  				<!-- right column row 2 -->
-						<div class="content-right margin-right-25px pull-right">
-
-							<div class ="ads">
-
-								<img src="http://placehold.it/290x300" class="ads pull-right">
-								<br><br>
-
-							</div><!-- ads -->	
-
-		  				</div><!-- content right kolumn row 2 -->
+						
 
 		  				</div><!-- content center kolumn row 2 -->
 		  				
