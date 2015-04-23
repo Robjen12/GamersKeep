@@ -297,7 +297,7 @@ margin-left:0;
 	margin-left: 0;
 }
 /* puts white triangel as css3 fgfx in right column second row in the footer */
-
+/* not used anymore
 #footer > .column-right-row2::before {
     content: '';
     display: block;
@@ -308,10 +308,13 @@ margin-left:0;
     border-color: transparent transparent transparent black;
     line-height: 0;
 }
+*/
 /* clears white triangel at the right side */
+/*
 #footer > .column-right-row2::before {
     right: 0;
 } 
+*/
 .bg-white {
     background-color: #fff;    /* Set background color to white */
 }
