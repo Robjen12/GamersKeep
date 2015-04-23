@@ -123,9 +123,6 @@ body {
     height: 60px;
 	border: none;
 }
-
-
-
 .no-border {
 	border: none;
 }
@@ -228,6 +225,10 @@ border: none;
 	margin-right: 0;
 	margin-left: 0;
 }
+
+.search-center {
+	float: right;
+}
  
 /* image icons in the header */
 .img.header-icons {
@@ -247,26 +248,54 @@ border: none;
 }
 /* footer */
 #footer {
-  height: 106px;              /* Sets height to 80 pixels */
-  width: 100%;
-}
-/* left column in the header */
-#footer > .column-left {
-    margin-left: 0;
-    height: 60px;
-}
-/* center column in the header */
-#footer > .column-center {
-    height: 60px;
-}
-/* right column in the header */
-#footer > .column-right {
-    margin-right: 0;
-    height: 60px;
-    float:right;
-    margin-left: auto;
+margin-top: 15px;
+height: 200px;
+margin-right: 0;
+margin-left:0;
 }
 
+.footer_bg {
+	background: url("../images/footer_bg.png") repeat-x bottom left;	/*  footer background img */
+	height: 200px;              /* Sets height to 200 pixels */
+	width: 100%;
+}
+
+/* left column in the footer */
+#footer > .column-left {
+    margin-left: 0;
+	background: url("../images/footer_bg_tri.png") no-repeat top right;	/* left row triangle img */
+	height: 20px;
+	margin-right: 0;
+}
+/* center column in the footer */
+/* not used anymore delete this
+#footer > .column-center {
+}
+*/
+
+/* right column in the footer */
+#footer > .column-right {
+ background: url("../images/footer_bg_r.png") repeat-x top left;	/* right bild */
+	height: 20px;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.column-right-row2 {
+}
+#footer > .column-left {
+	background: url("../images/footer_bg_tri.png") no-repeat bottom right;	/* trekant bild */
+	height: 20px;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+#footer > .column-left-row2 {
+	
+	height: 180px;
+	margin-right: 0;
+	margin-left: 0;
+}
 /* puts white triangel as css3 fgfx in right column second row in the footer */
 
 #footer > .column-right-row2::before {
