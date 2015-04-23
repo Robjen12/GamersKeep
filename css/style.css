@@ -813,6 +813,11 @@ a.text-primary:hover {
   margin-right: 10px;
   margin-left: auto;
 }
+.margin-guide-review-ads {
+	margin-right: -15px;
+	border: none;
+
+}
 /* forms */
 .form-control {
   width: 220px;
@@ -964,6 +969,15 @@ background: -webkit-linear-gradient(90deg, orange, #993300); /* For Safari 5.1 t
  }
 .panel-default > .panel-heading-genre {
 	width: 760px;
+}
+
+.panel-guide-review {
+    width: 887px;
+	min-height: 100px;
+	height: auto;
+ }
+.panel-default > .panel-heading-guide-review {
+	width: 897px;
 }
 
 .content-genre {

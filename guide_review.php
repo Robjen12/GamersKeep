@@ -132,11 +132,11 @@ $content = <<<END
 				<div class="col-md-9 margin-left-guide"> 
 							<div class="guide_review">
 								<form action="guide_review.php" method="post" id="guide_review_form">
-									<div class="panel panel-default panel-genre">
-										<div class="panel-heading panel-heading-genre">Skriva recension eller guide
+									<div class="panel panel-default panel-guide-review">
+										<div class="panel-heading panel-heading-guide-review">Skriva recension eller guide
 										</div><!-- panel heading -->
 						
-										<div class="panel body panel-genre margin-skriva skriva">
+										<div class="panel body panel-guide-review margin-skriva skriva">
 										<label for="title"><h3 class="quicksand">Titel</h3></label>
 										<br>
 										<input type="text" class="form-control" id="title" name="title" value="" placeholder="Ange titeln"></br></br>
@@ -156,9 +156,9 @@ $content = <<<END
 								</form>			
 							</div>				
 				</div><!-- col md 9 -->
-				<div class="col-md-3 margin-left-guide pull-right margin-right-15px">
+				<div class="col-md-3 margin-guide-review-ads pull-right">
 					<!-- right column row 2 -->
-						<div class="content-right margin-right-25px pull-right">
+						<div class="content-right pull-right">
 
 							<div class ="ads">
 
