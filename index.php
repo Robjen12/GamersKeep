@@ -222,7 +222,7 @@ $content = <<<END
 
 								<div class="panel-heading panel-heading-250px quicksand">Topplista guider</div>
 
-				  					<div class="panel-body">
+				  					<div class="panel-body height-410px">
 
 				  							<p>{$toplistguide}</p>
 				  					</div><!-- panel body -->
@@ -240,7 +240,7 @@ $content = <<<END
 
 								<div class="panel-heading panel-heading-250px">Senaste guider</div>
 
-				  					<div class="panel-body">
+				  					<div class="panel-body height-410px">
 
 				  							<p>{$latestguide}</p>
 				  					</div><!-- panel body -->
@@ -275,7 +275,7 @@ $content = <<<END
 
 								<div class="panel-heading panel-heading-250px">Topplista recensioner</div>
 
-				  					<div class="panel-body">
+				  					<div class="panel-body height-410px">
 
 				  							<p>{$toplistreview}</p>
 				  					</div><!-- panel body -->
@@ -291,7 +291,7 @@ $content = <<<END
 
 								<div class="panel-heading panel-heading-250px">Senaste recensioner</div>
 
-				  					<div class="panel-body">
+				  					<div class="panel-body height-410px">
 
 				  							<p>{$latestreview}</p>
 				  					</div><!-- panel body -->
@@ -305,8 +305,7 @@ $content = <<<END
 
 							<div class ="ads">
 
-								<img src="http://placehold.it/290x300" class="ads pull-right">
-								<br><br>
+								<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
 
 							</div><!-- ads -->	
 
