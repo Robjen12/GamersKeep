@@ -1117,3 +1117,7 @@ color: white;
 	min-height: 410px;
 	height: auto;
 }
+a.deletelink
+{
+  color: red;
+}

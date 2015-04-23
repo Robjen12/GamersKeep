@@ -46,6 +46,7 @@ while($row = $res->fetch_object())
 	if($_SESSION['roletype'] == 1)
 	{
 	$admindelete = <<<END
+	
 	<button class="delete"><a href="delete.php?grid={$grid}">x</a></button>
 END;
 	}
