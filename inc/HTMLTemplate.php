@@ -134,7 +134,6 @@ $footer = <<<END
 			
 			<!-- Meny right -->
 			<div class="col-md-3 column-right height-20px">
-			right 1
 			</div><!-- meny right -->
 			
 			<!-- Meny left row2 -->
