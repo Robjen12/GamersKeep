@@ -220,7 +220,9 @@ while($row = $res->fetch_object())
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$r} <button class=delete><a href="delete.php?grid={$grid}">x</a></button></li></br><br>
+			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$r}
+			<button class=delete><a href="delete.php?grid={$grid}">x</a></button>
+			<button class=edit><a href="guide_review_edit.php?grid={$grid}">pen</a></button></li></br><br>
 			
 END;
 	}
@@ -229,7 +231,9 @@ END;
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$g} <button class=delete><a href="delete.php?grid={$grid}">x</a></button></li></br><br>
+			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$g} 
+			<button class=delete><a href="delete.php?grid={$grid}">x</a></button>
+			<button class=edit><a href="guide_review_edit.php?grid={$grid}">pen</a></button></li></br><br>
 		
 END;
 	}
