@@ -12,7 +12,7 @@ if(isset($_POST["logintosite"]))
 		$keepername = isset($_POST['keepername']) ? $_POST['keepername'] : '';
 		$password = isset($_POST['pw']) ? $_POST['pw'] : '';
 
-		if($keepername == '' || $password == '' )
+		if($keepername == '' || $password == '' || $keepername == '' && $password == '' )
 		{
 			$feedback = "<p class=\"text-yellow\">Fyll i alla fält</p>";
 		}
