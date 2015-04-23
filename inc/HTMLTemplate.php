@@ -144,9 +144,10 @@ $footer = <<<END
 			<!-- Meny right row2 -->
 			
 			<div class="col-md-3 sociala-media text-white pull-right">
-			right 2
 			
-			</div><!-- -->
+			<!-- insatt text har -->
+			
+			</div><!-- col md 3 sociala media -->
 			
 		</div> <!-- footer -->
 	</div><!-- container fluid -->
