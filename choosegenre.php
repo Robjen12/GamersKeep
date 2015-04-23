@@ -195,7 +195,7 @@ $content = <<<END
 							Topplista guider <li class="views">{$genretype}</li>
 						</div><!-- panel heading -->
 
-		  					<div class="panel-body">
+		  					<div class="panel-body height-410px">
 
 			  					{$toplistgenreguide}
 
@@ -209,7 +209,7 @@ $content = <<<END
 							Senaste guider<li class="views">{$genretype}</li>
 						</div><!-- panel heading -->
 
-		  				<div class="panel-body">
+		  				<div class="panel-body height-410px">
 		  					{$latestgenreguide}
 		  				</div><!-- panel body -->
 						
@@ -231,10 +231,10 @@ $content = <<<END
 					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
 
 		  					<div class="panel-heading">
-								Topplista recensionerna <li class="views">{$genretype}</li>
+								Topplista recensioner <li class="views">{$genretype}</li>
 							</div><!-- panel heading -->
 
-			  				<div class="panel-body">										
+			  				<div class="panel-body height-410px">										
 				  				{$toplistgenrereview}		  			
 			  				</div><!-- panel body -->
 
@@ -243,10 +243,10 @@ $content = <<<END
 					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
 
 		  					<div class="panel-heading">
-								Senaste recensionerna<li class="views">{$genretype}</li>
+								Senaste recensioner<li class="views">{$genretype}</li>
 							</div><!-- panel heading -->
 
-			  				<div class="panel-body">
+			  				<div class="panel-body height-410px">
 			  						{$latestgenrereview}
 		  					</div><!-- panel body -->
 													
