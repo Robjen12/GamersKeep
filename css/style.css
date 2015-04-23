@@ -257,12 +257,6 @@ margin-right: 0;
 margin-left:0;
 }
 
-#footer {
-margin-top: 15px;
-height: 200px;
-margin-right: 0;
-margin-left:0;
-}
 .footer_bg {
 	background: url("../images/footer_bg.png") repeat-x bottom left;	/*  footer background img */
 
@@ -286,7 +280,7 @@ margin-left:0;
 */
 /* right column in the footer */
 #footer > .column-right {
- background: url("../images/footer_bg_r.png") repeat-x top left;	/* trekant bild */
+ background: url("../images/footer_bg_r.png") repeat-x top left;	/* right bild */
 	height: 20px;
 	margin-right: 0;
 	margin-left: 0;
