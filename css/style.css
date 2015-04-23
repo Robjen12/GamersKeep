@@ -1090,3 +1090,8 @@ color: white;
 	min-height: 290px;
 	height: auto;
 }
+.text-yellow {
+	background-color: Red;
+	color: White;
+	width: 75%;
+}
