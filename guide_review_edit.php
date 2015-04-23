@@ -46,6 +46,17 @@ if(isset($_POST['updaterevgui']))
 END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
+
+	$genre = $_POST["genretype"];
+
+	$query = <<<END
+
+	UPDATE genreguidereview SET genretype = '$genre' 
+	WHERE grid = '{$grid}';
+END;
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+		        
 	$feedback = "<p class=\"success\">Inlägget har uppdaterats</p>";
 }
 	
