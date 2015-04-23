@@ -126,7 +126,7 @@ $content = <<<END
 		<div class="container-fluid">
 END;
 $footer = <<<END
-		<div id="footer" class="bg-gradient-brown">
+		<div id="footer" class="footer_bg">
 			
 			<!-- Meny left with logo -->
 			

@@ -14,7 +14,7 @@ if(isset($_POST["logintosite"]))
 
 		if($keepername == '' || $password == '')
 		{
-			$feedback = "<p class=\"feedback-yellow\">Fyll i alla fält</p>";
+			$feedback = "<p=\"feedback-yellow\">Fyll i alla fält</p>";
 		}
 		else
 		{
