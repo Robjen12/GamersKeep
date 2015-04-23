@@ -103,7 +103,7 @@ $content = <<<END
 	  					<div class="panel-heading panel-heading-560px">Sökresultat</div>
 
 
-		  					<div class="panel-body height-450px">
+		  					<div class="panel-body height-290px">
 							
 							{$users}
 							{$article}
