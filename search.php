@@ -91,17 +91,35 @@ END;
 }
 $content = <<<END
 
-	<div id="container">
-		<div class="row">
-			<div class="col-md-4"></div>
+
+		<div class="row margin-top-100">
+		
 			<div class="col-md-4">
-				<div id="searchresult">
-				{$users}
-				{$article}
-				{$feedback}
-				</div>
+			</div><!-- col md 4 -->
+			
+			<div class="col-md-4">
+			<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default pull-left">
+
+	  					<div class="panel-heading panel-heading-560px">Sökresultat</div>
+
+
+		  					<div class="panel-body height-450px">
+							
+							{$users}
+							{$article}
+							{$feedback}
+
+							Tillbaka
+
+
+		  					</div><!-- panel body -->
+
+						</div><!-- panel heading -->
+						
+				
 			</div>
-			<div class="col-md-4"></div>
+			<div class="col-md-4">
+			</div><!-- col md 4 -->
 		</div>
 	</div>
 END;
