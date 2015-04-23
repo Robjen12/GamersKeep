@@ -126,29 +126,26 @@ $content = <<<END
 		<div class="container-fluid">
 END;
 $footer = <<<END
-		<div id="footer" class="footer_bg">
+<div id="footer" class="footer_bg">
 			
-			<!-- Meny left with logo -->
+			<!-- Meny left with triangle to the right -->			
+			<div class="col-md-9 column-left height-20px">
+			</div><!-- col md 9 column left -->			
 			
-			<div class="col-md-4 column-left-row2 bg-black height-20px">
-			</div>
-			
-			<!-- Meny center -->
-			
-			<div class="col-md-4 column-center-row2 bg-black height-20px">
-			</div>
 			<!-- Meny right -->
-			<div class="col-md-4 column-right-row2 margin-horizontal-zero height-20px">
+			<div class="col-md-3 column-right height-20px">
+			right 1
 			</div><!-- meny right -->
+			
 			<!-- Meny left row2 -->
-			<div class="col-md-4 column-left">
+			<div class="col-md-9 copyright text-white pull-left">
+			Copyright &copy; 2015 GameTeam
 			</div><!-- -->
-			<!-- Meny center row2 -->
-			<div class="col-md-4 column-center">
-			</div><!-- -->
+	
 			<!-- Meny right row2 -->
 			
-			<div class="col-md-4 column-right pull-right margin-right-zero">
+			<div class="col-md-3 sociala-media text-white pull-right">
+			right 2
 			
 			</div><!-- -->
 			
