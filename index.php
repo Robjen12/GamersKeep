@@ -14,10 +14,11 @@ $text = "";
 $grade = "";
 $title	= htmlspecialchars($title);
 $text	= htmlspecialchars($text);
-
+$admindelete = "";
 //test
 $genretype = "";
 $genre = "";
+
 
 $query = <<<END
 
@@ -42,6 +43,13 @@ while($row = $res->fetch_object())
 	$date 	= strtotime($row->timestamp);
 	$date	= date("d M Y H:i", $date);
 
+	if($_SESSION['roletype'] == 1)
+	{
+	$admindelete = <<<END
+	<button class="delete"><a href="delete.php?grid={$grid}">x</a></button>
+END;
+	}
+
 	$latestguide .= <<<END
 	
 								<ul class="media-list">
@@ -54,7 +62,7 @@ while($row = $res->fetch_object())
     									</div>
     									<div class="media-body">
       										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
-      										class="text-bold">{$title}</a></br>
+      										class="text-bold">{$title}</a><li class="views">{$admindelete}</li></br>
 											<i>{$text}</i></h4><br>
     									</div>
   									</li>
@@ -87,6 +95,13 @@ while($row = $res->fetch_object())
 	$date 	= strtotime($row->timestamp);
 	$date	= date("d M Y H:i", $date);
 
+	if($_SESSION['roletype'] == 1)
+	{
+	$admindelete = <<<END
+	<button class="delete"><a href="delete.php?grid={$grid}">x</a></button>
+END;
+	}
+
 	$latestreview .= <<<END
 
 								<ul class="media-list">
@@ -99,7 +114,7 @@ while($row = $res->fetch_object())
     									</div>
     									<div class="media-body">
       										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
-      										class="text-bold">{$title}</a></br>
+      										class="text-bold">{$title}</a><li class="views">{$admindelete}</li></br>
 											<i>{$text}</i><br></h4>
     									</div>
   									</li>
@@ -137,6 +152,12 @@ if($result->num_rows > 0)
 			$title	= utf8_decode(htmlspecialchars($row->title));
 			$text 	= utf8_decode(htmlspecialchars($row->text));
 
+			if($_SESSION['roletype'] == 1)
+			{
+				$admindelete = <<<END
+				<button class="delete"><a href="delete.php?grid={$grid}">x</a></button>
+END;
+			}
                 $toplistguide .=<<<END
 
                 <ul class="media-list">
@@ -149,7 +170,7 @@ if($result->num_rows > 0)
     									</div>
     									<div class="media-body">
       										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
-      										class="text-bold">{$title}</a><li class="views">{$row->counter}</li></br>
+      										class="text-bold">{$title}</a><li class="views">{$row->counter}{$admindelete}</li></br>
 											<i>{$text}</i><br></h4>
     									</div>
   									</li>
@@ -184,6 +205,13 @@ if($res->num_rows > 0){
 	$text 	= utf8_decode(htmlspecialchars($row->text));
 	$grade  = $row->grade;
 
+	if($_SESSION['roletype'] == 1)
+	{
+	$admindelete = <<<END
+	<button class="delete"><a href="delete.php?grid={$grid}">x</a></button>
+END;
+	}
+
 	$toplistreview .= <<<END
 
 	<ul class="media-list">
@@ -196,7 +224,7 @@ if($res->num_rows > 0){
     									</div>
     									<div class="media-body">
       										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
-      										class="text-bold">{$title}</a></br><li class="views">{$row->counter}</li>
+      										class="text-bold">{$title}</a></br><li class="views">{$row->counter}{$admindelete}</li>
 											<i>{$text}</i><br></h4>
     									</div>
   									</li>
