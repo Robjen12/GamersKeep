@@ -344,11 +344,9 @@ $content = <<<END
 		  					
 							<!-- Reklam karusel -->
 							
-		  						<img src="http://placehold.it/290x290" class="ads">
+		  						<<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
 
-		  						<br><br><br>
-
-		  						<img src="http://placehold.it/290x290" class="ads">
+		  						<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
 
 		  					
 							</div><!-- reklam kolumn -->
