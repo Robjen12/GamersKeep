@@ -1091,7 +1091,23 @@ color: white;
 	height: auto;
 }
 .text-yellow {
-	background-color: Red;
+	background-color: #e48900;
+	border-radius: 3px;
 	color: White;
-	width: 75%;
+	font-size: 12px;
+	width: 220px;
+	padding-left: 5px;
+	padding-right: 5px;
+	
+}
+
+.text-red {
+	background-color: #cc3300;
+	border-radius: 3px;
+	color: White;
+	width: 220px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 12px;
+	
 }

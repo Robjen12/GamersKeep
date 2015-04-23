@@ -53,7 +53,7 @@ END;
 
 				else
 				{
-					$feedback .= "<p class=\"feedback-red\">Användarnamn eller lösenord är fel</p>";
+					$feedback .= "<p class=\"text-red\">Användarnamn eller lösenord är fel</p>";
 				}
 				$res->close();
 			}
