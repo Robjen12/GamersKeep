@@ -6,7 +6,7 @@ include_once("inc/Connstring.php");
 $grid = isset($_GET['grid']) ? $_GET['grid'] : "";
 $feedback = "";
 $dropdown = "";
-
+$grades = "";
 
 //NYTT
 if(!empty($_GET))
@@ -34,17 +34,19 @@ END;
 				if($editgrade > 0)
 				{
 					$guideorreview = <<<END
-					<input type="radio" id="reviewcheck" name="review" value="Review">Recension
-					<input type="radio" id="guidecheck" name="guide" value="Guide">Guide</br></br>
+					<input type="radio" id="reviewcheck" name="review" value="Review">Recension</br></br>
+					
 									
 END;
-
+					$grades = <<<END
+					<label for="grade" id="gradescale">Betyg (1-5)</label></br>
+					<input type="number" class="text-black" id="grade" name="grade" min="1" max="5" value="{$editgrade}">
+END;
 				}
 				if($editgrade == NULL)
 				{
 					$guideorreview = <<<END
-					<input type="radio" id="guidecheck" name="guide" value="Guide">Guide
-					<input type="radio" id="reviewcheck" name="review" value="Review">Recension</br></br>
+					<input type="radio" id="guidecheck" name="guide" value="Guide">Guide</br></br>
 									
 END;
 
@@ -155,8 +157,7 @@ $content = <<<END
 										{$dropdown}<br><br>
 										<label for="information">Innehållet:</label>
 										<textarea id="nicEdit" name="nicEdit" cols="80" rows="15">{$edittext}</textarea></br>
-										<label for="grade" id="gradescale">Betyg (1-5)</label></br>
-										<input type="number" class="text-black" id="grade" name="grade" min="1" max="5" value="{$editgrade}">
+										{$grades}
 										<button type="submit" id="submit" name="updaterevgui">Spara ändringar</button>
 										</div>
 									</div>
@@ -176,22 +177,6 @@ $content = <<<END
   });
  
   </script>
-
-  <script>
-
-	$(document).ready(function(){
-		$('#grade').hide();
-		$('#gradescale').hide();
-		$('#reviewcheck').click(function(){
-			$('#grade').show();
-			$('#gradescale').show();
-		});
-		$('#guidecheck').click(function(){
-			$('#grade').hide();
-			$('#gradescale').hide();
-		});
-	});	
-	</script>
 
 	<script>
 	$(document).ready(function () {
