@@ -58,7 +58,7 @@ END;
 	}
 	else
 	{
-		$feedback = "<p class=\"feedback-yellow\">Det finns ingen i databasen med det användarnamnet</p>";
+		$feedback = "<p class=\"feedback-yellow\">Det finns ingen i databasen med det användarnamnet.</p>";
 	}
 }
 if(isset($_GET['searchgenre']))
@@ -86,7 +86,7 @@ END;
 	}
 	else
 	{
-		$feedback = "<p class=\"feedback-yellow\">Det finns ingen artikel i databasen med det namnet</p>";
+		$feedback = "<p class=\"feedback-yellow\">Det finns ingen artikel i databasen med det namnet.</p>";
 	}
 }
 $content = <<<END
