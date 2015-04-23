@@ -275,16 +275,22 @@ margin-left:0;
 
 
 }
-/* center column in the header */
+/* center column in the footer */
+/* not used anymore delete this
 #footer > .column-center {
-    height: 60px;
+
 }
-/* right column in the header */
+*/
+/* right column in the footer */
 #footer > .column-right {
-    margin-right: 0;
-    height: 60px;
-    float:right;
-    margin-left: auto;
+ background: url("../images/footer_bg_r.png") repeat-x top left;	/* trekant bild */
+	height: 20px;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.column-right-row2 {
+
 }
 
 /* puts white triangel as css3 fgfx in right column second row in the footer */
