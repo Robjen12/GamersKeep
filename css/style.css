@@ -293,8 +293,22 @@ margin-left:0;
 
 }
 
-/* puts white triangel as css3 fgfx in right column second row in the footer */
+#footer > .column-left {
+	background: url("../images/footer_bg_tri.png") no-repeat bottom right;	/* trekant bild */
+	height: 20px;
+	margin-right: 0;
+	margin-left: 0;
+}
 
+#footer > .column-left-row2 {
+	
+	height: 180px;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+/* puts white triangel as css3 fgfx in right column second row in the footer */
+/* not used anymore
 #footer > .column-right-row2::before {
     content: '';
     display: block;
@@ -305,10 +319,14 @@ margin-left:0;
     border-color: transparent transparent transparent black;
     line-height: 0;
 }
+*/
+
 /* clears white triangel at the right side */
+/*
 #footer > .column-right-row2::before {
     right: 0;
 } 
+*/ 
 .bg-white {
     background-color: #fff;    /* Set background color to white */
 }
