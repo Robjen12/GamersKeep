@@ -12,7 +12,7 @@ if(isset($_POST["logintosite"]))
 		$keepername = isset($_POST['keepername']) ? $_POST['keepername'] : '';
 		$password = isset($_POST['pw']) ? $_POST['pw'] : '';
 
-		if($keepername == '' || $password == '')
+		if($keepername == '' || $password == '' )
 		{
 			$feedback = "<p class=\"text-yellow\">Fyll i alla fält</p>";
 		}
@@ -95,9 +95,7 @@ $content = <<<END
 							</br>
 													
 							<button type="submit" class="btn btn-danger btn-sm pull-left text-bold" id="submit" name="logintosite" value="Logga in">Logga in</button>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-							
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;							
 
 							<a href="register.php" class="btn btn-warning btn-sm text-bold login-text" role="button" text-white>Registrera dig</button></a></br>
 						</form>
