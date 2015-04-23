@@ -129,8 +129,8 @@ $content = <<<END
 
 		<div class="container-fluid">
 			<div class="row margin-top-100">
-				<div class="col-md-12 margin-left-guide"> 
-							<div id="guide_review">
+				<div class="col-md-9 margin-left-guide"> 
+							<div class="guide_review">
 								<form action="guide_review.php" method="post" id="guide_review_form">
 									<div class="panel panel-default panel-genre">
 										<div class="panel-heading panel-heading-genre">Skriva recension eller guide
@@ -154,9 +154,21 @@ $content = <<<END
 										</div>
 									</div>
 								</form>			
-							</div>
-						
-				</div>
+							</div>				
+				</div><!-- col md 9 -->
+				<div class="col-md-3 margin-left-guide pull-right margin-right-15px">
+					<!-- right column row 2 -->
+						<div class="content-right margin-right-25px pull-right">
+
+							<div class ="ads">
+
+								<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
+
+							</div><!-- ads -->	
+
+		  				</div><!-- content right kolumn row 2 -->
+				</div><!-- reklam -->
+				
 			</div>
 		</div>
 		
