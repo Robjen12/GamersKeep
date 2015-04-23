@@ -124,6 +124,7 @@ $header = <<<END
 END;
 $content = <<<END
 		<div class="container-fluid">
+		
 END;
 $footer = <<<END
 <div id="footer" class="footer_bg">
