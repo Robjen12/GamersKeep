@@ -1161,6 +1161,8 @@ a.deletelink
   color: none;
   background-color: #fff;
   border: none;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .btn-default-span:hover,
@@ -1172,5 +1174,20 @@ a.deletelink
 
 	background-color: White;
 	border: none;
-  
+	margin-left: 2px;
+	margin-right: 0px;
+
 }
+
+.btn-sm-span,
+.btn-group-sm-span > .btn {
+  padding: 3px 3px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: none;
+  margin-left: 2px;
+  display: inline-block;
+	margin-right: 0px;
+	float: right;
+}
+
