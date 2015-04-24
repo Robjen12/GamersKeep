@@ -12,9 +12,10 @@ $query = <<<END
 END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
+
 	if($res->num_rows > 0)
 	{
-		if($row = $res->fetch_object())
+		while($row = $res->fetch_object())
 		{
 
 			$grid = $row->grid;
