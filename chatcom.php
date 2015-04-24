@@ -160,6 +160,13 @@ $content = <<<END
 			</div>
 
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+    // set the default scroll bar to bottom of chat box
+    $(".guestbook").scrollTop($(".guestbook")[0].scrollHeight);
+});
+	</script>
 END;
 echo $header;
 echo $content;

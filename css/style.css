@@ -1100,7 +1100,7 @@ color: white;
 .guestbook
 {
   
-  overflow-y: auto;
+  overflow-y: scroll;
   height: 400px;
   background-color: white;
   border-radius: 15px;
