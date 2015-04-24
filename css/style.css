@@ -561,7 +561,7 @@ margin-left:0;
 li.views{
   float: right;
   list-style: none;
-
+vertical-align: text-top;
 }
 
 /* dortes andringar från dorte2 branch */
@@ -868,11 +868,12 @@ width: 30%;
 }
 .views > li > a,
 .views > li > span {
-color: Black;
+color: Orange;
   list-style: none;
   float: left;
   margin-right: 5px;
   margin-left: 0px;
+  vertical-align: top;
 }
 
 .panel-default > .panel-heading-560px {
