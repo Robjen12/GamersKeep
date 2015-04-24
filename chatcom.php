@@ -7,7 +7,7 @@ include_once("inc/Connstring.php");
 $keeperid = $_SESSION['keeperid'];
 $keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
 $guestbook = "";
-$chatcomid = isset($_GET['chatcomid']) ? $_GET['chatcomid'] : "";
+
 
 if(!empty($_POST))
 {
@@ -94,24 +94,29 @@ END;
 
 
 
-/*if(!empty($_GET))
+if(!empty($_GET))
 {
-	
+	$chatcomid = isset($_GET['chatcomid']) ? $_GET['chatcomid'] : "";
+
 	$query = <<<END
 
 	SELECT *
-	FROM chatcom
-    JOIN user
-	ON chatcom.keeperid = user.keeperid
-	WHERE chatcomid = '{$chatcomid}'
-    GROUP BY timestamp DESC;
+			FROM repchatcom
+			JOIN replys
+			ON replys.replyid = repchatcom.replyid
+			JOIN chatcom
+			ON repchatcom.keeperid = chatcom.keeperid
+			JOIN user
+			ON repchatcom.keeperid = user.keeperid
+			WHERE repchatcom.chatcomid = '{$chatcomid}'
+			GROUP BY timestamp DESC;
 END;
 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 
 if($res->num_rows > 0)
 {
-	if($row = $res->fetch_object())
+	while($row = $res->fetch_object())
 	{
 
 		$keepername = $row->keepername;
@@ -127,7 +132,7 @@ END;
 	}
 }
 
-}	*/
+}	
 
 
 
