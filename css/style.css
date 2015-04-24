@@ -1135,3 +1135,10 @@ a.deletelink
 {
   color: red;
 }
+.admin-profile
+{
+  min-height: 450px;
+  height: auto;
+  background-color: white;
+  
+}

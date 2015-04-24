@@ -19,6 +19,12 @@ $penbutton2 = "";
 $formabout = "";
 $formother = "";
 
+
+if($_SESSION['roletype'] == 1)
+{
+	header("Location: admin.php");
+}
+
 if(!empty($_GET))
 {
 	
