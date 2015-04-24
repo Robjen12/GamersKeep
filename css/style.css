@@ -545,9 +545,23 @@ margin-left:0;
   margin-right: 0px;
   margin-left: auto;
 }
-.views{
+.list-group {
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+li.views{
   float: right;
   list-style: none;
+  color: #000;
 }
 
 /* dortes andringar från dorte2 branch */
@@ -770,18 +784,18 @@ a.text-primary:hover {
 }
 
 .ovrigt {
-  width: 310px;
+  width: 200px;
 }
 
 .panel-default > .ovrigt-heading {
-  width: 320px;
+  width: 210px;
 }
 .aktiviteter {
-  width: 213px;
+  width: 315px;
 
 }
 .panel-default > .aktiviteter-heading {
-  width: 223px;
+  width: 325px;
 
 }
 .panel-width-240px {
@@ -852,10 +866,15 @@ width: 30%;
 
 /*  .make-lg-column-offset(1); */
 }
-.views {
-  float: right;
+.views > li > a,
+.views > li > span {
+color: Black;
   list-style: none;
+  float: left;
+  margin-right: 5px;
+  margin-left: 0px;
 }
+
 .panel-default > .panel-heading-560px {
   width: 560px;
 }
@@ -1158,11 +1177,13 @@ a.deletelink
 }
 
 .btn-default-span {
-  color: none;
+color: Red;
   background-color: #fff;
   border: none;
   margin-left: 2px;
-  margin-right: 2px;
+  margin-right: 0px;
+  width: auto;
+  height: auto;
 }
 
 .btn-default-span:hover,
@@ -1171,7 +1192,7 @@ a.deletelink
 .btn-default-span:active,
 .btn-default-span.active,
 .open > .dropdown-toggle.btn-default-span {
-
+	color: Red;
 	background-color: White;
 	border: none;
 	margin-left: 2px;
@@ -1183,11 +1204,14 @@ a.deletelink
 .btn-group-sm-span > .btn {
   padding: 3px 3px;
   font-size: 12px;
-  line-height: 1.5;
+
   border-radius: none;
   margin-left: 2px;
   display: inline-block;
 	margin-right: 0px;
 	float: right;
+	width: auto;
+	height: auto;
+	color: #000;
 }
 

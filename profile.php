@@ -78,7 +78,7 @@ while($row = $res->fetch_object())
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$r}</li></br><br>
+			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$r}</li><br>
 		
 
 END;
@@ -88,7 +88,7 @@ END;
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$g}</li></br><br>
+			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$g}</li><br>
 		
 
 END;
@@ -217,8 +217,9 @@ while($row = $res->fetch_object())
 	$timestamp = strtotime($row->timestamp);
 	$timestamp = date("d M Y H:i", $timestamp);
 
-	$r = "R";
+	$r = "<span class=\"glyphicon glyphicon-book pull-left\" aria-hidden=\"true\">&nbsp;</span>";
 	$g = "G";
+	
 
 	
 	if($grade > 0)
@@ -226,9 +227,10 @@ while($row = $res->fetch_object())
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$r}
+			<a href="genre.php?grid={$grid}">{$title}</a>{$r}
 			<button class="btn btn-sm-span btn-default-span delete"><a class="span" href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a></button>
 			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
+			<br>
 			
 END;
 	}
