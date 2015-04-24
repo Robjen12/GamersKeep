@@ -181,7 +181,7 @@ END;
 $content = <<<END
 				
 
-				<div class="wrapper margin-top-100">
+				<div class="wrapper margin-top-75">
 
 					<div class="row">
 					<!-- search function in genre -->
