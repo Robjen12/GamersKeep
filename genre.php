@@ -91,14 +91,22 @@ END;
 
 		$comments .=  <<<END
 
-		Skriven av: <a href="profile.php?keeperid={$keeperid}">{$commentkeepername}</a> <!-- flagga --><a href="#" alt="Markera stötande innehåll">
+		Skriven av: <a href="profile.php?keeperid={$keeperid}">{$commentkeepername}</a> <!-- flagga --><a href="#" class="flag" alt="Markera stötande innehåll">
 		<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a><br>
 		Publicerad: {$date}<br>
 		{$comment}
 		<hr>
 END;
+
+
 	}
 
+	$getflag = <<<END
+		UPDATE guidereviewinfo SET flag = 1
+		WHERE grid = '{$grid}';
+END;
+	$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
+			        " : " . $mysqli->error);
 $content = <<<END
 
 		<div class="wrapper margin-top-100">
@@ -113,7 +121,7 @@ $content = <<<END
 								
 								<div class="panel-body">								
 									
-									Skriven av: <a href="profile.php?keeperid={$keeperid}">{$keepername}</a> <!-- flagga --><a href="#" alt="Markera stötande innehåll">
+									Skriven av: <a href="profile.php?keeperid={$keeperid}">{$keepername}</a> <!-- flagga --><a href="genre.php?grid={$grid}" class="flag" alt="Markera stötande innehåll">
 									<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a>
 									</br>
 									
@@ -154,6 +162,13 @@ $content = <<<END
 				</div>
 			</div>
 		</div>
+	<script>
+	$(document).ready(function(){
+		$('.flag')click(function(){
+			{$getflag}
+		});
+	});
+	</script>
 END;
 
 echo $header;
