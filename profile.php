@@ -249,13 +249,18 @@ END;
 }
 // FORTSÄTTNING FÖLJER!
 $query = <<<END
-	SELECT * FROM repchatcom
+
+	SELECT * FROM repchatcom 
 	JOIN replys
 	ON replys.replyid = repchatcom.replyid
-	JOIN chatcom
-	ON chatcom.chatcomid = repchatcom.chatcomid
-	WHERE repchatcom.keeperid = '{$keeperid}'
-	OR repchatcom.keeperid2 = '{$keeperid}';
+	JOIN chatcom 
+	ON chatcom.chatcomid = repchatcom.chatcomid 
+	AND chatcom.keeperid = '{$keeperid}'
+	JOIN user 
+	ON repchatcom.keeperid2 = user.keeperid
+	WHERE repchatcom.keeperid != '{$keeperid}'
+	OR repchatcom.keeperid2 != '{$keeperid}';
+
 END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 	  " : " . $mysqli->error);
@@ -264,14 +269,18 @@ END;
 	{
 			while($row = $res->fetch_object())
 			{
-
+				$keepername2 = $row->keepername;
 				$chatcomid = $row->chatcomid;
 				$reply = $row->reply;
 				$keeper = $row->keeperid;
 				$keeper2 = $row->keeperid2;
+				$date 	= strtotime($row->timestamp);
+				$date	= date("d M Y H:i", $date);
+				
+				
 
-				$chatmess = <<<END
-					<a href="chatcom.php?chatcomid={$chatcomid}">{$reply}</a><br>
+				$chatmess .= <<<END
+					<a href="chatcom.php?chatcomid={$chatcomid}">{$keepername2}</a><br>
 					
 END;
 				
