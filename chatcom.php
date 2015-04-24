@@ -7,7 +7,7 @@ include_once("inc/Connstring.php");
 $keeperid = $_SESSION['keeperid'];
 $keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
 $guestbook = "";
-
+$chatcomid = isset($_GET['chatcomid']) ? $_GET['chatcomid'] : "";;
 
 if(!empty($_POST))
 {
@@ -18,18 +18,25 @@ if(!empty($_POST))
 
 		$query = <<<END
 
-			INSERT INTO chatcom (keeperid, keeperid2, reply, timestamp, flag)
-			VALUES ('{$keeperid}', '{$keeperid2}', '{$reply}', CURRENT_TIMESTAMP, '');
+			INSERT INTO replys (reply)
+			VALUE('{$reply}')
 END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
+
+		$query = <<<END
+
+			INSERT INTO repchatcom (keeperid, keeperid2, chatcomid, replyid)
+			VALUES ('{$keeperid}', '{$keeperid2}', '{$chatcomid}', 'LAST_INSERT_ID()')
+END;
 	}
+	
 		$query = <<<END
 			SELECT *
-			FROM chatcom
-			JOIN user
-			ON chatcom.keeperid = user.keeperid
-			WHERE chatcomid = LAST_INSERT_ID()
+			FROM replys
+			JOIN repchatcom
+			ON replys.replyid = repchatcom.replyid
+			WHERE chatcomid = '{$chatcomid}'
 			GROUP BY timestamp DESC;
 
 END;

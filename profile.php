@@ -245,9 +245,9 @@ END;
 	}
 	
 }
-
+// FORTSÄTTNING FÖLJER!
 $query = <<<END
-	SELECT chatcomid, reply, keeperid, keeperid2 FROM chatcom
+	SELECT replyid, reply FROM repchatcom
 	WHERE chatcom.keeperid = '{$keeperid}'
 	OR chatcom.keeperid2 = '{$keeperid}';
 END;
