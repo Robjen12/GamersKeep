@@ -1156,3 +1156,21 @@ a.deletelink
   background-color: white;
   
 }
+
+.btn-default-span {
+  color: none;
+  background-color: #fff;
+  border: none;
+}
+
+.btn-default-span:hover,
+.btn-default-span:focus,
+.btn-default-span.focus,
+.btn-default-span:active,
+.btn-default-span.active,
+.open > .dropdown-toggle.btn-default-span {
+
+	background-color: White;
+	border: none;
+  
+}
