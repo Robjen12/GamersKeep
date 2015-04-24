@@ -5,6 +5,7 @@ include_once("inc/Connstring.php");
 $grid = isset($_GET['grid']) ? $_GET['grid'] : "";
 $gr_flag = "";
 
+// Hämtar ut allt i guidereviewinfo som har status 1 i posten flag
 $query = <<<END
 
 	SELECT * FROM guidereviewinfo
@@ -27,7 +28,7 @@ END;
 END;
 		}
 	}
-
+// Sätter flaggan till noll om innehållet inte är otillämpligt
 	$admit = <<<END
 		UPDATE guidereviewinfo SET flag = 0
 		WHERE grid = '{$grid}';
@@ -39,8 +40,8 @@ END;
 	<div class="row margin-top-100">
 		<div class="col-md-12">
 			<div class="admin-profile">
-			
-			{$gr_flag}
+				<h3>Admin Profile</h3>
+				{$gr_flag}
 			</div>
 
 		</div>
