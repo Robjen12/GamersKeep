@@ -247,9 +247,13 @@ END;
 }
 // FORTSÄTTNING FÖLJER!
 $query = <<<END
-	SELECT replyid, reply FROM repchatcom
-	WHERE chatcom.keeperid = '{$keeperid}'
-	OR chatcom.keeperid2 = '{$keeperid}';
+	SELECT * FROM repchatcom
+	JOIN replys
+	ON replys.replyid = repchatcom.replyid
+	JOIN chatcom
+	ON chatcom.chatcomid = repchatcom.chatcomid
+	WHERE repchatcom.keeperid = '{$keeperid}'
+	OR repchatcom.keeperid2 = '{$keeperid}';
 END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 	  " : " . $mysqli->error);

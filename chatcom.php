@@ -7,7 +7,7 @@ include_once("inc/Connstring.php");
 $keeperid = $_SESSION['keeperid'];
 $keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
 $guestbook = "";
-$chatcomid = isset($_GET['chatcomid']) ? $_GET['chatcomid'] : "";;
+$chatcomid = isset($_GET['chatcomid']) ? $_GET['chatcomid'] : "";
 
 if(!empty($_POST))
 {
@@ -18,8 +18,24 @@ if(!empty($_POST))
 
 		$query = <<<END
 
-			INSERT INTO replys (reply)
-			VALUE('{$reply}')
+			SELECT * FROM chatcom 
+			WHERE accept = 1;
+END;
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+
+		if($res->num_rows > 0)
+		{
+			if($row = $res->fetch_object())
+			{
+
+				$getchatcomid = $row->chatcomid;
+
+
+				$query = <<<END
+
+			INSERT INTO replys (reply, timestamp, flag)
+			VALUE('{$reply}', CURRENT_TIMESTAMP, '');
 END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
@@ -27,16 +43,29 @@ END;
 		$query = <<<END
 
 			INSERT INTO repchatcom (keeperid, keeperid2, chatcomid, replyid)
-			VALUES ('{$keeperid}', '{$keeperid2}', '{$chatcomid}', 'LAST_INSERT_ID()')
+			VALUES ('{$keeperid}', '{$keeperid2}', '{$getchatcomid}', LAST_INSERT_ID());
 END;
 	}
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
 	
+		
+
+
+			}
+			
+		}
+
 		$query = <<<END
 			SELECT *
-			FROM replys
-			JOIN repchatcom
+			FROM repchatcom
+			JOIN replys
 			ON replys.replyid = repchatcom.replyid
-			WHERE chatcomid = '{$chatcomid}'
+			JOIN chatcom
+			ON repchatcom.keeperid = chatcom.keeperid
+			JOIN user
+			ON repchatcom.keeperid = user.keeperid
+			WHERE repchatcom.chatcomid = '{$getchatcomid}'
 			GROUP BY timestamp DESC;
 
 END;
@@ -45,7 +74,7 @@ END;
 
 		if($res->num_rows > 0)
 		{
-			if($row = $res->fetch_object())
+			while($row = $res->fetch_object())
 			{
 				
 				$keepername = $row->keepername;
@@ -65,10 +94,9 @@ END;
 
 
 
-if(!empty($_GET))
+/*if(!empty($_GET))
 {
-	$chatcomid = isset($_GET['chatcomid']) ? $_GET['chatcomid'] : "";;
-
+	
 	$query = <<<END
 
 	SELECT *
@@ -99,7 +127,7 @@ END;
 	}
 }
 
-}	
+}	*/
 
 
 
