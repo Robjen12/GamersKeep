@@ -1127,6 +1127,17 @@ color: white;
 	font-size: 12px;
 	
 }
+
+.text-green {
+	background-color: Green;
+	border-radius: 3px;
+	color: White;
+	width: 220px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 12px;
+	
+}
 .height-410px {
 	min-height: 410px;
 	height: auto;

@@ -26,7 +26,7 @@ $admindelete = "";
 
 			if($title == "" || $text == "")
 			{
-				$feedback = "<p class=\"feedback-yellow\">Fyll i alla fält</p>";
+				$feedback = "<p class=\"text-yellow\">Fyll i alla fält</p>";
 			}
 			
 			else
@@ -58,7 +58,7 @@ END;
 				 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 			}
-			$feedback = "<p class=\"success\">Inlägget har publicerats</p>";
+			$feedback = "<p class=\"text-green\">Inlägget har publicerats</p>";
 		}
 
 		else if(isset($_POST['review']))
@@ -66,7 +66,7 @@ END;
 
 			if($title == "" || $text == "" || $grade == "")
 			{
-				$feedback = "<p class=\"danger\">Fyll i alla fält</p>";
+				$feedback = "<p class=\"text-red\">Fyll i alla fält</p>";
 			}
 
 			else
