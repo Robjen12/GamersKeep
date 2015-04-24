@@ -874,6 +874,7 @@ color: Orange;
   margin-right: 5px;
   margin-left: 0px;
   vertical-align: top;
+  margin-bottom: 5px;
 }
 
 .panel-default > .panel-heading-560px {
@@ -1185,6 +1186,9 @@ color: Red;
   margin-right: 0px;
   width: auto;
   height: auto;
+  display: block;
+  vertical-align: top;
+  float: left;
 }
 
 .btn-default-span:hover,

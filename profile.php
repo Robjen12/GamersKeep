@@ -380,6 +380,8 @@ $content = <<<END
 		  					<div class="panel-body">
  
 		  						<a href class="text-primary">{$latestactivity}</a>
+								
+								
 
 		  					</div>
 						
