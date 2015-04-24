@@ -66,7 +66,7 @@ END;
 			JOIN user
 			ON repchatcom.keeperid = user.keeperid
 			WHERE repchatcom.chatcomid = '{$getchatcomid}'
-			GROUP BY timestamp DESC;
+			GROUP BY timestamp ASC;
 
 END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
@@ -84,8 +84,8 @@ END;
 
 				$guestbook .= <<<END
 				<b>{$keepername}</b><br>
-				Skickat den: {$date}<br>
 				{$replys}<br>
+				<p class="sendwhen">Skickat den: {$date}<br></p>
 END;
 			}
 		}
