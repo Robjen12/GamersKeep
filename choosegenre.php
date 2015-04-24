@@ -181,17 +181,19 @@ END;
 $content = <<<END
 				
 
-				<div class="row margin-top-100">
-				
+				<div class="wrapper margin-top-100">
+
+					<div class="row">
+					<!-- search function in genre -->
 					<form action="search.php" method="get" id="searchgenrer">
-					<h3 class="quicksand text-white">Sök efter en specifik titel</h3>
+					
 						<input type="text" id="searchgenre" name="searchgenre">
-						<input type="submit" value="Sök"><br><br>
+						<input type="submit" value="Sök">
 					</form>
 
-					<div class="col-md-4 col-sm-4 panel panel-default">
+					<div class="col-md-4 col-sm-4 panel panel-default panel-width-240px pull-left">
 
-	  					<div class="panel-heading">
+	  					<div class="panel-heading panel-heading-250px quicksand">
 							Topplista guider <li class="views">{$genretype}</li>
 						</div><!-- panel heading -->
 
@@ -203,9 +205,9 @@ $content = <<<END
 
 						</div><!-- panel heading -->					
 
-					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
+					<div class="col-md-4 col-sm-4 panel panel-default panel-width-240px pull-left">
 
-	  					<div class="panel-heading">
+	  					<div class="panel-heading panel-heading-250px">
 							Senaste guider<li class="views">{$genretype}</li>
 						</div><!-- panel heading -->
 
@@ -228,9 +230,9 @@ $content = <<<END
 				</div><!-- row -->
 
 				<div class="row">
-					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
+					<div class="col-md-4 col-sm-4 panel panel-default panel-width-240px pull-left">
 
-		  					<div class="panel-heading">
+		  					<div class="panel-heading panel-heading-250px">
 								Topplista recensioner <li class="views">{$genretype}</li>
 							</div><!-- panel heading -->
 
@@ -240,9 +242,9 @@ $content = <<<END
 
 					</div><!-- col md 4 -->						
 
-					<div class="col-md-4 col-sm-4 panel panel-default pull-left">
+					<div class="col-md-4 col-sm-4 panel panel-default panel-width-240px pull-left">
 
-		  					<div class="panel-heading">
+		  					<div class="panel-heading panel-heading-250px">
 								Senaste recensioner<li class="views">{$genretype}</li>
 							</div><!-- panel heading -->
 
