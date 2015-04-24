@@ -18,18 +18,54 @@ if(!empty($_POST))
 
 		$query = <<<END
 
-			INSERT INTO chatcom (keeperid, keeperid2, reply, timestamp, flag)
-			VALUES ('{$keeperid}', '{$keeperid2}', '{$reply}', CURRENT_TIMESTAMP, '');
+			SELECT * FROM chatcom 
+			WHERE accept = 1;
 END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
+
+		if($res->num_rows > 0)
+		{
+			if($row = $res->fetch_object())
+			{
+
+				$getchatcomid = $row->chatcomid;
+
+
+				$query = <<<END
+
+			INSERT INTO replys (reply, timestamp, flag)
+			VALUE('{$reply}', CURRENT_TIMESTAMP, '');
+END;
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+
+		$query = <<<END
+
+			INSERT INTO repchatcom (keeperid, keeperid2, chatcomid, replyid)
+			VALUES ('{$keeperid}', '{$keeperid2}', '{$getchatcomid}', LAST_INSERT_ID());
+END;
 	}
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+	
+		
+
+
+			}
+			
+		}
+
 		$query = <<<END
 			SELECT *
-			FROM chatcom
+			FROM repchatcom
+			JOIN replys
+			ON replys.replyid = repchatcom.replyid
+			JOIN chatcom
+			ON repchatcom.keeperid = chatcom.keeperid
 			JOIN user
-			ON chatcom.keeperid = user.keeperid
-			WHERE chatcomid = LAST_INSERT_ID()
+			ON repchatcom.keeperid = user.keeperid
+			WHERE repchatcom.chatcomid = '{$getchatcomid}'
 			GROUP BY timestamp DESC;
 
 END;
@@ -38,7 +74,7 @@ END;
 
 		if($res->num_rows > 0)
 		{
-			if($row = $res->fetch_object())
+			while($row = $res->fetch_object())
 			{
 				
 				$keepername = $row->keepername;
@@ -60,23 +96,27 @@ END;
 
 if(!empty($_GET))
 {
-	$chatcomid = isset($_GET['chatcomid']) ? $_GET['chatcomid'] : "";;
+	$chatcomid = isset($_GET['chatcomid']) ? $_GET['chatcomid'] : "";
 
 	$query = <<<END
 
 	SELECT *
-	FROM chatcom
-    JOIN user
-	ON chatcom.keeperid = user.keeperid
-	WHERE chatcomid = '{$chatcomid}'
-    GROUP BY timestamp DESC;
+			FROM repchatcom
+			JOIN replys
+			ON replys.replyid = repchatcom.replyid
+			JOIN chatcom
+			ON repchatcom.keeperid = chatcom.keeperid
+			JOIN user
+			ON repchatcom.keeperid = user.keeperid
+			WHERE repchatcom.chatcomid = '{$chatcomid}'
+			GROUP BY timestamp DESC;
 END;
 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 
 if($res->num_rows > 0)
 {
-	if($row = $res->fetch_object())
+	while($row = $res->fetch_object())
 	{
 
 		$keepername = $row->keepername;
