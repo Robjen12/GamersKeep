@@ -109,7 +109,7 @@ if(!empty($_GET))
 			JOIN user
 			ON repchatcom.keeperid = user.keeperid
 			WHERE repchatcom.chatcomid = '{$chatcomid}'
-			GROUP BY timestamp DESC;
+			GROUP BY timestamp ASC;
 END;
 $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
@@ -118,7 +118,7 @@ if($res->num_rows > 0)
 {
 	while($row = $res->fetch_object())
 	{
-
+		
 		$keepername = $row->keepername;
 		$replys = $row->reply;
 		$date 	= strtotime($row->timestamp);
@@ -126,8 +126,8 @@ if($res->num_rows > 0)
 
 		$guestbook .= <<<END
 		<b>{$keepername}</b><br>
-		Skickat den: {$date}<br>
 		{$replys}<br>
+		<p class="sendwhen">Skickat den: {$date}<br></p>
 END;
 	}
 }
@@ -145,13 +145,15 @@ $content = <<<END
 				<div class="col-md-8">
 
 					<div class="guestbook">
-						<h3>Meddelande</3><br><br>
+						<h3>Meddelande</h3><br><br>
 						{$guestbook}
-						<form action="chatcom.php?keeperid={$keeperid2}" method="post" id="send">
-								<textarea id="reply" name="reply" cols="40" rows="5"></textarea></br>
-								<input type="submit" id="submit" name="friendmessage" value="Skicka">
-						</form>
 					</div>
+					<div class="guestbookreplys">
+							<form action="chatcom.php?keeperid={$keeperid2}" method="post" id="send">
+								<textarea id="reply" name="reply" cols="121" rows="5"></textarea></br>
+								<input type="submit" id="submit" name="friendmessage" value="Skicka">
+							</form>
+						</div>
 
 				</div>
 

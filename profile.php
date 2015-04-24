@@ -270,7 +270,7 @@ END;
 				$keeper = $row->keeperid;
 				$keeper2 = $row->keeperid2;
 
-				$chatmess .= <<<END
+				$chatmess = <<<END
 					<a href="chatcom.php?chatcomid={$chatcomid}">{$reply}</a><br>
 					
 END;

@@ -1099,8 +1099,9 @@ color: white;
 }
 .guestbook
 {
-  min-height: 500px;
-  height: auto;
+  
+  overflow-y: auto;
+  height: 400px;
   background-color: white;
   border-radius: 15px;
   padding-top: 10px;
@@ -1114,7 +1115,8 @@ color: white;
  }
  #send
  {
-  margin-top: 250px;
+  margin-top: 20px;
+  width: 400px;
  }
 #updateform
 {
@@ -1214,4 +1216,7 @@ color: Red;
 	height: auto;
 	color: #000;
 }
-
+.sendwhen
+{
+  font-size: 10px;
+}
