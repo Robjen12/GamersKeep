@@ -823,31 +823,38 @@ a.text-primary:hover {
   width: 220px;
 }
 /* nytt grid-system */
-
+/*
 .index-left {
   background-color: yellow;
 }
 .wrapper {
   .make-row();
 }
+/*
 .content-left {
   .make-lg-column(4);
 width: 30%;
+*/
 /* background-color: red; */
+
+/*
 }
 .content-center {
   .make-lg-column(4);
 width: 30%;
-/*  background-color: green; */
+*/
+/*  background-color: green;
 
 
 }
+
 .content-right {
   .make-lg-column(4);
-width: 30%;
 /*  background-color: yellow; */
 
-/*  .make-lg-column-offset(1); */
+/*.make-lg-column-offset(1);
+*/
+
 }
 .views {
   float: right;
@@ -982,7 +989,6 @@ background: -webkit-linear-gradient(90deg, orange, #993300); /* For Safari 5.1 t
 
 .content-genre {
 	.make-lg-column(8);
-	width: 70%;
 
 }
 /* listed bullet lankfarger i genre meny */
@@ -1119,6 +1125,16 @@ color: white;
 
 .text-red {
 	background-color: #cc3300;
+	border-radius: 3px;
+	color: White;
+	width: 220px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 12px;
+	
+}
+.text-green {
+	background-color: #3c763d;
 	border-radius: 3px;
 	color: White;
 	width: 220px;

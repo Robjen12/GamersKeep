@@ -101,9 +101,9 @@ END;
 
 $content = <<<END
 
-		<div class="wrapper margin-top-100">
-			<div class="row">
-				<div class="content-genre col-md-8 margin-genre pull-left">
+
+			<div class="row margin-top-100">
+				<div class="col-md-9 margin-genre pull-left">
 						<div class="grinfo">
 							<div class="panel panel-default panel-genre pull-left">
 								<div class="panel-heading panel-heading-genre quicksand">{$title}
@@ -133,8 +133,14 @@ $content = <<<END
 									</br></br>
 								</form>
 							</div>
-						</div>
 							
+							<div class="col-md-3 content-right margin-genre-right pull-right">reklam
+							</div>
+						</div>
+				</div>
+				
+				
+					
 							
 							<div class="showcomments">
 								<div class="panel panel-default panel-genre pull-left">
