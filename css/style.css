@@ -558,12 +558,17 @@ margin-left:0;
   border: 1px solid #ddd;
 }
 
+li.views-left{
+  float: left;
+  list-style: none;
+
+}
+
 li.views{
   float: right;
   list-style: none;
 
 }
-
 /* dortes andringar från dorte2 branch */
 
 
@@ -791,11 +796,11 @@ a.text-primary:hover {
   width: 210px;
 }
 .aktiviteter {
-  width: 315px;
+  width: 323px;
 
 }
 .panel-default > .aktiviteter-heading {
-  width: 325px;
+  width: 333px;
 
 }
 .panel-width-240px {
@@ -866,13 +871,24 @@ width: 30%;
 
 /*  .make-lg-column-offset(1); */
 }
-.views > li > a,
-.views > li > span {
+.views-left > li > a,
+.views-left > li > span {
 color: Black;
   list-style: none;
   float: left;
   margin-right: 5px;
   margin-left: 0px;
+	
+}
+
+.views-right > li > a,
+.views-right > li > span {
+color: Black;
+  list-style: none;
+  float: right;
+  margin-right: 5px;
+  margin-left: 0px;
+	
 }
 
 .panel-default > .panel-heading-560px {
