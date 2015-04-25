@@ -240,8 +240,8 @@ END;
 		$latestactivity .= <<<END
 		 
 			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$g} 
-			<button class=delete><a href="delete.php?grid={$grid}">x</a></button>
-			<button class=edit><a href="guide_review_edit.php?grid={$grid}">pen</a></button></li></br><br>
+			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a></button>
+			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button></li></br><br>
 		
 END;
 	}
