@@ -11,6 +11,8 @@ $button = "";
 $latestactivity = "";
 $g = "";
 $r = "";
+$v = "";
+$k = "";
 $grade = "";
 $chatmess = "";
 $sendmessage = "";
@@ -70,15 +72,17 @@ while($row = $res->fetch_object())
 	$timestamp = strtotime($row->timestamp);
 	$timestamp = date("d M Y H:i", $timestamp);
 
-	$r = "R";
-	$g = "G";
+	$r = "<span class=\"glyphicon glyphicon-edit pull-left\" aria-hidden=\"true\">&nbsp;</span>";
+	$g = "<span class=\"glyphicon glyphicon-book pull-left\" aria-hidden=\"true\">&nbsp;</span>";
 
 	if($grade > 0)
 	{
 
 		$latestactivity .= <<<END
+		
+		
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$r}</li><br>
+			<a href="genre.php?grid={$grid}">{$title}</a>{$r}
 		
 
 END;
@@ -88,7 +92,7 @@ END;
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$g}</li><br>
+			<a href="genre.php?grid={$grid}">{$title}</a>{$g}
 		
 
 END;
@@ -220,6 +224,7 @@ while($row = $res->fetch_object())
 	$r = "<span class=\"glyphicon glyphicon-edit pull-left\" aria-hidden=\"true\">&nbsp;</span>";
 	$g = "<span class=\"glyphicon glyphicon-book pull-left\" aria-hidden=\"true\">&nbsp;</span>";
 	
+	
 
 	
 	if($grade > 0)
@@ -285,6 +290,10 @@ END;
 
 }
 
+
+$v = "<span class=\"glyphicon glyphicon-user pull-left\" aria-hidden=\"true\">&nbsp;</span>";
+$k = "<span class=\"glyphicon glyphicon-comment pull-left\" aria-hidden=\"true\">&nbsp;</span>";
+
 $content = <<<END
 
 		
@@ -309,19 +318,54 @@ $content = <<<END
 	  							<p><b>{$profilekeepername}</b></p>
 	  							{$button}
 	  							{$sendmessage}
+								<p>Senaste inläggen</p>
 	  						</div>
 
-	  						<div class="column-left-bottom text-center">
+	  						<div class="column-left-bottom">
 
-		  						<div class="latestmessage">
-		  							<p>Senaste inläggen</p>
-		  								{$chatmess}
+		  						<div class="latestmessage text-center">		  							
+		  								<p class="text-left">{$chatmess}
+											{$r} <!-- insat recensionlankor har --> Recensionslaenkor <span class="badge pull-right">15</span><br>
+											{$g} <!-- insat guidelankor har --> Guidelaenkor <span class="badge pull-right">7</span><br>
+											{$v} <!-- insat accepterade vaenner har --> Vaenner <span class="badge pull-right">78</span><br>
+											{$k} <!-- insat chat har --> chat konversation <span class="badge pull-right">5</span>											
+										</p>
 		  						</div>
 
 
 	  							<p>Sociala Medier</p>
-	  							
-	  							<p>Vanner</p>	  							
+								
+								<!-- Twitter -->
+								<a href="https://twitter.com/skrivditttwitternamn" class="twitter-follow-button" data-show-count="false">
+									Follow @skrivditttwitternamn
+									<!-- Hur kan vi faa den att visa en form  dar anvandaren fyller i sitt twitternamn??? -->
+								</a>
+								<script>
+									!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+									if(!d.getElementById(id)){js=d.createElement(s);
+									js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);
+									}}(document, 'script', 'twitter-wjs');
+								</script>
+								
+								<!-- facebook -->
+								<div id="fb-root"></div>
+								
+								<script>
+									(function(d, s, id) {
+										var js, fjs = d.getElementsByTagName(s)[0];
+										if (d.getElementById(id)) return;
+										js = d.createElement(s); js.id = id;
+										js.src = "//connect.facebook.net/da_DK/sdk.js#xfbml=1&version=v2.3";
+										fjs.parentNode.insertBefore(js, fjs);
+									}(document, 'script', 'facebook-jssdk'));
+								</script>
+								
+								<div class="fb-follow" data-href="https://www.facebook.com/dinfb" data-colorscheme="dark"
+								data-layout="button" data-show-faces="false">
+								</div>
+								
+								<button>Twitch Följ</button>
+							
 
 	  							</div><!-- col md 3>
 
