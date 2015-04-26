@@ -797,19 +797,14 @@ a.text-primary:hover {
   width: 310px;
 }
 
-.panel-default > .panel-heading > .aktiviteter-body {
-
-	padding: none;
-	margin: 0px;
-}
 .aktiviteter {
-  width: 230px;
+  width: 225px;
   padding: none;
   
 }
 
 .panel-default > .aktiviteter-heading {
-  width: 240px;
+  width: 235px;
   
   
 }
@@ -1224,7 +1219,7 @@ color: Red;
 
 .btn-sm-span,
 .btn-group-sm-span > .btn {
-  padding: 3px 3px;
+  padding: 3px 3px 3px 3px;
   font-size: 12px;
 
   border-radius: none;
@@ -1256,8 +1251,11 @@ color: Red;
   height: 100px;
  }
  
+ 
  .akt-margin {
+	margin-top: 3px;
+	padding-top: 3px;
 	margin-left: 0px;
 	margin-right: 0px;
-	padding: none;
+	
  }

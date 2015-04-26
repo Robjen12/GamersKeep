@@ -429,7 +429,7 @@ $content = <<<END
 
 	  					<div class="panel-heading aktiviteter-heading">Aktiviteter</div>
 
-		  					<div class="panel-body aktiviteter-body">
+		  					<div class="panel-body margin-horizontal-zero">
  
 		  						<a href class="text-primary">{$latestactivity}</a>
 
