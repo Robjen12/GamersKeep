@@ -128,7 +128,6 @@ $header = <<<END
 			
 			<!-- Meny left row2 -->
 			<div class="col-md-9 column-left-row2 margin-left-zero no-border">
-			<a href="logout.php" class="pull-right">Logga ut</a>	
 			</div><!-- col md 9 -->
 			
 			<!-- Meny left row2 -->
