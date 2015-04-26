@@ -571,6 +571,15 @@ li.views{
   list-style: none;
 
 }
+
+li.views-profile{
+margin-top: 10px;
+display: block;
+  float: right;
+  list-style: none;
+
+}
+
 /* dortes andringar från dorte2 branch */
 
 
