@@ -388,6 +388,8 @@ $content = <<<END
 			  					{$profileabout}
 			  						
 			  					{$formabout}
+								
+								
 
 
 		  					</div><!-- panel body -->

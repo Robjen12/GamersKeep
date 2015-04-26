@@ -59,18 +59,35 @@ $header = <<<END
       	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     	<![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+		
+		
+		
 		
 	</head>
 	<body>
+<script> 
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#box").animate({
+            height: 'toggle'
+        });
+    });
+});
+</script> 
 		<div id="header" class="header-bg navbar navbar-default navbar-fixed-top no-border">
 			
 			<!-- Meny left with logo -->
 			<div class="col-md-9 column-left margin-right-zero">
 				<img src="images/logo.png" class="img header-logo">
 				<div class="pull-right">
-				
+					
 					<p>Inloggad som: {$_SESSION["keepername"]}{$adminText}
 
+					
+						<div id="box"></div>
+						<button>Start Animation</button>
 					<form action="search.php" method="GET">
 					<input type="text" id="searchfield" name="search" placeholder="Sök..">
 					<input type="Submit" value="Sök">
@@ -124,6 +141,8 @@ $header = <<<END
 END;
 $content = <<<END
 		<div class="container-fluid">
+		
+		
 		
 END;
 $footer = <<<END
