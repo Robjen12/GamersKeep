@@ -323,10 +323,10 @@ $content = <<<END
 		  						<div class="profileinformation text-left text-black">
 									
 		  								<p class="text-left">
-											{$r} <!-- insat recensionlankor har --> Recensionslänkar <span class="badge pull-right">15</span><br>
-											{$g} <!-- insat guidelankor har --> Guidelänkar <span class="badge pull-right">7</span><br>
+											{$r} Recensioner <span class="badge pull-right">15</span><br>
+											{$g} Guider <span class="badge pull-right">7</span><br>
 											<div class="friends">
-												{$v} <!-- insat accepterade vänner har --> Vänner <span class="badge pull-right">78</span><br>
+												{$v} Vänner <span class="badge pull-right">78</span><br>
 											</div>
 											<div class="latestmessage">
 												{$k} <!-- insat chat har --> Chat konversation <span class="badge pull-right">5</span>	<br>
@@ -397,9 +397,9 @@ $content = <<<END
 
 						</div><!-- panel heading -->
 
-						<div class="col-md-3 col-sm-3 pull-right profil-right">
+						<div class="content-right margin-right-25px pull-right">
 
-							<div class="ads profil-right pull-right">
+							<div class="ads">
 
 		  					
 							<!-- Reklam karusel -->
