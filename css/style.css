@@ -1124,12 +1124,6 @@ color: white;
   padding-top: 10px;
   padding-left: 10px;
 }
-.latestmessage
- {
-  overflow-y: auto;
-  height: 100px;
-
- }
  #send
  {
   margin-top: 20px;
@@ -1237,3 +1231,13 @@ color: Red;
 {
   font-size: 10px;
 }
+.latestmessage
+ {
+  overflow-y: auto;
+  height: 100px;
+ }
+ .friends
+ {
+  overflow-y: auto;
+  height: 100px;
+ }

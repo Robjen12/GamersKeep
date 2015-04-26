@@ -320,12 +320,17 @@ $content = <<<END
 
 	  						<div class="column-left-bottom">
 
-		  						<div class="latestmessage text-center">		  							
-		  								<p class="text-left">{$chatmess}
-											{$r} <!-- insat recensionlankor har --> Recensionslaenkor <span class="badge pull-right">15</span><br>
-											{$g} <!-- insat guidelankor har --> Guidelaenkor <span class="badge pull-right">7</span><br>
-											{$v} <!-- insat accepterade vaenner har --> Vaenner <span class="badge pull-right">78</span><br>
-											{$k} <!-- insat chat har --> chat konversation <span class="badge pull-right">5</span>											
+		  						<div class="profileinformation text-center">		  							
+		  								<p class="text-left">
+											{$r} <!-- insat recensionlankor har --> Recensionslänkar <span class="badge pull-right">15</span><br>
+											{$g} <!-- insat guidelankor har --> Guidelänkar <span class="badge pull-right">7</span><br>
+											<div class="friends">
+												{$v} <!-- insat accepterade vänner har --> Vänner <span class="badge pull-right">78</span><br>
+											</div>
+											<div class="latestmessage">
+												{$k} <!-- insat chat har --> Chat konversation <span class="badge pull-right">5</span>	<br>
+												{$chatmess}		
+											</div>								
 										</p>
 		  						</div>
 
