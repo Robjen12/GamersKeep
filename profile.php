@@ -221,31 +221,17 @@ while($row = $res->fetch_object())
 	$timestamp = strtotime($row->timestamp);
 	$timestamp = date("d M Y H:i", $timestamp);
 
-<<<<<<< HEAD
-	$r = "<span class=\"glyphicon glyphicon-book\" aria-hidden=\"true\">&nbsp;</span>";
-	$g = "<span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\">&nbsp;</span>";
-=======
 	$r = "<span class=\"glyphicon glyphicon-edit pull-left\" aria-hidden=\"true\">&nbsp;</span>";
 	$g = "<span class=\"glyphicon glyphicon-book pull-left\" aria-hidden=\"true\">&nbsp;</span>";
-	
->>>>>>> d_ikoner6
-	
-
 	
 	if($grade > 0)
 	{
 
 		$latestactivity .= <<<END
 		 
-<<<<<<< HEAD
-			<a href="genre.php?grid={$grid}">{$title}</a><li class="views">{$r}
-			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}"><span class="views-right glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a></button>
-			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}"><span class="views-right glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
-=======
 			<a href="genre.php?grid={$grid}">{$title}</a>{$r}
 			<button class="btn btn-sm-span btn-default-span delete"><a class="span" href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a></button>
 			<button class="btn btn-sm-span btn-default-span edit"><a class="span" href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
->>>>>>> d_ikoner6
 			</li><br><br>
 			
 END;
