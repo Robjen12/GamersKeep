@@ -790,19 +790,28 @@ a.text-primary:hover {
 }
 
 .ovrigt {
-  width: 200px;
+  width: 300px;
 }
 
 .panel-default > .ovrigt-heading {
-  width: 210px;
+  width: 310px;
+}
+
+.panel-default > .panel-heading > .aktiviteter-body {
+
+	padding: none;
+	margin: 0px;
 }
 .aktiviteter {
-  width: 324px;
-
+  width: 230px;
+  padding: none;
+  
 }
 
 .panel-default > .aktiviteter-heading {
-  width: 334px;
+  width: 240px;
+  
+  
 }
 .panel-width-240px {
   width: 400px;
@@ -1247,3 +1256,8 @@ color: Red;
   height: 100px;
  }
  
+ .akt-margin {
+	margin-left: 0px;
+	margin-right: 0px;
+	padding: none;
+ }

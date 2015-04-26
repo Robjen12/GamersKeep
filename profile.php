@@ -304,7 +304,7 @@ $content = <<<END
 	  						<div class="column-left-top">
 	  						<br>
 	  					
-	  							<p>Välkommen</p>
+	  							<p class="text-center quicksand text-bold text-16px">Välkommen</p>
   	  					
   	  						</div>	  					
 	  					
@@ -336,7 +336,7 @@ $content = <<<END
 		  						</div>
 
 
-	  							<p>Sociala Medier</p>
+	  							<p class="text-center quicksand text-bold text-16px">Sociala Medier</p>
 								
 								<!-- Twitter -->
 								<a href="https://twitter.com/skrivditttwitternamn" class="twitter-follow-button" data-show-count="false">
@@ -429,7 +429,7 @@ $content = <<<END
 
 	  					<div class="panel-heading aktiviteter-heading">Aktiviteter</div>
 
-		  					<div class="panel-body">
+		  					<div class="panel-body aktiviteter-body">
  
 		  						<a href class="text-primary">{$latestactivity}</a>
 
