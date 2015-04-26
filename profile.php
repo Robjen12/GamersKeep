@@ -315,12 +315,13 @@ $content = <<<END
 	  							<p><b>{$profilekeepername}</b></p>
 	  							{$button}
 	  							{$sendmessage}
-								<p>Senaste inläggen</p>
+								
 	  						</div>
 
 	  						<div class="column-left-bottom">
-
-		  						<div class="profileinformation text-left text-black">		  							
+								<p class="text-center quicksand text-bold text-16px">Senaste inläggen</p>
+		  						<div class="profileinformation text-left text-black">
+									
 		  								<p class="text-left">
 											{$r} <!-- insat recensionlankor har --> Recensionslänkar <span class="badge pull-right">15</span><br>
 											{$g} <!-- insat guidelankor har --> Guidelänkar <span class="badge pull-right">7</span><br>
