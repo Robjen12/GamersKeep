@@ -797,20 +797,12 @@ a.text-primary:hover {
   width: 210px;
 }
 .aktiviteter {
-<<<<<<< HEAD
-  width: 323px;
-
-}
-.panel-default > .aktiviteter-heading {
-  width: 333px;
-=======
   width: 324px;
 
 }
+
 .panel-default > .aktiviteter-heading {
   width: 334px;
->>>>>>> d_ikoner6
-
 }
 .panel-width-240px {
   width: 400px;
