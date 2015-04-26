@@ -83,25 +83,41 @@ $header = <<<END
 			<div class="col-md-3 column-right pull-right margin-right-zero nav nav-pills pull-right">
 			
 				<ul>
-					<li><a href="profile.php"><img src="images/profil2.png" class="img header-icons pull-right" alt="Profil" title="Profil">
-					</a>
+				
+					<div class="dropdown">
+				
+					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="menu" aria-expanded="true">
+					<li class="li-icons"><img src="images/profil2.png" class="img header-icons pull-right" title="Profil">
 					</li>
-					<li class="li-icons"><a href="index.php"><img src="images/home.png" class="img header-icons pull-right" title="Nyheter"></a></li>
+			  		</ul>
+					
+					<ul class="dropdown-menu drop-margin-0 pull-right dropdown-top-margin Droid bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">
+			    			<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px">Profil</li>
+							<!-- laesa in genrer från db har -->
+							<li>FAQ</li)
+							<li>Inställningar</li>
+							
+			    		</ul>
+					</div><!-- dropdown -->
+					</li>
+					
+					
+				
+					<li class="li-icons"><a href="index.php"><img src="images/home.png" class="img header-icons pull-right" title="Hem"></a></li>
 					<li><a href="guide_review.php"><img src="images/pen.png" class="img header-icons pull-right" title="Skriv recension/guide"></a></li>
 					
-						<div class="dropdown">
+					<div class="dropdown">
 						
-		  					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="menu"
-		  					 aria-expanded="true"><img src="images/swords.png" class="img header-icons pull-right" title="Genre">
-			  				</ul>
+		  				<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="menu"
+		  				 aria-expanded="true"><img src="images/swords.png" class="img header-icons pull-right" title="Genre">
+			  			</ul>
 				 							
-		  					<ul class="dropdown-menu pull-right dropdown-top-margin Droid bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">
-			    				<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px">Genrer</li>
-								<!-- laesa in genrer från db har -->
-								{$genre}
-			    			</ul>
-						</div><!-- dropdown -->
-						
+		  				<ul class="dropdown-menu drop-margin-75px pull-right dropdown-top-margin Droid bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">
+			    			<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px">Genrer</li>
+							<!-- laesa in genrer från db har -->
+							{$genre}
+			    		</ul>
+					</div><!-- dropdown -->
 					</li>
 					
 					<li class="li-icons"><a href="#"><img src="images/search.png" class="img header-icons pull-right" title="Sök"></a></li>
