@@ -320,7 +320,7 @@ $content = <<<END
 
 	  						<div class="column-left-bottom">
 
-		  						<div class="profileinformation text-center">		  							
+		  						<div class="profileinformation text-left text-black">		  							
 		  								<p class="text-left">
 											{$r} <!-- insat recensionlankor har --> Recensionslänkar <span class="badge pull-right">15</span><br>
 											{$g} <!-- insat guidelankor har --> Guidelänkar <span class="badge pull-right">7</span><br>

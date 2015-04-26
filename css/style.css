@@ -1227,6 +1227,11 @@ color: Red;
 	height: auto;
 	color: #000;
 }
+/* lagger span ikoner centreret m text pa baseline */
+.middle {
+  display: inline-block;
+  vertical-align: middle;
+}
 .sendwhen
 {
   font-size: 10px;
@@ -1241,3 +1246,4 @@ color: Red;
   overflow-y: auto;
   height: 100px;
  }
+ 
