@@ -94,10 +94,11 @@ $header = <<<END
 					<ul class="dropdown-menu drop-margin-0 pull-right dropdown-top-margin Droid bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">
 			    			<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px">Profil</li>
 							<!-- laesa in genrer från db har -->
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="profile.php">Profil</a></li>
 							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">FAQ</a></li>
 							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Inställningar</a></li>
 							<li role="presentation"><a role="menuitem" tabindex="-1" href="logout.php">Logga ut</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="profile.php">Profil</a></li>
+							
 			    		</ul>
 					</div><!-- dropdown -->
 					</li>
