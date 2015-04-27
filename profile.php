@@ -287,6 +287,47 @@ END;
 
 }
 
+$query = <<< END
+
+	
+	SELECT picname, type, size, link
+	FROM picture
+	JOIN userpic
+	ON userpic.picid = picture.picid
+	WHERE keeperid = '{$keeperid}';
+END;
+
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+/*list($name, $type, $size, $filePath) = mysql_fetch_array($result);
+
+header("Content-Disposition: attachment; filename=$name");
+header("Content-length: $size");
+header("Content-type: $type");
+
+readfile($filePath);*/
+	if($res->num_rows > 0)
+	{
+		if($row = $res->fetch_object())
+		{
+			$link = $row->link;
+
+			if(file_exists($link))
+			{
+				$profil_bild = <<<END
+			<img src="{$link}">	
+END;
+			}
+			else
+			{
+			$profil_bild = <<<END
+			<img src="images/profil_bild.png">
+END;
+			}
+	
+
+		}
+	}
 
 $v = "<span class=\"glyphicon glyphicon-user pull-left\" aria-hidden=\"true\">&nbsp;</span>";
 $k = "<span class=\"glyphicon glyphicon-comment pull-left\" aria-hidden=\"true\">&nbsp;</span>";
@@ -310,9 +351,20 @@ $content = <<<END
 	  					
 	  						<div class="column-left-center text-center">	  							
 	  					
-	  								<img src="images/profil_bild.png">	  							
+	  								{$profil_bild}	  							
 
-	  							<p><b>{$profilekeepername}</b></p>
+	  									<form action="upload.php" method="post" enctype="multipart/form-data">
+											<table width="350" border="0" cellpadding="1" cellspacing="1" class="box">
+											<tr> 
+											<td width="246">
+											<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+											<input name="userfile" type="file" id="userfile"> 
+											</td>
+											<td width="80"><input name="upload" type="submit" class="box" id="upload" value=" Upload "></td>
+											</tr>
+											</table>
+										</form>
+														  							<p><b>{$profilekeepername}</b></p>
 	  							{$button}
 	  							{$sendmessage}
 								
