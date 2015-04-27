@@ -1285,3 +1285,20 @@ color: Red;
 	margin-right: 0px;
 	
  }
+ 
+  /* sokfunktion animation */
+ #soek {
+ background:#98bf21;
+ height:20px;
+ width:200px;
+ position:absolute;
+ visibility: hidden;
+  
+ 
+ }
+ 
+ .soek_button {
+ background:#98bf21;
+ height:32px;
+ width:32px;
+ }
