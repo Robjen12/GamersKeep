@@ -1285,3 +1285,11 @@ color: Red;
 	margin-right: 0px;
 	
  }
+ .settings
+ {
+  background-color: white;
+  min-height: 400px;
+  height: auto;
+  padding-top: 10px;
+  padding-left: 20px;
+ }

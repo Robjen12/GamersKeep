@@ -33,6 +33,17 @@ $fileName = addslashes($fileName);
 $filePath = addslashes($filePath);
 }
 
+if(isset($filePath))
+{
+	$query = <<<END
+
+	DELETE FROM userpic
+	WHERE keeperid = '{$keeperid}'
+END;
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+}
+
 $query = <<<END
 	INSERT INTO picture (picname, size, type, link )
 	VALUES ('$fileName', '$fileSize', '$fileType', '$filePath');
