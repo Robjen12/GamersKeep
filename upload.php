@@ -13,7 +13,13 @@ $tmpName = $_FILES['userfile']['tmp_name'];
 $fileSize = $_FILES['userfile']['size'];
 $fileType = $_FILES['userfile']['type'];
 
-$filePath = $uploadDir . $fileName;
+// get the file extension first
+$ext = substr(strrchr($fileName, "."), 1); 
+
+// make the random file name
+$randName = md5(rand() * time());
+
+$filePath = $uploadDir . $randName . '.' . $ext;
 
 $result = move_uploaded_file($tmpName, $filePath);
 if (!$result) {

@@ -299,13 +299,7 @@ END;
 
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 	  " : " . $mysqli->error);
-/*list($name, $type, $size, $filePath) = mysql_fetch_array($result);
 
-header("Content-Disposition: attachment; filename=$name");
-header("Content-length: $size");
-header("Content-type: $type");
-
-readfile($filePath);*/
 	if($res->num_rows > 0)
 	{
 		if($row = $res->fetch_object())
