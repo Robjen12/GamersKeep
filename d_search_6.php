@@ -92,15 +92,26 @@ END;
 $content = <<<END
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+ 
 <script> 
 $(document).ready(function(){
-    $("button").click(function(){
-        $("#soek").animate({
-            width: 'toggle'
+    $(".soek_button").click(function(){
+        $(".soek").animate({
+			width: 'toggle',
+            Left: '0px'
         });
     });
 });
 </script> 
+
+
+
+
+
+
+
+
 <body>
 <!-- http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_animation1_toggle -->
 
@@ -119,11 +130,11 @@ $(document).ready(function(){
 
 
 		  					<div class="panel-body height-290px">
-							<button>Start Animation</button>
+							<button class="soek_button">Start Animation</button>
 
 							<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
 
-							<div id="soek" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+							<div class="soek"><span class="glyphicon glyphicon-align-left pull-right" aria-hidden="true"></span></div>
 	
 							<form action="search.php" method="GET">
 							<input type="text" id="searchfield" name="search" placeholder="Sök..">

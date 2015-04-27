@@ -95,10 +95,17 @@ $content = <<<END
 <script> 
 $(document).ready(function(){
     $("button").click(function(){
-        $("#soek").animate({
+		$("#soek").fadeOut("slow");
+        $("#soek").animate({		
             width: 'toggle'
+			
         });
+		
     });
+	$("button").click(function(){
+		$("#soek").fadeIn("slow");
+	})
+	
 });
 </script> 
 <body>
@@ -119,11 +126,11 @@ $(document).ready(function(){
 
 
 		  					<div class="panel-body height-290px">
-							<button>Start Animation</button>
+							<button class="soek_button">Start Animation</button>
 
 							<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
 
-							<div id="soek" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+							<div id="soek"></div>
 	
 							<form action="search.php" method="GET">
 							<input type="text" id="searchfield" name="search" placeholder="Sök..">
