@@ -49,7 +49,42 @@ END;
 		$profileother = $row->other;
 
 	}
+// Hämtar ut annan användaren bild
+$query = <<< END
 
+	
+	SELECT picname, type, size, link
+	FROM picture
+	JOIN userpic
+	ON userpic.picid = picture.picid
+	WHERE keeperid = '{$keeperid2}';
+END;
+
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+
+	if($res->num_rows > 0)
+	{
+		if($row = $res->fetch_object())
+		{
+			$link = $row->link;
+
+			if(file_exists($link))
+			{
+				$profil_bild = <<<END
+			<img src="{$link}">	
+END;
+			}
+			else
+			{
+			$profil_bild = <<<END
+			<img src="images/profil_bild.png">
+END;
+			}
+	
+
+		}
+	}
 // Hämtar ut senaste aktiviteterna för anvnändaren
 $latestact = <<<END
 
@@ -133,6 +168,43 @@ END;
 // Hämtar ut all information om ens egen profil
 else
 {
+
+$query = <<< END
+
+	
+	SELECT picname, type, size, link
+	FROM picture
+	JOIN userpic
+	ON userpic.picid = picture.picid
+	WHERE keeperid = '{$keeperid}';
+END;
+
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+
+	if($res->num_rows > 0)
+	{
+		if($row = $res->fetch_object())
+		{
+			$link = $row->link;
+
+			if(file_exists($link))
+			{
+				$profil_bild = <<<END
+			<img src="{$link}">	
+END;
+			}
+			else
+			{
+			$profil_bild = <<<END
+			<img src="images/profil_bild.png">
+END;
+			}
+	
+
+		}
+	}
+	
 	$penbutton = <<<END
 	<a href="#"><img src="images/pen.png" width="30px" id="pen" class="pull-right" title="Redigera"></a>
 END;
@@ -287,41 +359,7 @@ END;
 
 }
 
-$query = <<< END
 
-	
-	SELECT picname, type, size, link
-	FROM picture
-	JOIN userpic
-	ON userpic.picid = picture.picid
-	WHERE keeperid = '{$keeperid}';
-END;
-
-	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-	  " : " . $mysqli->error);
-
-	if($res->num_rows > 0)
-	{
-		if($row = $res->fetch_object())
-		{
-			$link = $row->link;
-
-			if(file_exists($link))
-			{
-				$profil_bild = <<<END
-			<img src="{$link}">	
-END;
-			}
-			else
-			{
-			$profil_bild = <<<END
-			<img src="images/profil_bild.png">
-END;
-			}
-	
-
-		}
-	}
 
 $v = "<span class=\"glyphicon glyphicon-user pull-left\" aria-hidden=\"true\">&nbsp;</span>";
 $k = "<span class=\"glyphicon glyphicon-comment pull-left\" aria-hidden=\"true\">&nbsp;</span>";
