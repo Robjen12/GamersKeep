@@ -93,18 +93,29 @@ $content = <<<END
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
- 
+<!-- soekanimation -->
 <script> 
 $(document).ready(function(){
-    $(".soek_button").click(function(){
-        $(".soek").animate({
+    $(".soek_button").hover(function(){
+        $(".soek_anim").animate({
 			width: 'toggle',
-            Left: '0px'
+            Left: '0px',
+			
+			
         });
+		
     });
 });
 </script> 
-
+<script>
+$(document).ready(function(){
+    $("p").hover(function(){
+        $("p").css("background-color", "yellow");
+        },function(){
+        $("p").css("background-color", "pink");
+    });
+});
+</script>
 
 
 
@@ -132,18 +143,24 @@ $(document).ready(function(){
 		  					<div class="panel-body height-290px">
 							<button class="soek_button">Start Animation</button>
 
-							<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
-
-							<div class="soek"><span class="glyphicon glyphicon-align-left pull-right" aria-hidden="true"></span></div>
-	
-							<form action="search.php" method="GET">
-							<input type="text" id="searchfield" name="search" placeholder="Sök..">
-							<input type="Submit" value="Sök">
-							</form>
 							
-							{$users}
+
+							<div class="soek_anim"></div>
+	
+						<form class="form-inline">
+							<div class="form-group">
+							
+								<form action="search.php" method="GET">
+								<input type="text" class="form-control" id="searchfield" name="search" placeholder="Sök speltitel">
+								<button class="btn btn-default" type="Submit" value="Sök"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+								</form>
+							
+							</div><!-- form group -->
+						</div><!-- form inline -->
+							
+						<p>	{$users}
 							{$article}
-							{$feedback}
+							{$feedback} </p>
 
 							Tillbaka
 
