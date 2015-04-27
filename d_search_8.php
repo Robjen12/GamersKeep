@@ -113,7 +113,7 @@ $(document).ready(function(){
 		});
     });
 	
-    $(".soek_anim").on("mouseover", function(){
+    $(".soek_anim").on("mouseover",function(){
         $(".soek_anim").toggleClass(".soek_anim").animate({
 			width: '0'
 		})
