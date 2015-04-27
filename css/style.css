@@ -1297,10 +1297,16 @@ margin-left: 0;
 
 }
 .soek_button {
+width: 30px;
+height: 20px;
 background-color: none;
-background-image: none;
+  background-image: url("../images/search.png");
+  background-position: top center;
+  background-size: 20px auto; 
+  background-repeat: no-repeat;
 border:none;
+margin-left: 0px;
+margin-right: 0px;
 
- z-index: 1000;
  
 } 

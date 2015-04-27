@@ -94,64 +94,35 @@ $content = <<<END
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 <!-- soekanimation -->
-<script> 
+
+<!-- http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_event_on_multiple -->
+<script>
 $(document).ready(function(){
-    $(".soek_button").hover(function(){
-        $(".soek_anim").animate({
+    $(".soek_button").on("mouseover", function(){
+        $(".soek_anim").toggleClass(".soek_anim").animate({
 			width: 'toggle',
-            Left: '0px',
-			
-			
-        });
+			Left: '0px'
+		});
+    });
+	
 		
+	$(".soek_button").on("mouseout", function(){
+        $(".soek_anim").toggleClass(".soek_anim").animate({
+			width: 'toggle',
+			Right: '0px'
+		});
     });
-	$(".soek_button").hover(function(){
-        $(".soek_anim").animate(stop);
-	});
-
+	
+    $(".soek_anim").on("mouseover", function(){
+        $(".soek_anim").toggleClass(".soek_anim").animate({
+			width: '0'
+		})
+    });
 });
+
 </script>
-
-<script>
-$(document).ready(function(){
-    $("p").on("mouseover", function(){
-        $(this).toggleClass("intro");
-    });
-$("p").on("mouseout", function(){
-        $(this).toggleClass(stop);
-    });
-});
-</script>
-
-<script> 
-$("#animate-test div").hover(function(){
-    $(this).filter(':not(:animated)').animate({ width: "200px" });
-}, function() {
-    $(this).animate({ width: "100px" });
-});
-</script> 
-
-<script>
-$(document).ready(function(){
-    $("p").hover(function(){
-        $("p").css("background-color", "yellow");
-        },function(){
-        $("p").css("background-color", "pink");
-    });
-});
-</script>
-
-
-
-
-
-
 
 <body>
-<!-- http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_animation1_toggle -->
-
- 
-
 
 		<div class="row margin-top-100">
 		
@@ -168,7 +139,7 @@ $(document).ready(function(){
 							<!-- <button class="soek_button">Start Animation</button> -->
 
 							
-<button class="soek_button">sök</button>
+
 							<div class="soek_anim"></div>
 	
 						<form class="form-inline">
@@ -176,7 +147,7 @@ $(document).ready(function(){
 							
 								<form action="search.php" method="GET">
 								<input type="text" class="form-control" id="searchfield" name="search" placeholder="Sök speltitel">
-								<button class="btn btn-default" type="Submit" value="Sök"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+								<button class="btn btn-default soek_button" type="Submit" value="Sök"> </button>
 								</form>
 							
 							</div><!-- form group -->
