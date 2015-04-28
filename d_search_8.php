@@ -118,6 +118,11 @@ $(document).ready(function(){
 			width: '0'
 		})
     });
+	$(".soek_anim").on("mouseout",function(){
+        $(".soek_anim").toggleClass(".soek_anim").animate({
+			width: '0'
+		})
+    });
 });
 
 </script>
