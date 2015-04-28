@@ -1297,7 +1297,10 @@ color: Red;
  
  /* sokfunktion animation */
 .soek_anim {						/* den animation som täcker sokrutan */
-background:#fff;
+  background-image: url("../images/search_anim.png");
+  background-position: top left;
+  background-size: 183px 30px; 
+  background-repeat: no-repeat;
 height:30px;
 width:180px;
 position:absolute;
@@ -1314,7 +1317,7 @@ float: right;
   height: 30px;
   
   margin-right: 0px;
-  margin-left: 20px;
+  margin-left: 23px;
   margin-top: 23px;
   margin-bottom: 0;
 }
