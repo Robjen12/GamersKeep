@@ -1288,7 +1288,7 @@ color: Red;
  
 /* sokfunktion animation */
 .soek_anim {
-background:#000;
+background:#fff;
 height:34px;
 width:200px;
 position:absolute;
@@ -1298,8 +1298,8 @@ margin-left: 0;
 }
 .soek_button {
 width: 30px;
-height: 20px;
-background-color: none;
+height: 30px;
+background-color: Grey;
   background-image: url("../images/search.png");
   background-position: top center;
   background-size: 20px auto; 

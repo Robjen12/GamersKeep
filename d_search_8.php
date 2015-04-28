@@ -152,7 +152,7 @@ $(document).ready(function(){
 							
 								<form action="search.php" method="GET">
 								<input type="text" class="form-control" id="searchfield" name="search" placeholder="Sök speltitel">
-								<button class="btn btn-default soek_button" type="Submit" value="Sök"> </button>
+								<button class="btn btn-default soek_button" type="Submit" value="Sök"></button>
 								</form>
 							
 							</div><!-- form group -->
