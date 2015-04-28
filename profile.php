@@ -20,7 +20,7 @@ $penbutton = "";
 $penbutton2 = "";
 $formabout = "";
 $formother = "";
-
+$profil_bild = "";
 
 if($_SESSION['roletype'] == 1)
 {

@@ -13,7 +13,7 @@ if(isset($_POST['registeraccount']))
 		$fname = $_POST['fname'];
 		$lname = $_POST['lname'];
 		$email = $_POST['email'];
-		$about = $_POST['about'];
+		
 
 		if($keepername == '' || $password == '' || $fname == '' || $lname == '' || $email == '' )
 		{
@@ -26,12 +26,11 @@ if(isset($_POST['registeraccount']))
 			$fname = $mysqli->real_escape_string($fname);
 			$lname = $mysqli->real_escape_string($lname);
 			$email = $mysqli->real_escape_string($email);
-			$about = $mysqli->real_escape_string($about);
 			$password = md5($password);
 			
 			$query = <<<END
-			INSERT INTO user (keepername, fname, lname, email, about, pw)
-			VALUES ('$keepername', '$fname', '$lname', '$email', '$about', '$password');
+			INSERT INTO user (keepername, fname, lname, email, pw)
+			VALUES ('$keepername', '$fname', '$lname', '$email', '$password');
 		
 END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . " : " . $mysqli->error);
@@ -75,8 +74,6 @@ $content = <<<END
 						<input type="lname" class="form-control" id="lname" name="lname" value="" placeholder="Efternamn"></br>
 						<label for="email">E-post</label></br>
 						<input type="text" class="form-control" id="email" name="email" value="" placeholder="E-post"></br>
-						<label for="about">Om dig</label></br>
-						<input type="text" class="form-control" id="about" name="about" value="" placeholder="Om dig"></br>
 						<label for="pw">Lösenord</label></br>
 						<input type="password" class="form-control" id="pw" name="pw" value"" placeholder="Lösenord"><br><br>
 						<input type="checkbox" name="policy"> Jag har läst och accepterat <A HREF="popup.html" onClick="return popup(this, 'stevie')">vilkoren</a> för sidan<br>
