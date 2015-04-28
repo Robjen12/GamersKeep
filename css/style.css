@@ -1304,7 +1304,7 @@ color: Red;
 height:30px;
 width:250px;
 position:absolute;
-margin-right:-15px;
+margin-right:0px;
 margin-left: 0px;
 border:none;
 margin-top: 23px;
@@ -1315,7 +1315,7 @@ float: right;
 .form-control-search {
   width: 250px;
   height: 30px;
-  margin-right: -15px;
+  margin-right: 0px;
   margin-left: 0px;
   margin-top: 23px;
   margin-bottom: 0;
