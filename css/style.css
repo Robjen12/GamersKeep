@@ -859,6 +859,7 @@ a.text-primary:hover {
 .form-control {
   width: 220px;
 }
+
 /* nytt grid-system */
 
 .index-left {
@@ -1293,3 +1294,49 @@ color: Red;
   padding-top: 10px;
   padding-left: 20px;
  }
+ 
+ /* sokfunktion animation */
+.soek_anim {						/* den animation som täcker sokrutan */
+background:#fff;
+height:30px;
+width:180px;
+position:absolute;
+margin-right:0px;
+margin-left: 20px;
+border:none;
+margin-top: 20px;
+margin-bottom: 0;
+margin-top: 20px;
+float: right;
+}
+.soek_button {
+width: 36px;
+height: 36px;
+background-color: none;
+  background-image: url("../images/search.png");
+  background-position: center center;
+  background-size: 36px auto; 
+  background-repeat: no-repeat;
+
+  border:none;
+margin-left: 20px;
+margin-right: 0px;
+margin-bottom: 0;
+margin-top: 20px;
+float: right;
+}
+
+.form-control-search {
+  width: 180px;
+  height: 30px;
+  margin-left: 20px;
+  margin-right: 0px;
+  margin-top: 23px;
+}
+
+.img.header-icons {
+    height: 30px;
+    margin-right: 0px;
+    margin-top: 23px;
+    margin-left: 20px;
+}

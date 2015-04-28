@@ -60,27 +60,65 @@ $header = <<<END
     	<![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		
+		<!-- http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_event_on_multiple -->
+<!-- soekanimation -->
+<script>
+$(document).ready(function(){
+    $(".soek_button").on("mouseover", function(){
+        $(".soek_anim").toggleClass(".soek_anim").animate({
+			width: 'toggle',
+			Left: '0px'
+		});
+    });
+	
+		
+	$(".soek_button").on("mouseout", function(){
+        $(".soek_anim").toggleClass(".soek_anim").animate({
+			width: 'toggle',
+			Right: '0px'
+		});
+    });
+	
+    $(".soek_anim").on("mouseover",function(){
+        $(".soek_anim").toggleClass(".soek_anim").animate({
+			width: '0'
+		})
+    });
+	$(".soek_anim").on("mouseout",function(){
+        $(".soek_anim").toggleClass(".soek_anim").animate({
+			width: '0'
+		})
+    });
+});
+
+</script>
+
 	</head>
 	<body>
 		<div id="header" class="header-bg navbar navbar-default navbar-fixed-top no-border">
 			
 			<!-- Meny left with logo -->
-			<div class="col-md-9 column-left margin-right-zero">
-				<img src="images/logo.png" class="img header-logo">
+			<div class="col-md-6 column-left margin-right-zero">
+				<a href="index.php"><img src="images/logo.png" class="img header-logo"></a>
 				<div class="pull-right">
 				
-					<p>Inloggad som: {$_SESSION["keepername"]}{$adminText}
-
-					<form action="search.php" method="GET">
-					<input type="text" id="searchfield" name="search" placeholder="Sök..">
-					<input type="Submit" value="Sök">
-					</form>
+					<p>Inloggad som: {$_SESSION["keepername"]}{$adminText}</p>
+										
+							
 
 				</div><!-- pull right -->
-			</div><!-- col md 9 -->
-
+			</div><!-- col md 6 -->
+			
+			<!-- center -->
+			<div class="col-md-1 column-center pull-left margin-right-zero">
+			
+			
+								
+			</div><!-- col md 1 center -->
+			
 			<!-- Meny right -->
-			<div class="col-md-3 column-right pull-right margin-right-zero nav nav-pills pull-right">
+			<div class="col-md-5 column-right pull-right margin-right-zero nav nav-pills pull-right">
+			
 			
 				<ul>
 				
@@ -122,7 +160,16 @@ $header = <<<END
 					</div><!-- dropdown -->
 					</li>
 					
-					<li class="li-icons"><a href="#"><img src="images/search.png" class="img header-icons pull-right" title="Sök"></a></li>
+						<div class="soek_anim"></div>
+					
+							
+								<form action="search.php" method="GET">
+								<input type="text" class="form-control-search pull-left" id="searchfield" name="search" placeholder="Sök...">
+								<button class="soek_button pull-right" type="Submit" value="Sök">
+								
+								</button>
+								</form>
+					
 				</ul>
 				
 			</div><!-- meny right -->
