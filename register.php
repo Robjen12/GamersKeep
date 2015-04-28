@@ -10,17 +10,21 @@ if(isset($_POST['registeraccount']))
 	{
 		$keepername = $_POST['keepername'];
 		$password = ($_POST['pw']);
+		$password2 = ($_POST['pw2']);
 		$fname = $_POST['fname'];
 		$lname = $_POST['lname'];
 		$email = $_POST['email'];
 		
 
-		if($keepername == '' || $password == '' || $fname == '' || $lname == '' || $email == '' )
+		if($keepername == '' || $password == '' || $password2 == '' ||$fname == '' || $lname == '' || $email == '' )
 		{
 			$feedback = "<p class=\"danger\">Fyll i fälten</p>";
 		}
 		else
 		{
+			if($password == $password2)
+			{
+
 			$keepername = $mysqli->real_escape_string($keepername);
 			$password = $mysqli->real_escape_string($password);
 			$fname = $mysqli->real_escape_string($fname);
@@ -36,9 +40,9 @@ END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . " : " . $mysqli->error);
 
 		header("Location: login.php");
-
+			}
 		}
-		$feedback = "<p class=\"success\">Konto skapat</p>";
+		$feedback = "<p class=\"danger\">Lösenordet matchar inte</p>";
 	}
 }
 
@@ -76,6 +80,8 @@ $content = <<<END
 						<input type="text" class="form-control" id="email" name="email" value="" placeholder="E-post"></br>
 						<label for="pw">Lösenord</label></br>
 						<input type="password" class="form-control" id="pw" name="pw" value"" placeholder="Lösenord"><br><br>
+						<label for="pw">Ange Lösenord igen</label></br>
+						<input type="password" class="form-control" id="pw2" name="pw2" value"" placeholder="Lösenord"><br><br>
 						<input type="checkbox" name="policy"> Jag har läst och accepterat <A HREF="popup.html" onClick="return popup(this, 'stevie')">vilkoren</a> för sidan<br>
 						<br>
 						<button type="submit" class="btn btn-danger btn-sm pull-left text-bold" value="submit" name="registeraccount" value="Skapa konto">Skapa Konto</button>
