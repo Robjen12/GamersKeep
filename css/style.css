@@ -1296,16 +1296,16 @@ color: Red;
  }
  
  /* sokfunktion animation */
-.soek_anim {						/* den animation som täcker sokrutan */
+.soek_anim {												/* den animation som täcker sokrutan */
   background-image: url("../images/search_anim.png");
   background-position: top left;
-  background-size: 183px 30px; 
-  background-repeat: no-repeat;
+  background-size: 200px 30px; 
+  background-repeat: repeat-x;
 height:30px;
-width:180px;
+width:250px;
 position:absolute;
-margin-right:0px;
-margin-left: 23px;
+margin-right:-15px;
+margin-left: 0px;
 border:none;
 margin-top: 23px;
 margin-bottom: 0;
@@ -1313,13 +1313,16 @@ float: right;
 }
 
 .form-control-search {
-  width: 180px;
+  width: 250px;
   height: 30px;
-  
-  margin-right: 0px;
-  margin-left: 23px;
+  margin-right: -15px;
+  margin-left: 0px;
   margin-top: 23px;
   margin-bottom: 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  
 }
 
 .soek_button {
