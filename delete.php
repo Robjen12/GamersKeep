@@ -37,11 +37,13 @@ END;
 
 			$query = <<<END
 
-				DELETE FROM user, guidereviewinfo, userguidereview, comment
-				WHERE user.keeperid = '{$keeperid}'
-				AND guidereviewinfo.grid = '{$grid}'
-				OR user.keeperid = '{$keeperid}'
-				OR guidereviewinfo.grid = '{$grid}';
+				DELETE FROM userguidereview,user,guidereviewinfo
+				USING userguidereview
+  				LEFT JOIN user
+    			ON userguidereview.keeperid = user.keeperid
+  				LEFT JOIN guidereviewinfo
+    			ON userguidereview.grid = guidereviewinfo.grid
+				WHERE user.keeperid = '{$keeperid}';
 
 END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
