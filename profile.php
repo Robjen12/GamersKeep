@@ -197,7 +197,7 @@ END;
 			else
 			{
 			$profil_bild = <<<END
-			<img src="images/profil_bild.png">
+			<img src="pictures/profile.jpg" width="45px">
 END;
 			}
 	
@@ -302,8 +302,10 @@ while($row = $res->fetch_object())
 		$latestactivity .= <<<END
 		 
 			<a href="genre.php?grid={$grid}">{$title}</a>{$r}
-			<button class="btn btn-sm-span btn-default-span delete"><a class="span" href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a></button>
-			<button class="btn btn-sm-span btn-default-span edit"><a class="span" href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
+			<button class="btn btn-sm-span btn-default-span delete"><a class="span" href="delete.php?grid={$grid}">
+			<span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a></button>
+			<button class="btn btn-sm-span btn-default-span edit"><a class="span" href="guide_review_edit.php?grid={$grid}">
+			<span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
 			</li><br><br>
 			
 END;
@@ -314,8 +316,10 @@ END;
 		$latestactivity .= <<<END
 		 
 			<a href="genre.php?grid={$grid}">{$title}</a>{$g} 
-			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a></button>
-			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
+			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}">
+			<span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a></button>
+			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}">
+			<span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
 			</li><br><br>
 		
 END;
@@ -383,7 +387,8 @@ $content = <<<END
 	  					
 	  						<div class="column-left-center text-center">	  							
 	  					
-	  								{$profil_bild}	  							
+	  								{$profil_bild}
+									<br>									
 
 	  						
 														  							<p><b>{$profilekeepername}</b></p>
