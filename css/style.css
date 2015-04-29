@@ -1345,3 +1345,6 @@ float: right;
 	margin-left: -30px;
 	margin-right: auto;
 }
+img.footer {
+border: none;
+}
