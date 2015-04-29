@@ -1341,10 +1341,10 @@ margin-bottom: 0;
 margin-top: 20px;
 float: right;
 }
-
-.img.header-icons {
-    height: 30px;
-    margin-right: 0px;
-    margin-top: 23px;
-    margin-left: 20px;
+.search-content{
+	margin-left: -30px;
+	margin-right: auto;
+}
+img.footer {
+border: none;
 }

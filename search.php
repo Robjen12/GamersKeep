@@ -37,9 +37,10 @@ END;
 			if($keeperid2 == $keeperid){
 				$users = <<<END
 			
-			Användarnamn: <a href="profile.php">{$row->keepername}</a><br>
+			<p class="droid">Användarnamn: <a href="profile.php">{$row->keepername}</a><br>
 			Namn: {$row->fname}{$row->lname}<br>
-			Email: {$row->email}<br>
+			Email: {$row->email}
+			</p>
 END;
 				
 			}
@@ -47,9 +48,10 @@ END;
 			{
 					$users = <<<END
 			
-			Användarnamn: <a href="profile.php?keeperid={$keeperid2}">{$row->keepername}</a><br>
+			<p class="droid">Användarnamn: <a href="profile.php?keeperid={$keeperid2}">{$row->keepername}</a><br>
 			Namn: {$row->fname}{$row->lname}<br>
-			Email: {$row->email}<br>
+			Email: {$row->email}
+			</p>
 END;
 
 			}
@@ -58,7 +60,7 @@ END;
 	}
 	else
 	{
-		$feedback = "<p class=\"feedback-yellow\">Det finns ingen i databasen med det användarnamnet.</p>";
+		$feedback = "<p class=\"text-yellow\">Det finns ingen i databasen med det användarnamnet.</p>";
 	}
 }
 if(isset($_GET['searchgenre']))
@@ -78,7 +80,7 @@ END;
 			$title = utf8_decode(htmlspecialchars($row->title));
 			$text = utf8_decode(htmlspecialchars($row->text));
 			
-			$article .= <<<END
+			$article = <<<END
 				Titel: <a href="genre.php?grid={$grid}">{$title}</a><br>
 				<i>{$text}</i><br><br>
 END;
@@ -86,40 +88,44 @@ END;
 	}
 	else
 	{
-		$feedback = "<p class=\"feedback-yellow\">Det finns ingen artikel i databasen med det namnet.</p>";
+		$feedback = "<p class=\"text-yellow\">Det finns ingen artikel i databasen med det namnet.</p>";
 	}
 }
 $content = <<<END
 
 
 		<div class="row margin-top-100">
-		
-			<div class="col-md-4">
-			</div><!-- col md 4 -->
 			
-			<div class="col-md-4">
-			<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default pull-left">
-
-	  					<div class="panel-heading panel-heading-560px">Sökresultat</div>
-
-
-		  					<div class="panel-body height-290px">
-							
-							{$users}
-							{$article}
-							{$feedback}
-
-							Tillbaka
-
-
-		  					</div><!-- panel body -->
-
-						</div><!-- panel heading -->
-						
-				
+			<div class="col-md-2 col-sm-2">
 			</div>
-			<div class="col-md-4">
-			</div><!-- col md 4 -->
+			
+			<div class="col-md-6 col-sm-6 search-content panel-width-550px panel panel-default">
+
+	  			<div class="panel-heading panel-heading-560px">Sökresultat</div>
+
+  					<div class="panel-body height-410px">
+							
+						{$users}
+						{$article}
+						{$feedback}
+
+						<button>Tillbaka</button>
+
+  					</div><!-- panel body -->
+
+				</div><!-- panel heading -->
+
+					
+				<!-- right column -->
+						<div class="content-right margin-right-25px pull-right">
+
+							<div class ="ads">
+
+								<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
+
+							</div><!-- ads -->
+				</div><!-- col md 3 -->
+				</div><!-- col md 6 -->
 		</div>
 	</div>
 END;
