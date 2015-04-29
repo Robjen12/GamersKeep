@@ -204,7 +204,7 @@ $footer = <<<END
 			<!-- Meny left row2 -->
 			<div class="col-md-9 copyright text-white pull-left">
 			Copyright &copy; 2015 GameTeam<br>
-			<img src="images/footer_logot.png" class="footer">
+			<img class="footer" src="images/footer_logot.png" >
 			</div><!-- -->
 	
 			<!-- Meny right row2 -->
