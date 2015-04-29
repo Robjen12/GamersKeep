@@ -16,8 +16,6 @@ $users = "";
 
 if(isset($_GET['search']))
 {
-
-		
 			$query = <<<END
 
 				SELECT * FROM user
@@ -47,9 +45,10 @@ END;
 			{
 					$users = <<<END
 			
-			Användarnamn: <a href="profile.php?keeperid={$keeperid2}">{$row->keepername}</a><br>
+			<p class="droid">Användarnamn <a href="profile.php?keeperid={$keeperid2}">{$row->keepername}</a><br>
 			Namn: {$row->fname}{$row->lname}<br>
 			Email: {$row->email}<br>
+			</p>
 END;
 
 			}
@@ -95,7 +94,7 @@ $content = <<<END
 		<div class="row margin-top-100">
 		
 			<div class="col-md-3 pull-left">
-				left
+				
 			</div><!-- col md 3 -->
 			
 			<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default pull-left">
@@ -116,8 +115,14 @@ $content = <<<END
 				</div><!-- panel heading -->
 
 					
-				<div class="col-md-3 pull-left">
-					right
+				<!-- right column -->
+						<div class="content-right margin-right-25px pull-right">
+
+							<div class ="ads">
+
+								<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
+
+							</div><!-- ads -->
 				</div><!-- col md 3 -->
 				</div><!-- col md 6 -->
 		</div>
