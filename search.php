@@ -58,7 +58,7 @@ END;
 	}
 	else
 	{
-		$feedback = "<p class=\"feedback-yellow\">Det finns ingen i databasen med det användarnamnet.</p>";
+		$feedback = "<p class=\"text-yellow\">Det finns ingen i databasen med det användarnamnet.</p>";
 	}
 }
 if(isset($_GET['searchgenre']))
@@ -86,7 +86,7 @@ END;
 	}
 	else
 	{
-		$feedback = "<p class=\"feedback-yellow\">Det finns ingen artikel i databasen med det namnet.</p>";
+		$feedback = "<p class=\"text-yellow\">Det finns ingen artikel i databasen med det namnet.</p>";
 	}
 }
 $content = <<<END
@@ -94,32 +94,32 @@ $content = <<<END
 
 		<div class="row margin-top-100">
 		
-			<div class="col-md-4">
-			</div><!-- col md 4 -->
+			<div class="col-md-3 pull-left">
+				left
+			</div><!-- col md 3 -->
 			
-			<div class="col-md-4">
 			<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default pull-left">
 
-	  					<div class="panel-heading panel-heading-560px">Sökresultat</div>
+	  			<div class="panel-heading panel-heading-560px">Sökresultat</div>
 
 
-		  					<div class="panel-body height-290px">
+  					<div class="panel-body height-290px">
 							
-							{$users}
-							{$article}
-							{$feedback}
+						{$users}
+						{$article}
+						{$feedback}
 
-							Tillbaka
+						<button>Tillbaka</button>
 
+  					</div><!-- panel body -->
 
-		  					</div><!-- panel body -->
+				</div><!-- panel heading -->
 
-						</div><!-- panel heading -->
-						
-				
-			</div>
-			<div class="col-md-4">
-			</div><!-- col md 4 -->
+					
+				<div class="col-md-3 pull-left">
+					right
+				</div><!-- col md 3 -->
+				</div><!-- col md 6 -->
 		</div>
 	</div>
 END;
