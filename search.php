@@ -92,17 +92,15 @@ $content = <<<END
 
 
 		<div class="row margin-top-100">
-		
-			<div class="col-md-3 pull-left">
-				
-			</div><!-- col md 3 -->
 			
-			<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default pull-left">
+			<div class="col-md-2 col-sm-2">
+			</div>
+			
+			<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default">
 
 	  			<div class="panel-heading panel-heading-560px">Sökresultat</div>
 
-
-  					<div class="panel-body height-290px">
+  					<div class="panel-body height-410px">
 							
 						{$users}
 						{$article}
