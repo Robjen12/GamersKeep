@@ -41,8 +41,12 @@ END;
 
 		header("Location: login.php");
 			}
+			else
+			{
+				$feedback = "<p class=\"danger\">Lösenordet matchar inte</p>";
+			}
 		}
-		$feedback = "<p class=\"danger\">Lösenordet matchar inte</p>";
+		
 	}
 }
 
