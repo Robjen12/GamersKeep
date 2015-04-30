@@ -98,7 +98,7 @@ $content = <<<END
 								Logga in
 							</button>
 							
-							<button class="btn btn-warning btn-sm text-bold login-text text-white margin-left-40px"><a class="login" href="register.php" role="button">
+							<button class="btn btn-default btn-sm text-bold login-text text-white margin-left-40px"><a class="login" href="register.php" role="button">
 								Registrera dig</a></button>
 							
 						</form>
