@@ -426,13 +426,13 @@ $content = <<<END
 		  						<div class="profileinformation text-left text-black">
 									
 		  								<p class="text-left">
-											{$r} Recensioner <span class="badge pull-right">15</span><br>
-											{$g} Guider <span class="badge pull-right">7</span><br>
+											{$r} Recensioner <span class="badge badge-info pull-right">15</span><br>
+											{$g} Guider <span class="badge primary pull-right">7</span><br>
 											<div class="friends">
-												{$v} Vänner <span class="badge pull-right">78</span><br>
+												{$v} Vänner <span class="badge badge-warning pull-right">78</span><br>
 											</div>
 											<div class="latestmessage">
-												{$k} <!-- insat chat har --> Chat konversation <span class="badge pull-right">5</span>	<br>
+												{$k} <!-- insat chat har --> Chat konversation <span class="badge badge-success pull-right">5</span>	<br>
 												{$chatmess}		
 											</div>								
 										</p>
@@ -471,8 +471,6 @@ $content = <<<END
 								</div>
 								
 								<button>Twitch Följ</button>
-							
-	  							<p>Vänner</p>
 
 	  						</div><!-- column left bottom -->
 						
