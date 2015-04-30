@@ -519,6 +519,25 @@ margin-left:0;
   width: 290px;
   margin-top: 0;
   margin-bottom: 0;
+  background-image: url("../images/profil_torn3.png");
+  background-position: top center;
+  background-size: 290px auto; 
+  background-repeat: repeat-y;
+
+  background-color: #c7ccc8;
+  height: auto;
+}
+
+.profil > .column-left-bottom2 {
+  min-height: 210px;
+  padding: 15px;
+  width: 290px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-image: url("../images/profil_torn4.png");
+  background-position: top center;
+  background-size: 290px auto; 
+  background-repeat: repeat-y;
   background-color: #c7ccc8;
   height: auto;
 }

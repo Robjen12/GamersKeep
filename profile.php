@@ -406,7 +406,7 @@ $content = <<<END
 	  					
 	  							<p class="text-center quicksand text-bold text-16px">Välkommen</p>
   	  					
-  	  						</div>	  					
+  	  						</div><!-- left top -->				
 	  					
 	  						<div class="column-left-center text-center profil_bild">	  							
 								
@@ -429,12 +429,14 @@ $content = <<<END
 											<div class="friends">
 												{$v} Vänner <span class="badge badge-warning pull-right">78</span><br>
 											</div>
+							
+								
 											<div class="latestmessage">
 												{$k} <!-- insat chat har --> Chat konversation <span class="badge badge-success pull-right">5</span>	<br>
 												{$chatmess}		
 											</div>								
 										</p>
-		  						</div>
+		  						
 
 
 	  							<p class="text-center quicksand text-bold text-16px">Sociala Medier</p>
@@ -471,6 +473,8 @@ $content = <<<END
 								<button>Twitch Följ</button>
 
 	  						</div><!-- column left bottom -->
+							
+							</div><!-- column left bottom2 -->
 						
 						</div><!-- row -->
 
