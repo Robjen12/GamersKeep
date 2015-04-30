@@ -202,8 +202,8 @@ if($res->num_rows > 0){
 	{
 	
 	$grid 	= $row->grid;
-	$title	= utf8_decode(htmlspecialchars($row->title));
-	$text 	= utf8_decode(htmlspecialchars($row->text));
+	$title	= utf8_decode($row->title);
+	$text 	= utf8_decode($row->text);
 	$grade  = $row->grade;
 
 	if($_SESSION['roletype'] == 1)
