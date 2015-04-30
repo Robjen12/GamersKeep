@@ -99,7 +99,7 @@ END;
 				$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 			}
-			$feedback = "<p class=\"text-yellow\">Inlägget har publicerats</p>";
+			$feedback = "<p class=\"text-green\">Inlägget har publicerats</p>";
 		}
 	}
 
