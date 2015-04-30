@@ -117,7 +117,7 @@ while($row = $res->fetch_object())
 		
 		
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a>{$r}
+			{$r}<a href="genre.php?grid={$grid}">{$title}</a>
 		
 
 END;
@@ -127,7 +127,7 @@ END;
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a>{$g}
+			{$g}<a href="genre.php?grid={$grid}">{$title}</a>
 		
 
 END;
