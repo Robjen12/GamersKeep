@@ -115,7 +115,7 @@ $content = <<<END
 						<input type="password" class="form-control" id="pw2" name="pw2" value"" placeholder="Lösenord"><br><br>
 						<input type="checkbox" name="policy"> Jag har läst och accepterat <A HREF="popup.html" onClick="return popup(this, 'stevie')">villkoren</a> för sidan<br>
 						<br>
-						<button type="submit" class="btn btn-danger btn-sm pull-left text-bold" value="submit" name="registeraccount" value="Skapa konto">Skapa Konto</button>
+						<button type="submit" class="btn btn-primary btn-sm pull-left text-bold" value="submit" name="registeraccount" value="Skapa konto">Skapa Konto</button>
 						</div><!-- form group -->	
 				</form>
 				</div><!-- register -->

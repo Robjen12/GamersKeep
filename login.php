@@ -53,7 +53,7 @@ END;
 
 				else
 				{
-					$feedback .= "<p class=\"text-red\">Användarnamn eller lösenord är fel</p>";
+					$feedback = "<p class=\"text-red\">Användarnamn eller lösenord är fel</p>";
 				}
 				$res->close();
 			}
@@ -89,19 +89,18 @@ $content = <<<END
 						<form action="login.php" method="post" id="login-form" class="quicksand">
 							Användarnamn<br>
 							<input type="text" class="form-control" id="keepername" name="keepername" value="" placeholder="Skriv in användarnamn">
-							</br>
-							Lösenord</br>
+							<br>
+							Lösenord<br>
 							<input type="password" class="form-control" id="pw" name="pw" value="" placeholder="Skriv in lösenord">
-							</br>
+							<br>
 													
-							<button type="submit" class="btn btn-danger btn-sm pull-left text-bold" id="submit" name="logintosite" value="Logga in">
+							<button type="submit" class="btn btn-primary btn-sm pull-left text-bold" id="submit" name="logintosite" value="Logga in">
 								Logga in
 							</button>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="register.php" class="btn btn-warning btn-sm text-bold login-text" role="button" text-white>
-								Registrera dig
-							</button></a>
-							</br>
+							
+							<button class="btn btn-warning btn-sm text-bold login-text text-white margin-left-40px"><a class="login" href="register.php" role="button">
+								Registrera dig</a></button>
+							
 						</form>
 						<a href="forgotuserpassword.php" class="text-10px text-primary">Glömt lösenord?</a>
 					</div>     

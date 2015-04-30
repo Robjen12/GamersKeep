@@ -1045,6 +1045,18 @@ a:hover {
 	color: #000;
 
 }
+
+
+a:link .login,
+a:active .login,
+a:visited  .login,
+a:hover  .login {
+    color: #fff;
+	text-decoration: none;
+}
+
+
+
 /* satter margin vaenster till minus 15px i paa genre sidan */
 .margin-genre {
 	margin-left: -15px;
@@ -1294,4 +1306,10 @@ float: right;
 }
 .margin-right-20px {
 	margin-right: 20px;
+}
+.text-size-8px {
+	font-size: 8px;
+}
+.margin-left-40px {
+margin-left:40px;
 }
