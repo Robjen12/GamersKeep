@@ -242,9 +242,9 @@ $footer = <<<END
 					</address>
 				</div>
 				
-				<div class="col-md-2 pull-left">
-				<address>
-					<strong>Twitter, Inc.</strong><br>
+				<div class="col-md-2 pull-left text-justify">
+					<address>
+					<p class="text-justify"> <strong>Twitter, Inc.</strong><br>
 					795 Folsom Ave, Suite 600<br>
 					San Francisco, CA 94107<br>
 					<abbr title="Phone">P:</abbr> (123) 456-7890
