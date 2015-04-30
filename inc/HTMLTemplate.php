@@ -144,7 +144,7 @@ $(document).ready(function(){
 					
 				
 					<li class="li-icons"><a href="index.php"><img src="images/home.png" class="img header-icons pull-right" title="Hem"></a></li>
-					<li><a href="guide_review.php"><img src="images/pen.png" class="img header-icons pull-right" title="Skriv recension/guide"></a></li>
+					<li><a href="guide_review.php"><img src="images/pen_meny.png" class="img header-icons pull-right" title="Skriv recension/guide"></a></li>
 					
 					<div class="dropdown">
 						
