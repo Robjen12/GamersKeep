@@ -135,7 +135,7 @@ $content = <<<END
 									<textarea id="comment" name="comment" cols="80" rows="6"></textarea>
 									</br>
 									
-									<button type="submit" class="btn btn-danger btn-sm pull-left text-bold login-text
+									<button type="submit" class="btn btn-primary btn-sm pull-left text-bold login-text
 									text-white" id="submit" name="publishcomment" value="Kommentera">Kommentera
 									</button>
 									</br></br>

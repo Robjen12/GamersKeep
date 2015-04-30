@@ -415,7 +415,7 @@ $content = <<<END
 								<!-- Twitter -->
 								<a href="https://twitter.com/skrivditttwitternamn" class="twitter-follow-button" data-show-count="false">
 									Follow @skrivditttwitternamn
-									<!-- Hur kan vi faa den att visa en form  dar anvandaren fyller i sitt twitternamn??? -->
+									
 								</a>
 								<script>
 									!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
@@ -469,7 +469,7 @@ $content = <<<END
 
 		  					</div><!-- panel body -->
 
-						</div><!-- panel heading -->
+						</div><!-- col md 6 -->
 
 						<div class="content-right margin-right-25px pull-right">
 
@@ -485,7 +485,7 @@ $content = <<<END
 		  					
 							</div><!-- reklam kolumn -->
 
-						</div><!-- col -->
+						</div><!-- row -->
 					
 
 					<div class="col-md-3 col-sm-3 ovrigt panel panel-default pull-left">
