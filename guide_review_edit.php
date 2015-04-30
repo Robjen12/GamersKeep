@@ -79,7 +79,7 @@ END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 		        
-	$feedback = "<p class=\"success\">Inlägget har uppdaterats</p>";
+	$feedback = "<p class=\"text-green\">Inlägget har uppdaterats</p>";
 }
 
 if(isset($_POST['review']))
@@ -110,7 +110,7 @@ END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 		        
-	$feedback = "<p class=\"success\">Inlägget har uppdaterats</p>";
+	$feedback = "<p class=\"text-green\">Inlägget har uppdaterats</p>";
 }
 	
 }

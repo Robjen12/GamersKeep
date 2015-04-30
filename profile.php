@@ -301,11 +301,11 @@ while($row = $res->fetch_object())
 
 		$latestactivity .= <<<END
 		 
-			{$r}
-			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a></button>
-			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
+			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pen pull-right" aria-hidden="true"></span></a></button>
+			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pen pull-right" aria-hidden="true"></span></a></button>
 			
-			</li>
+			</li>{$r}
+			
 			<a href="genre.php?grid={$grid}">{$title}</a>
 			<br><br>
 			
@@ -317,10 +317,13 @@ END;
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a>{$g} 
-			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a></button>
-			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
-			</li><br><br>
+			
+			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pull-right pen" aria-hidden="true"></span></a></button>
+			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right pen" aria-hidden="true"></span></a></button>
+			</li>{$g}
+			
+			<a href="genre.php?grid={$grid}">{$title}</a>
+			<br><br>
 		
 END;
 	}
