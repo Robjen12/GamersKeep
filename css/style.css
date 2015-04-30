@@ -248,8 +248,9 @@ border: none;
 }
 /* footer */
 #footer {
+height: auto;
 margin-top: 15px;
-height: 200px;
+min-height: 200px;
 margin-right: 0;
 margin-left:0;
 }
@@ -1342,4 +1343,10 @@ margin-bottom: 30px;
 
 .badge-inverse {
   background-color: #333333;
+}
+
+.margin-top-50px {
+margin-top: 85px;
+vertical-align: bottom;
+bottom: 0;
 }
