@@ -324,14 +324,37 @@ END;
 }
 // FORTSÄTTNING FÖLJER!
 $query = <<<END
-	SELECT * FROM repchatcom
-	JOIN replys
-	ON replys.replyid = repchatcom.replyid
-	JOIN chatcom
-	ON chatcom.chatcomid = repchatcom.chatcomid
-	WHERE repchatcom.keeperid = '{$keeperid}'
-	OR repchatcom.keeperid2 = '{$keeperid}';
+
+			SELECT * FROM chatcom 
+			WHERE accept = 1;
 END;
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+
+		if($res->num_rows > 0)
+		{
+			if($row = $res->fetch_object())
+			{
+
+				$getchatcomid = $row->chatcomid;
+
+
+			}
+		}	
+$query = <<<END
+			SELECT *
+			FROM chatcom
+			JOIN repchatcom
+			ON repchatcom.keeperid = chatcom.keeperid
+            OR repchatcom.keeperid2 = chatcom.keeperid2
+			JOIN user
+			ON repchatcom.keeperid = user.keeperid
+            OR repchatcom.keeperid2 = user.keeperid
+			WHERE repchatcom.chatcomid = chatcom.chatcomid
+			AND user.keeperid != '{$keeperid}';
+			
+END;
+
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 	  " : " . $mysqli->error);
 
@@ -340,17 +363,16 @@ END;
 			while($row = $res->fetch_object())
 			{
 
+				
+				$keepername2 = $row->keepername;
 				$chatcomid = $row->chatcomid;
-				$reply = $row->reply;
-				$keeper = $row->keeperid;
 				$keeper2 = $row->keeperid2;
 
-				$chatmess = <<<END
-					<a href="chatcom.php?chatcomid={$chatcomid}">{$reply}</a><br>
-					
+				
+					$chatmess = <<<END
+					<a href="chatcom.php?keeperid={$keeper2}">{$keepername2}</a><br>
 END;
-				
-				
+							
 			}
 		
 	
