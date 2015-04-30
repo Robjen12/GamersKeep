@@ -72,7 +72,7 @@ END;
 			if(file_exists($link))
 			{
 				$profil_bild = <<<END
-			<img src="{$link}">	
+			<img class="profil_bild" src="{$link}">	
 END;
 			}
 			else
@@ -381,9 +381,9 @@ $content = <<<END
   	  					
   	  						</div>	  					
 	  					
-	  						<div class="column-left-center text-center">	  							
+	  						<div class="column-left-center text-center profil_bild">	  							
 								
-	  								{$profil_bild}	  							
+	  							{$profil_bild}	  							
 
 	  						
 														  							<p><b>{$profilekeepername}</b></p>

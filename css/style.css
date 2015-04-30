@@ -1313,3 +1313,9 @@ float: right;
 .margin-left-40px {
 margin-left:40px;
 }
+.profil_bild > img{
+width: 85px;
+height: auto;
+border-top-left-radius: 60px;
+border-top-right-radius: 60px;
+}
