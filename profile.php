@@ -301,9 +301,13 @@ while($row = $res->fetch_object())
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a>{$r}
-			<button class="btn btn-sm-span btn-default-span delete"><a class="span" href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a></button>
-			<button class="btn btn-sm-span btn-default-span edit"><a class="span" href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
+			{$r}<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}">
+			<span class="glyphicon glyphicon-remove pull-right" aria-hidden="true">
+			</span></a></button>
+			
+			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}">
+			<span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
+			<a href="genre.php?grid={$grid}">{$title}</a>			
 			</li><br><br>
 			
 END;
@@ -313,9 +317,12 @@ END;
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a>{$g} 
-			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a></button>
-			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
+			{$g}<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}">
+			<span class="glyphicon glyphicon-remove pull-right pic-top" aria-hidden="true">
+			</span></a></button>
+			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}">
+			<span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
+			<a href="genre.php?grid={$grid}">{$title}</a>		
 			</li><br><br>
 		
 END;
@@ -361,8 +368,8 @@ END;
 
 
 
-$v = "<span class=\"glyphicon glyphicon-user pull-left\" aria-hidden=\"true\">&nbsp;</span>";
-$k = "<span class=\"glyphicon glyphicon-comment pull-left\" aria-hidden=\"true\">&nbsp;</span>";
+$v = "<span class=\"glyphicon glyphicon-user pull-left pic-top\" aria-hidden=\"true\">&nbsp;</span>";
+$k = "<span class=\"glyphicon glyphicon-comment pull-left pic-top\" aria-hidden=\"true\">&nbsp;</span>";
 
 $content = <<<END
 
@@ -442,8 +449,6 @@ $content = <<<END
 								</div>
 								
 								<button>Twitch Följ</button>
-							
-	  							<p>Vänner</p>
 
 	  						</div><!-- column left bottom -->
 						
@@ -497,7 +502,11 @@ $content = <<<END
 
 		  					<div class="panel-body margin-horizontal-zero">
  
-		  						<a href class="text-primary">{$latestactivity}</a>
+		  						<a href class="text-primary">
+								<span class="pic-top media">
+								{$latestactivity}
+								</span>
+								</a>
 
 		  					</div>
 						
