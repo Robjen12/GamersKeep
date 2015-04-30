@@ -129,17 +129,17 @@ body {
 
 /* Sets background color to gradient between the rust red in the bottom to the black color at the top */
 .bg-gradient-brown {
-  background: -webkit-linear-gradient(#993300, #000);
-  background: -o-linear-gradient(#993300, #000); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#993300, #000); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#993300, #000); /* Standard syntax (must be last) */
+  background: -webkit-linear-gradient(#e5e9f7, #6c78a7);
+  background: -o-linear-gradient(#e5e9f7, #6c78a7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#e5e9f7, #6c78a7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#e5e9f7, #6c78a7); /* Standard syntax (must be last) */
 }
 /* Sets background color to gradient between the black in the bottom to the rust red color at the top */
 .bg-gradient-black {
-  background: -webkit-linear-gradient(#000, #993300);
-  background: -o-linear-gradient(#000, #993300); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#000, #993300); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#000, #993300); /* Standard syntax (must be last) */
+  background: -webkit-linear-gradient(#6c78a7, #e5e9f7);
+  background: -o-linear-gradient(#6c78a7, #e5e9f7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#6c78a7, #e5e9f7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#6c78a7, #e5e9f7); /* Standard syntax (must be last) */
 }
 /* Sets background to black translucent */
 .bg-gradient-black-trans {
@@ -402,10 +402,10 @@ margin-left:0;
   text-shadow: 0 1px 1px #111;
   border-top: 1px solid #363636;
   border-bottom: 1px solid #202020;
-  background: -webkit-linear-gradient(#000, #993300); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#000, #993300); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#000, #993300); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#000, #993300); /* Standard syntax (must be last) */
+  background: -webkit-linear-gradient(#6c78a7, #e5e9f7); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#6c78a7, #e5e9f7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#6c78a7, #e5e9f7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#6c78a7, #e5e9f7); /* Standard syntax (must be last) */
   border-radius: 2px 2px 0 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
@@ -429,7 +429,7 @@ margin-left:0;
   bottom: -11px;
   z-index: -10;
   border: 5px solid;
-  border-color: #993300 transparent transparent transparent;    
+  border-color: #6c78a7 transparent transparent transparent;    
 }
 .panel-default > .panel-heading::before {
     left: 0;
@@ -675,13 +675,13 @@ a.text-primary:hover {
 }
 
 .btn-danger {
-  background-color: #993300;
+  background-color: #6c78a7;
 }
 
 /* roströd knapp */
 .btn-danger {
   color: #fff;
-  background-color: #993300;
+  background-color: #6c78a7;
   border-color: #663300;
 }
 
@@ -789,12 +789,12 @@ a.text-primary:hover {
   
   color: #fff;
   text-shadow: 0 1px 1px #333;
-	border-top: 1px solid #993300;
-  border-bottom: 1px solid #202020;
-  background: -webkit-linear-gradient(#000, #993300); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#000, #993300); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#000, #993300); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#000, #993300); /* Standard syntax (must be last) */
+	border-top: 1px solid #e5e9f7;
+  border-bottom: 1px solid #6c78a7;
+  background: -webkit-linear-gradient(#6c78a7, #e5e9f7); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#6c78a7, #e5e9f7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#6c78a7, #e5e9f7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#6c78a7, #e5e9f7); /* Standard syntax (must be last) */
   border-radius: 2px 2px 0 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
@@ -994,10 +994,10 @@ color: #fff;
 .dropdown-menu2 > li > a:visited {
   color: #fff;
   text-decoration: none;
-  background: -webkit-linear-gradient(90deg, #e48900, #993300); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(90deg, #e48900, #993300); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(90deg, #e48900, #993300); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(90deg, #e48900, #993300); /* Standard syntax (must be last) */
+  background: -webkit-linear-gradient(90deg, #e5e9f7, #6c78a7); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(90deg, #e5e9f7, #6c78a7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(90deg, #e5e9f7, #6c78a7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(90deg, #e5e9f7, #6c78a7); /* Standard syntax (must be last) */
 }
 
 /* hover farg på dropdown meny nar den ar aktiv */
@@ -1007,22 +1007,22 @@ color: #fff;
 .dropdown-menu > .active > a:visited {
   color: #fff;
   text-decoration: none;
-  background-color: #337ab7;
+  background-color: #6c78a7;
   outline: 0;
 }
 
 /* farg och stil pa genre header */
 .dropdown-header {
-	background-color: #000;
-	color: #fff;
-	outline: 1px solid #000;
+	background-color: #e5e9f7;
+	color: #464e6b;
+	outline: 1px solid #e5e9f7;
 }
 
 @dropdown-link-hover-bg {
-background: -webkit-linear-gradient(90deg, orange, #993300); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(90deg, orange, #993300); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(90deg, orange, #993300); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(90deg, orange, #993300); /* Standard syntax (must be last) */
+background: -webkit-linear-gradient(90deg, #e5e9f7, #6c78a7); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, #e5e9f7, #6c78a7); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, #e5e9f7, #6c78a7); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(90deg, #e5e9f7, #6c78a7); /* Standard syntax (must be last) */
 }
 
 /* transparent gradient */
@@ -1297,10 +1297,7 @@ color: Red;
  
  /* sokfunktion animation */
 .soek_anim {												/* den animation som täcker sokrutan */
-  background-image: url("../images/search_anim.png");
-  background-position: top left;
-  background-size: 200px 30px; 
-  background-repeat: repeat-x;
+background-color: #fff;
 height:30px;
 width:250px;
 position:absolute;
@@ -1345,6 +1342,9 @@ float: right;
 	margin-left: -30px;
 	margin-right: auto;
 }
-img.footer {
-border: none;
+.margin-top-10px {
+	margin-top: 10px;
+}
+.margin-right-20px {
+	margin-right: 20px;
 }

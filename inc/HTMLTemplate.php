@@ -99,10 +99,10 @@ $(document).ready(function(){
 			
 			<!-- Meny left with logo -->
 			<div class="col-md-6 column-left margin-right-zero">
-				<a href="index.php"><img src="images/logo.png" class="img header-logo"></a>
+				<a href="index.php"><img src="images/logo-menu.png" class="img header-logo"></a>
 				<div class="pull-right">
 				
-					<p>Inloggad som: {$_SESSION["keepername"]}{$adminText}</p>
+					<p class="text-black">Inloggad som: {$_SESSION["keepername"]}{$adminText}</p>
 										
 							
 
@@ -195,20 +195,26 @@ $footer = <<<END
 			
 			<!-- Meny left with triangle to the right -->			
 			<div class="col-md-9 column-left height-20px">
+			
 			</div><!-- col md 9 column left -->			
 			
 			<!-- Meny right -->
 			<div class="col-md-3 column-right height-20px">
+			<p class="pull-right text-black text-10px margin-right-20px margin-top-10px">Copyright &copy; 2015 GameTeam</p>
 			</div><!-- meny right -->
 			
 			<!-- Meny left row2 -->
-			<div class="col-md-9 copyright text-white pull-left">
-			Copyright &copy; 2015 GameTeam
+			<div class="col-md-9 copyright text-black pull-left">
+			<img src="images/logo_gt.png" width="200px">
+			
+			
+			
+			
 			</div><!-- -->
 	
 			<!-- Meny right row2 -->
 			
-			<div class="col-md-3 sociala-media text-white pull-right">
+			<div class="col-md-3 sociala-media text-black pull-right">
 			
 			<!-- insatt text har -->
 			
