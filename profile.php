@@ -301,10 +301,14 @@ while($row = $res->fetch_object())
 
 		$latestactivity .= <<<END
 		 
-			<a href="genre.php?grid={$grid}">{$title}</a>{$r}
-			<button class="btn btn-sm-span btn-default-span delete"><a class="span" href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a></button>
-			<button class="btn btn-sm-span btn-default-span edit"><a class="span" href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
-			</li><br><br>
+			{$r}
+			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span></a></button>
+			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right" aria-hidden="true"></span></a></button>
+			
+			</li>
+			<a href="genre.php?grid={$grid}">{$title}</a>
+			<br><br>
+			
 			
 END;
 	}
