@@ -40,8 +40,8 @@ if($res->num_rows ==1)
 
 	$keeperid = $row->keeperid;
 	$keepername = $row->keepername;
-	$title = utf8_decode(htmlspecialchars($row->title));
-	$text  = utf8_decode(htmlspecialchars($row->text));
+	$title = utf8_decode($row->title);
+	$text  = utf8_decode($row->text);
 	$timestamp = strtotime($row->timestamp);
 	$timestamp = date("d M Y H:i", $timestamp);
 	$grade = $row->grade;
@@ -85,7 +85,7 @@ END;
 	{
 		$commentkeeperid = $row->keeperid;
 		$commentkeepername = $row->keepername;
-		$comment = utf8_decode(htmlspecialchars($row->comment));
+		$comment = utf8_decode($row->comment);
 		$date = strtotime($row->timestamp);
 		$date = date("d M Y H:i", $date);
 

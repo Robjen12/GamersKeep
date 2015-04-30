@@ -12,8 +12,8 @@ $toplistguide = "";
 $title = "";
 $text = "";
 $grade = "";
-$title	= htmlspecialchars($title);
-$text	= htmlspecialchars($text);
+$title	= "";
+$text	= "";
 $admindelete = "";
 //test
 $genretype = "";
@@ -37,8 +37,8 @@ date_default_timezone_set("Europe/Stockholm");
 while($row = $res->fetch_object())
 {
 	$grid 	= $row->grid;
-	$title	= utf8_decode(htmlspecialchars($row->title));
-	$text 	= utf8_decode(htmlspecialchars($row->text));
+	$title	= utf8_decode($row->title);
+	$text 	= utf8_decode($row->text);
 	$grade  = $row->grade;
 	$date 	= strtotime($row->timestamp);
 	$date	= date("d M Y H:i", $date);
@@ -90,8 +90,8 @@ date_default_timezone_set("Europe/Stockholm");
 while($row = $res->fetch_object())
 {
 	$grid 	= $row->grid;
-	$title	= utf8_decode(htmlspecialchars($row->title));
-	$text 	= utf8_decode(htmlspecialchars($row->text));
+	$title	= utf8_decode($row->title);
+	$text 	= utf8_decode($row->text);
 	$grade  = $row->grade;
 	$date 	= strtotime($row->timestamp);
 	$date	= date("d M Y H:i", $date);
@@ -150,8 +150,8 @@ if($result->num_rows > 0)
         while($row = $result->fetch_object())
         {
         	$grid 	= $row->grid;
-			$title	= utf8_decode(htmlspecialchars($row->title));
-			$text 	= utf8_decode(htmlspecialchars($row->text));
+			$title	= utf8_decode($row->title);
+			$text 	= utf8_decode($row->text);
 
 			if($_SESSION['roletype'] == 1)
 			{
