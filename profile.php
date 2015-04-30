@@ -478,9 +478,9 @@ $content = <<<END
 		  					
 							<!-- Reklam karusel -->
 							
-		  						<<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
+		  						<<img src="images/ad_req.png" class="ads pull-right" width="300px">
 
-		  						<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
+		  						<img src="images/ad_req.png" class="ads pull-right" width="300px">
 
 		  					
 							</div><!-- reklam kolumn -->
