@@ -375,7 +375,7 @@ $content = <<<END
 	  					<div class="row profil margin-left-profile">
 	  					
 	  						<div class="column-left-top">
-	  						<br>
+								<br>
 	  					
 	  							<p class="text-center quicksand text-bold text-16px">Välkommen</p>
   	  					
@@ -386,7 +386,7 @@ $content = <<<END
 	  							{$profil_bild}	  							
 
 	  						
-														  							<p><b>{$profilekeepername}</b></p>
+								<p class="text-bold">{$profilekeepername}</p>
 	  							{$button}
 	  							{$sendmessage}
 								
@@ -437,16 +437,13 @@ $content = <<<END
 									}(document, 'script', 'facebook-jssdk'));
 								</script>
 								
-								<div class="fb-follow" data-href="https://www.facebook.com/dinfb" data-colorscheme="dark"
-								data-layout="button" data-show-faces="false">
+								<div class="fb-follow" data-href="https://www.facebook.com/dinfb" data-colorscheme="dark" data-layout="button"
+								data-show-faces="false">
 								</div>
 								
 								<button>Twitch Följ</button>
 							
-
-	  							</div><!-- col md 3>
-
-	  							<p>Vänner</p>		
+	  							<p>Vänner</p>
 
 	  						</div><!-- column left bottom -->
 						
@@ -471,15 +468,10 @@ $content = <<<END
 
 						</div><!-- col md 6 -->
 
-						<div class="content-right margin-right-25px pull-right">
-
+						<div class="col-md-3 col-sm-3 content-right pull-right">
 							<div class="ads">
-
-		  					
 							<!-- Reklam karusel -->
-							
-		  						<<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
-
+		  						<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
 		  						<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
 
 		  					
