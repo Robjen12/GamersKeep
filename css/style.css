@@ -248,19 +248,16 @@ border: none;
 }
 /* footer */
 #footer {
-background-color: #fff;
-height: auto;
 margin-top: 15px;
-min-height: 200px;
+height: 200px;
 margin-right: 0;
 margin-left:0;
 }
 
 .footer_bg {
 	background: url("../images/footer_bg.png") repeat-x bottom left;	/*  footer background img */
-	min-height: 200px;              /* Sets height to 200 pixels */
+	height: 200px;              /* Sets height to 200 pixels */
 	width: 100%;
-	
 }
 
 /* left column in the footer */
@@ -521,25 +518,6 @@ margin-left:0;
   width: 290px;
   margin-top: 0;
   margin-bottom: 0;
-  background-image: url("../images/profil_torn3.png");
-  background-position: top center;
-  background-size: 290px auto; 
-  background-repeat: repeat-y;
-
-  background-color: #c7ccc8;
-  height: auto;
-}
-
-.profil > .column-left-bottom2 {
-  min-height: 210px;
-  padding: 15px;
-  width: 290px;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-image: url("../images/profil_torn4.png");
-  background-position: top center;
-  background-size: 290px auto; 
-  background-repeat: repeat-y;
   background-color: #c7ccc8;
   height: auto;
 }
@@ -1364,13 +1342,4 @@ margin-bottom: 30px;
 
 .badge-inverse {
   background-color: #333333;
-}
-
-.margin-top-50px {
-margin-top: 85px;
-vertical-align: bottom;
-bottom: 0;
-}
-p.profile {
-	margin-top: 25px;
 }
