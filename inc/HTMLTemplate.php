@@ -204,67 +204,21 @@ $footer = <<<END
 			</div><!-- meny right -->
 			
 			<!-- Meny left row2 -->
-			<div class="col-md-12 copyright text-black pull-left margin-left-10px margin-top-10px">
+			<div class="col-md-9 copyright text-black pull-left">
+			<img src="images/logo_gt.png" width="200px">
 			
-				<div class="col-md-2 pull-left">
-				<address>
-					<strong>Twitter, Inc.</strong><br>
-					795 Folsom Ave, Suite 600<br>
-					San Francisco, CA 94107<br>
-					<abbr title="Phone">P:</abbr> (123) 456-7890
-					</address>
-				</div>
 			
-				<div class="col-md-2 pull-left">
-				<address>
-					<strong>Twitter, Inc.</strong><br>
-					795 Folsom Ave, Suite 600<br>
-					San Francisco, CA 94107<br>
-					<abbr title="Phone">P:</abbr> (123) 456-7890
-					</address>
-				</div>
-				
-				<div class="col-md-2 pull-left">
-				<address>
-					<strong>Twitter, Inc.</strong><br>
-					795 Folsom Ave, Suite 600<br>
-					San Francisco, CA 94107<br>
-					<abbr title="Phone">P:</abbr> (123) 456-7890
-					</address>
-				</div>
-				
-				<div class="col-md-2 pull-left">
-				<address>
-					<strong>Twitter, Inc.</strong><br>
-					795 Folsom Ave, Suite 600<br>
-					San Francisco, CA 94107<br>
-					<abbr title="Phone">P:</abbr> (123) 456-7890
-					</address>
-				</div>
-				
-				<div class="col-md-2 pull-left text-justify">
-					<address>
-					<p class="text-justify"> <strong>Twitter, Inc.</strong><br>
-					795 Folsom Ave, Suite 600<br>
-					San Francisco, CA 94107<br>
-					<abbr title="Phone">P:</abbr> (123) 456-7890
-					</address>
-				</div>
-				
-				<div class="col-md-2 pull-left">
-				<address>
-					<strong>Twitter, Inc.</strong><br>
-					795 Folsom Ave, Suite 600<br>
-					San Francisco, CA 94107<br>
-					<abbr title="Phone">P:</abbr> (123) 456-7890
-					</address>
-				</div>
-				
-			<img src="images/logo_gt.png" width="200px">			
-			</div><!-- col md 12 -->
-			<br>
+			
+			
+			</div><!-- -->
 	
+			<!-- Meny right row2 -->
 			
+			<div class="col-md-3 sociala-media text-black pull-right">
+			
+			<!-- insatt text har -->
+			
+			</div><!-- col md 3 sociala media -->
 			
 		</div> <!-- footer -->
 	</div><!-- container fluid -->

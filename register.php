@@ -36,17 +36,17 @@ END;
 
 		if($keepername == '' || $password == '' || $password2 == '' ||$fname == '' || $lname == '' || $email == '' )
 		{
-			$feedback = "<p class=\"danger\">Fyll i fälten</p>";
+			$feedback = "<p class=\"text-red\">Fyll i alla fälten</p>";
 		}
 		else
 		{
 			if($password != $password2)
 			{
-				$feedback = "<p class=\"danger\">Lösenordet matchar inte</p>";
+				$feedback = "<p class=\"text-red\">Lösenordet matchar inte</p>";
 			}
 			else if($keepername == $keepername2)
 			{
-				$feedback = "<p class=\"danger\">Användarnamn upptaget</p>";
+				$feedback = "<p class=\"text-red\">Användarnamn upptaget</p>";
 			}
 			else 
 			{

@@ -248,6 +248,7 @@ border: none;
 }
 /* footer */
 #footer {
+background-color: #fff;
 height: auto;
 margin-top: 15px;
 min-height: 200px;
@@ -257,8 +258,9 @@ margin-left:0;
 
 .footer_bg {
 	background: url("../images/footer_bg.png") repeat-x bottom left;	/*  footer background img */
-	height: 200px;              /* Sets height to 200 pixels */
+	min-height: 200px;              /* Sets height to 200 pixels */
 	width: 100%;
+	
 }
 
 /* left column in the footer */
@@ -1368,4 +1370,7 @@ margin-bottom: 30px;
 margin-top: 85px;
 vertical-align: bottom;
 bottom: 0;
+}
+p.profile {
+	margin-top: 25px;
 }
