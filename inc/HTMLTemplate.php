@@ -165,7 +165,7 @@ $(document).ready(function(){
 							
 								<form action="search.php" method="GET">
 								<input type="text" class="form-control-search pull-left" id="searchfield" name="search" placeholder="Sök...">
-								<button class="soek_button pull-right" type="Submit" value="Sök">
+								<button class="soek_button pull-right" type="Submit" value="Sök" alt="Sök">
 								
 								</button>
 								</form>
