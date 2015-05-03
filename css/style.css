@@ -291,8 +291,8 @@ margin-left:0;
 }
 
 #footer > .column-left-row2 {
-	
-	height: 180px;
+	height: auto;
+	min-height: 180px;
 	margin-right: 0;
 	margin-left: 0;
 }
@@ -518,6 +518,10 @@ margin-left:0;
   width: 290px;
   margin-top: 0;
   margin-bottom: 0;
+  background-image: url("../images/profil_torn3.png");
+  background-position: top center;
+  background-size: 290px auto; 
+  background-repeat: repeat-x;
   background-color: #c7ccc8;
   height: auto;
 }
@@ -1303,6 +1307,10 @@ float: right;
 }
 .margin-top-10px {
 	margin-top: 10px;
+}
+
+.margin-top-30px {
+	margin-top: 30px;
 }
 .margin-right-20px {
 	margin-right: 20px;

@@ -204,9 +204,37 @@ $footer = <<<END
 			</div><!-- meny right -->
 			
 			<!-- Meny left row2 -->
-			<div class="col-md-9 copyright text-black pull-left">
-			<img src="images/logo_gt.png" width="200px">
+			<div class="col-md-9 copyright text-black margin-top-10px pull-left">
 			
+				<div class="col-md-4 pull-left">
+					<address>
+					<strong>OM GAMETEAM</strong><br>
+					<a href="om_gameteam.php">Vem vi är</a><br>
+					<a href="#">Robert</a><br>
+					<a href="#">Dorte</a><br>
+					<a href="#">Malena</a><br>
+					<a href="#">Maria</a><br>
+					</address>
+					
+				</div>
+				
+				<div class="col-md-4 pull-left">
+					<strong>OM GAMERSKEEP</strong>
+					<br>
+					<a href="#">Syfte</a><br>
+					<a href="#">Policy</a><br>
+					<a href="#">FAQ</a><br>
+										
+				</div>
+				
+				<div class="col-md-4 pull-left">
+					<strong>KONTAKT OSS</strong>
+					<br>
+					<a href="#">Annoncera</a><br>
+					<a href="#">Mejl</a><br>
+				</div>	
+						
+						
 			
 			
 			
@@ -214,11 +242,27 @@ $footer = <<<END
 	
 			<!-- Meny right row2 -->
 			
-			<div class="col-md-3 sociala-media text-black pull-right">
-			
-			<!-- insatt text har -->
+			<div class="col-md-3 sociala-media text-black pull-right margin-top-10px">
+			<strong>SOCIALA MEDIER</strong> <br>
+			Twitter<br>
+			Facebook<br>
+			Annat<br>
+				
 			
 			</div><!-- col md 3 sociala media -->
+			
+			
+			<div class="col-md-12 pull-left text-left bg-white margin-top-30px">
+			
+				<div class="col-md-3 pull-left">
+				
+					<img src="images/logo_gt.png" width="200px" class="pull-left">
+					<br><br><br><br>
+					<p class="pull-left text-10px">Copyright &copy; 2015 GameTeam.</p>
+				
+				</div><!-- col md 3 -->
+			
+			</div><!-- col md 12 -->
 			
 		</div> <!-- footer -->
 	</div><!-- container fluid -->
