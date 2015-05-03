@@ -513,18 +513,20 @@ margin-left:0;
 }
 
 .profil > .column-left-bottom {
-  min-height: 210px;
+  min-height: 310px;
   padding: 15px;
   width: 290px;
   margin-top: 0;
   margin-bottom: 0;
-  background-image: url("../images/profil_torn3.png");
+  background-image: url("../images/profil_torn3b.png");
   background-position: top center;
   background-size: 290px auto; 
-  background-repeat: repeat-x;
+  background-repeat: repeat-y;
   background-color: #c7ccc8;
   height: auto;
 }
+
+
 
 /* profil bild */
 .column-left-center > img {

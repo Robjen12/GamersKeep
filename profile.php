@@ -429,7 +429,7 @@ $content = <<<END
 											<div class="friends">
 												{$v} Vänner <span class="badge badge-warning pull-right">78</span><br>
 											</div>
-							
+									
 								
 											<div class="latestmessage">
 												{$k} <!-- insat chat har --> Chat konversation <span class="badge badge-success pull-right">5</span>	<br>
