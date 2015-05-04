@@ -1295,7 +1295,7 @@ width: 36px;
 height: 36px;
 background-color: none;
   background-image: url("../images/search2.png");
-  background-position: center center;
+  background-position: top left;
   background-size: 36px auto; 
   background-repeat: no-repeat;
 
@@ -1355,4 +1355,21 @@ margin-bottom: 30px;
 
 .badge-inverse {
   background-color: #333333;
+}
+
+.profil_ikon {
+width: 36px;
+height: 36px;
+background-color: none;
+  background-image: url("../images/profil2.png");
+  background-position: top left;
+  background-size: 36px 36px; 
+  background-repeat: no-repeat;
+
+  border:none;
+margin-left: 20px;
+margin-right: -9px;
+margin-bottom: 0;
+margin-top: 20px;
+float: right;
 }
