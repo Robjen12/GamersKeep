@@ -1360,14 +1360,35 @@ margin-bottom: 30px;
 /* image icons in the footer */
 .img.footer-icons {
     height: 30px;
-    margin-right: 0px;
+    margin-right: 20px;
     margin-top: 23px;
-    margin-left: 20px;
+    margin-left: 0;
 	border-radius: 3px;
 	display: inline;
 	float: left;
 }
+li.facebook {
+	background: url("images/fb1.png") top left no-repeat;
+}
 
-.margin-left-zero{
-margin-left: 0;
+li.facebook a:hover {
+	background: url("images/fb2.png") top left no-repeat;
+}
+
+.margin-left-minus{
+margin-left: -35px;
+
+}
+ 
+ 
+.home a:hover {
+    background: url('img_navsprites_hover.gif') 0 -45px;
+}
+
+#prev a:hover {
+    background: url('img_navsprites_hover.gif') -47px -45px;
+}
+
+#next a:hover {
+    background: url('img_navsprites_hover.gif') -91px -45px;
 }

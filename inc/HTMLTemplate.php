@@ -241,13 +241,14 @@ $footer = <<<END
 			
 			<div class="col-md-12 pull-left text-left bg-white margin-top-30px margin-left-zero">
 			
+				<div class="col-md-6 pull-left margin-left-minus">
 								
 					<ul>
-					<li class="li-icons"><img src="images/twitter1.png" class="img footer-icons"></li>
-					<li class="li-icons"><img src="images/fb1.png" class="img footer-icons"></li>
-					<li class="li-icons"><img src="images/twitter1.png" class="img footer-icons"></li>
-					</ul>						
+					<a href="#"><li class="li-icons float-left facebook"><img src="images/fb1.png" class="img footer-icons"></li></a>
+					<li class="li-icons float-left"><img src="images/twitter1.png" class="img footer-icons"></li>
+					</ul>
 				
+				</div><!-- col md 6 -->
 				
 				<div class="col-md-6 pull-right">
 				
