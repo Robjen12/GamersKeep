@@ -34,7 +34,12 @@ if(!empty($_POST))
 	{
 		$reply = $_POST['reply'];
 
-	
+		if($reply == "")
+		{
+			$feedback = "<p class=\"text-red\">Du måste skriva ett meddelande!</p>";
+		}
+		else
+		{
 				$query = <<<END
 
 			INSERT INTO replys (reply, timestamp, flag)
@@ -66,6 +71,8 @@ END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 		}
+		}
+			
 	}
 
 		
@@ -125,7 +132,8 @@ $content = <<<END
 						<h3>Meddelande</h3><br><br>
 						{$guestbook}
 					</div>
-					<div class="guestbookreplys">
+					<div class="guestbookreplys"><br>
+					{$feedback}
 							<form action="chatcom.php?keeperid={$keeperid2}" method="post" id="send">
 								<textarea id="reply" name="reply" cols="121" rows="5"></textarea></br>
 								<input type="submit" id="submit" name="friendmessage" value="Skicka">
