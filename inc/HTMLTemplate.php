@@ -201,34 +201,34 @@ $footer = <<<END
 			</div><!-- meny right -->
 			
 			<!-- footer left row2 -->
-			<div class="col-md-9 copyright text-black margin-top-10px pull-left">
+			<div class="col-md-9 copyright margin-top-10px pull-left">
 			
-				<div class="col-md-4 droid pull-left">
-					
-					<p class="quicksand text-bold">GAMETEAM</p>
+				<div class="col-md-4 pull-left quicksand text-bold text-16px">					
+					GAMERSKEEP
+					<p class="droid text-normal">
+					<a href="#">Syfte</a><br>
+					<a href="#">Policy</a><br>
+					<a href="#">FAQ</a><br>
+					</p>										
+				</div>
+				
+				<div class="col-md-4 pull-left quicksand text-bold text-16px">
+					GAMETEAM
+					<p class="droid text-normal">
 					<a href="om_gameteam.php">Vem vi är</a><br>
 					<a href="#">Robert</a><br>
 					<a href="#">Dorte</a><br>
 					<a href="#">Maria</a><br>
-					<a href="#">Mal</a><br>
+					<a href="#">Malena</a>
 					</p>
-										
 				</div>
 				
-				<div class="col-md-4 pull-left">
-					<strong>GAMERSKEEP</strong>
-					<br>
-					<a href="#">Syfte</a><br>
-					<a href="#">Policy</a><br>
-					<a href="#">FAQ</a><br>
-										
-				</div>
-				
-				<div class="col-md-4 pull-left">
-					<strong>KONTAKT</strong>
-					<br>
+				<div class="col-md-4 pull-left quicksand text-bold text-16px">
+					KONTAKT
+					<p class="droid text-normal">
 					<a href="#">Annoncera</a><br>
-					<a href="#">Mejl</a><br>
+					<a href="#">Mejl</a>
+					</p>
 				</div>	
 						
 						
@@ -239,11 +239,13 @@ $footer = <<<END
 	
 			<!-- Meny right row2 -->
 			
-			<div class="col-md-3 sociala-media text-black pull-right margin-top-10px">
-			<strong>SOCIALA MEDIER</strong> <br>
-			Twitter<br>
-			Facebook<br>
-			Annat<br>
+			<div class="col-md-3 quicksand text-bold text-16px pull-right margin-top-10px">
+				SOCIALA MEDIER
+				<p class="droid text-normal">
+				Twitter<br>
+				Facebook<br>
+				Annat
+			</p>
 				
 			
 			</div><!-- col md 3 sociala media -->
