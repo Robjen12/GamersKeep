@@ -1,0 +1,1376 @@
+@import url("http://fonts.googleapis.com/css?family=Quicksand:400,700");
+@import url("http://fonts.googleapis.com/css?family=Droid+Sans:400,700");
+
+.register-forgot-background{
+	background-color: #993300;
+}
+.login-picture{
+	background: url("../images/registrering.jpg") no-repeat center center fixed;
+	background-size: 100%;
+}
+.logo{
+	background-size: 50%;
+}
+
+.login-font
+{
+  font-family: 'Quicksand';
+  margin-left: 20px;
+  color: white;
+}
+.login-copyright
+{
+  margin-top: 200px;
+}
+/*
+#header{
+	background-color: black;
+	height: 80px;
+}
+*/
+#footer{
+
+	min-height: 200px;
+}
+#news{
+	background-color: white;
+	height: 400px;
+}
+.toplistname,
+.latestlistname,
+
+{
+	margin-left: 50px;
+	border: 5px solid black;
+	margin-top: 50px;
+	height: 50px;
+}
+	
+	.toplist,
+	.latestlist
+	{
+		border: 5px solid black;
+		min-height: 400px;
+		margin-left: 50px;
+	}
+
+.login
+{
+	margin-top: 150px;
+}
+.register{
+	background-color: white;
+	border-radius: 15px;	
+	margin: 10px;
+	padding: 15px;
+	height: auto;
+	border-radius: 15px;
+  min-height: 550px;
+	height: auto;
+	margin: 100px 100px 100px 100px;
+	padding: 20px 0px 0px 20px;
+
+}
+.toplist,
+.latest
+{
+	height: 500px;
+	background-color: white;
+}
+#forgot
+{	margin-left: auto;
+	margin-right: auto;
+	min-width: 260px;
+	background-color: white;
+	border-radius: 15px;
+	height: auto;
+	margin-top: 200px;
+	padding: 5px 20px 20px 20px;
+	width: 150px;
+	
+}
+
+#searchresult
+{
+  margin-top: 100px;
+  min-height: 400px;
+
+}
+
+body {
+	overflow-x: hidden;        /* Hide horizontal overflow */
+	overflow-y: auto;          /* Show vertical overflow */
+	background-color: brown;    /* Set background color to brown */
+	background: url("../images/bg.jpg") no-repeat center center fixed;	/* bakgrundsbild */
+	background-size: 100% 100%;
+}
+}
+#header {
+  margin-left: 0;            /* Sets left margin to zero */
+  margin-top: 0;             /* Sets top margin to zero */
+	height: 80px;              /* Sets height to 80 pixels */ 
+	width: 100%;
+
+}
+
+.header-bg {
+	background: url("../images/header_bg_l.png") repeat-x top left;	/* header bakgrundsbild */}
+}
+
+/* left column in the header */
+#header > .column-left {
+    margin-left: 0;
+    height: 60px;
+	border: none;
+}
+.no-border {
+	border: none;
+}
+
+/* Sets background color to gradient between the rust red in the bottom to the black color at the top */
+.bg-gradient-brown {
+  background: -webkit-linear-gradient(#e5e9f7, #6c78a7);
+  background: -o-linear-gradient(#e5e9f7, #6c78a7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#e5e9f7, #6c78a7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#e5e9f7, #6c78a7); /* Standard syntax (must be last) */
+}
+/* Sets background color to gradient between the black in the bottom to the rust red color at the top */
+.bg-gradient-black {
+  background: -webkit-linear-gradient(#6c78a7, #e5e9f7);
+  background: -o-linear-gradient(#6c78a7, #e5e9f7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#6c78a7, #e5e9f7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#6c78a7, #e5e9f7); /* Standard syntax (must be last) */
+}
+/* Sets background to black translucent */
+.bg-gradient-black-trans {
+background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 1%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(1%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 1%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 1%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 1%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 1%,rgba(0,0,0,0.65) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+border: none;
+}
+
+/* center column in the header */
+/*
+#header > .column-center {
+    height: 60px;
+	border: none;
+}
+*/
+
+/* right column in the header */
+#header > .column-right {
+    margin-right: 0;
+    height: 60px;
+    float:right;
+    margin-left: auto;
+	border:none;
+}
+
+/* left second row in the header */
+.height-20px {
+    height: 20px;
+}
+/* puts white triangel as css3 fgfx in right column second row in the header */
+/*
+#header > .column-right-row2::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 0 20px;
+	
+    border-color: transparent transparent transparent black;
+    line-height: 0;
+}
+*/
+.top-to-bottom {
+    border-width: auto;
+	border: repeat-x;
+	height: 20px;
+    border-style: solid;
+    -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+    -webkit-border-image: 
+      -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+    -moz-border-image:
+      -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;    
+    -o-border-image:
+      -o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+    border-image:
+      linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%;
+}
+
+/* clears white triangel at the right side */
+/*
+#header > .column-right-row2::before {
+    right: 0;
+}
+*/
+
+#header > .column-left-row2 {
+	background: url("../images/header_bg_tri.png") no-repeat bottom right;	/* trekant bild */
+	height: 20px;
+	margin-right: 0;
+	margin-left: 0;
+
+}
+
+#header > .column-right-row2 {
+	background: url("../images/header_bg_r2.png") repeat-x bottom left;	/* left row 2 background img */
+	height: 20px;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.search-center {
+	float: right;
+}
+ 
+/* image icons in the header */
+.img.header-icons {
+    height: 30px;
+    margin-right: 0px;
+    margin-top: 23px;
+    margin-left: 20px;
+}
+.margin-right-zero {
+    margin-right: 0px;
+}
+.margin-left-50px {
+    margin-left: 50px;
+}
+.img.header-logo {
+    height: 60px;
+}
+/* footer */
+#footer {
+margin-top: 15px;
+height: 200px;
+margin-right: 0;
+margin-left:0;
+}
+
+.footer_bg {
+	background: url("../images/footer_bg.png") repeat-x bottom left;	/*  footer background img */
+	height: 200px;              /* Sets height to 200 pixels */
+	width: 100%;
+}
+
+/* left column in the footer */
+#footer > .column-left {
+    margin-left: 0;
+	background: url("../images/footer_bg_tri.png") no-repeat top right;	/* left row triangle img */
+	height: 20px;
+	margin-right: 0;
+}
+/* center column in the footer */
+/* not used anymore delete this
+#footer > .column-center {
+}
+*/
+
+/* right column in the footer */
+#footer > .column-right {
+ background: url("../images/footer_bg_r.png") repeat-x top left;	/* right bild */
+	height: 20px;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.column-right-row2 {
+}
+#footer > .column-left {
+	background: url("../images/footer_bg_tri.png") no-repeat bottom right;	/* trekant bild */
+	height: 20px;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+#footer > .column-left-row2 {
+	height: auto;
+	min-height: 180px;
+	margin-right: 0;
+	margin-left: 0;
+}
+/* puts white triangel as css3 fgfx in right column second row in the footer */
+/* not used anymore
+#footer > .column-right-row2::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 20px;
+    border-color: transparent transparent transparent black;
+    line-height: 0;
+}
+*/
+/* clears white triangel at the right side */
+/*
+#footer > .column-right-row2::before {
+    right: 0;
+} 
+*/
+.bg-white {
+    background-color: #fff;    /* Set background color to white */
+}
+.bg-black {
+    background-color: #000;    /* Set background color to white */
+}
+
+.margin-right-50px{
+	margin-right: 3em;
+}
+.margin-horizontal-zero{
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.margin-left-50px{
+	margin-left: 3em;
+}
+.ad1 {
+	margin-left: 3em;
+	border: 1px solid black;
+	margin-top: 50px;
+	height: 300px;
+}
+.padding-15px {
+	padding-left: 15px;
+	padding-right: 15px;
+	
+}
+.padding-zero-horizontal {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.margin-top-100{ 
+	margin-top: 100px; 
+}
+
+.margin-top-75{ 
+	margin-top: 75px; 
+}
+
+.panel {
+    margin-top: 5px;
+    width: 350px;
+    margin-left: 100px;
+    padding: 0 10px 0;
+    position: relative;
+    color: #111;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.panel-default {
+  border-color: #ddd;
+  margin-left: 25px;
+  min-height: 300px;
+  height: auto;
+}
+.ads > img {
+    border-radius: 3px;
+    width:300px;
+	height: 450px;
+	margin-right: 10px;
+	margin-bottom: 15px;
+	margin-top: 0;
+}
+
+.margin-right-7px {
+	margin-right: 10px;
+}
+.panel-default > .panel-heading {
+  border-color: #ddd;
+  display: block;
+  height: 35px;
+  line-height: 1.3;
+  width: 360px;
+  margin: 0;
+  padding: 5px 10px;
+  position: relative;
+  left: -16px;
+  top: 5px;
+  
+  color: #fff;
+  text-shadow: 0 1px 1px #111;
+  border-top: 1px solid #363636;
+  border-bottom: 1px solid #202020;
+  background: -webkit-linear-gradient(#6c78a7, #e5e9f7); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#6c78a7, #e5e9f7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#6c78a7, #e5e9f7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#6c78a7, #e5e9f7); /* Standard syntax (must be last) */
+  border-radius: 2px 2px 0 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #fff;
+}
+.panel-default > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #333;
+}
+.panel-default > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #ddd;
+}
+.panel-default > .panel-heading::before,
+.panel-default > .panel-heading::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -11px;
+  z-index: -10;
+  border: 5px solid;
+  border-color: #6c78a7 transparent transparent transparent;    
+}
+.panel-default > .panel-heading::before {
+    left: 0;
+}
+.panel-default > .panel-heading::after {
+    right: 0;
+}
+.grinfo
+{
+  min-height: 400px;
+  height: auto;
+}
+
+.panel-default > .panel-heading-300px{
+  width: 360px;
+}
+
+
+
+.width-360px {
+  width: 360px;
+}
+
+.panel-width-330px {
+  width: 330px;
+}
+
+.panel-default > .panel-heading-340px {
+  width: 340px;
+}
+
+.panel-width-190px {
+  width: 190px;
+}
+
+.panel-default > .panel-heading-200px {
+  width: 200px;
+}
+
+/* Profil torn */
+
+.profil {
+
+  text-align: center;
+}
+
+.profil-right {
+  margin-right: 10px;
+  margin-left: auto;
+
+  text-align: center;
+}
+
+.profil > .column-left-top {
+  height: 74px;
+  width: 290px;
+  background-image: url("../images/profil_torn1.png");
+  background-position: top center;
+  background-size: 290px auto; 
+  background-repeat: no-repeat;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.margin-left-15px {
+  margin-left: 0;
+}
+.profil > .column-left-center {
+  height: 241px;
+  width: 290px;
+  background-image: url("../images/profil_torn2.png");
+  background-position: top center;
+  background-size: 290px auto; 
+  background-repeat: no-repeat;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 25px;
+
+}
+
+.profil > .column-left-bottom {
+  min-height: 310px;
+  padding: 15px;
+  width: 290px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-image: url("../images/profil_torn3b.png");
+  background-position: top center;
+  background-size: 290px auto; 
+  background-repeat: repeat-y;
+  background-color: #c7ccc8;
+  height: auto;
+}
+
+
+
+/* profil bild */
+.column-left-center > img {
+    margin: 0 auto;
+    width: 85px;
+  
+}
+
+/* friend bild */
+.column-left-bottom > img {
+    width: 35px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0 auto;
+  
+}
+
+.margin-left-15px {
+  margin-left: 15px;
+  margin-right: auto;
+}
+
+.margin-right-15px{
+  margin-right: 0px;
+  margin-left: auto;
+}
+.list-group {
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+li.views-left{
+  float: left;
+  list-style: none;
+
+}
+
+li.views{
+  float: right;
+  list-style: none;
+
+}
+
+li.views-profile{
+margin-top: 10px;
+display: block;
+  float: right;
+  list-style: none;
+
+}
+
+/* dortes andringar från dorte2 branch */
+
+
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2.login-font
+{
+  font-family: 'Quicksand';
+  margin-left: 20px;
+  color: white;
+}
+.quicksand {
+    font-family: 'Quicksand';
+}
+.droid {
+    font-family: 'Droid Sans', sans-serif;
+}
+p {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+.text-normal {
+  font-weight: normal;
+}
+/* lankfarger genrellt satt till svart */
+
+/* unvisited link */
+a:link {
+    color: #000;
+	text-decoration: underline;
+}
+/* visited link */
+a:visited {
+    color: #000;
+}
+
+/* mouse over link */
+a:hover {
+    color: #000;
+}
+
+/* active link */
+a:active {
+	color: #000;
+}
+
+.dropdown-hover .a:hover {
+  visibility: visible;
+}
+/* selected link */
+a:active {
+    color: #cc3300;
+}
+
+a.text-primary {
+  color: #ddd;
+}
+
+/* ändrar länkfärg från roströd till svart när musen förs över länkan */
+a.text-primary:hover {
+  color: black;
+}
+
+.text-16px {
+  font-size: 16px;
+}
+
+.text-10px {
+  font-size: 10px;
+}
+
+.login-cloud {
+  margin-right: auto;
+  margin-left: -30px;
+}
+
+.margin-horizontal-25px{
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.margin-left-25px{
+  margin-left: 25px;
+  margin-right: auto;
+}
+.margin-right-25px{
+  margin-right: 25px;
+  margin-left: auto;
+}
+
+.margin-top-110
+{
+  margin-top: 51px;
+  
+}
+
+.panel {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 350px;
+  /*  margin-left: 100px; */
+    padding: 0 10px 0;
+    position: relative;
+    color: #111;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.panel-default {
+  border-color: #ddd;
+/*  margin-left: 25px; */
+  min-height: 300px;
+  height: auto;
+}
+.panel-default > .panel-heading {
+  border-color: #ddd;
+  display: block;
+  font-family: 'Quicksand';
+  font-weight: bold;
+  font-size: 1.4em;
+  height: 35px;
+  line-height: 1.3;
+  width: 360px;
+  margin: 0;
+  padding: 3px 10px;
+  position: relative;
+  left: -16px;
+  top: 5px;
+  
+  color: #fff;
+  text-shadow: 0 1px 1px #333;
+	border-top: 1px solid #e5e9f7;
+  border-bottom: 1px solid #6c78a7;
+  background: -webkit-linear-gradient(#6c78a7, #e5e9f7); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#6c78a7, #e5e9f7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#6c78a7, #e5e9f7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#6c78a7, #e5e9f7); /* Standard syntax (must be last) */
+  border-radius: 2px 2px 0 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.ovrigt {
+  width: 300px;
+}
+
+.panel-default > .ovrigt-heading {
+  width: 310px;
+}
+
+.aktiviteter {
+  width: 225px;
+  padding: none;
+  
+}
+
+.panel-default > .aktiviteter-heading {
+  width: 235px;
+  
+  
+}
+.panel-width-240px {
+  width: 400px;
+}
+.panel-default > .panel-heading-250px {
+  width: 410px;
+}
+
+.profil-right {
+  margin-right: 0px;
+  margin-left: auto;
+
+  text-align: center;
+}
+
+.margin-left-15px {
+  margin-left: 15px;
+}
+.margin-left-profile {
+  margin-left: 10px;
+}
+.margin-left-genre,
+.margin-left-guide {
+  margin-left: -30px;
+}
+.margin-right-15px{
+  margin-right: 15px;
+  margin-left: auto;
+}
+.margin-right-profile{
+  margin-right: 10px;
+  margin-left: auto;
+}
+.margin-guide-review-ads {
+	margin-right: -15px;
+	border: none;
+
+}
+/* forms */
+.form-control {
+  width: 220px;
+}
+
+/* nytt grid-system */
+
+.index-left {
+  background-color: yellow;
+}
+.wrapper {
+  .make-row();
+}
+.content-left {
+  .make-lg-column(4);
+width: 30%;
+/* background-color: red; */
+}
+.content-center {
+  .make-lg-column(4);
+width: 30%;
+/*  background-color: green; */
+
+
+}
+.content-right {
+  .make-lg-column(4);
+width: 30%;
+/*  background-color: yellow; */
+
+/*  .make-lg-column-offset(1); */
+}
+.views-left > li > a,
+.views-left > li > span {
+color: Black;
+  list-style: none;
+  float: left;
+  margin-right: 5px;
+  margin-left: 0px;
+	
+}
+
+.views-right > li > a,
+.views-right > li > span {
+color: Black;
+  list-style: none;
+  float: right;
+  margin-right: 5px;
+  margin-left: 0px;
+	
+}
+
+.panel-default > .panel-heading-560px {
+  width: 560px;
+}
+
+.panel-width-550px {
+  width: 550px;
+}
+
+/* unvisited link */
+a:link .login-text {
+    color: #fff;
+}
+/* visited link */
+a:visited .login-text {
+    color: #fff;
+}
+
+/* mouse over link */
+a:hover .login-text {
+    color: #fff;
+}
+
+/* selected link */
+a:active {
+    color: #fff;
+}
+
+/* placering av genre dropdown menu */
+.dropdown:hover .dropdown-menu {
+    display: block;
+	border-top: none;
+	padding-top: 0;
+
+ }
+ 
+.drop-margin-75px{
+	margin-right: 75px;
+} 
+
+.drop-margin-0{
+	margin-right: 0;
+	margin-left: 10px;
+} 
+
+
+.dropdown-top-margin {
+	margin-top: 51px;
+}
+#searchgenrer
+{
+  margin-left: 25px;
+  font-family: 'Quicksand';
+}
+#searchgenre
+{
+  width: 300px;
+
+}
+
+.dropdown
+ li > a:link, a:hover, a:active, a:visited {
+color: #fff;
+}
+/* dropdown meny aktiva lankar farg mm */
+.dropdown-menu > li > a,
+.dropdown-menu2 > li > a {
+
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #e48900;						/* satter besokta lankor till fargen orange */
+  white-space: nowrap;
+}
+
+/* dropdown menu bakgrundsfarg och lankfarg */
+.dropdown-menu > li > a:active,
+.dropdown-menu2 > li > a:active,
+.dropdown-menu > li > a:hover,
+.dropdown-menu2 > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu2 > li > a:focus,
+.dropdown-menu > li > a:visited,
+.dropdown-menu2 > li > a:visited {
+  color: #fff;
+  text-decoration: none;
+  background: -webkit-linear-gradient(90deg, #e5e9f7, #6c78a7); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(90deg, #e5e9f7, #6c78a7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(90deg, #e5e9f7, #6c78a7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(90deg, #e5e9f7, #6c78a7); /* Standard syntax (must be last) */
+}
+
+/* hover farg på dropdown meny nar den ar aktiv */
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:visited {
+  color: #fff;
+  text-decoration: none;
+  background-color: #6c78a7;
+  outline: 0;
+}
+
+/* farg och stil pa genre header */
+.dropdown-header {
+	background-color: #e5e9f7;
+	color: #464e6b;
+	outline: 1px solid #e5e9f7;
+}
+
+@dropdown-link-hover-bg {
+background: -webkit-linear-gradient(90deg, #e5e9f7, #6c78a7); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, #e5e9f7, #6c78a7); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, #e5e9f7, #6c78a7); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(90deg, #e5e9f7, #6c78a7); /* Standard syntax (must be last) */
+}
+
+/* transparent gradient */
+.transparent-gradient {
+	background: -webkit-linear-gradient(left, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* Standard syntax (must be last) */
+}
+.panel-genre {
+    width: 750px;
+	min-height: 100px;
+	height: auto;
+ }
+.panel-default > .panel-heading-genre {
+	width: 760px;
+}
+
+.panel-guide-review {
+    width: 887px;
+	min-height: 100px;
+	height: auto;
+ }
+.panel-default > .panel-heading-guide-review {
+	width: 897px;
+}
+
+.content-genre {
+	.make-lg-column(8);
+	width: 70%;
+
+}
+/* listed bullet lankfarger i genre meny */
+li > a:link,
+li > a:hover,
+li > a:focus,
+li > a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+/* unvisited link */
+
+btn > a:link,
+btn > a:hover,
+btn > a:active,
+btn > a:visited  {
+    color: #fff;
+	text-decoration: none;
+}
+
+/* visited link */
+
+.login-text {
+	color: #fff;
+}
+.login-text,
+btn,
+li.login-text > a:link,
+li.login-text > a:active,
+li.login-text > a:hover,
+li.login-text > a:visited {
+    color: #fff;
+}
+
+a:link,
+a:active,
+a:visited {
+    color: #667094;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+
+}
+
+
+a:link .login,
+a:active .login,
+a:visited  .login,
+a:hover  .login {
+    color: #fff;
+	text-decoration: none;
+}
+
+
+
+/* satter margin vaenster till minus 15px i paa genre sidan */
+.margin-genre {
+	margin-left: -15px;
+}
+.margin-skriva {
+	margin-left: -11px;
+}
+
+.skriva {
+border: none;
+padding-left: 15px;
+padding-right: 15px;
+}
+
+.comments {
+	margin-left: 15px;
+	height: auto;
+
+	}
+.showcomments {
+	min-height: 200px;
+	color: green;
+	height: auto;
+}
+
+.content-genre {
+	.make-lg-column(8);
+	width: 70%;
+
+}
+
+.search {
+	border: 1px solid #9f9f9f;
+	border-radius: 4px;
+	height: 30px;
+	
+	
+}
+p .success {
+background-color: green;
+color: white;
+}
+
+p .danger {
+background-color: red;
+color: white;
+}
+.guestbook
+{
+  
+  overflow-y: scroll;
+  height: 400px;
+  background-color: white;
+  border-radius: 15px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+ #send
+ {
+  margin-top: 20px;
+  width: 400px;
+ }
+#updateform
+{
+ margin-top: 130px;
+}
+#updateformother
+{
+ margin-top: 160px;
+}
+.height-290px {
+	min-height: 290px;
+	height: auto;
+}
+.text-yellow {
+	background-color: #e48900;
+	border-radius: 3px;
+	color: White;
+	font-size: 12px;
+	width: 220px;
+	padding-left: 5px;
+	padding-right: 5px;
+	
+}
+
+.text-red {
+	background-color: #cc3300;
+	border-radius: 3px;
+	color: White;
+	width: 220px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 12px;
+	
+}
+
+.text-green {
+	background-color: Green;
+	border-radius: 3px;
+	color: White;
+	width: 220px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 12px;
+	
+}
+.height-410px {
+	min-height: 410px;
+	height: auto;
+}
+a.deletelink
+{
+  color: red;
+}
+.admin-profile
+{
+  min-height: 450px;
+  height: auto;
+  background-color: white;
+  
+}
+
+.btn-default-span {
+color: Red;
+  background-color: #fff;
+  border: none;
+  margin-left: 2px;
+  margin-right: 0px;
+  width: auto;
+  height: auto;
+}
+
+.btn-default-span:hover,
+.btn-default-span:focus,
+.btn-default-span.focus,
+.btn-default-span:active,
+.btn-default-span.active,
+.open > .dropdown-toggle.btn-default-span {
+	color: Red;
+	background-color: White;
+	border: none;
+	margin-left: 2px;
+	margin-right: 0px;
+
+}
+
+.btn-sm-span,
+.btn-group-sm-span > .btn {
+  padding: 3px 3px 3px 3px;
+  font-size: 12px;
+
+  border-radius: none;
+  margin-left: 2px;
+  display: inline-block;
+	margin-right: 0px;
+	float: right;
+	width: auto;
+	height: auto;
+	color: #000;
+}
+/* lagger span ikoner centreret m text pa baseline */
+.middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+.sendwhen
+{
+  font-size: 10px;
+}
+.latestmessage
+ {
+  overflow-y: auto;
+  height: 100px;
+ }
+ .friends
+ {
+  overflow-y: auto;
+  height: 100px;
+ }
+ 
+ 
+ .akt-margin {
+	margin-top: 3px;
+	padding-top: 3px;
+	margin-left: 0px;
+	margin-right: 0px;
+	
+ }
+ .settings
+ {
+  background-color: white;
+  min-height: 400px;
+  height: auto;
+  padding-top: 10px;
+  padding-left: 20px;
+ }
+ 
+ /* sokfunktion animation */
+.soek_anim {												/* den animation som täcker sokrutan */
+background-color: #fff;
+height:30px;
+width:250px;
+position:absolute;
+margin-right:0px;
+margin-left: 0px;
+border:none;
+margin-top: 23px;
+margin-bottom: 0;
+float: right;
+}
+
+.form-control-search {
+  width: 250px;
+  height: 30px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 23px;
+  margin-bottom: 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  
+}
+
+.soek_button {
+width: 36px;
+height: 36px;
+background-color: none;
+  background-image: url("../images/search2.png");
+  background-position: center center;
+  background-size: 36px auto; 
+  background-repeat: no-repeat;
+
+  border:none;
+margin-left: 20px;
+margin-right: 0px;
+margin-bottom: 0;
+margin-top: 20px;
+float: right;
+}
+.search-content{
+	margin-left: -30px;
+	margin-right: auto;
+}
+.margin-top-10px {
+	margin-top: 10px;
+}
+
+.margin-top-30px {
+	margin-top: 30px;
+}
+.margin-right-20px {
+	margin-right: 20px;
+}
+
+.text-size-8px {
+	font-size: 8px;
+}
+.margin-left-40px {
+margin-left:40px;
+}
+.profil_bild > img{
+width: 85px;
+height: auto;
+border-top-left-radius: 60px;
+border-top-right-radius: 60px;
+}
+span .pen {
+margin-bottom: 30px;
+}
+
+.badge-danger {
+  background-color: #d43f3a;
+}
+
+.badge-warning {
+  background-color: #d58512;
+}
+
+.badge-success {
+  background-color: #398439;
+}
+
+.badge-info {
+  background-color: #269abc;
+}
+
+.badge-inverse {
+  background-color: #333333;
+}
+
+/* image icons in the footer */
+.img.footer-icons {
+    height: 30px;
+    margin-right: 20px;
+    margin-top: 35px;
+    margin-left: 0;
+	border-radius: 3px;
+	display: inline;
+	float: left;
+}
+a.facebook:hover, a.facebook:active {
+	background-image: url("images/fb2.png") top left no-repeat;
+}
+
+.margin-left-minus{
+margin-left: -35px;
+}
