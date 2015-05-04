@@ -213,21 +213,19 @@ $footer = <<<END
 				</div>
 				
 				<div class="col-md-4 pull-left quicksand text-bold text-16px">
-					GAMETEAM
-					<p class="droid text-normal">
-					<a href="om_gameteam.php">Vem vi är</a><br>
-					<a href="#">Robert</a><br>
-					<a href="#">Dorte</a><br>
-					<a href="#">Maria</a><br>
-					<a href="#">Malena</a>
-					</p>
-				</div>
-				
-				<div class="col-md-4 pull-left quicksand text-bold text-16px">
 					KONTAKT
 					<p class="droid text-normal">
 					<a href="#">Annoncera</a><br>
 					<a href="#">Mejl</a>
+					</p>
+				</div>
+				
+				<div class="col-md-4 pull-left quicksand text-bold text-16px">
+					SOCIALA MEDIER
+					<p class="droid text-normal">
+					Twitter<br>
+					Facebook<br>
+					Annat
 					</p>
 				</div>	
 						
@@ -240,11 +238,14 @@ $footer = <<<END
 			<!-- Meny right row2 -->
 			
 			<div class="col-md-3 quicksand text-bold text-16px pull-right margin-top-10px">
-				SOCIALA MEDIER
+				GAMETEAM
 				<p class="droid text-normal">
-				Twitter<br>
-				Facebook<br>
-				Annat
+				<a href="om_gameteam.php">Vem vi är</a><br>
+				<a href="#">Robert</a><br>
+				<a href="#">Dorte</a><br>
+				<a href="#">Maria</a><br>
+				<a href="#">Malena</a>
+				</p>				
 			</p>
 				
 			
