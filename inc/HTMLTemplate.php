@@ -171,7 +171,7 @@ $(document).ready(function(){
 					
 					
 				
-					<a href="index.php"><div class="class="header_ikoner header_home pull-left"></div></a>
+					<li><a href="index.php"><div class="header_ikoner header_home pull-right"></div></a></li>
 					<li><a href="guide_review.php"><img src="images/pen_meny.png" class="img header-icons pull-right" title="Skriv recension/guide"></a></li>
 					
 					<div class="dropdown">
