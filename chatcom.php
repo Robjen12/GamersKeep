@@ -8,18 +8,10 @@ $keeperid = $_SESSION['keeperid'];
 $keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
 $guestbook = "";
 
+$query = <<<END
 
-if(!empty($_POST))
-{
-
-	if(isset($_POST['friendmessage']))
-	{
-		$reply = $_POST['reply'];
-
-		$query = <<<END
-
-			SELECT * FROM chatcom 
-			WHERE accept = 1;
+		SELECT * FROM chatcom 
+		WHERE accept = 1;
 END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
@@ -31,7 +23,18 @@ END;
 
 				$getchatcomid = $row->chatcomid;
 
+			}
+		}
 
+
+if(!empty($_POST))
+{
+
+	if(isset($_POST['friendmessage']))
+	{
+		$reply = $_POST['reply'];
+
+	
 				$query = <<<END
 
 			INSERT INTO replys (reply, timestamp, flag)
@@ -49,12 +52,6 @@ END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 	
-		
-
-
-			}
-			
-		}
 
 		$query = <<<END
 			SELECT *
@@ -96,7 +93,6 @@ END;
 
 if(!empty($_GET))
 {
-	$chatcomid = isset($_GET['chatcomid']) ? $_GET['chatcomid'] : "";
 
 	$query = <<<END
 
@@ -108,29 +104,29 @@ if(!empty($_GET))
 			ON repchatcom.keeperid = chatcom.keeperid
 			JOIN user
 			ON repchatcom.keeperid = user.keeperid
-			WHERE repchatcom.chatcomid = '{$chatcomid}'
+			WHERE repchatcom.chatcomid = '{$getchatcomid}'
 			GROUP BY timestamp ASC;
 END;
-$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+			$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 
-if($res->num_rows > 0)
-{
-	while($row = $res->fetch_object())
-	{
-		
-		$keepername = $row->keepername;
-		$replys = $row->reply;
-		$date 	= strtotime($row->timestamp);
-		$date	= date("d M Y H:i", $date);
+			if($res->num_rows > 0)
+			{
+				while($row = $res->fetch_object())
+				{
+					
+					$keepername = $row->keepername;
+					$replys = $row->reply;
+					$date 	= strtotime($row->timestamp);
+					$date	= date("d M Y H:i", $date);
 
-		$guestbook .= <<<END
-		<b>{$keepername}</b><br>
-		{$replys}<br>
-		<p class="sendwhen">Skickat den: {$date}<br></p>
+					$guestbook .= <<<END
+					<b>{$keepername}</b><br>
+					{$replys}<br>
+					<p class="sendwhen">Skickat den: {$date}<br></p>
 END;
-	}
-}
+				}
+			}
 
 }	
 
