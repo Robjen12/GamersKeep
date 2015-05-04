@@ -333,7 +333,9 @@ END;
 $query = <<<END
 
 			SELECT * FROM chatcom 
-			WHERE accept = 1;
+			WHERE accept = 1
+			AND chatcom.keeperid = '{$keeperid}'
+			OR chatcom.keeperid2 = '{$keeperid}';
 END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
@@ -342,12 +344,14 @@ END;
 		{
 			if($row = $res->fetch_object())
 			{
-
+				$keeperv1 = $row->keeperid;
+				$keeperv2 = $row->keeperid;
 				$getchatcomid = $row->chatcomid;
-
 
 			}
 		}	
+
+
 $query = <<<END
 		SELECT *
 			   FROM repchatcom
@@ -357,7 +361,7 @@ $query = <<<END
 			   ON repchatcom.chatcomid = chatcom.chatcomid
 			   JOIN user
 			   ON repchatcom.keeperid = user.keeperid
-			   WHERE repchatcom.chatcomid = chatcom.chatcomid
+			   WHERE repchatcom.chatcomid = '{$getchatcomid}'
 			   AND user.keeperid != '{$keeperid}';	
 END;
 
@@ -369,7 +373,6 @@ END;
 			while($row = $res->fetch_object())
 			{
 
-				
 				$keepername2 = $row->keepername;
 				$chatcomid = $row->chatcomid;
 				$keeper = $row->keeperid;
@@ -396,15 +399,14 @@ END;
 
 $query = <<<END
 
-	SELECT * FROM chatcom
-	JOIN user
-	ON chatcom.keeperid = user.keeperid
-	OR chatcom.keeperid2 = user.keeperid
-	WHERE accept = 1
+SELECT * 
+	FROM chatcom 
+	JOIN user 
+	ON chatcom.keeperid = user.keeperid 
+	WHERE accept = 1 
     AND user.keeperid != '{$keeperid}'
-    GROUP BY user.keepername
+    AND chatcom.chatcomid = '{$getchatcomid}';
 	
-
 END;
 	
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
@@ -417,7 +419,7 @@ END;
 				$keeperid = $row->keeperid;
 				$friendskeepername = $row->keepername;
 
-				$yourfriends .= <<<END
+				$yourfriends = <<<END
 
 					<a href="profile.php?keeperid={$keeperid}">{$friendskeepername}</a><br>
 END;
