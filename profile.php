@@ -347,18 +347,16 @@ END;
 			}
 		}	
 $query = <<<END
-			SELECT *
-			FROM chatcom
-			JOIN repchatcom
-			ON repchatcom.keeperid = chatcom.keeperid
-            OR repchatcom.keeperid2 = chatcom.keeperid2
-			JOIN user
-			ON repchatcom.keeperid = user.keeperid
-            OR repchatcom.keeperid2 = user.keeperid
-			WHERE repchatcom.chatcomid = chatcom.chatcomid
-			AND user.keeperid != '{$keeperid}';
-
-			
+		SELECT *
+			   FROM repchatcom
+			   JOIN replys
+			   ON replys.replyid = repchatcom.replyid
+			   JOIN chatcom
+			   ON repchatcom.chatcomid = chatcom.chatcomid
+			   JOIN user
+			   ON repchatcom.keeperid = user.keeperid
+			   WHERE repchatcom.chatcomid = chatcom.chatcomid
+			   AND user.keeperid != '{$keeperid}';	
 END;
 
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 

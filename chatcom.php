@@ -68,39 +68,7 @@ END;
 		}
 	}
 
-		$query = <<<END
-			SELECT *
-			FROM repchatcom
-			JOIN replys
-			ON replys.replyid = repchatcom.replyid
-			JOIN chatcom
-			ON repchatcom.keeperid = chatcom.keeperid
-			JOIN user
-			ON repchatcom.keeperid = user.keeperid
-			WHERE repchatcom.chatcomid = '{$getchatcomid}'
-			GROUP BY timestamp ASC;
-
-END;
-		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-		        " : " . $mysqli->error);
-
-		if($res->num_rows > 0)
-		{
-			while($row = $res->fetch_object())
-			{
-				
-				$keepername = $row->keepername;
-				$replys = $row->reply;
-				$date 	= strtotime($row->timestamp);
-				$date	= date("d M Y H:i", $date);
-
-				$guestbook .= <<<END
-				<b>{$keepername}</b><br>
-				{$replys}<br>
-				<p class="sendwhen">Skickat den: {$date}<br></p>
-END;
-			}
-		}
+		
 }
 
 
@@ -110,15 +78,15 @@ if(!empty($_GET))
 	$query = <<<END
 
 	SELECT *
-			FROM repchatcom
-			JOIN replys
-			ON replys.replyid = repchatcom.replyid
-			JOIN chatcom
-			ON repchatcom.keeperid = chatcom.keeperid
-			JOIN user
-			ON repchatcom.keeperid = user.keeperid
-			WHERE repchatcom.chatcomid = '{$getchatcomid}'
-			GROUP BY timestamp ASC;
+			   FROM repchatcom
+			   JOIN replys
+			   ON replys.replyid = repchatcom.replyid
+			   JOIN chatcom
+			   ON repchatcom.chatcomid = chatcom.chatcomid
+			   JOIN user
+			   ON repchatcom.keeperid = user.keeperid
+			   WHERE chatcom.chatcomid = '{$getchatcomid}'
+			   GROUP BY timestamp ASC
 END;
 			$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
