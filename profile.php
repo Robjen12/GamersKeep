@@ -357,6 +357,7 @@ $query = <<<END
             OR repchatcom.keeperid2 = user.keeperid
 			WHERE repchatcom.chatcomid = chatcom.chatcomid
 			AND user.keeperid != '{$keeperid}';
+
 			
 END;
 
@@ -371,12 +372,21 @@ END;
 				
 				$keepername2 = $row->keepername;
 				$chatcomid = $row->chatcomid;
+				$keeper = $row->keeperid;
 				$keeper2 = $row->keeperid2;
 
-				
+				if($keeperid == $keeper)
+				{
 					$chatmess = <<<END
 					<a href="chatcom.php?keeperid={$keeper2}">{$keepername2}</a><br>
 END;
+				}
+				else
+				{
+					$chatmess = <<<END
+					<a href="chatcom.php?keeperid={$keeper}">{$keepername2}</a><br>
+END;
+				}
 							
 			}
 		
