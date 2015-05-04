@@ -22,20 +22,18 @@
 {
   margin-top: 200px;
 }
+
 /*
-#header{
-	background-color: black;
-	height: 80px;
-}
-*/
 #footer{
 
 	min-height: 200px;
 }
+
 #news{
 	background-color: white;
 	height: 400px;
 }
+*/
 .toplistname,
 .latestlistname,
 
@@ -102,7 +100,7 @@ body {
 	overflow-y: auto;          /* Show vertical overflow */
 	background-color: brown;    /* Set background color to brown */
 	background: url("../images/bg.jpg") no-repeat center center fixed;	/* bakgrundsbild */
-	background-size: 100%;
+	background-size: 100% 100%;
 }
 }
 #header {
@@ -154,12 +152,12 @@ border: none;
 }
 
 /* center column in the header */
-/*
+
 #header > .column-center {
     height: 60px;
 	border: none;
 }
-*/
+
 
 /* right column in the header */
 #header > .column-right {
@@ -187,7 +185,7 @@ border: none;
     border-color: transparent transparent transparent black;
     line-height: 0;
 }
-*/
+
 .top-to-bottom {
     border-width: auto;
 	border: repeat-x;
@@ -248,7 +246,7 @@ border: none;
 }
 /* footer */
 #footer {
-margin-top: 15px;
+
 height: 200px;
 margin-right: 0;
 margin-left:0;
@@ -586,10 +584,6 @@ display: block;
 
 }
 
-/* dortes andringar från dorte2 branch */
-
-
-
 .row {
   margin-right: 0px;
   margin-left: 0px;
@@ -836,9 +830,8 @@ width: 30%;
 .content-right {
   .make-lg-column(4);
 width: 30%;
-/*  background-color: yellow; */
 
-/*  .make-lg-column-offset(1); */
+.make-lg-column-offset(1);
 }
 .views-left > li > a,
 .views-left > li > span {

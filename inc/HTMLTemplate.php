@@ -99,26 +99,12 @@ $(document).ready(function(){
 			
 			<!-- Meny left with logo -->
 			<div class="col-md-6 column-left margin-right-zero">
-				<a href="index.php"><img src="images/logo-menu.png" class="img header-logo"></a>
-				<div class="pull-right">
-						
-
-				</div><!-- pull right -->
+				<a href="index.php"><img src="images/logo-menu.png" class="img header-logo"></a>			
 			</div><!-- col md 6 -->
-			
-			<!-- center -->
-			<div class="col-md-1 column-center pull-left margin-right-zero">
-			
-			
-								
-			</div><!-- col md 1 center -->
-			
+						
 			<!-- Meny right -->
 			<div class="col-md-5 column-right pull-right margin-right-zero nav nav-pills pull-right">
-			
-			
 				<ul>
-				
 					<div class="dropdown">
 				
 					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="menu" aria-expanded="true">
