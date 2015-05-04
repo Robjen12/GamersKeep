@@ -238,6 +238,8 @@ $footer = <<<END
 			<!-- Meny right row2 -->
 			
 			<div class="col-md-3 quicksand text-bold text-16px pull-right margin-top-10px">
+			
+			<img src="images/hh.png" class="pull-right margin-right-15px" width="125px">
 				GAMETEAM
 				<p class="droid text-normal">
 				<a href="om_gameteam.php">Vem vi är</a><br>
@@ -246,8 +248,6 @@ $footer = <<<END
 				<a href="#">Maria</a><br>
 				<a href="#">Malena</a>
 				</p>				
-			</p>
-				
 			
 			</div><!-- col md 3 sociala media -->
 			
