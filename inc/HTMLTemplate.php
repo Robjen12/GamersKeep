@@ -108,8 +108,21 @@ $(document).ready(function(){
 	$(".header_ikoner.header_profil").mouseout(function(){
         $(this).css("background-image", "url('images/profil2.png')");
     });
+	$(".header_ikoner.header_genrer").mouseover(function(){
+        $(this).css("background-image", "url('images/swords2.png')");
+	});
+	$(".header_ikoner.header_genrer").mouseout(function(){
+        $(this).css("background-image", "url('images/swords.png')");
+    });
+	$(".header_ikoner.header_home").mouseover(function(){
+        $(this).css("background-image", "url('images/home2.png')");
+	});
+	$(".header_ikoner.header_home").mouseout(function(){
+        $(this).css("background-image", "url('images/home.png')");
+    });
 });
 </script>
+
 
 	</head>
 	<body>
@@ -158,13 +171,13 @@ $(document).ready(function(){
 					
 					
 				
-					<li class="li-icons"><a href="index.php"><img src="images/home.png" class="img header-icons pull-right" title="Hem"></a></li>
+					<a href="index.php"><div class="class="header_ikoner header_home pull-left"></div></a>
 					<li><a href="guide_review.php"><img src="images/pen_meny.png" class="img header-icons pull-right" title="Skriv recension/guide"></a></li>
 					
 					<div class="dropdown">
 						
 		  				<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="menu"
-		  				 aria-expanded="true"><img src="images/swords.png" class="img header-icons pull-right" title="Genre">
+		  				 aria-expanded="true"><div class="header_ikoner header_genrer pull-right" alt="Genrer"></div>
 			  			</ul>
 				 							
 		  				<ul class="dropdown-menu drop-margin-75px pull-right dropdown-top-margin Droid bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">

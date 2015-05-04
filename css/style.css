@@ -1393,3 +1393,15 @@ background-image: url("../images/profil2.png");
 margin-left: 20px;
 margin-right: -9px;
 }
+
+.header_ikoner.header_genrer {
+background-image: url("../images/swords.png");
+margin-left: 18px;
+margin-right: 0;
+}
+
+.header_ikoner.header_home {
+background-image: url("../images/home.png");
+margin-left: 18px;
+margin-right: 0;
+}
