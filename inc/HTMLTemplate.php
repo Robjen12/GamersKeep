@@ -244,7 +244,7 @@ $footer = <<<END
 				<div class="col-md-6 pull-left margin-left-minus">
 								
 					<ul>
-					<a href="#"><li class="li-icons float-left facebook"><img src="images/fb1.png" class="img footer-icons"></li></a>
+					<li class="li-icons"><a href="#" class="facebook"><img src="images/fb1.png" class="img footer-icons"></li></a>
 					<li class="li-icons float-left"><img src="images/twitter1.png" class="img footer-icons"></li>
 					</ul>
 				
