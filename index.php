@@ -279,7 +279,7 @@ $content = <<<END
 							</div><!-- panel -->		  				
 
 		  				<!-- right column -->
-						<div class="content-right margin-right-25px pull-right">
+						<div class="content-right margin-right-15px pull-right">
 
 							<div class ="ads">
 
@@ -330,7 +330,7 @@ $content = <<<END
 							</div><!-- panel -->		  				
 
 		  				<!-- right column row 2 -->
-						<div class="content-right margin-right-25px pull-right">
+						<div class="content-right margin-right-15px pull-right">
 
 							<div class ="ads">
 

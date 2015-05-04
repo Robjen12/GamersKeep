@@ -633,12 +633,15 @@ p {
 .text-bold {
   font-weight: bold;
 }
-
+.text-normal {
+  font-weight: normal;
+}
 /* lankfarger genrellt satt till svart */
 
 /* unvisited link */
 a:link {
     color: #000;
+	text-decoration: underline;
 }
 /* visited link */
 a:visited {

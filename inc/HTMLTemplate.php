@@ -190,33 +190,33 @@ END;
 $footer = <<<END
 <div id="footer" class="footer_bg">
 			
-			<!-- Meny left with triangle to the right -->			
+			<!-- footer left with triangle to the right -->			
 			<div class="col-md-9 column-left height-20px">
 			
 			</div><!-- col md 9 column left -->			
 			
-			<!-- Meny right -->
+			<!-- footer right -->
 			<div class="col-md-3 column-right height-20px">
-			<p class="pull-right text-black text-10px margin-right-20px margin-top-10px">Copyright &copy; 2015 GameTeam</p>
+			
 			</div><!-- meny right -->
 			
-			<!-- Meny left row2 -->
+			<!-- footer left row2 -->
 			<div class="col-md-9 copyright text-black margin-top-10px pull-left">
 			
-				<div class="col-md-4 pull-left">
-					<address>
-					<strong>OM GAMETEAM</strong><br>
+				<div class="col-md-4 droid pull-left">
+					
+					<p class="quicksand text-bold">GAMETEAM</p>
 					<a href="om_gameteam.php">Vem vi är</a><br>
 					<a href="#">Robert</a><br>
 					<a href="#">Dorte</a><br>
-					<a href="#">Malena</a><br>
 					<a href="#">Maria</a><br>
-					</address>
-					
+					<a href="#">Mal</a><br>
+					</p>
+										
 				</div>
 				
 				<div class="col-md-4 pull-left">
-					<strong>OM GAMERSKEEP</strong>
+					<strong>GAMERSKEEP</strong>
 					<br>
 					<a href="#">Syfte</a><br>
 					<a href="#">Policy</a><br>
@@ -225,7 +225,7 @@ $footer = <<<END
 				</div>
 				
 				<div class="col-md-4 pull-left">
-					<strong>KONTAKT OSS</strong>
+					<strong>KONTAKT</strong>
 					<br>
 					<a href="#">Annoncera</a><br>
 					<a href="#">Mejl</a><br>
@@ -251,11 +251,11 @@ $footer = <<<END
 			
 			<div class="col-md-12 pull-left text-left bg-white margin-top-30px">
 			
-				<div class="col-md-3 pull-left">
+				<div class="col-md-11 pull-right">
 				
-					<img src="images/logo_gt.png" width="200px" class="pull-left">
+					<img src="images/logo_gt.png" width="200px" class="pull-right">
 					<br><br><br><br>
-					<p class="pull-left text-10px">Copyright &copy; 2015 GameTeam.</p>
+					<p class="pull-right text-10px">Copyright &copy; 2015 GameTeam.</p>
 				
 				</div><!-- col md 3 -->
 			
