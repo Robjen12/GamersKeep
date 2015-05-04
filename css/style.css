@@ -1357,30 +1357,15 @@ margin-bottom: 30px;
   background-color: #333333;
 }
 
-.profil_ikon {
-width: 36px;
-height: 36px;
-background-color: none;
-background-image: url("../images/profil2.png");
-background-position: top left;
-background-size: 36px 36px; 
-background-repeat: no-repeat;
-
-border:none;
-margin-left: 20px;
-margin-right: -9px;
-margin-bottom: 0;
-margin-top: 20px;
-float: right;
-}
-
 .header_ikoner {
 width: 36px;
 height: 36px;
 background-color: none;
 border:none;
 margin-bottom: 0;
-margin-top: 18px;
+margin-top: 20px;
+margin-left: 15px;
+margin-right: 0;
 float: right;
 visibility: visible;
 background-position: top left;
@@ -1390,18 +1375,17 @@ background-repeat: no-repeat;
 
 .header_ikoner.header_profil {
 background-image: url("../images/profil2.png");
-margin-left: 20px;
 margin-right: -9px;
 }
 
 .header_ikoner.header_genrer {
 background-image: url("../images/swords.png");
-margin-left: 18px;
-margin-right: 0;
 }
 
 .header_ikoner.header_home {
 background-image: url("../images/home.png");
-margin-left: 14px;
-margin-right: 0;
+}
+
+.header_ikoner.header_write {
+background-image: url("../images/pen_meny.png");
 }

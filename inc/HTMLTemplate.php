@@ -120,6 +120,12 @@ $(document).ready(function(){
 	$(".header_ikoner.header_home").mouseout(function(){
         $(this).css("background-image", "url('images/home.png')");
     });
+		$(".header_ikoner.header_write").mouseover(function(){
+        $(this).css("background-image", "url('images/pen_meny2.png')");
+	});
+	$(".header_ikoner.header_write").mouseout(function(){
+        $(this).css("background-image", "url('images/pen_meny.png')");
+    });
 });
 </script>
 
@@ -172,7 +178,7 @@ $(document).ready(function(){
 					
 				
 					<li><a href="index.php"><div class="header_ikoner header_home pull-right"></div></a></li>
-					<li><a href="guide_review.php"><img src="images/pen_meny.png" class="img header-icons pull-right" title="Skriv recension/guide"></a></li>
+					<li><a href="guide_review.php" alt="Skriv recension/guide"><div class="header_ikoner header_write pull-right"></div></a></li>
 					
 					<div class="dropdown">
 						
