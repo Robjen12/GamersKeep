@@ -403,9 +403,11 @@ SELECT *
 	FROM chatcom 
 	JOIN user 
 	ON chatcom.keeperid = user.keeperid 
+	OR chatcom.keeperid2 = user.keeperid
 	WHERE accept = 1 
     AND user.keeperid != '{$keeperid}'
-    AND chatcom.chatcomid = '{$getchatcomid}';
+    AND chatcom.chatcomid = '{$getchatcomid}'
+    GROUP BY user.keepername;
 	
 END;
 	
@@ -419,7 +421,7 @@ END;
 				$keeperid = $row->keeperid;
 				$friendskeepername = $row->keepername;
 
-				$yourfriends = <<<END
+				$yourfriends .= <<<END
 
 					<a href="profile.php?keeperid={$keeperid}">{$friendskeepername}</a><br>
 END;

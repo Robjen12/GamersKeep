@@ -7,6 +7,7 @@ include_once("inc/Connstring.php");
 $keeperid = $_SESSION['keeperid'];
 $keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
 $guestbook = "";
+$feedback = "";
 
 $query = <<<END
 
