@@ -1356,3 +1356,18 @@ margin-bottom: 30px;
 .badge-inverse {
   background-color: #333333;
 }
+
+/* image icons in the footer */
+.img.footer-icons {
+    height: 30px;
+    margin-right: 0px;
+    margin-top: 23px;
+    margin-left: 20px;
+	border-radius: 3px;
+	display: inline;
+	float: left;
+}
+
+.margin-left-zero{
+margin-left: 0;
+}

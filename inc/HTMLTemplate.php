@@ -127,7 +127,7 @@ $(document).ready(function(){
 			  		</ul>
 					
 					<ul class="dropdown-menu drop-margin-0 pull-right dropdown-top-margin Droid bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">
-			    			<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px"> {$_SESSION["keepername"]}{$adminText}</li>
+			    			<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px">{$_SESSION["keepername"]}{$adminText}</li>
 							
 							<li role="presentation pull-right"><a role="menuitem" tabindex="-1" href="profile.php"><span class="glyphicon glyphicon-user pull-right text-white" aria-hidden="true"></span>Profil</a> </li>
 							<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-education pull-right text-white" aria-hidden="true"></span>FAQ</a></li>
@@ -203,7 +203,7 @@ $footer = <<<END
 			<!-- footer left row2 -->
 			<div class="col-md-9 copyright margin-top-10px pull-left">
 			
-				<div class="col-md-4 pull-left quicksand text-bold text-16px">					
+				<div class="col-md-6 pull-left quicksand text-bold text-16px">					
 					GAMERSKEEP
 					<p class="droid text-normal">
 					<a href="#">Syfte</a><br>
@@ -212,26 +212,13 @@ $footer = <<<END
 					</p>										
 				</div>
 				
-				<div class="col-md-4 pull-left quicksand text-bold text-16px">
+				<div class="col-md-6 pull-left quicksand text-bold text-16px">
 					KONTAKT
 					<p class="droid text-normal">
 					<a href="#">Annoncera</a><br>
 					<a href="#">Mejl</a>
 					</p>
-				</div>
-				
-				<div class="col-md-4 pull-left quicksand text-bold text-16px">
-					SOCIALA MEDIER
-					<p class="droid text-normal">
-					Twitter<br>
-					Facebook<br>
-					Annat
-					</p>
-				</div>	
-						
-						
-			
-			
+				</div>		
 			
 			</div><!-- -->
 	
@@ -252,15 +239,23 @@ $footer = <<<END
 			</div><!-- col md 3 sociala media -->
 			
 			
-			<div class="col-md-12 pull-left text-left bg-white margin-top-30px">
+			<div class="col-md-12 pull-left text-left bg-white margin-top-30px margin-left-zero">
 			
-				<div class="col-md-11 pull-right">
+								
+					<ul>
+					<li class="li-icons"><img src="images/twitter1.png" class="img footer-icons"></li>
+					<li class="li-icons"><img src="images/fb1.png" class="img footer-icons"></li>
+					<li class="li-icons"><img src="images/twitter1.png" class="img footer-icons"></li>
+					</ul>						
+				
+				
+				<div class="col-md-6 pull-right">
 				
 					<img src="images/logo_gt.png" width="200px" class="pull-right">
 					<br><br><br><br>
 					<p class="pull-right text-10px">Copyright &copy; 2015 GameTeam.</p>
 				
-				</div><!-- col md 3 -->
+				</div><!-- col md 6 -->
 			
 			</div><!-- col md 12 -->
 			
