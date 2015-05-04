@@ -93,7 +93,7 @@ $(document).ready(function(){
 
 </script>
 
-<!-- ikonswap soek -->
+<!-- header ikoner -->
 <!-- http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_event_mouseover_mouseout -->
 <script>
 $(document).ready(function(){
@@ -103,21 +103,10 @@ $(document).ready(function(){
 	$(".soek_button").mouseout(function(){
         $(this).css("background-image", "url('images/search2.png')");
     });
-	$(".profil_ikon").mouseover(function(){
+	$(".header_ikoner.header_profil").mouseover(function(){
         $(this).css("background-image", "url('images/profil3.png')");
 	});
-	$(".profil_ikon").mouseout(function(){
-        $(this).css("background-image", "url('images/profil2.png')");
-    });
-});
-</script>
-
-<script>
-$(document).ready(function(){
-	$(".profil_ikon").mouseover(function(){
-        $(this).css("background-image", "url('images/profil3.png')");
-	});
-	$(".profil_ikon").mouseout(function(){
+	$(".header_ikoner.header_profil").mouseout(function(){
         $(this).css("background-image", "url('images/profil2.png')");
     });
 });
@@ -152,7 +141,7 @@ $(document).ready(function(){
 					<div class="dropdown">
 				
 					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="menu" aria-expanded="true">
-					<a href="profile.php"><img class="profil_ikon pull-right" alt="Profil"></a>
+					<a href="profile.php" alt="Profil"><div class="header_ikoner header_profil no-border pull-right"></div></a>
 					</li>
 			  		</ul>
 					

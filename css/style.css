@@ -1373,3 +1373,23 @@ margin-bottom: 0;
 margin-top: 20px;
 float: right;
 }
+
+.header_ikoner {
+width: 36px;
+height: 36px;
+background-color: none;
+border:none;
+margin-bottom: 0;
+margin-top: 18px;
+float: right;
+visibility: visible;
+background-position: top left;
+background-size: 36px 36px; 
+background-repeat: no-repeat;
+}
+
+.header_ikoner.header_profil {
+background-image: url("../images/profil2.png");
+margin-left: 20px;
+margin-right: -9px;
+}
