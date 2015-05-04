@@ -101,10 +101,7 @@ $(document).ready(function(){
 			<div class="col-md-6 column-left margin-right-zero">
 				<a href="index.php"><img src="images/logo-menu.png" class="img header-logo"></a>
 				<div class="pull-right">
-				
-					<p class="text-black">Inloggad som: {$_SESSION["keepername"]}{$adminText}</p>
-										
-							
+						
 
 				</div><!-- pull right -->
 			</div><!-- col md 6 -->
@@ -130,7 +127,7 @@ $(document).ready(function(){
 			  		</ul>
 					
 					<ul class="dropdown-menu drop-margin-0 pull-right dropdown-top-margin Droid bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">
-			    			<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px">Profil</li>
+			    			<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px"> {$_SESSION["keepername"]}{$adminText}</li>
 							
 							<li role="presentation pull-right"><a role="menuitem" tabindex="-1" href="profile.php"><span class="glyphicon glyphicon-user pull-right text-white" aria-hidden="true"></span>Profil</a> </li>
 							<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-education pull-right text-white" aria-hidden="true"></span>FAQ</a></li>
