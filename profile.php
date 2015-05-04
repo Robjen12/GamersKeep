@@ -21,6 +21,7 @@ $penbutton2 = "";
 $formabout = "";
 $formother = "";
 $profil_bild = "";
+$yourfriends = "";
 
 if($_SESSION['roletype'] == 1)
 {
@@ -202,6 +203,7 @@ END;
 
 		}
 	}
+
 	
 	$penbutton = <<<END
 	<a href="#"><img src="images/pen.png" width="30px" id="pen" class="pull-right" title="Redigera"></a>
@@ -392,6 +394,40 @@ END;
 	}
 
 
+$query = <<<END
+
+	SELECT * FROM chatcom
+	JOIN user
+	ON chatcom.keeperid = user.keeperid
+	OR chatcom.keeperid2 = user.keeperid
+	WHERE accept = 1
+    AND user.keeperid != '{$keeperid}'
+    GROUP BY user.keepername
+	
+
+END;
+	
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+
+		if($res->num_rows > 0)
+		{
+			while($row = $res->fetch_object())
+			{
+				$keeperid = $row->keeperid;
+				$friendskeepername = $row->keepername;
+
+				$yourfriends .= <<<END
+
+					<a href="profile.php?keeperid={$keeperid}">{$friendskeepername}</a><br>
+END;
+			}
+
+
+		}	
+
+
+
 }
 
 
@@ -434,8 +470,11 @@ $content = <<<END
 		  								<p class="text-left">
 											{$r} Recensioner <span class="badge badge-info pull-right">15</span><br>
 											{$g} Guider <span class="badge primary pull-right">7</span><br>
+
 											<div class="friends">
+
 												{$v} Vänner <span class="badge badge-warning pull-right">78</span><br>
+												{$yourfriends}
 											</div>
 									
 								
