@@ -117,7 +117,7 @@ $content = <<<END
 
 					
 				<!-- right column -->
-						<div class="content-right margin-right-25px pull-right">
+						<div class="col-md-3 margin-right-search pull-right">
 
 							<div class ="ads">
 

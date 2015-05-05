@@ -802,7 +802,7 @@ a.text-primary:hover {
   margin-right: 15px;
   margin-left: auto;
 }
-.margin-right-profile{
+.margin-right-profile {
   margin-right: 10px;
   margin-left: auto;
 }
@@ -1388,4 +1388,9 @@ background-image: url("../images/home.png");
 
 .header_ikoner.header_write {
 background-image: url("../images/pen_meny.png");
+}
+
+.margin-right-search {
+  margin-right: 0;
+  margin-left: auto;
 }
