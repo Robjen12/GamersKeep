@@ -18,14 +18,27 @@ $content = <<<END
 
 			<div class="panel-heading panel-heading-560px">Inställningar</div>
 			
-				<div class="panel-body height-410px">
+				<div class="panel-body height-410px pull-left">
 				
 					<form action="upload.php" method="post" enctype="multipart/form-data">
 					<h4 class="quicksand text-bold">Ladda upp profilbild</h4>
 						<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-						<input name="userfile" type="file" id="userfile"> <br>
-						<input name="upload" type="submit" class="box" id="upload" value="Ersätt befintlig profilbild med denna bild">
-						<button type="reset" value="Reset">kryss</button>
+						<input name="userfile" type="file" id="userfile">
+						<br>
+						
+						
+							<button class="btn-sm-span pull-left margin-right-span-10px" input name="upload" type="submit" id="upload" value="">
+								<span class="glyphicon glyphicon-ok text-success pull-right" aria-hidden="true"></span>
+							</button>
+							<button class="btn-sm-span pull-left" input name="upload" type="reset" id="upload" value="">
+								<span class="glyphicon glyphicon-remove text-danger pull-right" aria-hidden="true">
+							</span></button>
+						
+						
+						<div class="col-md-11 pull-left">
+							
+						</div>
+						
 					</form><br><br>
 					
 					<h4 class="quicksand text-bold">Ta bort kontot</h4>
