@@ -109,8 +109,6 @@ $content = <<<END
 						{$article}
 						{$feedback}
 
-						<button>Tillbaka</button>
-
   					</div><!-- panel body -->
 
 				</div><!-- panel heading -->

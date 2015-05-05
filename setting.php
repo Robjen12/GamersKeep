@@ -7,21 +7,48 @@ $keeperid = $_SESSION['keeperid'];
 
 $content = <<<END
 
-	<div class="row">
-		<div class="col-md-6 margin-top-100">
-			<div class="settings">
-			<h2>Inställningar</h2>
-				<form action="upload.php" method="post" enctype="multipart/form-data">
-				<h4><b>Ladda upp profilbild<b></h4>
-					<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-					<input name="userfile" type="file" id="userfile"> <br>
-					<input name="upload" type="submit" class="box" id="upload" value="Spara bild">
-				</form><br><br>
-			<h4><b>Ta bort kontot<b></h4>
-			<button><a href="delete.php?keeperid={$keeperid}">Ta bort kontot</a></button>
-			</div>
-		</div>
 
+
+	<div class="row margin-top-100">
+		
+		<div class="col-md-2 col-sm-2">
+		</div>
+		
+		<div class="col-md-6 col-sm-6 margin-top-100 setting panel-width-550px panel panel-default">
+
+			<div class="panel-heading panel-heading-560px">Inställningar</div>
+			
+				<div class="panel-body height-410px">
+				
+					<form action="upload.php" method="post" enctype="multipart/form-data">
+					<h4 class="quicksand text-bold">Ladda upp profilbild</h4>
+						<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+						<input name="userfile" type="file" id="userfile"> <br>
+						<input name="upload" type="submit" class="box" id="upload" value="Ersätt befintlig profilbild med denna bild">
+						<button type="reset" value="Reset">kryss</button>
+					</form><br><br>
+					
+					<h4 class="quicksand text-bold">Ta bort kontot</h4>
+					<p>Önskar du inte längre delta i GamersKeep, kan du ta bort din profil vid att klicka på knappen nedan.
+					Tänk på att all din information raderas om du tar bort din profil, även alla dina inlägg här på GamersKeep.
+					</p>
+					<a class="login" href="delete.php?keeperid={$keeperid}"><button class="btn btn-danger">Ta bort din profil</button></a>
+				</div><!-- panel body -->
+
+			</div><!-- panel heading -->
+
+					
+				<!-- right column -->
+						<div class="col-md-3 margin-right-search pull-right">
+
+							<div class ="ads">
+
+								<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
+
+							</div><!-- ads -->
+				</div><!-- col md 3 -->
+				</div><!-- col md 6 -->
+		</div>
 	</div>
 END;
 
