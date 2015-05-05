@@ -60,7 +60,7 @@ $content = <<<END
 					<div class="profil_bild pull-left">
 						{$profil_bild}
 					</div>
-					<br><br><br><br><br><br><br><br>
+					<br><br><br><br><br><br><br>
 					<div class="pull-left text-bold">
 						{$keepername}
 					</div>
