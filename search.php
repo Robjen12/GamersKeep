@@ -63,12 +63,12 @@ END;
 		$feedback = "<p class=\"text-yellow\">Det finns ingen i databasen med det användarnamnet.</p>";
 	}
 }
-if(isset($_GET['searchgenre']))
+if(isset($_GET['search']))
 {
 
 	$query = <<<END
 		SELECT * FROM guidereviewinfo
-		WHERE title LIKE '%{$_GET['searchgenre']}%';
+		WHERE title LIKE '%{$_GET['search']}%';
 END;
 	$result = $mysqli->query($query) or die();
 
@@ -88,7 +88,7 @@ END;
 	}
 	else
 	{
-		$feedback = "<p class=\"text-yellow\">Det finns ingen artikel i databasen med det namnet.</p>";
+		$feedback .= "<p class=\"text-yellow\">Det finns ingen artikel i databasen med det namnet.</p>";
 	}
 }
 $content = <<<END
