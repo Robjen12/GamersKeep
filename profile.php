@@ -65,22 +65,22 @@ END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 	  " : " . $mysqli->error);
 
-	if($res->num_rows > 0)
+		if($res->num_rows == 0)
 	{
-		if($row = $res->fetch_object())
-		{
-			$link = $row->link;
-
-			if(file_exists($link))
-			{
 				$profil_bild = <<<END
-			<img class="profil_bild" src="{$link}">	
+			<img src="images/profil_bild.png">	
 END;
 			}
-			else
-			{
-			$profil_bild = <<<END
-			<img src="images/profil_bild.png">
+			else if($res->num_rows > 0)
+				{
+					if($row = $res->fetch_object())
+					{
+						$link = $row->link;
+
+						if(file_exists($link))
+						{
+							$profil_bild = <<<END
+						<img src="{$link}">
 END;
 			}
 	

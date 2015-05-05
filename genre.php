@@ -11,6 +11,8 @@ $title = "";
 $timestamp = "";
 $comments = "";
 $commmentkeepername = "";
+$keepername = "";
+$keeperid = "";
 	$query = <<<END
 
 		INSERT INTO userclick (grid, keeperid)
@@ -111,24 +113,28 @@ $content = <<<END
 
 		<div class="wrapper margin-top-100">
 			<div class="row">
+			
 				<div class="content-genre col-md-8 margin-genre pull-left">
 						<div class="grinfo">
 							<div class="panel panel-default panel-genre pull-left">
-								<div class="panel-heading panel-heading-genre quicksand">{$title}
-								<li class="views">{$showgrade}</li>
+								<div class="panel-heading panel-heading-genre quicksand">
+									{$title}
+									<li class="views">{$showgrade}</li>
 								</div><!-- panel heading -->
 								</br>
 								
 								<div class="panel-body">								
 									
-									Skriven av: <a href="profile.php?keeperid={$keeperid}">{$keepername}</a> <!-- flagga --><a href="genre.php?grid={$grid}" class="flag" alt="Markera stötande innehåll">
+									Skriven av: <a href="profile.php?keeperid={$keeperid}">{$keepername}</a>
+									<!-- flagga --><a href="genre.php?grid={$grid}" class="flag" alt="Markera stötande innehåll">
 									<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a>
 									</br>
-									
+																	
+									Publicerad: {$timestamp}<br><br>
+									{$text}<br>	
+								</div><!-- panel body -->
 								
-								Publicerad: {$timestamp}<br><br>
-								{$text}<br>	
-							</div>
+																
 							<div class="comments">
 								<form action="genre.php?grid={$grid}" method="post" class="quicksand text-bold">
 									<h3>Kommentera</h3>
@@ -140,7 +146,12 @@ $content = <<<END
 									</button>
 									</br></br>
 								</form>
-							</div>
+
+								
+								</div><!-- comments -->
+							
+						
+						
 						</div>
 							
 							
@@ -157,9 +168,13 @@ $content = <<<END
 									
 								
 								</div>
-							</div>
+							</div><!-- show comments -->
+							
+							
 						</div>
+
 				</div>
+				
 			</div>
 		</div>
 	<script>
