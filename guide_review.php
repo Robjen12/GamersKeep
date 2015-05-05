@@ -136,7 +136,7 @@ $content = <<<END
 										<div class="panel-heading panel-heading-guide-review">Skriva recension eller guide
 										</div><!-- panel heading -->
 						
-										<div class="panel body panel-guide-review margin-skriva skriva">
+										<div class="panel body panel-guide-review margin-skriva skriva img guide_review">
 										<label for="title"><h3 class="quicksand">Titel</h3></label>
 										<br>
 										<input type="text" class="form-control" id="title" name="title" value="" placeholder="Ange titeln"></br></br>
@@ -146,7 +146,7 @@ $content = <<<END
 										<label for="genretype">Genre</label><br>
 										{$dropdown}<br><br>
 										<label for="information">Innehållet:</label>
-										<textarea id="nicEdit" name="nicEdit" cols="80" rows="15"></textarea></br>
+										<textarea id="nicEdit" name="nicEdit" cols="80" rows="15" class="img guide_review"></textarea></br>
 										<label for="grade" id="gradescale">Betyg (1-5)</label></br>
 										<input type="number" class="text-black" id="grade" name="grade" min="1" max="5" value="1">
 										<button type="submit" id="publish" name="publish_guide_review" value="Publicera">Publicera innehållet</button><br><br>

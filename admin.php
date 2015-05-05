@@ -23,8 +23,15 @@ END;
 			$title = utf8_decode(htmlspecialchars($row->title));
 
 			$gr_flag .= <<<END
-			<a href="genre.php?grid={$grid}">{$title}</a><button class="delete"><a href="delete.php?grid={$grid}">x</a></button>
-			<button class="admit"><a href="admin.php?grid={$grid}">V</a></button><br><br>
+			<a href="genre.php?grid={$grid}">{$title}</a>
+			
+			<button class="btn-sm-span delete"><a href="delete.php?grid={$grid}">
+				<span class="glyphicon glyphicon-remove text-danger pull-right" aria-hidden="true"></span></a>
+			</button>
+			
+			<button class="btn-sm-span admit">
+				<a href="admin.php?grid={$grid}"><span class="glyphicon glyphicon-ok text-success pull-right" aria-hidden="true"></span></a>
+			</button><br><br>
 END;
 		}
 	}
@@ -43,10 +50,14 @@ END;
 			
 			<div class="panel-heading panel-heading-guide-review">
 			
-				Admin Profile
-				{$gr_flag}
+				Admin Profil
+				
 				
 			</div><!-- panel heading -->
+			
+			<div class="panel-body ">
+				{$gr_flag}
+			</div>
 
 		</div><!-- col md 12 -->
 		

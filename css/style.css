@@ -1400,3 +1400,13 @@ background-image: url("../images/pen_meny.png");
 .margin-right-span-10px {
 margin-right: 10px;
 }
+img.guide_review {
+width: 500px;
+height: 250px;
+padding-left: 15px;
+padding-right: 15px;
+height: auto;
+float: left;
+left: 0;
+right: 0;
+}
