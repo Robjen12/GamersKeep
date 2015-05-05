@@ -9,69 +9,34 @@ $keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
 $guestbook = "";
 $feedback = "";
 
-$query = <<<END
-
-		SELECT * FROM chatcom 
-		WHERE accept = 1;
-END;
-		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-		        " : " . $mysqli->error);
-
-		if($res->num_rows > 0)
-		{
-			if($row = $res->fetch_object())
-			{
-
-				$getchatcomid = $row->chatcomid;
-
-			}
-		}
-
 
 if(!empty($_POST))
 {
 
 	if(isset($_POST['friendmessage']))
 	{
-		$reply = $_POST['reply'];
+		$msg = $_POST['msg'];
 
-		if($reply == "")
+		if($msg == "")
 		{
 			$feedback = "<p class=\"text-red\">Du måste skriva ett meddelande!</p>";
 		}
 		else
 		{
-				$query = <<<END
+		
+			if($keeperid != $keeperid2)
+			{
 
-			INSERT INTO replys (reply, timestamp, flag)
-			VALUE('{$reply}', CURRENT_TIMESTAMP, '');
-END;
-		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-		        " : " . $mysqli->error);
-
-		if($keeperid != $keeperid2)
-		{
-
-		$query = <<<END
-
-			INSERT INTO repchatcom (chatcomid, keeperid, keeperid2, replyid)
-			VALUES ( '{$getchatcomid}', '{$keeperid}', '{$keeperid2}', LAST_INSERT_ID());
-END;
-	
-		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-		        " : " . $mysqli->error);
-		}
-		else
-		{
 			$query = <<<END
 
-			INSERT INTO repchatcom (chatcomid, keeperid, keeperid2, replyid)
-			VALUES ('{$getchatcomid}', '{$keeperid2}', '{$keeperid}', LAST_INSERT_ID());
+				INSERT INTO message (keeperid, keeperid2, msg, timestamp)
+				VALUES ('{$keeperid}', '{$keeperid2}', '{$msg}', CURRENT_TIMESTAMP);
 END;
-	
-		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		
+			$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 		}
+		
 		}
 			
 	}
@@ -85,16 +50,16 @@ if(!empty($_GET))
 
 	$query = <<<END
 
-	SELECT *
-			   FROM repchatcom
-			   JOIN replys
-			   ON replys.replyid = repchatcom.replyid
-			   JOIN chatcom
-			   ON repchatcom.chatcomid = chatcom.chatcomid
-			   JOIN user
-			   ON repchatcom.keeperid = user.keeperid
-			   WHERE chatcom.chatcomid = '{$getchatcomid}'
-			   GROUP BY timestamp ASC
+	SELECT * 
+	FROM message
+	JOIN user
+	ON user.keeperid = message.keeperid
+	WHERE message.keeperid = '{$keeperid}'
+    AND message.keeperid2 = '{$keeperid2}'
+    OR message.keeperid2 = '{$keeperid}'
+    AND message.keeperid = '{$keeperid2}'
+	GROUP BY timestamp;	  
+	 
 END;
 			$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
@@ -105,20 +70,19 @@ END;
 				{
 					
 					$keepername = $row->keepername;
-					$replys = $row->reply;
+					$msgs = $row->MSG;
 					$date 	= strtotime($row->timestamp);
 					$date	= date("d M Y H:i", $date);
 
 					$guestbook .= <<<END
 					<b>{$keepername}</b><br>
-					{$replys}<br>
+					{$msgs}<br>
 					<p class="sendwhen">Skickat den: {$date}<br></p>
 END;
 				}
 			}
 
 }	
-
 
 
 $content = <<<END
@@ -136,7 +100,7 @@ $content = <<<END
 					<div class="guestbookreplys"><br>
 					{$feedback}
 							<form action="chatcom.php?keeperid={$keeperid2}" method="post" id="send">
-								<textarea id="reply" name="reply" cols="121" rows="5"></textarea></br>
+								<textarea id="msg" name="msg" cols="121" rows="5"></textarea></br>
 								<input type="submit" id="submit" name="friendmessage" value="Skicka">
 							</form>
 						</div>
