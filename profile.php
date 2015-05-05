@@ -330,75 +330,85 @@ END;
 	}
 	
 }
-// FORTSÄTTNING FÖLJER!
-$query = <<<END
-
-			SELECT * FROM chatcom 
-			WHERE accept = 1
-			AND chatcom.keeperid = '{$keeperid}'
-			OR chatcom.keeperid2 = '{$keeperid}';
-END;
-		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-		        " : " . $mysqli->error);
-
-		if($res->num_rows > 0)
-		{
-			if($row = $res->fetch_object())
-			{
-				$keeperv1 = $row->keeperid;
-				$keeperv2 = $row->keeperid;
-				$getchatcomid = $row->chatcomid;
-
-			}
-		}	
-
 
 $query = <<<END
 		SELECT *
-			   FROM repchatcom
-			   JOIN replys
-			   ON replys.replyid = repchatcom.replyid
-			   JOIN chatcom
-			   ON repchatcom.chatcomid = chatcom.chatcomid
+			   FROM message
 			   JOIN user
-			   ON repchatcom.keeperid = user.keeperid
-			   WHERE repchatcom.chatcomid = '{$getchatcomid}'
-			   AND user.keeperid != '{$keeperid}';	
+			   ON message.keeperid = user.keeperid
+			   OR message.keeperid2 = user.keeperid
+			   WHERE user.keeperid = '{$keeperid}'
+			   GROUP BY keeperid2;
 END;
 
-	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-	  " : " . $mysqli->error);
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		  " : " . $mysqli->error);
 
 	if($res->num_rows > 0)
 	{
-			while($row = $res->fetch_object())
-			{
+		while($row = $res->fetch_object())
+		{
+			$keeperid1 = $row->keeperid;
+			$keeperid2 = $row->keeperid2;
 
-				$keepername2 = $row->keepername;
-				$chatcomid = $row->chatcomid;
-				$keeper = $row->keeperid;
-				$keeper2 = $row->keeperid2;
-
-				if($keeperid == $keeper)
+				if($keeperid == $row->keeperid)
 				{
-					$chatmess = <<<END
+					$query = <<<END
+
+						SELECT keeperid, keepername
+						FROM user
+						WHERE keeperid = '{$keeperid2}';
+
+END;
+				
+					$res2 = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		 			 " : " . $mysqli->error);
+
+					$row2 = $res2->fetch_object();
+					$keepername2 = $row2->keepername;
+					$keeper2 = $row->keeperid2;
+
+					if($keepername2 != $keepername )
+					{
+					$chatmess .= <<<END
 					<a href="chatcom.php?keeperid={$keeper2}">{$keepername2}</a><br>
 END;
+					}
+
 				}
 				else
 				{
-					$chatmess = <<<END
-					<a href="chatcom.php?keeperid={$keeper}">{$keepername2}</a><br>
+					$query = <<<END
+
+						SELECT keepername, keeperid
+						FROM user
+						WHERE keeperid = '{$keeperid1}';
 END;
+				
+					$res3 = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		 			 " : " . $mysqli->error);
+
+					$row3 = $res3->fetch_object();
+					$keepername1 = $row3->keepername;
+					$keeper = $keeperid1;
+
+					if($keepername1 != $keepername )
+					{
+						$chatmess .= <<<END
+						<a href="chatcom.php?keeperid={$keeper}">{$keepername1}</a><br>
+END;
+					}
 				}
+
+		}
 							
-			}
+			
 		
 	
 	}
 
 
-$query = <<<END
+/*$query = <<<END
 
 SELECT * 
 	FROM chatcom 
@@ -429,7 +439,7 @@ END;
 			}
 
 
-		}	
+		}	*/
 
 
 
