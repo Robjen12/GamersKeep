@@ -20,7 +20,9 @@ $penbutton = "";
 $penbutton2 = "";
 $formabout = "";
 $formother = "";
-$profil_bild = "";
+$profil_bild = <<<END
+			<img src="images/profil_bild.png">	
+END;
 $yourfriends = "";
 $getchatcomid = "";
 $accept = "";
@@ -66,13 +68,7 @@ END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 	  " : " . $mysqli->error);
 
-		if($res->num_rows == 0)
-	{
-				$profil_bild = <<<END
-			<img src="images/profil_bild.png">	
-END;
-			}
-			else if($res->num_rows > 0)
+		if($res->num_rows > 0)
 				{
 					if($row = $res->fetch_object())
 					{
@@ -220,13 +216,7 @@ END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 	  " : " . $mysqli->error);
 
-	if($res->num_rows == 0)
-	{
-				$profil_bild = <<<END
-			<img src="images/profil_bild.png">	
-END;
-			}
-			else if($res->num_rows > 0)
+	if($res->num_rows > 0)
 				{
 					if($row = $res->fetch_object())
 					{

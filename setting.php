@@ -3,12 +3,14 @@
 include_once("inc/HTMLTemplate.php");
 include_once("inc/Connstring.php");
 
+$profil_bild = <<<END
+			<img src="images/profil_bild.png">	
+END;
+
 $keeperid = $_SESSION['keeperid'];
 $keepername = $_SESSION['keepername'];
-$profil_bild = "";
 
 $query = <<< END
-
 	
 	SELECT picname, type, size, link
 	FROM picture
@@ -20,13 +22,8 @@ END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 	  " : " . $mysqli->error);
 
-	if($res->num_rows == 0)
-	{
-				$profil_bild = <<<END
-			<img src="images/profil_bild.png">	
-END;
-			}
-			else if($res->num_rows > 0)
+	
+			if($res->num_rows > 0)
 				{
 					if($row = $res->fetch_object())
 					{
@@ -63,7 +60,7 @@ $content = <<<END
 					<div class="profil_bild pull-left">
 						{$profil_bild}
 					</div>
-					<br><br><br><br><br><br><br>
+					<br><br><br><br><br><br><br><br>
 					<div class="pull-left text-bold">
 						{$keepername}
 					</div>
@@ -71,6 +68,7 @@ $content = <<<END
 						<form action="upload.php" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
 						<input name="userfile" type="file" id="userfile">
+						
 						<br>
 						
 						
@@ -79,8 +77,9 @@ $content = <<<END
 							</button>
 							<button class="btn-sm-span pull-left" input name="upload" type="reset" id="upload" value="">
 								<span class="glyphicon glyphicon-remove text-danger pull-right" aria-hidden="true">
-							</span></button>						
-					</form><br><br>
+							</span></button>
+						</form>							
+					<br><br>
 					
 					<h4 class="quicksand text-bold">Ta bort kontot</h4>
 					<p>Önskar du inte längre delta i GamersKeep, kan du ta bort din profil vid att klicka på knappen nedan.
