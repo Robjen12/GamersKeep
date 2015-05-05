@@ -23,6 +23,7 @@ $formother = "";
 $profil_bild = "";
 $yourfriends = "";
 $getchatcomid = "";
+$accept = "";
 
 if($_SESSION['roletype'] == 1)
 {
@@ -134,16 +135,8 @@ END;
 	}
 	
 }
-
-// Lägger till "lägg till vän" knapp om man är inne på en annan användares profil
-$button = <<<END
-	<form method="post">
-	<button type="submit" name="keeperfr" value="Lägg till">Lägg till vän</button>
-	</form>
-END;
-
 // Skickar in vänförfrågan i databasen
-/*if(isset($_POST['keeperfr'])){
+if(isset($_POST['keeperfr'])){
 
 	$query = <<<END
 	INSERT INTO keeperfriend(keeperid, keeperid2, accept) 
@@ -152,7 +145,52 @@ END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 
-}*/
+}
+// Visar om man är vänner eller behöver lägga till vän.
+$query = <<<END
+	SELECT *
+			   FROM keeperfriend
+			   WHERE keeperid = '{$keeperid}'
+			   AND keeperid2 = '{$keeperid2}'
+			   OR keeperid2 = '{$keeperid}'
+			   AND keeperid = '{$keeperid2}';		   
+END;
+
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+
+		if($res->num_rows == 1)
+		{
+			while($row = $res->fetch_object())
+			{
+			
+				$accept = $row->accept;
+
+				if($accept == 0)
+				{
+					$button = <<<END
+					<button>Vänförfrågan har skickats</button><br>
+END;
+							
+				}
+				else
+				{
+					$button = <<<END
+					
+END;
+				}
+			}
+		}
+		else
+		{		
+				$button = <<<END
+
+				<form action="profile.php?keeperid={$keeperid2}" method="post">
+				<button type="submit" name="keeperfr" value="Lägg till">Lägg till vän</button><br>
+				</form>
+END;
+
+		}
 
 $sendmessage = <<<END
 	<button><a href="chatcom.php?keeperid={$keeperid2}">Skicka meddelande</a></button>
