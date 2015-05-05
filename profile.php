@@ -63,16 +63,16 @@ $query = <<< END
 	WHERE keeperid = '{$keeperid2}';
 END;
 
-	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 	  " : " . $mysqli->error);
 
-		if($res->num_rows == 0)
+	if($res->num_rows == 0)
 	{
 				$profil_bild = <<<END
 			<img src="images/profil_bild.png">	
 END;
 			}
-			else if($res->num_rows > 0)
+			else if($res->num_rows == 1)
 				{
 					if($row = $res->fetch_object())
 					{
@@ -226,7 +226,7 @@ END;
 			<img src="images/profil_bild.png">	
 END;
 			}
-			else if($res->num_rows > 0)
+			else if($res->num_rows == 1)
 				{
 					if($row = $res->fetch_object())
 					{
