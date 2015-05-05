@@ -38,14 +38,19 @@ END;
 
 	$content = <<<END
 	<div class="row margin-top-100">
-		<div class="col-md-12">
-			<div class="admin-profile">
-				<h3>Admin Profile</h3>
+			
+		<div class="col-md-12 panel panel-default panel-guide-review height-410px">
+			
+			<div class="panel-heading panel-heading-guide-review">
+			
+				Admin Profile
 				{$gr_flag}
-			</div>
+				
+			</div><!-- panel heading -->
 
-		</div>
-	</div>
+		</div><!-- col md 12 -->
+		
+	</div><!-- row margin top 100 -->
 
 	<script>
 		$(document).ready(function(){
