@@ -22,6 +22,7 @@ $formabout = "";
 $formother = "";
 $profil_bild = "";
 $yourfriends = "";
+$getchatcomid = "";
 
 if($_SESSION['roletype'] == 1)
 {

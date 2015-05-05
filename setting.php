@@ -4,7 +4,45 @@ include_once("inc/HTMLTemplate.php");
 include_once("inc/Connstring.php");
 
 $keeperid = $_SESSION['keeperid'];
+$keepername = $_SESSION['keepername'];
+$profil_bild = "";
 
+$query = <<< END
+
+	
+	SELECT picname, type, size, link
+	FROM picture
+	JOIN userpic
+	ON userpic.picid = picture.picid
+	WHERE keeperid = '{$keeperid}';
+END;
+
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+
+	if($res->num_rows == 0)
+	{
+				$profil_bild = <<<END
+			<img src="images/profil_bild.png">	
+END;
+			}
+			else if($res->num_rows > 0)
+				{
+					if($row = $res->fetch_object())
+					{
+						$link = $row->link;
+
+						if(file_exists($link))
+						{
+							$profil_bild = <<<END
+						<img src="{$link}">
+END;
+			}
+	
+
+		}
+	}
+	
 $content = <<<END
 
 
@@ -14,14 +52,23 @@ $content = <<<END
 		<div class="col-md-2 col-sm-2">
 		</div>
 		
-		<div class="col-md-6 col-sm-6 margin-top-100 setting panel-width-550px panel panel-default">
+				<div class="col-md-6 col-sm-6 margin-top-100 setting panel-width-550px panel panel-default">
 
 			<div class="panel-heading panel-heading-560px">Inställningar</div>
 			
 				<div class="panel-body height-410px pull-left">
 				
-					<form action="upload.php" method="post" enctype="multipart/form-data">
-					<h4 class="quicksand text-bold">Ladda upp profilbild</h4>
+					<h4 class="quicksand text-bold">Profilbild</h4>
+					
+					<div class="profil_bild pull-left">
+						{$profil_bild}
+					</div>
+					<br><br><br><br><br><br><br>
+					<div class="pull-left text-bold">
+						{$keepername}
+					</div>
+					<br><br>
+						<form action="upload.php" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
 						<input name="userfile" type="file" id="userfile">
 						<br>
@@ -32,13 +79,7 @@ $content = <<<END
 							</button>
 							<button class="btn-sm-span pull-left" input name="upload" type="reset" id="upload" value="">
 								<span class="glyphicon glyphicon-remove text-danger pull-right" aria-hidden="true">
-							</span></button>
-						
-						
-						<div class="col-md-11 pull-left">
-							
-						</div>
-						
+							</span></button>						
 					</form><br><br>
 					
 					<h4 class="quicksand text-bold">Ta bort kontot</h4>
