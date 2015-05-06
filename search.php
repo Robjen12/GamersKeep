@@ -60,7 +60,7 @@ END;
 	}
 	else
 	{
-		$feedback = "<p class=\"text-yellow\">Det finns ingen i databasen med det användarnamnet.</p>";
+		$feedback .= "<p class=\"text-yellow\">Det finns ingen i databasen med det användarnamnet.</p>";
 	}
 }
 if(isset($_GET['search']))

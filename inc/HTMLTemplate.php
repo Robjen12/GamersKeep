@@ -279,7 +279,7 @@ $footer = <<<END
 			<img src="images/hh.png" class="pull-right margin-right-15px" width="125px">
 				GAMETEAM
 				<p class="droid text-normal">
-				<a href="om_gameteam.php">Vem vi är</a><br>
+				<a href="gameteam.php">Vem vi är</a><br>
 				<a href="#">Robert</a><br>
 				<a href="#">Dorte</a><br>
 				<a href="#">Maria</a><br>
