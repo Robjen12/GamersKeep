@@ -57,8 +57,7 @@ END;
   									<li class="media">
     									<div class="media-left">
       										<a href="genre.php?grid={$grid}">
-	        									<img class="media-object" src="http://placehold.it/64x64" class="ads"
-	        									alt="senaste guide image">
+	        									
       										</a>
     									</div>
     									<div class="media-body">
@@ -109,8 +108,7 @@ END;
   									<li class="media">
     									<div class="media-left">
       										<a href="genre.php?grid={$grid}">
-	        									<img class="media-object" src="http://placehold.it/64x64" class="latest review image"
-	        									alt="senaste guide image">
+	        									
       										</a>
     									</div>
     									<div class="media-body">
@@ -165,8 +163,7 @@ END;
   									<li class="media">
     									<div class="media-left">
       										<a href="genre.php?grid={$grid}">
-	        									<img class="media-object" src="http://placehold.it/64x64" class="toplist guide image"
-	        									alt="toplist guide image">
+	        									
       										</a>
     									</div>
     									<div class="media-body">
@@ -219,8 +216,7 @@ END;
   									<li class="media">
     									<div class="media-left">
       										<a href="genre.php?grid={$grid}">
-	        									<img class="media-object" src="http://placehold.it/64x64" class="toplist review image"
-	        									alt="Toplist review image">
+	        									
       										</a>
     									</div>
     									<div class="media-body">
@@ -267,11 +263,11 @@ $content = <<<END
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
-								<div class="panel-heading panel-heading-250px">Senaste guider</div>
+								<div class="panel-heading panel-heading-250px">Senaste recensioner</div>
 
 				  					<div class="panel-body height-410px">
 
-				  							<p>{$latestguide}</p>
+				  							<p>{$latestreview}</p>
 				  					</div><!-- panel body -->
 
 								</div><!-- panel heading -->
@@ -318,11 +314,11 @@ $content = <<<END
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
-								<div class="panel-heading panel-heading-250px">Senaste recensioner</div>
+								<div class="panel-heading panel-heading-250px">Senaste guider</div>
 
 				  					<div class="panel-body height-410px">
 
-				  							<p>{$latestreview}</p>
+				  							<p>{$latestguide}</p>
 				  					</div><!-- panel body -->
 
 								</div><!-- panel heading -->
