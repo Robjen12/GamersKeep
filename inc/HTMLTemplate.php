@@ -12,10 +12,12 @@ if(isset($_SESSION['keepername']) && isset($_SESSION['roletype'])){
 
 	if($_SESSION["roletype"] == 1)
 	{
-	$adminText = " (Admin)";
+	$adminText = <<<END
+		<span class="glyphicon glyphicon-king pull-right text-black" aria-hidden="true"></span>
+END;
 	$adminMeny = <<<END
 	<li role="presentation"><a role="menuitem" tabindex="-1" href="admin.php">
-	<span class="glyphicon glyphicon-king pull-right text-black" aria-hidden="true"></span>Admin</a>
+	<span class="glyphicon glyphicon-king pull-right text-white" aria-hidden="true"></span>Admin</a>
 	</li>
 END;
 	$admindelete = <<<END
