@@ -181,16 +181,10 @@ END;
 $content = <<<END
 				
 
-				<div class="wrapper margin-top-75">
+				<div class="wrapper margin-top-100">
 
 					<div class="row">
-					<!-- search function in genre -->
-					<form action="search.php" method="get" id="searchgenrer">
 					
-						<input type="text" id="searchgenre" name="searchgenre">
-						<button type="submit" value="Sök"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-					</form>
-
 					<div class="col-md-4 col-sm-4 panel panel-default panel-width-240px pull-left">
 
 	  					<div class="panel-heading panel-heading-250px quicksand">
