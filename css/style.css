@@ -1400,7 +1400,7 @@ background-image: url("../images/pen_meny.png");
 .margin-right-span-10px {
 margin-right: 10px;
 }
-img.guide_review {
+.guide_review > img {
 width: 500px;
 height: 250px;
 padding-left: 15px;

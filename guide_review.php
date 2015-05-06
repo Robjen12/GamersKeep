@@ -6,6 +6,7 @@ include_once("inc/HTMLTemplate.php");
 $table = "guidereviewinfo";
 $keeper = $_SESSION['keeperid'];
 $feedback = "";
+$delay_location = "";
 $admindelete = "";
 
 
@@ -59,7 +60,17 @@ END;
 		        " : " . $mysqli->error);
 			}
 			$feedback = "<p class=\"text-green\">Inlägget har publicerats</p>";
+			
+			// http://stackoverflow.com/questions/11299006/header-location-delay
+			//sleep(2);
+			header("Location: index.php", true, 303);
+			exit;
+				
 		}
+		
+		
+		    
+			 
 
 		else if(isset($_POST['review']))
 		{
@@ -100,8 +111,17 @@ END;
 		        " : " . $mysqli->error);
 			}
 			$feedback = "<p class=\"text-green\">Inlägget har publicerats</p>";
+			
+				// http://stackoverflow.com/questions/11299006/header-location-delay
+			//sleep(2);
+			header("Location: index.php", true, 303);
+			exit;
+
+			 
 		}
+		
 	}
+	
 
 
 $query = <<<END
@@ -142,15 +162,18 @@ $content = <<<END
 										<input type="text" class="form-control" id="title" name="title" value="" placeholder="Ange titeln"></br></br>
 										<input type="radio" id="guidecheck" name="guide" value="Guide">Guide
 										<input type="radio" id="reviewcheck" name="review" value="Review">Recension</br></br>
-										{$feedback}
+										
 										<label for="genretype">Genre</label><br>
 										{$dropdown} <br><br>
 										<label for="information">Innehållet:</label>
-										<textarea id="nicEdit" name="nicEdit" cols="80" rows="15" class="img guide_review"></textarea></br>
+										<textarea id="nicEdit" name="nicEdit" cols="119" rows="10" class="img guide_review"></textarea></br>
 										<label for="grade" id="gradescale">Betyg (1-5)</label></br>
 										<input type="number" class="text-black" id="grade" name="grade" min="1" max="5" value="1">
+										{$feedback}
 										<button type="submit" id="publish" name="publish_guide_review" value="Publicera">Publicera innehållet</button><br><br>
+										
 										{$admindelete}
+										
 										</div>
 									</div>
 								</form>			
@@ -214,6 +237,8 @@ $content = <<<END
 
 
 END;
+
+
 
 
 echo $header;
