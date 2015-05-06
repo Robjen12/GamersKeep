@@ -185,7 +185,9 @@ $content = <<<END
 
 					<div class="row">
 					
-					<div class="content-left panel panel-default panel-width-240px pull-left">
+						<div class="content-left pull-left">
+					
+						<div class="panel panel-default panel-width-240px pull-left">
 
 	  					<div class="panel-heading panel-heading-250px quicksand">
 							Topplista guider <li class="views">{$genretype}</li>
@@ -197,9 +199,14 @@ $content = <<<END
 
 		  					</div><!-- panel body -->
 
-						</div><!-- panel heading -->					
+						</div><!-- panel heading -->
+						
+						</div><!-- panel -->
+					
+					<!-- center column -->
+					<div class="content-center margin-left-25px pull-left">
 
-					<div class="col-md-4 col-sm-4 panel panel-default panel-width-240px pull-left">
+					<div class="panel panel-default panel-width-240px pull-left">
 
 	  					<div class="panel-heading panel-heading-250px">
 							Senaste guider<li class="views">{$genretype}</li>
@@ -210,21 +217,31 @@ $content = <<<END
 		  				</div><!-- panel body -->
 						
 					</div><!-- col md 4 -->
+					
+					</div><!-- panel -->
 
-					<div class="col-md-4 content-right pull-right">
+					<div class="content-right margin-right-15px pull-right">
 
 							<div class ="ads">
 
 								<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
 
 							</div><!-- ads -->
-							<br>
-					</div><!-- ads right row 1 -->					
+							
+						</div><!-- content left kolumn -->
+
+		  				</div><!-- content center kolumn -->
+		  				
+		  				</div><!-- content right kolumn -->					
 
 				</div><!-- row -->
 
 				<div class="row">
-					<div class="col-md-4 col-sm-4 panel panel-default panel-width-240px pull-left">
+					
+					<!-- left column row 2 -->
+				
+					<div class="content-left pull-left">
+						<div class="panel panel-default panel-width-240px pull-left">
 
 		  					<div class="panel-heading panel-heading-250px">
 								Topplista recensioner <li class="views">{$genretype}</li>
@@ -234,9 +251,14 @@ $content = <<<END
 				  				{$toplistgenrereview}		  			
 			  				</div><!-- panel body -->
 
-					</div><!-- col md 4 -->						
+						</div><!-- panel heading -->
 
-					<div class="col-md-4 col-sm-4 panel panel-default panel-width-240px pull-left">
+					</div><!-- panel -->
+
+					<!-- center column  row 2 -->
+					<div class="content-center margin-left-25px pull-left">					
+
+					<div class="panel panel-default panel-width-240px pull-left">
 
 		  					<div class="panel-heading panel-heading-250px">
 								Senaste recensioner<li class="views">{$genretype}</li>
@@ -244,15 +266,13 @@ $content = <<<END
 
 			  				<div class="panel-body height-410px">
 			  						{$latestgenrereview}
-		  					</div><!-- panel body -->
-													
+		  					</div><!-- panel body -->					
 							
-					</div><!-- col md 4 -->
-							
-						<div class="col-md-4">
-						
-							
-						</div><!-- content right -->
+							</div><!-- panel heading -->
+
+						</div><!-- panel -->
+					
+		  			<!-- center column  row 2 -->
 												
 					</div><!-- col md 4 -->
 					</div><!-- col md 4 -->
