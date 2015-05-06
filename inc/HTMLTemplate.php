@@ -6,15 +6,22 @@ include_once("inc/Connstring.php");
 
 $genre = "";
 $adminText = "";
+$adminMeny = "";
 
 if(isset($_SESSION['keepername']) && isset($_SESSION['roletype'])){
 
 	if($_SESSION["roletype"] == 1)
 	{
 	$adminText = " (Admin)";
+	$adminMeny = <<<END
+	<li role="presentation"><a role="menuitem" tabindex="-1" href="admin.php">
+	<span class="glyphicon glyphicon-king pull-right text-black" aria-hidden="true"></span>Admin</a>
+	</li>
+END;
 	$admindelete = <<<END
 	<button type="submit" id="delete" name="delete" value="delete">Delete</button>
 END;
+	
 	}	
 }
 
@@ -165,7 +172,7 @@ $(document).ready(function(){
 					
 					<ul class="dropdown-menu drop-margin-0 pull-right dropdown-top-margin Droid bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">
 			    			<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px"> {$_SESSION["keepername"]}{$adminText}</li>
-							
+							<li role="presentation" a role="menuitem" tabindex="-1">{$adminMeny}</li>
 							<li role="presentation pull-right"><a role="menuitem" tabindex="-1" href="profile.php"><span class="glyphicon glyphicon-user pull-right text-white" aria-hidden="true"></span>Profil</a> </li>
 							<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-education pull-right text-white" aria-hidden="true"></span>FAQ</a></li>
 							<li role="presentation"><a role="menuitem" tabindex="-1" href="setting.php"><span class="glyphicon glyphicon-cog pull-right text-white" aria-hidden="true"></span>Inställningar</a></li>

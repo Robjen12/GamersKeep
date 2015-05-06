@@ -1411,3 +1411,13 @@ float: left;
 left: 0;
 right: 0;
 }
+
+.hide{
+display: hidden;
+visibility: hidden;
+}
+
+.show{
+display: show;
+visibility: show;
+}
