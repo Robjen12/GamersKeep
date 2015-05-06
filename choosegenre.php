@@ -272,12 +272,24 @@ $content = <<<END
 
 						</div><!-- panel -->
 					
-		  			<!-- center column  row 2 -->
-												
-					</div><!-- col md 4 -->
-					</div><!-- col md 4 -->
+		  			<!-- right column row 2 -->
+						<div class="content-right margin-right-15px pull-right">
 
-				</div><!-- row -->
+							<div class ="ads">
+
+								<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
+
+							</div><!-- ads -->	
+
+		  				</div><!-- content right kolumn row 2 -->
+
+		  				</div><!-- content center kolumn row 2 -->
+		  				
+		  				</div><!-- content left kolumn row 2 -->
+
+					</div><!-- row -->
+
+				
 	
 
   
