@@ -16,6 +16,20 @@ END;
 	header("Location: profile.php");
 
 }
+if(!empty($_GET['commentid']))
+{
+	$commentid = isset($_GET['commentid']) ? $_GET['commentid'] : "";
+
+	$query = <<<END
+
+		DELETE FROM comment
+		WHERE commentid = '{$commentid}';
+END;
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+	header("Location: profile.php");
+
+}
 
 if(isset($_GET['keeperid']))
 {
