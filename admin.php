@@ -4,7 +4,18 @@ include_once("inc/HTMLTemplate.php");
 include_once("inc/Connstring.php");
 $grid = isset($_GET['grid']) ? $_GET['grid'] : "";
 $gr_flag = "";
+$admit = "";
 
+// Sätter flaggan till noll om innehållet inte är olämpligt
+if(isset($_POST['ok']))
+{
+	$admit = <<<END
+		UPDATE guidereviewinfo SET flag = 0
+		WHERE grid = '{$grid}';
+END;
+	$res = $mysqli->query($admit) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+}
 // Hämtar ut allt i guidereviewinfo som har status 1 i posten flag
 $query = <<<END
 
@@ -23,18 +34,18 @@ END;
 			$title = utf8_decode(htmlspecialchars($row->title));
 
 			$gr_flag .= <<<END
-			<a href="genre.php?grid={$grid}">{$title}</a><button class="delete"><a href="delete.php?grid={$grid}">x</a></button>
-			<button class="admit"><a href="admin.php?grid={$grid}">V</a></button><br><br>
+				
+				<form action="admin.php?grid={$grid}" method="post">
+				<a href="genre.php?grid={$grid}">{$title}</a>
+					<button type="submit" name="ok" value="">V</button>
+					<button class="delete"><a href="delete.php?grid={$grid}">x</a></button>
+				</form>
 END;
 		}
 	}
-// Sätter flaggan till noll om innehållet inte är otillämpligt
-	$admit = <<<END
-		UPDATE guidereviewinfo SET flag = 0
-		WHERE grid = '{$grid}';
-END;
-	$res = $mysqli->query($admit) or die("Could not query database" . $mysqli->errno . 
-	  " : " . $mysqli->error);
+
+			//<button class="delete"><a href="delete.php?grid={$grid}">x</a></button>
+			//<button class="admit"><a href="admin.php?grid={$grid}">V</a></button><br><br>
 
 	$content = <<<END
 	<div class="row margin-top-100">
@@ -43,9 +54,10 @@ END;
 			
 			<div class="panel-heading panel-heading-guide-review">
 			
-				Admin Profile
-				{$gr_flag}
-				
+				Admin Profile</br></br>
+				<p>Guide och recensioner</p>
+				{$gr_flag}<br>
+				<p>Kommentarer</p>
 			</div><!-- panel heading -->
 
 		</div><!-- col md 12 -->
