@@ -71,6 +71,7 @@ $header = <<<END
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<!-- gamerskeep style -->
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/mediaqueries.css">
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     	<!--[if lt IE 9]>
@@ -84,7 +85,7 @@ $header = <<<END
 <script>
 $(document).ready(function(){
     $(".soek_button").on("mouseover", function(){
-        $(".soek_anim").toggleClass(".soek_anim").animate({
+        $(".soek_anim").toggleClass(".soek_anim").stop(true, true).animate({
 			width: 'toggle',
 			Left: '0px'
 		});
@@ -92,7 +93,7 @@ $(document).ready(function(){
 	
 		
 	$(".soek_button").on("mouseout", function(){
-        $(".soek_anim").toggleClass(".soek_anim").animate({
+        $(".soek_anim").toggleClass(".soek_anim").stop(true, true).animate({
 			width: 'toggle',
 			Right: '0px'
 		});
@@ -213,14 +214,15 @@ $(document).ready(function(){
 					</div><!-- dropdown -->
 					</li>
 					
-						<div class="soek_anim"></div>
+						
 					
 							
-								<form action="search.php" method="GET">
-								<input type="text" class="form-control-search pull-left" id="searchfield" name="search" placeholder="Sök...">
+								<form action="search.php" method="GET" class="soek_form">
+								<div class="soek_anim"></div>
 								<button class="soek_button pull-right" type="Submit" value="Sök" alt="Sök">
 								
 								</button>
+								<input type="text" class="form-control-search pull-right" id="searchfield" name="search" placeholder="Sök...">
 								</form>
 					
 				</ul>
@@ -294,8 +296,8 @@ $footer = <<<END
 			<!-- Meny right row2 -->
 			
 			<div class="col-md-3 quicksand text-bold text-16px pull-right margin-top-10px">
-			
-			<img src="images/hh.png" class="pull-right margin-right-15px" width="125px">
+				<div class="footer-right">
+			<!--<img src="images/hh.png" class="pull-right margin-right-15px" width="125px">-->
 				GAMETEAM
 				<p class="droid text-normal">
 				<a href="gameteam.php">Vem vi är</a><br>
@@ -304,7 +306,7 @@ $footer = <<<END
 				<a href="#">Maria</a><br>
 				<a href="#">Malena</a>
 				</p>				
-			
+			</div>
 			</div><!-- col md 3 sociala media -->
 			
 			

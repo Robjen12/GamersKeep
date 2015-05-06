@@ -296,6 +296,13 @@ margin-left:0;
 	margin-right: 0;
 	margin-left: 0;
 }
+
+#footer .footer-right {
+  width: 100%;
+  background-image: url("../images/hh.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+}
 /* puts white triangel as css3 fgfx in right column second row in the footer */
 /* not used anymore
 #footer > .column-right-row2::before {
@@ -826,23 +833,43 @@ a.text-primary:hover {
 }
 .content-left {
   .make-lg-column(4);
-width: 30%;
+/*width: 30%;*/
 /* background-color: red; */
 }
 .content-center {
   .make-lg-column(4);
-width: 30%;
+/*width: 30%;*/
 /*  background-color: green; */
 
 
 }
 .content-right {
   .make-lg-column(4);
-width: 30%;
+/*width: 30%;*/
 /*  background-color: yellow; */
 
 /*  .make-lg-column-offset(1); */
 }
+
+.content-full {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.ads-row
+{
+  display: none;
+
+}
+
+.ads-row .ads img {
+  margin-left: 25px;
+}
+
+.guide-review .ads-row .ads img {
+  margin-left: 10px;
+}
+
 .views-left > li > a,
 .views-left > li > span {
 color: Black;
@@ -1264,6 +1291,12 @@ color: Red;
   padding-top: 10px;
   padding-left: 20px;
  }
+
+ .soek_form
+ {
+  position: relative;
+  float: right;
+ }
  
  /* sokfunktion animation */
 .soek_anim {												/* den animation som täcker sokrutan */
@@ -1276,7 +1309,7 @@ margin-left: 0px;
 border:none;
 margin-top: 23px;
 margin-bottom: 0;
-float: right;
+left: 0;
 }
 
 .form-control-search {

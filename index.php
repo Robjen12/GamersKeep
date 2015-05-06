@@ -259,7 +259,7 @@ $content = <<<END
 
 					
 		  				<!-- center column -->
-						<div class="content-center margin-left-25px pull-left">
+						<div class="content-center pull-left">
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
@@ -310,7 +310,7 @@ $content = <<<END
 							</div><!-- panel -->
 					
 		  				<!-- center column  row 2 -->
-						<div class="content-center margin-left-25px pull-left">
+						<div class="content-center pull-left">
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
@@ -343,6 +343,19 @@ $content = <<<END
 		  				{$genre}
 
 					</div><!-- row -->
+
+					<div class="row ads-row">
+						<div class="content-full pull-left">
+
+							<div class ="ads">
+
+								<img src="images/ad_req.jpg" class="ads pull-left" width="300px">
+								<img src="images/ad_req.jpg" class="ads pull-left" width="300px">
+
+							</div><!-- ads -->	
+
+		  				</div>
+					</div>
 
 				</div><!-- wrapper --> 
 

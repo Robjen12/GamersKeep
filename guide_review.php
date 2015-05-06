@@ -127,7 +127,7 @@ $dropdown .= '</select>';
 
 $content = <<<END
 
-		<div class="container-fluid">
+		<div class="container-fluid guide-review">
 			<div class="row margin-top-100">
 				<div class="col-md-9 margin-left-guide"> 
 							<div class="guide_review">
@@ -169,6 +169,17 @@ $content = <<<END
 		  				</div><!-- content right kolumn row 2 -->
 				</div><!-- reklam -->
 				
+			</div>
+			<div class="row ads-row">
+				<div class="content-full pull-left">
+
+					<div class ="ads">
+
+						<img src="images/ad_req.jpg" class="ads pull-left" width="300px">
+
+					</div><!-- ads -->	
+
+  				</div>
 			</div>
 		</div>
 		

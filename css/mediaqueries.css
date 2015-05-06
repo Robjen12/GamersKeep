@@ -1,0 +1,50 @@
+@media (max-width: 1351px)
+{
+	.form-control-search, .soek_anim
+	{
+		width: 200px;
+	}
+}
+
+@media (max-width: 1265px)
+{
+	.guide-review .content-right
+	{
+		display: none;
+	}
+
+	.guide-review .ads-row
+	{
+		display: inline;
+	}
+}
+
+@media (max-width: 1232px)
+{
+	.form-control-search, .soek_anim
+	{
+		width: 150px;
+	}
+}
+
+@media (max-width: 1205px)
+{
+	.content-right
+	{
+		display: none;
+	}
+
+	.ads-row
+	{
+		display: inline;
+	}
+}
+
+@media (max-width: 1112px)
+{
+	.form-control-search, .soek_anim
+	{
+		width: 100px;
+	}
+}
+
