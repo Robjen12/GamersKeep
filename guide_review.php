@@ -118,7 +118,7 @@ while($row = $result->fetch_assoc())
 	 $genretype = $row['genretype'];
 	 
 	 $dropdown .= <<<END
-	 	<option value="{$genretype}">{$genretype}</option>
+	 	<option id ="genretype" value="{$genretype}">{$genretype}</option>
 END;
 
 }
@@ -144,7 +144,7 @@ $content = <<<END
 										<input type="radio" id="reviewcheck" name="review" value="Review">Recension</br></br>
 										{$feedback}
 										<label for="genretype">Genre</label><br>
-										{$dropdown}<br><br>
+										{$dropdown} <br><br>
 										<label for="information">Innehållet:</label>
 										<textarea id="nicEdit" name="nicEdit" cols="80" rows="15" class="img guide_review"></textarea></br>
 										<label for="grade" id="gradescale">Betyg (1-5)</label></br>
