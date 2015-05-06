@@ -38,11 +38,28 @@ END;
 
 			$gr_flag .= <<<END
 				
+
 				<form action="admin.php?grid={$grid}" method="post">
-				<a href="genre.php?grid={$grid}">{$title}</a>
-					<button type="submit" name="ok" value="">V</button>
-					<button class="delete"><a href="delete.php?grid={$grid}">x</a></button>
+				
+				<button type="submit" class="btn-sm-span" name="ok" value="">
+						<span class="glyphicon glyphicon-ok text-success pull-left" aria-hidden="true"></span>
+				</button>
+					
+				<button class="btn-sm-span delete">
+						<a href="delete.php?grid={$grid}">
+						<span class="glyphicon glyphicon-remove text-danger pull-left" aria-hidden="true"></span>
+						</a>
+				</button>
+				
+				<a href="genre.php?grid={$grid}">{$title}</a>				
+					
+					<br><br>
+				
 				</form>
+				
+				
+				
+
 END;
 		}
 	}
@@ -78,8 +95,16 @@ END;
 				
 				<form action="admin.php?commentid={$commentids}" method="post">
 				<a href="genre.php?grid={$commentgrid}">{$comment}</a>
-					<button type="submit" name="okcomment" value="">V</button>
-					<button class="delete"><a href="delete.php?commentid={$commentids}">x</a></button><br><br>
+				
+					<button type="submit" class="btn-sm-span" name="okcomment" value="">
+						<span class="glyphicon glyphicon-ok text-success pull-left" aria-hidden="true"></span>
+					</button>
+														
+					<button class="btn-sm-span delete"><a href="delete.php?commentid={$commentids}">
+						<span class="glyphicon glyphicon-remove text-danger pull-left" aria-hidden="true"></span>
+					</a></button>
+					<br>
+					<br>
 				</form>
 END;
 		}
@@ -94,12 +119,18 @@ END;
 			
 			<div class="panel-heading panel-heading-guide-review">
 			
-				Admin Profile</br></br>
-				<p>Guide och recensioner</p>
-				{$gr_flag}<br>
-				<p>Kommentarer</p>
-				{$comment_flag}<br>
+				Admin Profil
+				
 			</div><!-- panel heading -->
+			
+			<div class="panel-body ">
+				<h4 class="quicksand text-bold">Guider och recensioner</h4>
+				<p class="droid text-bold">
+				{$gr_flag}<br>
+				<h4 class="quicksand text-bold">Kommentarer</h4>
+				{$comment_flag}<br>
+				</p>
+			</div><!-- panel body -->
 
 		</div><!-- col md 12 -->
 		
