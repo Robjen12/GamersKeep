@@ -124,7 +124,7 @@ END;
 		$comments .=  <<<END
 
 		Skriven av: <a href="profile.php?keeperid={$keeperid}">{$commentkeepername}</a> <!-- flagga -->
-			<form action="genre.php?grid={$grid}" method="post">
+			<form action="genre.php?grid={$grid}&commentid={$commentid}" method="post">
 				<button type="submit" name="unappropriatecomments" value="flag">flagga</button>
 			</form>
 		<br>
@@ -138,24 +138,15 @@ END;
 
 if(isset($_POST['unappropriatecomments']))
 {
-	if($commentflag == 0)
-	{
-		$getflag = <<<END
-		UPDATE comment SET flag = 1
-		WHERE commentid = '{$commentid}';
+	$flaggedCommentId = $_GET["commentid"];
+
+	$getflag = <<<END
+	UPDATE comment SET flag = 1
+	WHERE commentid = '{$flaggedCommentId}';
 END;
-		$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
-			        " : " . $mysqli->error);
-	}
-	else
-	{
-		$getflag = <<<END
-		UPDATE comment SET flag = 0
-		WHERE commentid = '{$commentid}';
-END;
-		$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
-			        " : " . $mysqli->error);
-	}
+	$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+
 }
 
 
