@@ -185,7 +185,7 @@ $content = <<<END
 
 					<div class="row">
 					
-					<div class="col-md-4 col-sm-4 panel panel-default panel-width-240px pull-left">
+					<div class="content-left panel panel-default panel-width-240px pull-left">
 
 	  					<div class="panel-heading panel-heading-250px quicksand">
 							Topplista guider <li class="views">{$genretype}</li>
