@@ -13,6 +13,9 @@ $comments = "";
 $commmentkeepername = "";
 $keepername = "";
 $keeperid = "";
+$getflag = "";
+$commentid = "";
+
 	$query = <<<END
 
 		INSERT INTO userclick (grid, keeperid)
@@ -47,11 +50,34 @@ if($res->num_rows ==1)
 	$timestamp = strtotime($row->timestamp);
 	$timestamp = date("d M Y H:i", $timestamp);
 	$grade = $row->grade;
+	$flag = $row->flag;
 
 	if($grade > 0){
 		$showgrade = <<<END
 		Betyg: {$grade}
 END;
+	}
+}
+
+if(isset($_POST['unappropriate']))
+{
+	if($flag == 0)
+	{
+		$getflag = <<<END
+		UPDATE guidereviewinfo SET flag = 1
+		WHERE grid = '{$grid}';
+END;
+		$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
+			        " : " . $mysqli->error);
+	}
+	else
+	{
+		$getflag = <<<END
+		UPDATE guidereviewinfo SET flag = 0
+		WHERE grid = '{$grid}';
+END;
+		$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
+			        " : " . $mysqli->error);
 	}
 }
 
@@ -72,6 +98,8 @@ END;
 
 	}
 }
+
+
 $query = <<<END
 	
 	SELECT * FROM comment
@@ -85,30 +113,52 @@ END;
 
 	while($row = $res->fetch_object())
 	{
+		$commentid = $row->commentid;
 		$commentkeeperid = $row->keeperid;
 		$commentkeepername = $row->keepername;
 		$comment = utf8_decode($row->comment);
 		$date = strtotime($row->timestamp);
 		$date = date("d M Y H:i", $date);
+		$commentflag = $row->flag;
 
 		$comments .=  <<<END
 
-		Skriven av: <a href="profile.php?keeperid={$keeperid}">{$commentkeepername}</a> <!-- flagga --><a href="#" class="flag" alt="Markera stötande innehåll">
-		<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a><br>
+		Skriven av: <a href="profile.php?keeperid={$keeperid}">{$commentkeepername}</a> <!-- flagga -->
+			<form action="genre.php?grid={$grid}" method="post">
+				<button type="submit" name="unappropriatecomments" value="flag">flagga</button>
+			</form>
+		<br>
 		Publicerad: {$date}<br>
 		{$comment}
 		<hr>
 END;
 
-
+//span class="glyphicon glyphicon-flag pull-right" aria-hidden="true">
 	}
 
-	$getflag = <<<END
-		UPDATE guidereviewinfo SET flag = 1
-		WHERE grid = '{$grid}';
+if(isset($_POST['unappropriatecomments']))
+{
+	if($commentflag == 0)
+	{
+		$getflag = <<<END
+		UPDATE comment SET flag = 1
+		WHERE commentid = '{$commentid}';
 END;
-	$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
+		$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
 			        " : " . $mysqli->error);
+	}
+	else
+	{
+		$getflag = <<<END
+		UPDATE comment SET flag = 0
+		WHERE commentid = '{$commentid}';
+END;
+		$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
+			        " : " . $mysqli->error);
+	}
+}
+
+
 $content = <<<END
 
 		<div class="wrapper margin-top-100">
@@ -126,8 +176,10 @@ $content = <<<END
 								<div class="panel-body">								
 									
 									Skriven av: <a href="profile.php?keeperid={$keeperid}">{$keepername}</a>
-									<!-- flagga --><a href="genre.php?grid={$grid}" class="flag" alt="Markera stötande innehåll">
-									<span class="glyphicon glyphicon-flag pull-right" aria-hidden="true"></span></a>
+									<form action="genre.php?grid={$grid}" method="post">
+										<button type="submit" name="unappropriate" value="flag">flagga</button>
+									</form>
+									
 									</br>
 																	
 									Publicerad: {$timestamp}<br><br>

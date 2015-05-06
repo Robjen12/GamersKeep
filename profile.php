@@ -436,38 +436,7 @@ END;
 	}
 
 
-/*$query = <<<END
 
-SELECT * 
-	FROM chatcom 
-	JOIN user 
-	ON chatcom.keeperid = user.keeperid 
-	OR chatcom.keeperid2 = user.keeperid
-	WHERE accept = 1 
-    AND user.keeperid != '{$keeperid}'
-    AND chatcom.chatcomid = '{$getchatcomid}'
-    GROUP BY user.keepername;
-	
-END;
-	
-	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-	  " : " . $mysqli->error);
-
-		if($res->num_rows > 0)
-		{
-			while($row = $res->fetch_object())
-			{
-				$keeperid = $row->keeperid;
-				$friendskeepername = $row->keepername;
-
-				$yourfriends .= <<<END
-
-					<a href="profile.php?keeperid={$keeperid}">{$friendskeepername}</a><br>
-END;
-			}
-
-
-		}	*/
 
 
 
