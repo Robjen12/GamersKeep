@@ -452,9 +452,9 @@ $content = <<<END
 
 		
 
-				<div class="row margin-top-100">
+				<div class="row margin-top-100 profile-page">
 			
-					<div class="col-md-3 col-sm-3 pull-left">
+					<div class="profile-tower pull-left">
 
 	  					<div class="row profil margin-left-profile">
 	  					
@@ -540,65 +540,57 @@ $content = <<<END
 
 						</div>
 						
-						<div class="col-md-6 col-sm-6 panel-width-550px panel panel-default pull-left">
+						<div class="col-sm-8">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 panel-width-550px panel panel-default pull-left">
 
-	  					<div class="panel-heading panel-heading-560px">Om mig {$penbutton}</div>
-
-
-		  					<div class="panel-body">
-
-			  					<p>Namn: {$profilename} {$profilelastname}</p> 
-			  					{$profileabout}
-			  						
-			  					{$formabout}
+			  					<div class="panel-heading panel-heading-560px">Om mig {$penbutton}</div>
 
 
-		  					</div><!-- panel body -->
+				  					<div class="panel-body">
 
-						</div><!-- col md 6 -->
+					  					<p>Namn: {$profilename} {$profilelastname}</p> 
+					  					{$profileabout}
+					  						
+					  					{$formabout}
 
-						<div class="col-md-3 col-sm-3 content-right pull-right">
-							<div class="ads">
-							<!-- Reklam karusel -->
-		  						<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
-		  						<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
 
-		  					
-							</div><!-- reklam kolumn -->
+				  					</div><!-- panel body -->
 
-						</div><!-- row -->
-					
+								</div><!-- col md 12 -->
 
-					<div class="col-md-3 col-sm-3 ovrigt panel panel-default pull-left">
+								<div class="col-md-6 col-sm-6 ovrigt panel panel-default pull-left">
 
-	  					<div class="panel-heading ovrigt-heading">Övrigt {$penbutton2}</div>
+				  					<div class="panel-heading ovrigt-heading">Övrigt {$penbutton2}</div>
 
-		  					<div class="panel-body">
- 								{$profileother}
- 								{$formother}
-		  					</div>
-						
-						</div><!-- panel heading -->
+					  					<div class="panel-body">
+			 								{$profileother}
+			 								{$formother}
+					  					</div>
+									
+									</div><!-- panel heading -->
 
-						<div class="col-md-3 col-sm-3 aktiviteter panel panel-default pull-left margin-left-25px">
+									<div class="col-md-3 col-sm-3 aktiviteter panel panel-default pull-left margin-left-25px">
 
-	  					<div class="panel-heading aktiviteter-heading">Aktiviteter</div>
+					  					<div class="panel-heading aktiviteter-heading">Aktiviteter</div>
 
-		  					<div class="panel-body margin-horizontal-zero">
- 
-		  						<a href class="text-primary">{$latestactivity}</a>
+						  					<div class="panel-body margin-horizontal-zero">
+				 
+						  						<a href class="text-primary">{$latestactivity}</a>
 
-		  					</div>
-						
-						</div><!-- panel heading -->
+						  					</div>
+										
+										</div><!-- panel heading -->
 
 
 
-					
-					</div><!-- kolumn 2 -->
-					</div><!-- kolumn 2 -->
+								
+									</div><!-- kolumn 2 -->
+								</div><!-- kolumn 2 -->
+							</div>
+						</div>
 
-				</div><!-- row -->
+					</div><!-- row -->
 <script>
 $(document).ready(function(){
 	$('#updateform').hide();

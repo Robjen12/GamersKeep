@@ -788,6 +788,10 @@ a.text-primary:hover {
   width: 410px;
 }
 
+.profile-tower {
+  margin-left: 15px;
+}
+
 .profil-right {
   margin-right: 0px;
   margin-left: auto;
