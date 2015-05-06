@@ -80,7 +80,7 @@ END;
 			$title = utf8_decode(htmlspecialchars($row->title));
 			$text = utf8_decode(htmlspecialchars($row->text));
 			
-			$article = <<<END
+			$article .= <<<END
 				Titel: <a href="genre.php?grid={$grid}">{$title}</a><br>
 				<i>{$text}</i><br><br>
 END;

@@ -38,23 +38,10 @@ END;
 
 			$gr_flag .= <<<END
 				
-
 				<form action="admin.php?grid={$grid}" method="post">
-				
-				<button type="submit" class="btn-sm-span" name="ok" value="">
-						<span class="glyphicon glyphicon-ok text-success pull-left" aria-hidden="true"></span>
-				</button>
-					
-				<button class="btn-sm-span delete">
-						<a href="delete.php?grid={$grid}">
-						<span class="glyphicon glyphicon-remove text-danger pull-left" aria-hidden="true"></span>
-						</a>
-				</button>
-				
-				<a href="genre.php?grid={$grid}">{$title}</a>				
-					
-					<br><br>
-				
+				<a href="genre.php?grid={$grid}">{$title}</a>
+					<button type="submit" name="ok" value="">V</button>
+					<button class="delete"><a href="delete.php?grid={$grid}">X</a></button>
 				</form>
 				
 				
