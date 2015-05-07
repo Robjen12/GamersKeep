@@ -59,6 +59,11 @@ END;
 		        " : " . $mysqli->error);
 			}
 			$feedback = "<p class=\"text-green\">Inlägget har publicerats</p>";
+			
+			// http://stackoverflow.com/questions/11299006/header-location-delay
+			//sleep(2);
+			header("Location: index.php", true, 303);
+			exit;
 		}
 
 		else if(isset($_POST['review']))
@@ -100,6 +105,11 @@ END;
 		        " : " . $mysqli->error);
 			}
 			$feedback = "<p class=\"text-green\">Inlägget har publicerats</p>";
+			
+			// http://stackoverflow.com/questions/11299006/header-location-delay
+			//sleep(2);
+			header("Location: index.php", true, 303);
+			exit;
 		}
 	}
 
