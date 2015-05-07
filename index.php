@@ -53,22 +53,18 @@ END;
 
 	$latestguide .= <<<END
 	
-								<ul class="media-list">
-  									<li class="media">
-    									<div class="media-left">
-      										<a href="genre.php?grid={$grid}">
-	        									
-      										</a>
-    									</div>
-    									<div class="media-body">
-      										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
-      										class="text-bold">{$title}</a><li class="views">{$admindelete}</li></br>
-											<i>{$text}</i></h4><br>
-    									</div>
-  									</li>
-								</ul>
-
-						
+		<ul class="media-list margin-left-topplista margin-top-topplistaindex">
+  				<li class="media">
+    				<div class="media-left">
+      				</div>
+    				<div class="media-body">
+      					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
+						<li class="views">{$admindelete}</li>
+						<br>
+						<h5 class="media-heading">{$text}</h5>
+    				</div><!-- media body -->
+  				</li><!-- media -->
+			</ul><!-- media list -->						
 END;
 
 }
@@ -104,25 +100,19 @@ END;
 
 	$latestreview .= <<<END
 
-								<ul class="media-list">
-  									<li class="media">
-    									<div class="media-left">
-      										<a href="genre.php?grid={$grid}">
-	        									
-      										</a>
-    									</div>
-    									<div class="media-body">
-      										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
-      										class="text-bold">{$title}</a><li class="views">{$admindelete}</li></br>
-											<i>{$text}</i><br></h4>
-    									</div>
-  									</li>
-								</ul>			
+			<ul class="media-list margin-left-topplista margin-top-topplistaindex">
+  				<li class="media">
+    				<div class="media-left">
+      				</div>
+    				<div class="media-body">
+      					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
+						<li class="views">{$admindelete}</li>
+						<br>
+						<h5 class="media-heading">{$text}</h5>
+    				</div><!-- media body -->
+  				</li><!-- media -->
+			</ul><!-- media list -->
 
-
-
-
-		
 END;
 }
 
@@ -159,23 +149,18 @@ END;
 			}
                 $toplistguide .=<<<END
 
-                <ul class="media-list">
-  									<li class="media">
-    									<div class="media-left">
-      										<a href="genre.php?grid={$grid}">
-	        									
-      										</a>
-    									</div>
-    									<div class="media-body">
-      										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
-      										class="text-bold">{$title}</a><li class="views">{$row->counter}{$admindelete}</li></br>
-											<i>{$text}</i><br></h4>
-    									</div>
-  									</li>
-								</ul>			
-
-               
-           
+				<ul class="media-list margin-left-topplista margin-top-topplistaindex">
+					<li class="media">
+						<div class="media-left">
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
+							<li class="views">{$row->counter}</li>
+							<br>
+							<h5 class="media-heading">{$text}</h5>
+						</div><!-- media body -->
+					</li><!-- media -->
+				</ul><!-- media list -->
 END;
         }
 }
@@ -212,22 +197,18 @@ END;
 
 	$toplistreview .= <<<END
 
-	<ul class="media-list">
-  									<li class="media">
-    									<div class="media-left">
-      										<a href="genre.php?grid={$grid}">
-	        									
-      										</a>
-    									</div>
-    									<div class="media-body">
-      										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
-      										class="text-bold">{$title}</a><li class="views">{$row->counter}{$admindelete}</li><br>
-											<i>{$text}</i><br></h4>
-    									</div>
-  									</li>
-								</ul>
-
-		
+	<ul class="media-list margin-left-topplista margin-top-topplistaindex">
+					<li class="media">
+						<div class="media-left">
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
+							<li class="views">{$row->counter}</li>
+							<br>
+							<h5 class="media-heading">{$text}</h5>
+						</div><!-- media body -->
+					</li><!-- media -->
+				</ul><!-- media list -->		
 END;
 
 	}

@@ -52,11 +52,24 @@ if($result->num_rows > 0)
 		$genre = $row->genretype;
 
 		$latestgenreguide .= <<<END
+		
+			<ul class="media-list margin-left-topplista">
+				<li class="media">
+					<div class="media-left">
+				</div>
+    			<div class="media-body">
+      					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
+						<li class="views"></li>
+						<br>
+						<h5 class="media-heading">{$text}</h5>
+    				</div><!-- media body -->
+  				</li><!-- media -->
+			</ul><!-- media list -->	
 
-			<a href="genre.php?grid={$grid}">{$title}</a></br>
-			{$text}<br><br>
+			
 
 END;
+
 
 	}
 }
@@ -91,9 +104,19 @@ if($result->num_rows > 0)
 		$genre = $row->genretype;	
 
 		$latestgenrereview .= <<<END
-
-			<a href="genre.php?grid={$grid}">{$title}</a></br>
-			{$text}<br><br>
+		
+			<ul class="media-list margin-left-topplista">
+				<li class="media">
+					<div class="media-left">
+				</div>
+    			<div class="media-body">
+      					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
+						<li class="views"></li>
+						<br>
+						<h5 class="media-heading">{$text}</h5>
+    				</div><!-- media body -->
+  				</li><!-- media -->
+			</ul><!-- media list -->		
 END;
 	}
 
@@ -128,9 +151,19 @@ if($result->num_rows > 0)
 		$grade = $row->grade;
 
 		$toplistgenreguide .= <<<END
-
-			<a href="genre.php?grid={$grid}">{$title}</a><br>
-			<i>{$text}</i><br><br>
+		
+		<ul class="media-list margin-left-topplista">
+				<li class="media">
+					<div class="media-left">
+				</div>
+    			<div class="media-body">
+      					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
+						<li class="views">{$row->counter}</li>
+						<br>
+						<h5 class="media-heading">{$text}</h5>
+    				</div><!-- media body -->
+  				</li><!-- media -->
+			</ul><!-- media list -->
 END;
 
 	}
@@ -166,9 +199,19 @@ if($result->num_rows >0)
 		$grade = $row->grade;
 
 		$toplistgenrereview .= <<<END
-
-		<a href="genre.php?grid={$grid}">{$title}</a><br>
-		<i>{$text}</i><br><br>
+		
+			<ul class="media-list margin-left-topplista">
+				<li class="media">
+					<div class="media-left">
+				</div>
+    			<div class="media-body">
+      					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
+						<li class="views">{$row->counter}</li>
+						<br>
+						<h5 class="media-heading">{$text}</h5>
+    				</div><!-- media body -->
+  				</li><!-- media -->
+			</ul><!-- media list -->
 END;
 
 	}
