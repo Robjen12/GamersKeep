@@ -26,11 +26,12 @@ $yourfriends = "";
 $getchatcomid = "";
 $accept = "";
 $friendsaccept = "";
-//
-if($_SESSION['roletype'] == 1)
-{
-	header("Location: admin.php");
-}
+
+// ingen location header annars kan admin inte se sin profil
+//if($_SESSION['roletype'] == 1)
+//{
+//	header("Location: admin.php");
+//}
 
 if(!empty($_GET['keeperid']))
 {
@@ -165,10 +166,12 @@ END;
 				if($accept == 0)
 				{
 					$button = <<<END
-					<div class="pull-left margin-left-50px">
+					<p class="text-left margin-left-50px text-success">Vänförfrågan skickat
+					<span class="glyphicon glyphicon-hand-left pull-right margin-right-50px span-color-green" aria-hidden="true"></span>
+					&nbsp;
+					<span class="glyphicon glyphicon-hand-right pull-right span-color-green" aria-hidden="true"></span>
 					
-					<button class="button-bg-success">Vänförfrågan har skickats</button><br>
-					</div>
+					
 END;
 							
 				}
@@ -185,7 +188,7 @@ END;
 				$button = <<<END
 
 				<form action="profile.php?keeperid={$keeperid2}" method="post">
-				<button type="submit" name="keeperfr" value="Lägg till">Lägg till vän</button><br>
+				<button type="submit" name="keeperfr" value="Lägg till">Lägg till vän</button>
 				</form>
 END;
 
