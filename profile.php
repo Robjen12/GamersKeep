@@ -509,10 +509,11 @@ END;
 								<form action="profile.php?keeperfriendid={$friendkeeperfriendid}" method="post">
 								
 								<a href="profile.php?keeperid={$friendkeeperid}"><span class="glyphicon glyphicon-user pull-left" aria-hidden="true">&nbsp;</span>{$friendkeepername}</a>
-									<button type="submit" class="primary pull-right" name="yes" value=""><span class="glyphicon glyphicon-ok pull-left" aria-hidden="true">&nbsp;</span></button>
+									<button type="submit" class="btn btn-sm-span span-color-green" name="yes" value=""><span class="glyphicon glyphicon-ok pull-left" aria-hidden="true"></span></button>
 									&nbsp;
-									<button type="submit" class="danger pull-right" name="no" value="">Nej</button>
+									<button type="submit" class="btn btn-sm-span span-color-red" name="no" value=""><span class="glyphicon glyphicon-remove pull-left" aria-hidden="true"></span></button>
 								</form>
+								<br>
 END;
 	
 					}

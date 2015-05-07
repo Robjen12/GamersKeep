@@ -1222,13 +1222,16 @@ a.deletelink
 */
 
 .btn-default-span {
-color: Red;
-  background-color: #fff;
+
+background-color: Transparent;
+  background-repeat: no-repeat;
   border: none;
   margin-left: 2px;
   margin-right: 0px;
   width: auto;
   height: auto;
+  outline: none;
+  color: #000;
 }
 
 .btn-default-span:hover,
@@ -1238,10 +1241,12 @@ color: Red;
 .btn-default-span.active,
 .open > .dropdown-toggle.btn-default-span {
 	color: Red;
-	background-color: White;
+	background-color: Transparent;
+    background-repeat: no-repeat;
 	border: none;
 	margin-left: 2px;
 	margin-right: 0px;
+	outline: none;
 
 }
 
@@ -1249,7 +1254,8 @@ color: Red;
 .btn-group-sm-span > .btn {
   padding: 3px 3px 3px 3px;
   font-size: 12px;
-
+background-color: Transparent;
+    background-repeat: no-repeat;
   border-radius: none;
   margin-left: 2px;
   display: inline-block;
@@ -1258,6 +1264,7 @@ color: Red;
 	width: auto;
 	height: auto;
 	color: #000;
+	outline: none;
 }
 /* lagger span ikoner centreret m text pa baseline */
 .middle {
@@ -1463,4 +1470,12 @@ margin-left: -15px;
 margin-right: -5px;
 margin-bottom: 20px;
 margin-top: 10px;
+}
+
+.span-color-red {
+color: #d43f3a;
+}
+
+.span-color-green {
+color: #398439;
 }
