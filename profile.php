@@ -1,7 +1,6 @@
 <?php
 include_once("inc/HTMLTemplate.php");
 include_once("inc/Connstring.php");
-
 $keepername = $_SESSION['keepername'];
 $keeperid = $_SESSION['keeperid'];
 $keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
@@ -33,7 +32,7 @@ if($_SESSION['roletype'] == 1)
 	header("Location: admin.php");
 }
 
-if(!empty($_GET))
+if(!empty($_GET['keeperid']))
 {
 	
 // Hämtar ut om användaren
@@ -519,6 +518,92 @@ END;
 			
 		
 	
+	}
+	if(isset($_POST['yes']))
+ {
+
+  $keeperfriendid1 = $_GET["keeperfriendid"];
+
+  $query = <<<END
+   UPDATE keeperfriend SET accept = 1
+   WHERE keeperfriend.keeperfriendid = '{$keeperfriendid1}';
+  
+END;
+
+  $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+          " : " . $mysqli->error);
+
+  }
+ if(isset($_POST['no']))
+ {
+  $keeperfriendid1 = $_GET["keeperfriendid"];
+
+  $query = <<<END
+
+   DELETE FROM keeperfriend 
+   WHERE keeperfriend.keeperfriendid = '{$keeperfriendid1}';
+END;
+  $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+           " : " . $mysqli->error);
+
+ }
+
+
+	$query = <<<END
+
+	SELECT *
+	FROM keeperfriend
+	WHERE keeperfriend.keeperid2 = '{$keeperid}'
+	AND accept = 0;
+
+END;
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		  " : " . $mysqli->error);
+
+	if($res->num_rows > 0)
+	{
+
+		while($row = $res->fetch_object())
+		{
+			$friendkeeperfriendid = $row->keeperfriendid;
+			$friendkeeperid = $row->keeperid;
+			$friendkeeperid2 = $row->keeperid2;
+			$friendaccept = $row->accept;
+
+			if($keeperid == $friendkeeperid2)
+			{
+
+				$query = <<<END
+
+					SELECT keeperid, keepername FROM user
+					WHERE keeperid = '{$friendkeeperid}';
+END;
+				$res2 = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+
+				$row2 = $res2->fetch_object();
+				$friendkeepername = $row2->keepername;
+				
+
+					if($friendkeepername != $keepername)
+					{
+						
+							$friendsaccept .= <<<END
+
+								
+								<form action="profile.php?keeperfriendid={$friendkeeperfriendid}" method="post">
+								<a href="profile.php?keeperid={$friendkeeperid}">{$friendkeepername}</a>
+									<button type="submit" name="yes" value="">Ja</button>
+									<button type="submit" name="no" value="">Nej</button>
+								</form>
+END;
+	
+					}
+			
+
+			}
+			
+		}
 	}
 
 
