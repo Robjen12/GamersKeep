@@ -53,7 +53,7 @@ END;
 
 	$latestguide .= <<<END
 	
-		<ul class="media-list margin-left-topplista margin-top-topplistaindex">
+		<ul class="media-list margin-left-topplista">
   				<li class="media">
     				<div class="media-left">
       				</div>
@@ -100,7 +100,7 @@ END;
 
 	$latestreview .= <<<END
 
-			<ul class="media-list margin-left-topplista margin-top-topplistaindex">
+			<ul class="media-list margin-left-topplista">
   				<li class="media">
     				<div class="media-left">
       				</div>
@@ -149,7 +149,7 @@ END;
 			}
                 $toplistguide .=<<<END
 
-				<ul class="media-list margin-left-topplista margin-top-topplistaindex">
+				<ul class="media-list margin-left-topplista">
 					<li class="media">
 						<div class="media-left">
 						</div>
@@ -197,7 +197,7 @@ END;
 
 	$toplistreview .= <<<END
 
-	<ul class="media-list margin-left-topplista margin-top-topplistaindex">
+	<ul class="media-list margin-left-topplista">
 					<li class="media">
 						<div class="media-left">
 						</div>
