@@ -165,7 +165,10 @@ END;
 				if($accept == 0)
 				{
 					$button = <<<END
-					<button class="success">Vänförfrågan har skickats</button><br>
+					<div class="pull-left margin-left-50px">
+					
+					<button class="button-bg-success">Vänförfrågan har skickats</button><br>
+					</div>
 END;
 							
 				}
@@ -661,7 +664,7 @@ $content = <<<END
 
 											<div class="friends">
 
-												{$v} Vänner <span class="badge badge-warning pull-right">78</span><br>
+												{$v} Vänner <span class="badge badge-warning pull-right">{$friend_count}</span><br>
 												{$yourfriends}
 											</div>
 									

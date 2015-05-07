@@ -1232,6 +1232,7 @@ background-color: Transparent;
   height: auto;
   outline: none;
   color: #000;
+  border-radius: 3px;
 }
 
 .btn-default-span:hover,
@@ -1247,6 +1248,7 @@ background-color: Transparent;
 	margin-left: 2px;
 	margin-right: 0px;
 	outline: none;
+	border-radius: 3px;
 
 }
 
@@ -1478,4 +1480,8 @@ color: #d43f3a;
 
 .span-color-green {
 color: #398439;
+}
+.button-bg-success {
+background-color: #398439;
+color: #fff; 
 }
