@@ -26,12 +26,12 @@ END;
 $yourfriends = "";
 $getchatcomid = "";
 $accept = "";
-
+$friendsaccept = "";
 //
-//if($_SESSION['roletype'] == 1)
-//{
-//	header("Location: admin.php");
-//}
+if($_SESSION['roletype'] == 1)
+{
+	header("Location: admin.php");
+}
 
 if(!empty($_GET))
 {
@@ -521,6 +521,8 @@ END;
 	
 	}
 
+
+
 }
 
 
@@ -562,6 +564,13 @@ $content = <<<END
 		  								<p class="text-left">
 											{$r} Recensioner <span class="badge badge-info pull-right">15</span><br>
 											{$g} Guider <span class="badge primary pull-right">7</span><br>
+
+											<div class="almostfriends">
+
+												{$v} Vänförfrågan <span class="badge badge-warning pull-right"></span><br>
+										
+												{$friendsaccept}
+											</div>
 
 											<div class="friends">
 
