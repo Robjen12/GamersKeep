@@ -1458,3 +1458,9 @@ visibility: hidden;
 display: show;
 visibility: show;
 }
+.margin-left-topplista {
+margin-left: -15px;
+margin-right: -5px;
+margin-bottom: 20px;
+margin-top: 10px;
+}
