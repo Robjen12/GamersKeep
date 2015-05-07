@@ -209,11 +209,11 @@ $content = <<<END
 					<div class="panel panel-default panel-width-240px pull-left">
 
 	  					<div class="panel-heading panel-heading-250px">
-							Senaste guider<li class="views">{$genretype}</li>
+							Topplista recensioner<li class="views">{$genretype}</li>
 						</div><!-- panel heading -->
 
 		  				<div class="panel-body height-410px">
-		  					{$latestgenreguide}
+		  					{$toplistgenrereview}
 		  				</div><!-- panel body -->
 						
 					</div><!-- col md 4 -->
@@ -244,11 +244,11 @@ $content = <<<END
 						<div class="panel panel-default panel-width-240px pull-left">
 
 		  					<div class="panel-heading panel-heading-250px">
-								Topplista recensioner <li class="views">{$genretype}</li>
+								 Senaste guider<li class="views">{$genretype}</li>
 							</div><!-- panel heading -->
 
 			  				<div class="panel-body height-410px">										
-				  				{$toplistgenrereview}		  			
+				  				{$latestgenreguide}
 			  				</div><!-- panel body -->
 
 						</div><!-- panel heading -->
