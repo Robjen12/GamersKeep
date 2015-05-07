@@ -61,24 +61,15 @@ END;
 
 if(isset($_POST['unappropriate']))
 {
-	if($flag == 0)
-	{
+	
 		$getflag = <<<END
 		UPDATE guidereviewinfo SET flag = 1
 		WHERE grid = '{$grid}';
 END;
 		$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
 			        " : " . $mysqli->error);
-	}
-	else
-	{
-		$getflag = <<<END
-		UPDATE guidereviewinfo SET flag = 0
-		WHERE grid = '{$grid}';
-END;
-		$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
-			        " : " . $mysqli->error);
-	}
+	
+	
 }
 
 if(!empty($_POST))
