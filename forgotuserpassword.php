@@ -24,7 +24,10 @@ $content = <<<END
 				
 				<div class="col-md-6">
 					<div id="forgot">
-						<h3 class="quicksand">Hämta ditt användarnamn och lösenord</h3>
+						<div class="panel panel-default">
+						
+						<div class="panel-header">Hämta ditt användarnamn och lösenord</div>
+						<div class="panel-body">
 						<h6>Ange emailen som du angav vid registrering</h6>
 						<form action="forgotuserpassword.php" method="post" id="" class="quicksand">
 							<input type="text" class="form-control" id="email" name="email" value="" placeholder="Ange din mejl här"><br>
@@ -32,6 +35,7 @@ $content = <<<END
 							<button class="btn btn-warning btn-sm text-bold text-white pull-right"><a class="text-bold text-white" href="login.php">Bakåt</a></button>
 						</form>
 					</div><!-- forgot -->
+					</div><!-- panel body -->
 				</div><!-- col md 6 -->
 
 				<div class="col-md-3">
