@@ -221,7 +221,7 @@ END;
     									</div>
     									<div class="media-body">
       										<h4 class="media-heading"><a href="genre.php?grid={$grid}"
-      										class="text-bold">{$title}</a></br><li class="views">{$row->counter}{$admindelete}</li>
+      										class="text-bold">{$title}</a><li class="views">{$row->counter}{$admindelete}</li><br>
 											<i>{$text}</i><br></h4>
     									</div>
   									</li>
@@ -263,11 +263,11 @@ $content = <<<END
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
-								<div class="panel-heading panel-heading-250px">Senaste recensioner</div>
+								<div class="panel-heading panel-heading-250px">Topplista recensioner</div>
 
 				  					<div class="panel-body height-410px">
 
-				  							<p>{$latestreview}</p>
+				  							<p>{$toplistreview}</p>
 				  					</div><!-- panel body -->
 
 								</div><!-- panel heading -->
@@ -298,11 +298,11 @@ $content = <<<END
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
-								<div class="panel-heading panel-heading-250px">Topplista recensioner</div>
+								<div class="panel-heading panel-heading-250px">Senaste guider</div>
 
 				  					<div class="panel-body height-410px">
 
-				  							<p>{$toplistreview}</p>
+				  							<p>{$latestguide}</p>
 				  					</div><!-- panel body -->
 
 								</div><!-- panel heading -->
@@ -314,11 +314,11 @@ $content = <<<END
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
-								<div class="panel-heading panel-heading-250px">Senaste guider</div>
+								<div class="panel-heading panel-heading-250px">Senaste recensioner</div>
 
 				  					<div class="panel-body height-410px">
 
-				  							<p>{$latestguide}</p>
+				  							<p>{$latestreview}</p>
 				  					</div><!-- panel body -->
 
 								</div><!-- panel heading -->
