@@ -434,91 +434,6 @@ END;
 		
 	
 	}
-
-$query = <<<END
-
-			   SELECT *
-			   FROM keeperfriend
-			   
-				WHERE (keeperid = '{$keeperid}'
-					OR keeperid2 = '{$keeperid}')
-			   AND accept = 1
-
-END;
-
-	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-		  " : " . $mysqli->error);
-
-	$friend_count = 0;
-
-	if($res->num_rows > 0)
-	{
-		while($row = $res->fetch_object())
-		{
-			$keeperid1 = $row->keeperid;
-			$keeperid2 = $row->keeperid2;
-			$accept = $row->accept;
-
-				if($keeperid == $keeperid1)
-				{
-					$query = <<<END
-
-						SELECT keeperid, keepername
-						FROM user
-						WHERE keeperid = '{$keeperid2}';
-
-END;
-				
-					$res2 = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-		 			 " : " . $mysqli->error);
-
-					$row2 = $res2->fetch_object();
-					$keepername2 = $row2->keepername;
-					$keeper2 = $row->keeperid2;
-
-					if($keepername2 != $keepername)
-					{
-						$friend_count++;
-							$yourfriends .= <<<END
-							<a href="profile.php?keeperid={$keeper2}">{$keepername2}</a><br>
-END;
-						
-					}
-
-				}
-				else 
-				{
-					$query = <<<END
-
-						SELECT keepername, keeperid
-						FROM user
-						WHERE keeperid = '{$keeperid1}';
-END;
-				
-					$res3 = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-		 			 " : " . $mysqli->error);
-
-					$row3 = $res3->fetch_object();
-					$keepername1 = $row3->keepername;
-					$keeper = $keeperid1;
-
-					if($keepername1 != $keepername)
-					{
-						$friend_count++;
-						$yourfriends .= <<<END
-						<a href="profile.php?keeperid={$keeper}">{$keepername1}</a><br>
-END;
-					}
-				}
-
-
-
-		}
-							
-			
-		
-	
-	}
 	if(isset($_POST['yes']))
  {
 
@@ -606,6 +521,90 @@ END;
 		}
 	}
 
+$query = <<<END
+
+			   SELECT *
+			   FROM keeperfriend
+			   
+				WHERE (keeperid = '{$keeperid}'
+					OR keeperid2 = '{$keeperid}')
+			   AND accept = 1
+
+END;
+
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		  " : " . $mysqli->error);
+
+	$friend_count = 0;
+
+	if($res->num_rows > 0)
+	{
+		while($row = $res->fetch_object())
+		{
+			$keeperid1 = $row->keeperid;
+			$keeperid2 = $row->keeperid2;
+			$accept = $row->accept;
+
+				if($keeperid == $keeperid1)
+				{
+					$query = <<<END
+
+						SELECT keeperid, keepername
+						FROM user
+						WHERE keeperid = '{$keeperid2}';
+
+END;
+				
+					$res2 = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		 			 " : " . $mysqli->error);
+
+					$row2 = $res2->fetch_object();
+					$keepername2 = $row2->keepername;
+					$keeper2 = $row->keeperid2;
+
+					if($keepername2 != $keepername)
+					{
+						$friend_count++;
+							$yourfriends .= <<<END
+							<a href="profile.php?keeperid={$keeper2}">{$keepername2}</a><br>
+END;
+						
+					}
+
+				}
+				else 
+				{
+					$query = <<<END
+
+						SELECT keepername, keeperid
+						FROM user
+						WHERE keeperid = '{$keeperid1}';
+END;
+				
+					$res3 = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		 			 " : " . $mysqli->error);
+
+					$row3 = $res3->fetch_object();
+					$keepername1 = $row3->keepername;
+					$keeper = $keeperid1;
+
+					if($keepername1 != $keepername)
+					{
+						$friend_count++;
+						$yourfriends .= <<<END
+						<a href="profile.php?keeperid={$keeper}">{$keepername1}</a><br>
+END;
+					}
+				}
+
+
+
+		}
+							
+			
+		
+	
+	}
 
 
 }
