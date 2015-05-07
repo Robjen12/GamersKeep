@@ -179,7 +179,7 @@ $(document).ready(function(){
 					<div class="dropdown">
 				
 					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="menu" aria-expanded="true">
-					<a href="profile.php" alt="Profil"><div class="header_ikoner header_profil no-border pull-right"></div></a>
+					<a href="profile.php" alt="Profil" title="Profil"><div class="header_ikoner header_profil no-border pull-right"></div></a>
 					</li>
 			  		</ul>
 					
@@ -197,13 +197,13 @@ $(document).ready(function(){
 					
 					
 				
-					<li><a href="index.php"><div class="header_ikoner header_home pull-right"></div></a></li>
-					<li><a href="guide_review.php" alt="Skriv recension/guide"><div class="header_ikoner header_write pull-right"></div></a></li>
+					<li><a href="index.php" title="Hem"><div class="header_ikoner header_home pull-right"></div></a></li>
+					<li><a href="guide_review.php" alt="Skriv recension/guide" title="Skriv recension/guide"><div class="header_ikoner header_write pull-right"></div></a></li>
 					
 					<div class="dropdown">
 						
 		  				<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="menu"
-		  				 aria-expanded="true"><div class="header_ikoner header_genrer pull-right" alt="Genrer"></div>
+		  				 aria-expanded="true"><div class="header_ikoner header_genrer pull-right" alt="Genrer" title="Genrer"></div>
 			  			</ul>
 				 							
 		  				<ul class="dropdown-menu drop-margin-75px pull-right dropdown-top-margin Droid bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">
@@ -219,7 +219,7 @@ $(document).ready(function(){
 							
 								<form action="search.php" method="GET" class="soek_form">
 								<div class="soek_anim"></div>
-								<button class="soek_button pull-right" type="Submit" value="Sök" alt="Sök">
+								<button class="soek_button pull-right" type="Submit" value="Sök" alt="Sök" title="Sök">
 								
 								</button>
 								<input type="text" class="form-control-search pull-right" id="searchfield" name="search" placeholder="Sök...">
