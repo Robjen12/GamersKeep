@@ -165,7 +165,7 @@ END;
 				if($accept == 0)
 				{
 					$button = <<<END
-					<button>Vänförfrågan har skickats</button><br>
+					<button class="success pull-right">Vänförfrågan har skickats</button><br>
 END;
 							
 				}
@@ -182,7 +182,7 @@ END;
 				$button = <<<END
 
 				<form action="profile.php?keeperid={$keeperid2}" method="post">
-				<button type="submit" name="keeperfr" value="Lägg till">Lägg till vän</button><br>
+				<button class="btn btn-xs-success pull-right" type="submit" name="keeperfr" value="Lägg till">Lägg till vän</button><br>
 				</form>
 END;
 
@@ -507,9 +507,11 @@ END;
 
 								
 								<form action="profile.php?keeperfriendid={$friendkeeperfriendid}" method="post">
-								<a href="profile.php?keeperid={$friendkeeperid}">{$friendkeepername}</a>
-									<button type="submit" name="yes" value="">Ja</button>
-									<button type="submit" name="no" value="">Nej</button>
+								
+								<a href="profile.php?keeperid={$friendkeeperid}"><span class="glyphicon glyphicon-user pull-left" aria-hidden="true">&nbsp;</span>{$friendkeepername}</a>
+									<button type="submit" class="primary pull-right" name="yes" value=""><span class="glyphicon glyphicon-ok pull-left" aria-hidden="true">&nbsp;</span></button>
+									&nbsp;
+									<button type="submit" class="danger pull-right" name="no" value="">Nej</button>
 								</form>
 END;
 	
