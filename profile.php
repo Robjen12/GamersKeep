@@ -165,7 +165,7 @@ END;
 				if($accept == 0)
 				{
 					$button = <<<END
-					<button class="success pull-right">Vänförfrågan har skickats</button><br>
+					<button class="success">Vänförfrågan har skickats</button><br>
 END;
 							
 				}
