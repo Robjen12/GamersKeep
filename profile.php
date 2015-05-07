@@ -26,6 +26,7 @@ $yourfriends = "";
 $getchatcomid = "";
 $accept = "";
 $friendsaccept = "";
+$friend_count = "";
 
 // ingen location header annars kan admin inte se sin profil
 //if($_SESSION['roletype'] == 1)
@@ -166,11 +167,13 @@ END;
 				if($accept == 0)
 				{
 					$button = <<<END
-					<p class="text-left margin-left-50px text-success">Vänförfrågan skickat
-					<span class="glyphicon glyphicon-hand-left pull-right margin-right-50px span-color-green" aria-hidden="true"></span>
-					&nbsp;
-					<span class="glyphicon glyphicon-hand-right pull-right span-color-green" aria-hidden="true"></span>
 					
+					<div class="pull-left">
+						<button type="submit" class="btn btn-xs btn-success pull-left margin-left-50px" name="keeperfr" value="Lägg till"
+						title="Vänförfrågan skickat">Skickat&nbsp;
+						<span class="glyphicon glyphicon-ok-sign pull-right text-white text-bold text-14px" aria-hidden="true"></span>
+						</button>					
+					</div>					
 					
 END;
 							
@@ -186,16 +189,25 @@ END;
 		else
 		{		
 				$button = <<<END
-
+				<div class="pull-left">
 				<form action="profile.php?keeperid={$keeperid2}" method="post">
-				<button type="submit" name="keeperfr" value="Lägg till">Lägg till vän</button>
+				<button type="submit" class="btn btn-xs btn-primary pull-left margin-left-50px" name="keeperfr" value="Lägg till" title="Bli vän">Bli vän&nbsp;
+					<span class="glyphicon glyphicon-ok-sign pull-right text-white text-bold text-14px" aria-hidden="true"></span>
+				</button>
 				</form>
+				</div>
 END;
 
 		}
 
 $sendmessage = <<<END
-	<button><a href="chatcom.php?keeperid={$keeperid2}">Skicka meddelande</a></button>
+	<div class="pull-right">
+		<button class="btn btn-xs btn-default pull-right margin-right-50px text-white">
+		<a href="chatcom.php?keeperid={$keeperid2}" class="text-white" title="Skicka meddelande">Skicka meddelande&nbsp;
+			<span class="glyphicon glyphicon-envelope pull-right text-primary text-bold text-14px" aria-hidden="true"></span>	
+		</a>
+	</button>
+	</div>
 END;
 }
 

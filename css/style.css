@@ -690,6 +690,10 @@ a.text-primary:hover {
   font-size: 10px;
 }
 
+.text-14px {
+  font-size: 14px;
+}
+
 .login-cloud {
   margin-right: auto;
   margin-left: -30px;
