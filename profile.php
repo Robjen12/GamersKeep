@@ -182,7 +182,7 @@ END;
 				$button = <<<END
 
 				<form action="profile.php?keeperid={$keeperid2}" method="post">
-				<button class="btn btn-xs-success pull-right" type="submit" name="keeperfr" value="Lägg till">Lägg till vän</button><br>
+				<button type="submit" name="keeperfr" value="Lägg till">Lägg till vän</button><br>
 				</form>
 END;
 
