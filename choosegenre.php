@@ -62,7 +62,7 @@ if($result->num_rows > 0)
       					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
 						<li class="views"></li>
 						<br>
-						<h5 class="media-heading">{$subtext}</h5>
+						<h5 class="media-heading">{$subtext}...<a href="genre.php?grid={$grid}">Läs mer</a></h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
@@ -112,7 +112,7 @@ if($result->num_rows > 0)
       					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
 						<li class="views"></li>
 						<br>
-						<h5 class="media-heading">{$subtext}</h5>
+						<h5 class="media-heading">{$subtext}...<a href="genre.php?grid={$grid}">Läs mer</a></h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
@@ -160,7 +160,7 @@ if($result->num_rows > 0)
       					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
 						<li class="views">{$row->counter}</li>
 						<br>
-						<h5 class="media-heading">{$subtext}</h5>
+						<h5 class="media-heading">{$subtext}...<a href="genre.php?grid={$grid}">Läs mer</a></h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
@@ -209,7 +209,7 @@ if($result->num_rows >0)
       					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
 						<li class="views">{$row->counter}</li>
 						<br>
-						<h5 class="media-heading">{$subtext}</h5>
+						<h5 class="media-heading">{$subtext}...<a href="genre.php?grid={$grid}">Läs mer</a></h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->

@@ -114,7 +114,7 @@ END;
       					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
 						<li class="views">{$admindelete}</li>
 						<br>
-						<h5 class="media-heading">{$subtext}</h5>
+						<h5 class="media-heading">{$subtext}...<a href="genre.php?grid={$grid}">Läs mer</a></h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
@@ -163,7 +163,7 @@ END;
 							<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
 							<li class="views">{$row->counter}</li>
 							<br>
-							<h5 class="media-heading">{$subtext}</h5>
+							<h5 class="media-heading">{$subtext}...<a href="genre.php?grid={$grid}">Läs mer</a></h5>
 						</div><!-- media body -->
 					</li><!-- media -->
 				</ul><!-- media list -->
@@ -213,7 +213,7 @@ END;
 							<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
 							<li class="views">{$row->counter}</li>
 							<br>
-							<h5 class="media-heading">{$subtext}</h5>
+							<h5 class="media-heading">{$subtext}...<a href="genre.php?grid={$grid}">Läs mer</a></h5>
 						</div><!-- media body -->
 					</li><!-- media -->
 				</ul><!-- media list -->
