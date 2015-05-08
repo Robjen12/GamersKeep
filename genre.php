@@ -115,13 +115,22 @@ END;
 		if($commentflag == 0)
 		{
 			$buttons = <<<END
-			<button type="submit" name="unappropriatecomments" value="flag">flagga</button>
+			<div class="pull-right">
+				<button type="submit" name="unappropriatecomments" value="flag" class="btn btn-xs btn-success pull-left margin-left-50px"
+				title="Flagga för stötande innehåll till moderator">&nbsp;
+					<span class="glyphicon glyphicon-flag pull-right text-white text-bold text-14px" aria-hidden="true"></span>
+				</button>
+			</div>		
 END;
 		}
 		else
 		{
 			$buttons = <<<END
-			<button>yoo</button>
+			<div class="pull-right">
+				<button class="btn btn-xs btn-danger pull-left margin-left-50px" title="Flaggat till moderator">&nbsp;
+					<span class="glyphicon glyphicon-flag pull-right text-white text-bold text-14px" aria-hidden="true"></span>
+				</button>
+			</div>			
 END;
 		
 		}
