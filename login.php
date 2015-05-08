@@ -93,16 +93,20 @@ $content = <<<END
 							Lösenord<br>
 							<input type="password" class="form-control" id="pw" name="pw" value="" placeholder="Skriv in lösenord">
 							<br>
-													
+							
+							<div class="pull-left">
 							<button type="submit" class="btn btn-primary btn-sm pull-left text-bold" id="submit" name="logintosite" value="Logga in">
 								Logga in
 							</button>
+							</div>
 							
-							<button class="btn btn-default btn-sm text-bold login-text text-white margin-left-40px"><a class="login" href="register.php" role="button">
-								Registrera dig</a></button>
+							<div class="pull-right a text-white">							
+									<a href="register.php" class="btn btn-default btn-sm text-bold login-text margin-right-93px" role="button">																
+										Registrera dig
+									</a>
+							</div>
 							
 						</form>
-						<a href="forgotuserpassword.php" class="text-10px text-primary">Glömt lösenord?</a>
 					</div>     
 				</div>   
 			</div>
