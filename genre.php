@@ -24,6 +24,18 @@ END;
 
 $res = $mysqli->query($query);
 
+if(isset($_POST['unappropriate']))
+{
+	
+		$getflag = <<<END
+		UPDATE guidereviewinfo SET flag = 1
+		WHERE grid = '{$grid}';
+END;
+		$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
+			        " : " . $mysqli->error);
+	
+	
+}
 $query = <<<END
 
 	SELECT *
@@ -83,17 +95,18 @@ END;
 	}
 }
 
-if(isset($_POST['unappropriate']))
+
+if(isset($_POST['unappropriatecomments']))
 {
-	
-		$getflag = <<<END
-		UPDATE guidereviewinfo SET flag = 1
-		WHERE grid = '{$grid}';
+	$flaggedCommentId = $_GET["commentid"];
+
+	$getflag = <<<END
+	UPDATE comment SET flag = 1
+	WHERE commentid = '{$flaggedCommentId}';
 END;
-		$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
-			        " : " . $mysqli->error);
-	
-	
+	$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+
 }
 
 if(!empty($_POST))
@@ -113,7 +126,6 @@ END;
 
 	}
 }
-
 
 $query = <<<END
 	
@@ -174,20 +186,6 @@ END;
 
 //span class="glyphicon glyphicon-flag pull-right" aria-hidden="true">
 	}
-
-if(isset($_POST['unappropriatecomments']))
-{
-	$flaggedCommentId = $_GET["commentid"];
-
-	$getflag = <<<END
-	UPDATE comment SET flag = 1
-	WHERE commentid = '{$flaggedCommentId}';
-END;
-	$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
-		        " : " . $mysqli->error);
-
-}
-
 
 $content = <<<END
 
