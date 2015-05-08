@@ -15,6 +15,7 @@ $keepername = "";
 $keeperid = "";
 $getflag = "";
 $commentid = "";
+$buttons_top ="";
 
 	$query = <<<END
 
@@ -66,10 +67,32 @@ if(isset($_POST['unappropriate']))
 		UPDATE guidereviewinfo SET flag = 1
 		WHERE grid = '{$grid}';
 END;
+
+if($getflag == 0)
+		{
+			$buttons_top = <<<END
+			<div class="pull-right">
+				<button type="submit" name="unappropriate" value="flag" class="btn btn-xs btn-success pull-left margin-left-50px"
+				title="Flagga för stötande innehåll till moderator">&nbsp;
+					<span class="glyphicon glyphicon-flag pull-right text-white text-bold text-14px" aria-hidden="true"></span>
+				</button>
+			</div>
+			
+END;
+		}
+		else
+		{
+			$buttons_top = <<<END
+			<div class="pull-right">
+				<button class="btn btn-xs btn-danger pull-left margin-left-50px" title="Flaggat till moderator">&nbsp;
+					<span class="glyphicon glyphicon-flag pull-right text-white text-bold text-14px" aria-hidden="true"></span>
+				</button>
+			</div>			
+END;
 		$res = $mysqli->query($getflag) or die("Could not query database" . $mysqli->errno . 
 			        " : " . $mysqli->error);
 	
-	
+		}
 }
 
 if(!empty($_POST))
@@ -164,7 +187,7 @@ END;
 
 }
 
-
+//<button type="submit" name="unappropriate" value="flag">flagga</button>
 $content = <<<END
 
 		<div class="wrapper margin-top-100">
@@ -182,9 +205,9 @@ $content = <<<END
 								<div class="panel-body">								
 									
 									Skriven av: <a href="profile.php?keeperid={$keeperid}">{$keepername}</a>
-									<form action="genre.php?grid={$grid}" method="post">
-										<button type="submit" name="unappropriate" value="flag">flagga</button>
-									</form>
+																		
+										{$buttons_top}
+									
 									
 									</br>
 																	
