@@ -104,6 +104,7 @@ while($row = $res->fetch_object())
 	$keeperid = $_SESSION['keeperid'];
 	$grid = $row->grid;
 	$title = utf8_decode(htmlspecialchars($row->title));
+	$subtitle = substr($title, 0, 10);
 	$grade = $row->grade;
 	$timestamp = strtotime($row->timestamp);
 	$timestamp = date("d M Y H:i", $timestamp);
@@ -116,7 +117,7 @@ while($row = $res->fetch_object())
 
 		$latestactivity .= <<<END
 		 
-			{$r}<a href="genre.php?grid={$grid}">{$title}</a>
+			{$r}<a href="genre.php?grid={$grid}">{$subtitle}</a>
 		
 
 END;
@@ -126,7 +127,7 @@ END;
 
 		$latestactivity .= <<<END
 		 
-			{$g}<a href="genre.php?grid={$grid}">{$title}</a>
+			{$g}<a href="genre.php?grid={$grid}">{$subtitle}</a>
 		
 
 END;
@@ -335,6 +336,7 @@ while($row = $res->fetch_object())
 	$keeperid = $_SESSION['keeperid'];
 	$grid = $row->grid;
 	$title = utf8_decode(htmlspecialchars($row->title));
+	$subtitle = substr($title, 0, 10);
 	$grade = $row->grade;
 	$timestamp = strtotime($row->timestamp);
 	$timestamp = date("d M Y H:i", $timestamp);
@@ -352,7 +354,7 @@ while($row = $res->fetch_object())
 			
 			</li>{$r}
 			
-			<a href="genre.php?grid={$grid}">{$title}</a>
+			<a href="genre.php?grid={$grid}">{$subtitle}</a>
 			<br><br>
 			
 			
@@ -368,7 +370,7 @@ END;
 			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right pen" aria-hidden="true"></span></a></button>
 			</li>{$g}
 			
-			<a href="genre.php?grid={$grid}">{$title}</a>
+			<a href="genre.php?grid={$grid}">{$subtitle}</a>
 			<br><br>
 		
 END;

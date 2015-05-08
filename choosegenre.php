@@ -46,6 +46,7 @@ if($result->num_rows > 0)
 		$grid = $row->grid;
 		$title	= utf8_decode(htmlspecialchars($row->title));
 		$text 	= utf8_decode(htmlspecialchars($row->text));
+		$subtext = substr($text, 0, 60);
 		$grade = $row->grade;
 		$date 	= strtotime($row->timestamp);
 		$date	= date("d M Y H:i", $date);
@@ -61,7 +62,7 @@ if($result->num_rows > 0)
       					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
 						<li class="views"></li>
 						<br>
-						<h5 class="media-heading">{$text}</h5>
+						<h5 class="media-heading">{$subtext}</h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
@@ -95,6 +96,7 @@ if($result->num_rows > 0)
 		$grid = $row->grid;
 		$title	= utf8_decode(htmlspecialchars($row->title));
 		$text 	= utf8_decode(htmlspecialchars($row->text));
+		$subtext = substr($text, 0, 60);
 		$grade = $row->grade;
 		$date 	= strtotime($row->timestamp);
 		$date	= date("d M Y H:i", $date);
@@ -110,7 +112,7 @@ if($result->num_rows > 0)
       					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
 						<li class="views"></li>
 						<br>
-						<h5 class="media-heading">{$text}</h5>
+						<h5 class="media-heading">{$subtext}</h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
@@ -145,6 +147,7 @@ if($result->num_rows > 0)
 		$grid = $row->grid;
 		$title = utf8_decode(htmlspecialchars($row->title));
 		$text = utf8_decode(htmlspecialchars($row->text));
+		$subtext = substr($text, 0, 60);
 		$grade = $row->grade;
 
 		$toplistgenreguide .= <<<END
@@ -157,7 +160,7 @@ if($result->num_rows > 0)
       					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
 						<li class="views">{$row->counter}</li>
 						<br>
-						<h5 class="media-heading">{$text}</h5>
+						<h5 class="media-heading">{$subtext}</h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
@@ -193,6 +196,7 @@ if($result->num_rows >0)
 		$grid = $row->grid;
 		$title = utf8_decode(htmlspecialchars($row->title));
 		$text = utf8_decode(htmlspecialchars($row->text));
+		$subtext = substr($text, 0, 60);
 		$grade = $row->grade;
 
 		$toplistgenrereview .= <<<END
@@ -205,7 +209,7 @@ if($result->num_rows >0)
       					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
 						<li class="views">{$row->counter}</li>
 						<br>
-						<h5 class="media-heading">{$text}</h5>
+						<h5 class="media-heading">{$subtext}</h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
