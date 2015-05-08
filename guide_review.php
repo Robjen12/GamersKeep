@@ -21,6 +21,13 @@ $admindelete = "";
 		$text  = utf8_encode($mysqli->real_escape_string($text));
 		$grade = utf8_encode($mysqli->real_escape_string($grade));
 
+	if (strlen($text)<200) 
+	{
+  		$feedback = "<p class=\"text-yellow\">Du måste skriva minst 200 bokstäver</p>";
+	}
+	else
+	{
+
 		if(isset($_POST['guide']))
 		{
 
@@ -111,6 +118,7 @@ END;
 			header("Location: index.php", true, 303);
 			exit;
 		}
+	}
 	}
 
 
