@@ -70,7 +70,7 @@ END;
 				{
 					
 					$keepername = $row->keepername;
-					$msgs = $row->MSG;
+					$msgs = $row->msg;
 					$date 	= strtotime($row->timestamp);
 					$date	= date("d M Y H:i", $date);
 

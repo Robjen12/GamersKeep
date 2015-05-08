@@ -183,6 +183,15 @@ END;
 					$button = <<<END
 					
 END;
+					$sendmessage = <<<END
+	<div class="pull-right">
+		<button class="btn btn-xs btn-default pull-right margin-right-50px text-white">
+		<a href="chatcom.php?keeperid={$keeperid2}" class="text-white" title="Skicka meddelande">Skicka meddelande&nbsp;
+			<span class="glyphicon glyphicon-envelope pull-right text-primary text-bold text-14px" aria-hidden="true"></span>	
+		</a>
+	</button>
+	</div>
+END;
 				}
 			}
 		}
@@ -199,16 +208,6 @@ END;
 END;
 
 		}
-
-$sendmessage = <<<END
-	<div class="pull-right">
-		<button class="btn btn-xs btn-default pull-right margin-right-50px text-white">
-		<a href="chatcom.php?keeperid={$keeperid2}" class="text-white" title="Skicka meddelande">Skicka meddelande&nbsp;
-			<span class="glyphicon glyphicon-envelope pull-right text-primary text-bold text-14px" aria-hidden="true"></span>	
-		</a>
-	</button>
-	</div>
-END;
 }
 
 
