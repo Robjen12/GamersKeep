@@ -112,11 +112,24 @@ END;
 		$date = date("d M Y H:i", $date);
 		$commentflag = $row->flag;
 
+		if($commentflag == 0)
+		{
+			$buttons = <<<END
+			<button type="submit" name="unappropriatecomments" value="flag">flagga</button>
+END;
+		}
+		else
+		{
+			$buttons = <<<END
+			<button>yoo</button>
+END;
+		
+		}
 		$comments .=  <<<END
 
 		Skriven av: <a href="profile.php?keeperid={$keeperid}">{$commentkeepername}</a> <!-- flagga -->
 			<form action="genre.php?grid={$grid}&commentid={$commentid}" method="post">
-				<button type="submit" name="unappropriatecomments" value="flag">flagga</button>
+				{$buttons}
 			</form>
 		<br>
 		Publicerad: {$date}<br>
