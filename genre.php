@@ -136,14 +136,16 @@ END;
 		}
 		$comments .=  <<<END
 
-		Skriven av: <a href="profile.php?keeperid={$keeperid}">{$commentkeepername}</a> <!-- flagga -->
+		<!-- flagga -->
 			<form action="genre.php?grid={$grid}&commentid={$commentid}" method="post">
 				{$buttons}
 			</form>
-		<br>
-		Publicerad: {$date}<br>
-		{$comment}
-		<hr>
+			Skriven av: <a href="profile.php?keeperid={$keeperid}">{$commentkeepername}</a>
+		
+			<br>
+			Datum: {$date}<br>
+			{$comment}
+			<hr>
 END;
 
 //span class="glyphicon glyphicon-flag pull-right" aria-hidden="true">
