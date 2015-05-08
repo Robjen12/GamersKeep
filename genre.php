@@ -15,6 +15,7 @@ $keepername = "";
 $keeperid = "";
 $getflag = "";
 $commentid = "";
+$feedback = "";
 
 	$query = <<<END
 
@@ -117,13 +118,19 @@ if(!empty($_POST))
 
 		$comment  = utf8_encode($mysqli->real_escape_string($comment));
 
+		if($comment == '')
+		{
+			$feedback = "<p class=\"text-red\">Du måste skriva något</p>";
+		}
+		else
+		{
 		$query = <<<END
 			INSERT INTO comment (keeperid, grid, comment, timestamp)
 			VALUES ('{$keeper}', '{$grid}', '{$comment}', CURRENT_TIMESTAMP);
 END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 			        " : " . $mysqli->error);;
-
+		}
 	}
 }
 
@@ -216,6 +223,7 @@ $content = <<<END
 								
 																
 							<div class="comments">
+							{$feedback}
 								<form action="genre.php?grid={$grid}" method="post" class="quicksand text-bold">
 									<h3>Kommentera</h3>
 									<textarea id="comment" name="comment" cols="80" rows="6"></textarea>
