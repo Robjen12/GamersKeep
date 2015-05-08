@@ -40,7 +40,7 @@ while($row = $res->fetch_object())
 	$grid 	= $row->grid;
 	$title	= utf8_decode($row->title);
 	$text 	= utf8_decode($row->text);
-	$subtext = substr($text, 0, 60);
+	$subtext = substr($text, 0, 160);
 	$grade  = $row->grade;
 	$date 	= strtotime($row->timestamp);
 	$date	= date("d M Y H:i", $date);
@@ -63,7 +63,7 @@ END;
       					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
 						<li class="views">{$admindelete}</li>
 						<br>
-						<h5 class="media-heading">{$subtext}</h5>
+						<h5 class="media-heading">{$subtext}...<a href="genre.php?grid={$grid}">Läs mer</a></h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
@@ -92,7 +92,7 @@ while($row = $res->fetch_object())
 	$grid 	= $row->grid;
 	$title	= utf8_decode($row->title);
 	$text 	= utf8_decode($row->text);
-	$subtext = substr($text, 0, 60);
+	$subtext = substr($text, 0, 160);
 	$grade  = $row->grade;
 	$date 	= strtotime($row->timestamp);
 	$date	= date("d M Y H:i", $date);
@@ -145,7 +145,7 @@ if($result->num_rows > 0)
         	$grid 	= $row->grid;
 			$title	= utf8_decode($row->title);
 			$text 	= utf8_decode($row->text);
-			$subtext = substr($text, 0, 60);
+			$subtext = substr($text, 0, 160);
 
 			if($_SESSION['roletype'] == 1)
 			{
@@ -192,7 +192,7 @@ if($res->num_rows > 0){
 	$grid 	= $row->grid;
 	$title	= utf8_decode($row->title);
 	$text 	= utf8_decode($row->text);
-	$subtext = substr($text, 0, 60);
+	$subtext = substr($text, 0, 160);
 	$grade  = $row->grade;
 
 	if($_SESSION['roletype'] == 1)
