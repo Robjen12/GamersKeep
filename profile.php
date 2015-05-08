@@ -677,15 +677,16 @@ $content = <<<END
 												{$friendsaccept}
 											</div>
 
+											{$v} Vänner <span class="badge badge-warning pull-right">{$friend_count}</span><br>
 											<div class="friends">
 
-												{$v} Vänner <span class="badge badge-warning pull-right">{$friend_count}</span><br>
+												
 												{$yourfriends}
 											</div>
 									
-								
+											{$k} <!-- insat chat har --> Chat konversation <span class="badge badge-success pull-right">5</span>	
 											<div class="latestmessage">
-												{$k} <!-- insat chat har --> Chat konversation <span class="badge badge-success pull-right">5</span>	<br>
+												
 												{$chatmess}		
 											</div>								
 										</p>
