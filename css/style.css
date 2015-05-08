@@ -690,6 +690,10 @@ a.text-primary:hover {
   font-size: 10px;
 }
 
+.text-8px {
+  font-size: 8px;
+}
+
 .text-14px {
   font-size: 14px;
 }
@@ -1488,4 +1492,23 @@ color: #398439;
 .button-bg-success {
 background-color: #398439;
 color: #fff; 
+}
+.flag-red {
+color: Red;
+}
+
+.flag-green {
+
+color: Green;
+}
+.flag-black {
+color: #000;
+}
+
+#flag > .btn {
+
+background-color: Transparent;
+border:none;
+float: right;
+outline: none;
 }
