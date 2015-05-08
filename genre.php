@@ -55,13 +55,24 @@ if($res->num_rows ==1)
 	if($flag == 0)
 	{
 		$grbutton = <<<END
-		<button type="submit" name="unappropriate" value="flag">flagga</button>
+		
+		<div class="pull-right">
+				<button type="submit" name="unappropriate" value="flag" class="btn btn-xs btn-success pull-left margin-left-50px"
+				title="Flagga för stötande innehåll till moderator">&nbsp;
+					<span class="glyphicon glyphicon-flag pull-right text-white text-bold text-14px" aria-hidden="true"></span>
+				</button>
+			</div>
 END;
 	}
 	else
 	{
 		$grbutton = <<<END
-		<button>SKIT</button>
+		
+		<div class="pull-right">
+				<button class="btn btn-xs btn-danger pull-left margin-left-50px" title="Flaggat till moderator">&nbsp;
+					<span class="glyphicon glyphicon-flag pull-right text-white text-bold text-14px" aria-hidden="true"></span>
+				</button>
+			</div>
 END;
 		
 	}
@@ -193,11 +204,11 @@ $content = <<<END
 								</br>
 								
 								<div class="panel-body">								
-									
-									Skriven av: <a href="profile.php?keeperid={$keeperid}">{$keepername}</a>
 									<form action="genre.php?grid={$grid}" method="post">
 										{$grbutton}
 									</form>
+									Skriven av: <a href="profile.php?keeperid={$keeperid}">{$keepername}</a>
+									
 									
 									</br>
 																	
