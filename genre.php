@@ -52,6 +52,19 @@ if($res->num_rows ==1)
 	$grade = $row->grade;
 	$flag = $row->flag;
 
+	if($flag == 0)
+	{
+		$grbutton = <<<END
+		<button type="submit" name="unappropriate" value="flag">flagga</button>
+END;
+	}
+	else
+	{
+		$grbutton = <<<END
+		<button>SKIT</button>
+END;
+		
+	}
 	if($grade > 0){
 		$showgrade = <<<END
 		Betyg: {$grade}
@@ -183,7 +196,7 @@ $content = <<<END
 									
 									Skriven av: <a href="profile.php?keeperid={$keeperid}">{$keepername}</a>
 									<form action="genre.php?grid={$grid}" method="post">
-										<button type="submit" name="unappropriate" value="flag">flagga</button>
+										{$grbutton}
 									</form>
 									
 									</br>
