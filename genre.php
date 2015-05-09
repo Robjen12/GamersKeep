@@ -201,7 +201,7 @@ $content = <<<END
 								</div><!-- panel heading -->
 								</br>
 								
-								<div class="panel-body">								
+								<div class="panel-body panel-genre-body">								
 									<form action="genre.php?grid={$grid}" method="post">
 										{$grbutton}
 									</form>

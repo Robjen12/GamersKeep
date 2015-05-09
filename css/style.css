@@ -1032,6 +1032,10 @@ background: -webkit-linear-gradient(90deg, #e5e9f7, #5164be); /* For Safari 5.1 
 	min-height: 100px;
 	height: auto;
  }
+ .panel-genre-body
+ {
+  overflow: hidden;
+ }
 .panel-default > .panel-heading-genre {
 	width: 760px;
 }
@@ -1515,4 +1519,8 @@ outline: none;
 
 .margin-right-93px {
 margin-right: 93px;
+}
+.readmore_link
+{
+  display: block;
 }
