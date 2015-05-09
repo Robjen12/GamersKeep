@@ -118,18 +118,26 @@ if(!empty($_POST))
 
 		$comment  = utf8_encode($mysqli->real_escape_string($comment));
 
-		if($comment == '')
+		if(strlen($comment) > 1000 )
 		{
-			$feedback = "<p class=\"text-red\">Du måste skriva något</p>";
+			$feedback = "<p class=\"text-red\">Kommentaren är för lång</p>";
 		}
 		else
 		{
-		$query = <<<END
-			INSERT INTO comment (keeperid, grid, comment, timestamp)
-			VALUES ('{$keeper}', '{$grid}', '{$comment}', CURRENT_TIMESTAMP);
+
+			if($comment == '')
+			{
+				$feedback = "<p class=\"text-red\">Du måste skriva något</p>";
+			}
+			else
+			{
+			$query = <<<END
+				INSERT INTO comment (keeperid, grid, comment, timestamp)
+				VALUES ('{$keeper}', '{$grid}', '{$comment}', CURRENT_TIMESTAMP);
 END;
-		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+			$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 			        " : " . $mysqli->error);;
+			}
 		}
 	}
 }
