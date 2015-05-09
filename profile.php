@@ -27,6 +27,7 @@ $getchatcomid = "";
 $accept = "";
 $friendsaccept = "";
 $friend_count = "";
+$chat_count = "";
 
 // ingen location header annars kan admin inte se sin profil
 //if($_SESSION['roletype'] == 1)
@@ -134,6 +135,20 @@ END;
 	}
 	
 }
+// Tar bort en vänskap mellan personer
+if(isset($_POST['removefriend'])){
+
+	$query = <<<END
+	DELETE FROM keeperfriend
+	WHERE keeperfriend.keeperid = '{$keeperid}' 
+	AND keeperfriend.keeperid2 = '{$keeperid2}'
+	OR keeperfriend.keeperid2 = '{$keeperid}'
+	AND keeperfriend.keeperid2 = '{$keeperid}'
+END;
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+		        " : " . $mysqli->error);
+
+}
 // Skickar in vänförfrågan i databasen
 if(isset($_POST['keeperfr'])){
 
@@ -182,16 +197,21 @@ END;
 				else
 				{
 					$button = <<<END
-					
+						<div class="pull-left">
+							<form action="profile.php?keeperid={$keeperid2}" method="post">
+							<button type="submit" class="btn btn-xs btn-danger pull-left margin-left-50px" name="removefriend" value="Ta bort" title="Ta bort vän" onclick="return confirm('Är du säker på att du vill ta bort vännen?')">Ta bort vän&nbsp;
+							</button>
+							</form>
+						</div>
 END;
 					$sendmessage = <<<END
-	<div class="pull-right">
-		<button class="btn btn-xs btn-default pull-right margin-right-50px text-white">
-		<a href="chatcom.php?keeperid={$keeperid2}" class="text-white" title="Skicka meddelande">Skicka meddelande&nbsp;
-			<span class="glyphicon glyphicon-envelope pull-right text-primary text-bold text-14px" aria-hidden="true"></span>	
-		</a>
-	</button>
-	</div>
+						<div class="pull-right">
+							<button class="btn btn-xs btn-default pull-right margin-right-50px text-white">
+							<a href="chatcom.php?keeperid={$keeperid2}" class="text-white" title="Skicka meddelande">Skicka meddelande&nbsp;
+								<span class="glyphicon glyphicon-envelope pull-right text-primary text-bold text-14px" aria-hidden="true"></span>	
+							</a>
+						</button>
+						</div>
 END;
 				}
 			}
