@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$now = time();
 
 include_once("inc/Connstring.php");
 
@@ -8,6 +9,11 @@ $genre = "";
 $adminText = "";
 $adminMeny = "";
 $profilMeny = "";
+
+ if ($now > $_SESSION['expire']) {
+            session_destroy();
+            header("Location: login.php");
+        }
 
 if(isset($_SESSION['keepername']) && isset($_SESSION['roletype'])){
 
