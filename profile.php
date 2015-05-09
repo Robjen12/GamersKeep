@@ -349,7 +349,7 @@ while($row = $res->fetch_object())
 
 		$latestactivity .= <<<END
 		 
-			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pen pull-right" aria-hidden="true"></span></a></button>
+			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}" onclick="return confirm('Är du säker på att du vill ta bort inlägget?')"><span class="glyphicon glyphicon-remove pen pull-right" aria-hidden="true"></span></a></button>
 			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pen pull-right" aria-hidden="true"></span></a></button>
 			
 			</li>{$r}
@@ -366,7 +366,7 @@ END;
 		$latestactivity .= <<<END
 		 
 			
-			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}"><span class="glyphicon glyphicon-remove pull-right pen" aria-hidden="true"></span></a></button>
+			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}" onclick="return confirm('Är du säker på att du vill ta bort inlägget?')"><span class="glyphicon glyphicon-remove pull-right pen" aria-hidden="true"></span></a></button>
 			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right pen" aria-hidden="true"></span></a></button>
 			</li>{$g}
 			
@@ -745,21 +745,22 @@ $content = <<<END
 						
 						<div class="col-sm-8">
 							<div class="row">
-								<div class="col-md-12 col-sm-12 panel-width-550px panel panel-default pull-left">
+								<div class="col-md-12 col-sm-12">
+									<div class="panel-width-550px panel panel-default pull-left">
 
-			  					<div class="panel-heading panel-heading-560px">Om mig {$penbutton}</div>
-
-
-				  					<div class="panel-body">
-
-					  					<p>Namn: {$profilename} {$profilelastname}</p> 
-					  					{$profileabout}
-					  						
-					  					{$formabout}
+				  					<div class="panel-heading panel-heading-560px">Om mig {$penbutton}</div>
 
 
-				  					</div><!-- panel body -->
+					  					<div class="panel-body">
 
+						  					<p>Namn: {$profilename} {$profilelastname}</p> 
+						  					{$profileabout}
+						  						
+						  					{$formabout}
+
+
+					  					</div><!-- panel body -->
+					  				</div>
 								</div><!-- col md 12 -->
 
 								<div class="col-md-6 col-sm-6 ovrigt panel panel-default pull-left">
