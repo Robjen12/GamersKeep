@@ -745,8 +745,8 @@ $content = <<<END
 						
 						<div class="col-sm-8">
 							<div class="row">
-								<div class="col-md-12 col-sm-12">
-									<div class="panel-width-550px panel panel-default pull-left">
+								
+									<div class="col-md-12 col-sm-12 panel-width-550px panel panel-default pull-left">
 
 				  					<div class="panel-heading panel-heading-560px">Om mig {$penbutton}</div>
 
@@ -760,7 +760,7 @@ $content = <<<END
 
 
 					  					</div><!-- panel body -->
-					  				</div>
+					  			
 								</div><!-- col md 12 -->
 
 								<div class="col-md-6 col-sm-6 ovrigt panel panel-default pull-left">
