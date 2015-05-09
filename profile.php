@@ -199,7 +199,7 @@ END;
 					$button = <<<END
 						<div class="pull-left">
 							<form action="profile.php?keeperid={$keeperid2}" method="post">
-							<button type="submit" class="btn btn-xs btn-danger pull-left margin-left-50px" name="removefriend" value="Ta bort" title="Ta bort vän" onclick="return confirm('Är du säker på att du vill ta bort vännen?')">Ta bort vän&nbsp;
+							<button type="submit" class="btn btn-xs btn-danger pull-left margin-left-50px" onclick="return confirm('Är du säker på att du vill ta bort vännen?')" name="removefriend" value="Ta bort" title="Ta bort vän">Ta bort vän&nbsp;
 							</button>
 							</form>
 						</div>
