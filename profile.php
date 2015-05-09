@@ -379,27 +379,34 @@ END;
 }
 
 $query = <<<END
-		SELECT *
+		SELECT *, message.keeperid AS mkeeperid
 			   FROM message
 			   JOIN user
-			   ON message.keeperid = user.keeperid
-			   OR message.keeperid2 = user.keeperid
-			   WHERE user.keeperid = '{$keeperid}'
+			   ON message.keeperid = user.keeperid 
+			   OR message.keeperid2 = user.keeperid 
+			   WHERE message.keeperid = '{$keeperid}'
+               OR message.keeperid2 = '{$keeperid}'
 			   GROUP BY keeperid2;
 END;
 
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		  " : " . $mysqli->error);
 
+		$chat_count = 0;
+
 	if($res->num_rows > 0)
 	{
+		$user_array = array();
+
 		while($row = $res->fetch_object())
 		{
-			$keeperid1 = $row->keeperid;
+			$keeperid1 = $row->mkeeperid;
 			$keeperid2 = $row->keeperid2;
 
-				if($keeperid == $row->keeperid)
+				if($keeperid == $keeperid1 && !in_array($keeperid2, $user_array))
 				{
+					array_push($user_array, $keeperid2);
+					$chat_count++;
 					$query = <<<END
 
 						SELECT keeperid, keepername
@@ -413,18 +420,19 @@ END;
 
 					$row2 = $res2->fetch_object();
 					$keepername2 = $row2->keepername;
-					$keeper2 = $row->keeperid2;
-
+			
 					if(strtolower($keepername2) != strtolower($keepername) )
 					{
 					$chatmess .= <<<END
-					<a href="chatcom.php?keeperid={$keeper2}">{$keepername2}</a><br>
+					<a href="chatcom.php?keeperid={$keeperid2}">{$keepername2}</a><br>
 END;
 					}
 
 				}
-				else
+				else if($keeperid == $keeperid2 && !in_array($keeperid1, $user_array))
 				{
+					array_push($user_array, $keeperid1);
+					$chat_count++;
 					$query = <<<END
 
 						SELECT keepername, keeperid
@@ -437,12 +445,12 @@ END;
 
 					$row3 = $res3->fetch_object();
 					$keepername1 = $row3->keepername;
-					$keeper = $keeperid1;
+					
 
 					if(strtolower($keepername1) != strtolower($keepername))
 					{
 						$chatmess .= <<<END
-						<a href="chatcom.php?keeperid={$keeper}">{$keepername1}</a><br>
+						<a href="chatcom.php?keeperid={$keeperid1}">{$keepername1}</a><br>
 END;
 					}
 				}
@@ -685,7 +693,7 @@ $content = <<<END
 												{$yourfriends}
 											</div>
 									
-											{$k} <!-- insat chat har --> Chat konversation <span class="badge badge-success pull-right">5</span>	
+											{$k}  Chat konversation <span class="badge badge-success pull-right">{$chat_count}</span>	
 											<div class="latestmessage">
 												
 												{$chatmess}		
