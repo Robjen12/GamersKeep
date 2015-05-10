@@ -143,7 +143,7 @@ if(isset($_POST['removefriend'])){
 	WHERE keeperfriend.keeperid = '{$keeperid}' 
 	AND keeperfriend.keeperid2 = '{$keeperid2}'
 	OR keeperfriend.keeperid2 = '{$keeperid}'
-	AND keeperfriend.keeperid2 = '{$keeperid}'
+	AND keeperfriend.keeperid = '{$keeperid2}'
 END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
