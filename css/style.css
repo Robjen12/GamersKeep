@@ -1418,6 +1418,18 @@ margin-bottom: 30px;
   background-color: #333333;
 }
 
+.btn .btn-danger a:link {
+background-color: #d43f3a;
+color: #fff;
+}
+.white-a-text a:link,
+.white-a-text a:active,
+.white-a-text a:focus,
+.white-a-text a:visited
+{
+color: #fff;
+}
+
 .header_ikoner {
 width: 36px;
 height: 36px;

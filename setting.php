@@ -85,7 +85,15 @@ $content = <<<END
 					<p>Önskar du inte längre delta i GamersKeep, kan du ta bort din profil vid att klicka på knappen nedan.
 					Tänk på att all din information raderas om du tar bort din profil, även alla dina inlägg här på GamersKeep.
 					</p>
-					<a class="login" href="delete.php?keeperid={$keeperid}"><button class="btn btn-danger">Ta bort din profil</button></a>
+					
+					<div class="pull-left text-white white-a-text">
+						<a href="delete.php?keeperid={$keeperid}" role="button" class="btn btn-danger white-a-text">
+							Ta bort din profil
+						</a>
+					</div>
+					
+					
+					
 				</div><!-- panel body -->
 
 			</div><!-- panel heading -->
