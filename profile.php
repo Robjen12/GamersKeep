@@ -680,11 +680,16 @@ $content = <<<END
   	  					
   	  						</div><!-- left top -->				
 	  					
-	  						<div class="column-left-center text-center profil_bild">	  							
-								
-	  							{$profil_bild}	  							
+	  						<div class="column-left-center text-center">
 
-	  						
+								<div class="profil_bild_container">
+								
+									<div class="profil_bild">
+									{$profil_bild}	  							
+									</div>
+								
+								</div>
+								
 								<p class="text-bold">{$profilekeepername}</p>
 	  							{$button}
 	  							{$sendmessage}
