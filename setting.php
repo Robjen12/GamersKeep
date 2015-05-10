@@ -87,7 +87,7 @@ $content = <<<END
 					</p>
 					
 					<div class="pull-left white-a-text">
-						<a href="delete.php?keeperid={$keeperid}" role="button" class="btn btn-danger white-a-text">
+						<a href="delete.php?keeperid={$keeperid}" role="button" class="btn btn-danger white-a-text" onclick="return confirm('Vill du verkligen ta bort kontot?')">
 							Ta bort din profil
 						</a>
 					</div>
