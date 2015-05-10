@@ -50,6 +50,22 @@ END;
 			$grid = $row->grid;
 
 			$query = <<<END
+				DELETE FROM message
+				WHERE message.keeperid = '{$keeperid}' 
+				OR message.keeperid2 = '{$keeperid}'
+END;
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+
+			$query = <<<END
+				DELETE FROM keeperfriend
+				WHERE keeperfriend.keeperid = '{$keeperid}'
+				OR keeperfriend.keeperid2 = '{$keeperid}'
+END;
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+
+			$query = <<<END
 
 				DELETE FROM userguidereview,user,guidereviewinfo
 				USING userguidereview
@@ -71,6 +87,22 @@ END;
 	}
 	else
 	{
+		$query = <<<END
+		DELETE FROM message
+		WHERE message.keeperid = '{$keeperid}' 
+		OR message.keeperid2 = '{$keeperid}'
+END;
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+
+		$query = <<<END
+		DELETE FROM keeperfriend
+		WHERE keeperfriend.keeperid = '{$keeperid}'
+		OR keeperfriend.keeperid2 = '{$keeperid}'
+END;
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+
 		$query = <<<END
 		DELETE FROM user WHERE user.keeperid = '{$keeperid}'
 END;
