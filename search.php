@@ -77,8 +77,8 @@ END;
 		while($row = $result->fetch_object())
 		{
 			$grid = $row->grid;
-			$title = utf8_decode(htmlspecialchars($row->title));
-			$text = utf8_decode(htmlspecialchars($row->text));
+			$title = utf8_decode($row->title);
+			$text = utf8_decode($row->text);
 			
 			$article .= <<<END
 				Titel: <a href="genre.php?grid={$grid}">{$title}</a><br>
