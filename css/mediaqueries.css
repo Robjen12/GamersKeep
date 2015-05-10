@@ -47,4 +47,88 @@
 		width: 100px;
 	}
 }
+@media (max-width: 1349px)
+{
+	.login-bubble1
+	{
+		left: 390px;
+	}
+	.login-bubble2
+	{
+		left: 470px;
+	}
+	.login-bubble3
+	{
+		left: 580px;
+	}
+	.login-form
+	{
+		left: 680px;
+	}
+}
 
+@media (max-width: 1276px)
+{
+	.login-bubble1
+	{
+		left: 365px;
+	}
+	.login-bubble2
+	{
+		left: 420px;
+	}
+	.login-bubble3
+	{
+		left: 500px;
+	}
+	.login-form
+	{
+		left: 580px;
+	}
+}
+
+@media (max-width: 1176px)
+{
+	.login-logo
+	{
+	padding-bottom: 600px;
+	}
+	.login-bubble1
+	{
+		bottom: 260px;
+	}
+	.login-bubble2
+	{
+		display: none;
+	}
+	.login-bubble3
+	{
+		left: 400px;
+	}
+	.login-form
+	{
+		left: 480px;
+	}
+}
+
+@media (max-width: 1076px)
+{
+	.login-bubble1
+	{
+		display: none;
+	}
+	.login-bubble2
+	{
+		display: inline;
+		left: 360px;
+		bottom: 280px;
+	}
+	.login-bubble3
+	{
+		display: none;
+	}
+	.login-form
+	{
+		left: 420px;
+	}
+}
