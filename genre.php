@@ -70,7 +70,7 @@ if($res->num_rows ==1)
 		$grbutton = <<<END
 		
 		<div class="pull-right">
-				<button type="submit" name="unappropriate" value="flag" class="btn btn-xs btn-success pull-left margin-left-50px"
+				<button type="submit" name="unappropriate" value="flag" class="btn btn-xs btn-success pull-left margin-left-50px" onclick="return confirm('Vill du flagga detta som olämpligt?')"
 				title="Flagga för stötande innehåll till moderator">&nbsp;
 					<span class="glyphicon glyphicon-flag pull-right text-white text-bold text-14px" aria-hidden="true"></span>
 				</button>
@@ -167,7 +167,7 @@ END;
 		{
 			$buttons = <<<END
 			<div class="pull-right">
-				<button type="submit" name="unappropriatecomments" value="flag" class="btn btn-xs btn-success pull-left margin-left-50px"
+				<button type="submit" name="unappropriatecomments" value="flag" class="btn btn-xs btn-success pull-left margin-left-50px" onclick="return confirm('Vill du flagga detta som olämpligt?')"
 				title="Flagga för stötande innehåll till moderator">&nbsp;
 					<span class="glyphicon glyphicon-flag pull-right text-white text-bold text-14px" aria-hidden="true"></span>
 				</button>
