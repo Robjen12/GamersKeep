@@ -86,7 +86,7 @@ $content = <<<END
 					Tänk på att all din information raderas om du tar bort din profil, även alla dina inlägg här på GamersKeep.
 					</p>
 					
-					<div class="pull-left text-white white-a-text">
+					<div class="pull-left white-a-text">
 						<a href="delete.php?keeperid={$keeperid}" role="button" class="btn btn-danger white-a-text">
 							Ta bort din profil
 						</a>
