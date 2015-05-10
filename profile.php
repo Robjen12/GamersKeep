@@ -281,17 +281,17 @@ END;
 
 	$formabout = <<<END
 
-		<form action="profile.php" method="post" id="updateform">
-			<textarea id="updateinfo" name="updateinfo" cols="60" row="10">{$profileabout}</textarea>
-			<input type="submit" id="submit" name="update" value="Uppdatera info">
+		<form action="profile.php" method="post" id="updateform" class="form control">
+			<textarea id="updateinfo" name="updateinfo" class="col-md-12" rows="6">{$profileabout}</textarea>
+			<input type="submit" id="submit" name="update" value="Uppdatera info" class="btn btn-xs btn-primary text-bold">
 		</form>
 END;
 
 	$formother = <<<END
 
 		<form action="profile.php" method="post" id="updateformother">
-			<textarea id="updateother" name="updateother" cols="30" row="10">{$profileabout}</textarea>
-			<input type="submit" id="submit" name="updateothers" value="Uppdatera info">
+			<textarea id="updateother" name="updateother" cols="30" row="15">{$profileabout}</textarea>
+			<input type="submit" id="submit" name="updateothers" value="Uppdatera info" class="btn btn-primary">
 		</form>
 END;
 
@@ -775,13 +775,17 @@ $content = <<<END
 
 				  					<div class="panel-heading panel-heading-560px">Om mig {$penbutton}</div>
 
-
 					  					<div class="panel-body">
 
-						  					<p>Namn: {$profilename} {$profilelastname}</p> 
-						  					{$profileabout}
-						  						
-						  					{$formabout}
+						  					<p>Namn: {$profilename}
+											<br>
+											Efternamn: {$profilelastname}
+											<br>
+						  					Om mig: {$profileabout}
+											<br>
+						  					Extra: {$formabout}
+											<br>
+											</p>
 
 
 					  					</div><!-- panel body -->

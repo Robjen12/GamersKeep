@@ -1166,19 +1166,21 @@ color: white;
   padding-top: 10px;
   padding-left: 10px;
 }
- #send
- {
+ #send {
   margin-top: 20px;
   width: 400px;
  }
-#updateform
-{
- margin-top: 130px;
+ 
+#updateform,
+#updateformother {
+ /*margin-top: 130px; */
+ margin-top: 10px;
+ height: auto;
+ margin-left: 0;
+ margin-right: 0;
+ width: 100%;
 }
-#updateformother
-{
- margin-top: 160px;
-}
+
 .height-290px {
 	min-height: 290px;
 	height: auto;
