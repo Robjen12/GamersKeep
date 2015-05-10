@@ -279,6 +279,24 @@ END;
 	<a href="#"><img src="images/pen.png" width="30px" id="pen2" class="pull-right" title="Redigera"></a>
 END;
 
+$profileinfo = <<<END
+
+	SELECT keepername, fname, lname, about, other
+	FROM user
+	WHERE keeperid = '{$keeperid}';
+END;
+	$res = $mysqli->query($profileinfo) or die();
+
+	if($res->num_rows == 1)
+	{
+		$row = $res->fetch_object();
+		$profilekeepername = $row->keepername;
+		$profilename = $row->fname;
+		$profilelastname = $row->lname;
+		$profileabout = $row->about;
+		$profileother = $row->other;
+
+	}
 	$formabout = <<<END
 
 		<form action="profile.php" method="post" id="updateform" class="form control">
@@ -291,7 +309,7 @@ END;
 	$formother = <<<END
 
 		<form action="profile.php" method="post" id="updateformother" class="form control">
-			<textarea id="updateother" name="updateother" class="col-md-12" rows="9">{$profileabout}</textarea>
+			<textarea id="updateother" name="updateother" class="col-md-12" rows="9">{$profileother}</textarea>
 			</br>
 			<input type="submit" id="submit" name="updateothers" value="Uppdatera info" class="btn btn-xs btn-primary">
 		</form>
