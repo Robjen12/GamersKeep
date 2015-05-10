@@ -37,7 +37,7 @@ if(isset($_GET['keeperid']))
 	$keeperid = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
 
 	$query = <<<END
-		SELECT * FROM user, guidereviewinfo, userguidereview, comment WHERE user.keeperid = '{$keeperid}';
+		SELECT * FROM user, guidereviewinfo, userguidereview WHERE user.keeperid = '{$keeperid}';
 
 END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
@@ -68,6 +68,15 @@ END;
 	 header("Location: login.php");
 
 		}
+	}
+	else
+	{
+		$query = <<<END
+		DELETE FROM user WHERE user.keeperid = '{$keeperid}'
+END;
+$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+	  header("Location: login.php");
 	}
 }
 ?>
