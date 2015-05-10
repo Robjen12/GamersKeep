@@ -283,16 +283,19 @@ END;
 
 		<form action="profile.php" method="post" id="updateform" class="form control">
 			<textarea id="updateinfo" name="updateinfo" class="col-md-12" rows="6">{$profileabout}</textarea>
-			<input type="submit" id="submit" name="update" value="Uppdatera info" class="btn btn-xs btn-primary text-bold">
+			</br>
+			<input type="submit" id="submit" name="update" value="Uppdatera info" class="btn btn-xs btn-primary">
 		</form>
 END;
 
 	$formother = <<<END
 
-		<form action="profile.php" method="post" id="updateformother">
-			<textarea id="updateother" name="updateother" cols="30" row="15">{$profileabout}</textarea>
-			<input type="submit" id="submit" name="updateothers" value="Uppdatera info" class="btn btn-primary">
+		<form action="profile.php" method="post" id="updateformother" class="form control">
+			<textarea id="updateother" name="updateother" class="col-md-12" rows="9">{$profileabout}</textarea>
+			</br>
+			<input type="submit" id="submit" name="updateothers" value="Uppdatera info" class="btn btn-xs btn-primary">
 		</form>
+		
 END;
 
 if(isset($_POST['update']))
@@ -777,16 +780,16 @@ $content = <<<END
 
 					  					<div class="panel-body">
 
-						  					<p>Namn: {$profilename}
+						  					<p>Namn: {$profilename} Efternamn: {$profilelastname}
 											<br>
-											Efternamn: {$profilelastname}
+						  					Om mig:
 											<br>
-						  					Om mig: {$profileabout}
 											<br>
-						  					Extra: {$formabout}
-											<br>
-											</p>
 
+											{$profileabout}
+											<br>
+						  					{$formabout}											
+											</p>
 
 					  					</div><!-- panel body -->
 					  			
