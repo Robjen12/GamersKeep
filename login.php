@@ -74,17 +74,34 @@ $content = <<<END
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	  	<link rel="stylesheet" href="css/style.css">
+	  			<link rel="stylesheet" href="css/mediaqueries.css">
+
 	</head>
 
 	<body class="login-picture">
-		<div id="container">
-			<div class="row">
-				<div class="col-md-6">
-					<img src="images/logo.png">
-					<h2 class="login-font"><b>Ett community för gamers av gamers</b></h2>
+		<div class="login-wrapper">
+			<div id="container" class="login-logo">
+				<div class="row">
+					<div class="col-xs-12">
+						<img src="images/logo.png">
+						<h2 class="login-font"><b>Ett community för gamers av gamers</b></h2>
+					</div>
 				</div>
-				<div class="col-md-2"></div>
-				<div class="col-md-3 login-cloud quicksand text-bold text-16px">
+			</div>
+			<div class="login-graphics">
+				<div class="login-person">
+					<img src="images/profile.png" />
+				</div>
+				<div class="login-computer">
+					<img src="images/tv.png" />
+				</div>
+				<div class="login-bubble1">
+				</div>
+				<div class="login-bubble2">
+				</div>
+				<div class="login-bubble3">
+				</div>
+				<div class="login-form">
 					<div class="login">
 						<h2 class="quicksand text-bold">Enter the Keep</h2>
 						{$feedback}
@@ -103,14 +120,14 @@ $content = <<<END
 							</div>
 							
 							<div class="pull-right a text-white">							
-									<a href="register.php" class="btn btn-default btn-sm text-bold login-text margin-right-93px" role="button">																
+									<a href="register.php" class="btn btn-default btn-sm text-bold login-text" role="button">																
 										Registrera dig
 									</a>
 							</div>
 							
 						</form>
-					</div>     
-				</div>   
+					</div> 
+				</div>
 			</div>
 		</div>
 	</body>

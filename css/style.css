@@ -4,10 +4,98 @@
 .register-forgot-background{
 	background-color: #993300;
 }
-.login-picture{
-	background: url("../images/registrering.jpg") no-repeat center center fixed;
-	background-size: 100%;
+html, body 
+{
+	height: 100%;
 }
+
+.login-wrapper
+{
+	position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -600px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.login-logo
+{
+	padding-bottom: 450px;
+}
+
+.login-picture{
+	background: url("../images/bg.jpg") no-repeat center center fixed;	
+}
+
+.login-person
+{
+	position: absolute;
+	bottom: 0;
+	left: 160px;
+	z-index: 60;
+}
+	.login-person img 
+	{
+		width: 300px;
+	}
+.login-computer
+{
+	position: absolute;
+	bottom: 100px;
+	left: 0;
+	z-index: 50;
+}
+	.login-computer img
+	{
+		width: 400px;
+	}
+	
+.login-bubble1
+{
+	position: absolute;
+	left: 410px;
+	bottom: 230px;
+	width: 50px;
+	height: 47px;
+	background: url("../images/bubbla4_small.png") no-repeat left top;
+	z-index: 70;
+}
+.login-bubble2
+{
+	position: absolute;
+	left: 520px;
+	bottom: 260px;
+	width: 75px;
+	height: 69px;
+	background: url("../images/bubbla3_small.png") no-repeat left top;
+	z-index: 80;
+}
+.login-bubble3
+{
+	position: absolute;
+	left: 650px;
+	bottom: 300px;
+	width: 100px;
+	height: 86px;
+	background: url("../images/bubbla2_small.png") no-repeat left top;
+	z-index: 90;
+}
+
+.login-form
+{
+	position: absolute;
+	left: 750px;
+	bottom: 230px;
+	background: url("../images/bubbla_small.png") no-repeat left top;
+	width: 600px;
+	padding: 80px 180px;
+	z-index: 100;
+}
+	.login-form input.form-control
+	{
+		width: 100%;
+	}
+	
 .logo{
 	background-size: 50%;
 }
@@ -56,7 +144,7 @@
 
 .login
 {
-	margin-top: 150px;
+	
 }
 .register{
 	background-color: white;
@@ -1431,18 +1519,6 @@ margin-bottom: 30px;
 
 .badge-inverse {
   background-color: #333333;
-}
-
-.btn .btn-danger a:link {
-background-color: #d43f3a;
-color: #fff;
-}
-.white-a-text a:link,
-.white-a-text a:active,
-.white-a-text a:focus,
-.white-a-text a:visited
-{
-color: #fff;
 }
 
 .header_ikoner {
