@@ -1166,19 +1166,21 @@ color: white;
   padding-top: 10px;
   padding-left: 10px;
 }
- #send
- {
+ #send {
   margin-top: 20px;
   width: 400px;
  }
-#updateform
-{
- margin-top: 130px;
+ 
+#updateform,
+#updateformother {
+ /*margin-top: 130px; */
+ margin-top: 10px;
+ height: auto;
+ margin-left: 0;
+ margin-right: 0;
+ width: 100%;
 }
-#updateformother
-{
- margin-top: 160px;
-}
+
 .height-290px {
 	min-height: 290px;
 	height: auto;
@@ -1388,12 +1390,25 @@ float: right;
 .margin-left-40px {
 margin-left:40px;
 }
+
+.profil_bild_container {
+max-height: 300px;
+max-width: 130px;
+overflow: hidden;
+margin-left: auto;
+margin-right: auto;
+}
+
 .profil_bild > img{
-width: 85px;
-height: auto;
+width: 100%;
+height: 100%;  
+overflow: hidden;
 border-top-left-radius: 60px;
 border-top-right-radius: 60px;
+
+
 }
+
 span .pen {
 margin-bottom: 30px;
 }

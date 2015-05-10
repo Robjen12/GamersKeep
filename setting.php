@@ -67,17 +67,19 @@ $content = <<<END
 					<br><br>
 						<form action="upload.php" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-						<input name="userfile" type="file" id="userfile">
+						<input name="userfile" type="file" id="userfile">	
+										
 						
-						<br>
-						
-						
-							<button class="btn-sm-span pull-left margin-right-span-10px" input name="upload" type="submit" id="upload" value="">
-								<span class="glyphicon glyphicon-ok text-success pull-right" aria-hidden="true"></span>
+							<button class="pull-left margin-right-span-10px btn btn-sm-span span-color-green" input name="upload" type="submit"
+							id="upload" value="">
+								<span class="glyphicon glyphicon-ok pull-right" aria-hidden="true"></span>
 							</button>
-							<button class="btn-sm-span pull-left" input name="upload" type="reset" id="upload" value="">
-								<span class="glyphicon glyphicon-remove text-danger pull-right" aria-hidden="true">
+							<button class="btn btn-sm-span span-color-red pull-left text-16px" input name="upload" type="reset" id="upload" value="">
+								<span class="glyphicon glyphicon-remove pull-right" aria-hidden="true">
 							</span></button>
+							
+							
+							
 						</form>							
 					<br><br>
 					

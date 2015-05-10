@@ -281,18 +281,21 @@ END;
 
 	$formabout = <<<END
 
-		<form action="profile.php" method="post" id="updateform">
-			<textarea id="updateinfo" name="updateinfo" cols="60" row="10">{$profileabout}</textarea>
-			<input type="submit" id="submit" name="update" value="Uppdatera info">
+		<form action="profile.php" method="post" id="updateform" class="form control">
+			<textarea id="updateinfo" name="updateinfo" class="col-md-12" rows="6">{$profileabout}</textarea>
+			</br>
+			<input type="submit" id="submit" name="update" value="Uppdatera info" class="btn btn-xs btn-primary">
 		</form>
 END;
 
 	$formother = <<<END
 
-		<form action="profile.php" method="post" id="updateformother">
-			<textarea id="updateother" name="updateother" cols="30" row="10">{$profileabout}</textarea>
-			<input type="submit" id="submit" name="updateothers" value="Uppdatera info">
+		<form action="profile.php" method="post" id="updateformother" class="form control">
+			<textarea id="updateother" name="updateother" class="col-md-12" rows="9">{$profileabout}</textarea>
+			</br>
+			<input type="submit" id="submit" name="updateothers" value="Uppdatera info" class="btn btn-xs btn-primary">
 		</form>
+		
 END;
 
 if(isset($_POST['update']))
@@ -680,11 +683,16 @@ $content = <<<END
   	  					
   	  						</div><!-- left top -->				
 	  					
-	  						<div class="column-left-center text-center profil_bild">	  							
-								
-	  							{$profil_bild}	  							
+	  						<div class="column-left-center text-center">
 
-	  						
+								<div class="profil_bild_container">
+								
+									<div class="profil_bild">
+									{$profil_bild}	  							
+									</div>
+								
+								</div>
+								
 								<p class="text-bold">{$profilekeepername}</p>
 	  							{$button}
 	  							{$sendmessage}
@@ -770,14 +778,18 @@ $content = <<<END
 
 				  					<div class="panel-heading panel-heading-560px">Om mig {$penbutton}</div>
 
-
 					  					<div class="panel-body">
 
-						  					<p>Namn: {$profilename} {$profilelastname}</p> 
-						  					{$profileabout}
-						  						
-						  					{$formabout}
+						  					<p>Namn: {$profilename} Efternamn: {$profilelastname}
+											<br>
+						  					Om mig:
+											<br>
+											<br>
 
+											{$profileabout}
+											<br>
+						  					{$formabout}											
+											</p>
 
 					  					</div><!-- panel body -->
 					  			
