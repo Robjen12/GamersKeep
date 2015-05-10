@@ -23,7 +23,7 @@ $filePath = $uploadDir . $randName . '.' . $ext;
 
 $result = move_uploaded_file($tmpName, $filePath);
 if (!$result) {
-echo "Error uploading file";
+echo "Något gick snett med uppladdningen.";
 exit;
 }
 
@@ -59,7 +59,7 @@ END;
 
 
 
-echo "<br>Files uploaded<br>";
+echo "<br>Bild laddat upp<br>";
 header("Location: profile.php");
 }
 ?>
