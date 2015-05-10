@@ -16,6 +16,7 @@ $keeperid = "";
 $getflag = "";
 $commentid = "";
 $feedback = "";
+$grbutton = "";
 
 	$query = <<<END
 
