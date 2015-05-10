@@ -21,7 +21,8 @@ if(isset($_GET['search']))
 			$query = <<<END
 
 				SELECT * FROM user
-				WHERE keepername LIKE '%{$_GET['search']}%';
+				WHERE keepername LIKE '%{$_GET['search']}%'
+				AND roletype = 0;
 END;
 	
 	$result = $mysqli->query($query);
