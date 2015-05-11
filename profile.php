@@ -148,6 +148,14 @@ END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 
+	$query = <<<END
+				DELETE FROM message
+				WHERE message.keeperid = '{$keeperid}' 
+				OR message.keeperid2 = '{$keeperid}'
+END;
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+
 }
 // Skickar in vänförfrågan i databasen
 if(isset($_POST['keeperfr'])){
