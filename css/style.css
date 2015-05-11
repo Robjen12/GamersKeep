@@ -1480,8 +1480,8 @@ margin-left:40px;
 }
 
 .profil_bild_container {
-max-height: 300px;
-max-width: 130px;
+max-height: 131px;
+max-width: 85px;
 overflow: hidden;
 margin-left: auto;
 margin-right: auto;
@@ -1626,4 +1626,15 @@ margin-right: 93px;
 .readmore_link
 {
   display: block;
+}
+.btn .btn-danger a:link {
+background-color: #d43f3a;
+color: #fff;
+}
+.white-a-text a:link,
+.white-a-text a:active,
+.white-a-text a:focus,
+.white-a-text a:visited
+{
+color: #fff;
 }

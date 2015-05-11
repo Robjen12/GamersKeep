@@ -57,10 +57,10 @@ $content = <<<END
 				
 					<h4 class="quicksand text-bold">Profilbild</h4>
 					
-					<div class="profil_bild pull-left">
+					<div class="profil_bild border-radius-3px pull-left">
 						{$profil_bild}
 					</div>
-					<br><br><br><br><br><br><br>
+					<br><br><br><br><br><br><br><br><br><br><br><br>
 					<div class="pull-left text-bold">
 						{$keepername}
 					</div>
@@ -89,7 +89,8 @@ $content = <<<END
 					</p>
 					
 					<div class="pull-left white-a-text">
-						<a href="delete.php?keeperid={$keeperid}" role="button" class="btn btn-danger white-a-text" onclick="return confirm('Vill du verkligen ta bort kontot?')">
+						<a href="delete.php?keeperid={$keeperid}" role="button" class="btn btn-danger white-a-text"
+						onclick="return confirm('Vill du verkligen ta bort kontot?')">
 							Ta bort din profil
 						</a>
 					</div>
