@@ -151,7 +151,9 @@ END;
 	$query = <<<END
 				DELETE FROM message
 				WHERE message.keeperid = '{$keeperid}' 
+				AND message.keeperid2 = '{$keeperid2}'
 				OR message.keeperid2 = '{$keeperid}'
+				AND message.keeperid = '{$keeperid2}'
 END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 	  " : " . $mysqli->error);
