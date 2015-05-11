@@ -19,9 +19,7 @@ $content = <<<END
 						
 						<h4 class="quicksand text-bold">Introduktion</h4>
 						<p>Vi är hardcore gamers som har valt att skapa en mötesplats på nätet för gamers.
-						sdf sdjfkhdsjfhksdjfh askdhf kasdhf kasdhf aksdhf aksdfh askdf asdjf asdf asdf asdf
-						adsf asdfasdf dsf adsf asdf asdf adsf asdf asdf dsf asdf asdf adsf asd asdf asdf asdad
-						asd asdas sdfasdf adsfasdf asdfasd asdfsadfasdf fgsdgasgasdgasdga.
+						Här kan du utvexla dina efarenheter med andra gamers och prata om dina favoritspel. 
 						Varmt välkommen!</p>
 						<br>
 
@@ -34,16 +32,15 @@ $content = <<<END
     							</div>
     							
 								<div class="media-body">
-      								<h4 class="media-heading">
-									<a href="#"	class="text-bold quicksand">Robert, 300 år.</a>
+      								<h4 class="media-heading text-bold quicksand">
+									Robert, 300 år.
 									<br><br>
 								
-									<p>4 fruar i olika delar av världen, 2 i WoW, samt 21 barn.
+									<p class="text-normal">4 fruar i olika delar av världen, 2 i WoW, samt 21 barn.
 									Favoritspel: World of Warcraft, Diablo III, Monster Hunter och Dragon Age.
 									<br><br>
 									Programmeringsspråk: PHP, MySQL, HTML5 och CSS3.<br>
-									Övrigt: Kasten siger att du ska sätta in 2300 kr på hans jyskebank konto.
-																		
+									Övrigt: Kasten siger att du ska sätta in 2300 kr på hans jyskebank konto.								
 									</p>
     							</div>
   							</li>
@@ -60,10 +57,10 @@ $content = <<<END
     							</div>
     							
 								<div class="media-body">
-      								<h4 class="media-heading">
-									<a href="#"	class="text-bold quicksand">Dorte, 599 år.</a><br><br>
+      								<h4 class="media-heading text-bold quicksand">
+									Dorte, 599 år.<br><br>
 								
-									<p>4 fruar i olika delar av världen, 2 i WoW, 1 i Dragon Age, samt 25 barn.
+									<p class="text-normal">4 fruar i olika delar av världen, 2 i WoW, 1 i Dragon Age, samt 25 barn.
 									Favoritspel: Dragon Age, Dragon Age och Dragon Age.
 									<br><br>
 									Programmeringsspråk: PHP, MySQL, HTML5 och CSS3.<br><br><br>
@@ -81,10 +78,10 @@ $content = <<<END
     							</div>
     							
 								<div class="media-body">
-      								<h4 class="media-heading">
-									<a href="#"	class="text-bold quicksand">Maria, 150 år.</a><br><br>
+      								<h4 class="media-heading text-bold quicksand">
+									Maria, 150 år.<br><br>
 								
-									<p>4 sugardaddies i olika delar av världen, 2 i Grönland, inga barn än.
+									<p class="text-normal">4 sugardaddies i olika delar av världen, 2 i Grönland, inga barn än.
 									Favoritspel: Halo, Halo och HALOOOOO.
 									<br><br>
 									Designer i: Photoshop och Illustrator<br><br><br>
@@ -106,10 +103,10 @@ $content = <<<END
     							</div>
     							
 								<div class="media-body">
-      								<h4 class="media-heading">
-									<a href="#"	class="text-bold quicksand">Malena, 350 år.</a><br><br>
+      								<h4 class="media-heading text-bold quicksand">
+									Malena, 350 år.<br><br>
 								
-									<p>2 fruar i olika delar av världen, samt 2 män i WoW, och 1 barn.
+									<p class="text-normal">2 fruar i olika delar av världen, samt 2 män i WoW, och 1 barn.
 									Favoritspel: World of Warcraft, Diablo III, Talking Tom 2.
 									<br><br>
 									Programmeringsspråk: C++, MySQL, PHP, DVD, CD.<br><br>
