@@ -92,7 +92,7 @@ END;
 END;
 				$res2 = $mysqli->query($query2) or die("Could not query database" . $mysqli->errno . " : " . $mysqli->error);
 
-				header("Location: login.php");
+				header("Location: login.php", true, 303);
 
 						
 						
