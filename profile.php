@@ -576,8 +576,12 @@ END;
 								
 								<form action="profile.php?keeperfriendid={$friendkeeperfriendid}" method="post">
 								
-								<a href="profile.php?keeperid={$friendkeeperid}"><span class="glyphicon glyphicon-user pull-left" aria-hidden="true">&nbsp;</span>{$friendkeepername}</a>
-									<button type="submit" class="btn btn-sm-span span-color-green" name="yes" value=""><span class="glyphicon glyphicon-ok pull-left" aria-hidden="true"></span></button>
+								<a href="profile.php?keeperid={$friendkeeperid}"><span class="glyphicon glyphicon-user pull-left" aria-hidden="true">
+								&nbsp;</span>{$friendkeepername}
+								</a>
+									<button type="submit" class="btn btn-sm-span span-color-green" name="yes" value="">
+									<span class="glyphicon glyphicon-ok pull-left" aria-hidden="true"></span>
+									</button>
 									&nbsp;
 									<button type="submit" class="btn btn-sm-span span-color-red" name="no" value=""><span class="glyphicon glyphicon-remove pull-left" aria-hidden="true"></span></button>
 								</form>
@@ -747,7 +751,7 @@ $content = <<<END
 										</p>
 		  						
 
-
+								<div class="hidden">
 	  							<p class="text-center quicksand text-bold text-16px">Sociala Medier</p>
 								
 								<!-- Twitter -->
@@ -786,8 +790,10 @@ $content = <<<END
 							</div><!-- column left bottom2 -->
 						
 						</div><!-- row -->
-
+						
 						</div>
+						
+						</div><!-- hidden content -->
 						
 						<div class="col-sm-8">
 							<div class="row">
@@ -798,12 +804,7 @@ $content = <<<END
 
 					  					<div class="panel-body">
 
-						  					<p>Namn: {$profilename} Efternamn: {$profilelastname}
-											<br>
-						  					Om mig:
-											<br>
-											<br>
-
+						  					<p>
 											{$profileabout}
 											<br>
 						  					{$formabout}											
