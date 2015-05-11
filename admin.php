@@ -39,10 +39,21 @@ END;
 			$gr_flag .= <<<END
 				
 				<form action="admin.php?grid={$grid}" method="post">
-				<a href="genre.php?grid={$grid}">{$title}</a>
-					<button type="submit" name="ok" value="">V</button>
-					<button class="delete"><a href="delete.php?grid={$grid}">X</a></button>
+				<a href="genre.php?grid={$grid}" class="pull-left">{$title}</a>
+				
+					<div class="pull-left">
+						<button type="submit" name="ok" value="" class="pull-left margin-right-span-10px btn btn-sm-span span-color-green">						
+							<span class="glyphicon glyphicon-ok pull-right" aria-hidden="true"></span>						
+						</button>
+					</div>
+					
+					<div class="pull-left red-a-text">
+						<a href="delete.php?grid={$grid}" class="delete btn btn-sm-span span-color-red pull-left red-a-text" role="button">
+							<span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span>
+						</a>
+					</div>	
 				</form>
+				
 				
 				
 				
@@ -81,17 +92,25 @@ END;
 			$comment_flag .= <<<END
 				
 				<form action="admin.php?commentid={$commentids}" method="post">
-				<a href="genre.php?grid={$commentgrid}">{$comment}</a>
+				<a href="genre.php?grid={$commentgrid}" class="pull-left">{$comment}</a>
 				
-					<button type="submit" class="btn-sm-span" name="okcomment" value="">
-						<span class="glyphicon glyphicon-ok text-success pull-left" aria-hidden="true"></span>
+						
+					<div class="pull-left">
+					<button type="submit" class="btn btn-sm-span span-color-green" name="okcomment" value="">
+						<span class="glyphicon glyphicon-ok pull-left" aria-hidden="true"></span>
 					</button>
-														
-					<button class="btn-sm-span delete"><a href="delete.php?commentid={$commentids}">
-						<span class="glyphicon glyphicon-remove text-danger pull-left" aria-hidden="true"></span>
+					</div>
+					
+					<div class="pull-left red-a-text">
+					<a href="delete.php?commentid={$commentids}" role="button" class="btn btn-sm-span span-color-red pull-left red-a-text">
+						<span class="glyphicon glyphicon-remove pull-left" aria-hidden="true"></span>
 					</a></button>
+					</div>
+					
+					
 					<br>
 					<br>
+					
 				</form>
 END;
 		}
@@ -113,9 +132,9 @@ END;
 			<div class="panel-body ">
 				<h4 class="quicksand text-bold">Guider och recensioner</h4>
 				<p class="droid text-bold">
-				{$gr_flag}<br>
+				{$gr_flag}<br><br>
 				<h4 class="quicksand text-bold">Kommentarer</h4>
-				{$comment_flag}<br>
+				{$comment_flag}<br><br>
 				</p>
 			</div><!-- panel body -->
 

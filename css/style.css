@@ -1645,10 +1645,10 @@ color: #fff;
 .white-a-text a:link,
 .white-a-text a:active,
 .white-a-text a:focus,
-.white-a-text a:visited
-{
+.white-a-text a:visited {
 color: #fff;
 }
+
 .villkor {
 height: auto;
 background-color: #fff;
@@ -1662,4 +1662,15 @@ visibility: hidden;
 
 .show {
 visibility: show;
+}
+
+.red-a-text a:link,
+.red-a-text a:active,
+.red-a-text a:visited,
+.red-a-text a:focus
+ {
+color: #d43f3a;
+}
+.red-a-text a:hover {
+color: #000;
 }
