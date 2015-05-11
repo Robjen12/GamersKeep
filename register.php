@@ -130,7 +130,7 @@ $content = <<<END
 			<div class="col-md-8 pull-right">
 				<div class="register">
 				{$feedback4}
-					<h3 class="">Registrering</h3>
+					<h3 class="text-bold quicksand">Registrering</h3>
 					<form action="register.php" method="post" id="register-form" class="form-inline">
 					<div class="form-group col-lg-12">
 					{$feedback1}
