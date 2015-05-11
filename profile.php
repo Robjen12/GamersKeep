@@ -30,10 +30,10 @@ $friend_count = "";
 $chat_count = "";
 
 // ingen location header annars kan admin inte se sin profil
-//if($_SESSION['roletype'] == 1)
-//{
-//	header("Location: admin.php");
-//}
+if($_SESSION['roletype'] == 1)
+{
+	header("Location: admin.php");
+}
 
 if(!empty($_GET['keeperid']))
 {
