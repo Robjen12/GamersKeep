@@ -39,9 +39,8 @@ END;
 				$users = <<<END
 			
 			<p class="droid">Användarnamn: <a href="profile.php">{$row->keepername}</a><br>
-			Namn: {$row->fname}{$row->lname}<br>
-			Email: {$row->email}
-			</p>
+
+
 END;
 				
 			}
@@ -50,8 +49,6 @@ END;
 					$users = <<<END
 			
 			<p class="droid">Användarnamn: <a href="profile.php?keeperid={$keeperid2}">{$row->keepername}</a><br>
-			Namn: {$row->fname}{$row->lname}<br>
-			Email: {$row->email}
 			</p>
 END;
 
@@ -64,6 +61,12 @@ END;
 		$feedback .= "<p class=\"text-yellow\">Det finns ingen i databasen med det användarnamnet.</p>";
 	}
 }
+
+// Namn: {$row->fname}
+//{$row->lname}
+// Namn: {$row->fname}{$row->lname}<br>
+//Email: {$row->email}
+
 if(isset($_GET['search']))
 {
 
@@ -128,6 +131,10 @@ $content = <<<END
 		</div>
 	</div>
 END;
+
+// Namn: {$row->fname}
+//{$row->lname}<br>
+
 echo $header;
 echo $content; 
 echo $footer;
