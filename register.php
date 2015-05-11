@@ -7,6 +7,12 @@ $feedback2 = '';
 $feedback3 = '';
 $feedback4 = '';
 $feedback5 = '';
+$policy = '';
+
+$policy = <<<END
+
+
+END;
 
 
 if(isset($_POST['registeraccount']))
@@ -98,6 +104,7 @@ END;
 }
 
 
+
 $content = <<<END
 
 <!DOCTYPE html>
@@ -105,22 +112,27 @@ $content = <<<END
 <html>
 
 <head>
-	<title>GamersKeep - Where Gamers meet</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
+	<title>GamersKeep - Registrering</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">	
+	
 </head>
 
 <body class="register-forgot-background">
 	<div id="container-fluid">
 		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-8">
+			<div class="col-md-4 pull-left">
+				<img src="images/logo.png">		
+			</div><!-- col md 4 -->
+			
+			<div class="col-md-8 pull-right">
 				<div class="register">
 				{$feedback4}
 					<h3 class="">Registrering</h3>
 					<form action="register.php" method="post" id="register-form" class="form-inline">
-					<div class="form-group">
+					<div class="form-group col-lg-12">
 					{$feedback1}
 						<label for="keepername">Användarnamn</label></br>
 						<input type="text" class="form-control" id="keepername" name="keepername" value="" placeholder="Användarnamn"></br>
@@ -137,9 +149,20 @@ $content = <<<END
 						<label for="pw">Ange Lösenord igen</label></br>
 						<input type="password" class="form-control" id="pw2" name="pw2" value="" placeholder="Lösenord"><br><br>
 						{$feedback5}
-						<input type="checkbox" id="policy" name="policy" value=""> Jag har läst och accepterat <A HREF="popup.html" onClick="return popup(this, 'stevie')">villkoren</a> för sidan<br>
+						<input type="checkbox" id="policy" name="policy" value=""> Jag har läst och accepterat
+						<A HREF="popup.html" onClick="return popup(this, 'stevie')">villkoren</a> för sidan
 						<br>
-						<button type="submit" class="btn btn-primary btn-sm pull-left text-bold" value="submit" name="registeraccount" value="Skapa konto">Skapa Konto</button>
+						<br>
+						<button type="submit" class="btn btn-primary btn-sm pull-left text-bold" value="submit" name="registeraccount"
+						value="Skapa konto">
+							Skapa Konto
+						</button>
+						
+						<div class="pull-right a text-white">							
+							<a href="login.php" class="btn btn-default btn-sm text-bold login-text" role="button">																
+								Tillbaka till login
+							</a>
+						</div>
 						</div><!-- form group -->	
 				</form>
 				</div><!-- register -->
@@ -162,7 +185,7 @@ if (typeof(mylink) == 'string')
    href=mylink;
 else
    href=mylink.href;
-window.open(href, windowname, 'width=600,height=250,scrollbars=yes');
+window.open(href, windowname, 'width=600,height=300,scrollbars=yes');
 return false;
 }
 

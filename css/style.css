@@ -153,10 +153,12 @@ html, body
 	padding: 15px;
 	height: auto;
 	border-radius: 15px;
-  min-height: 550px;
+	min-height: 550px;
 	height: auto;
-	margin: 100px 100px 100px 100px;
-	padding: 20px 0px 0px 20px;
+	margin-right: 50px;
+	margin-top: 75px;
+	float:right;
+	width: 70%;
 
 }
 .toplist,
@@ -1575,13 +1577,20 @@ left: 0;
 right: 0;
 }
 
-.hide{
+/*.hide{
 display: hidden;
 visibility: hidden;
 }
+*/
+
+#visa {
+background-color: #fff;
+border-radius: 3px;
+height: auto;
+}
 
 .show{
-display: show;
+
 visibility: show;
 }
 .margin-left-topplista {
@@ -1639,4 +1648,18 @@ color: #fff;
 .white-a-text a:visited
 {
 color: #fff;
+}
+.villkor {
+height: auto;
+background-color: #fff;
+width: 100%;
+
+}
+
+.hidden {
+visibility: hidden;
+}
+
+.show {
+visibility: show;
 }
