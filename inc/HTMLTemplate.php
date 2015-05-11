@@ -270,17 +270,17 @@ $footer = <<<END
 				<div class="col-md-4 pull-left quicksand text-bold text-16px">					
 					GAMERSKEEP
 					<p class="droid text-normal">
-					<a href="#">Syfte</a><br>
-					<a href="#">Policy</a><br>
-					<a href="#">FAQ</a><br>
+					Syfte<br>
+					Policy<br>
+					FAQ<br>
 					</p>										
 				</div>
 				
 				<div class="col-md-4 pull-left quicksand text-bold text-16px">
 					KONTAKT
 					<p class="droid text-normal">
-					<a href="#">Annoncera</a><br>
-					<a href="#">Mejl</a>
+					Annonsera<br>
+					Mejl
 					</p>
 				</div>
 				
@@ -306,11 +306,12 @@ $footer = <<<END
 			<!--<img src="images/hh.png" class="pull-right margin-right-15px" width="125px">-->
 				GAMETEAM
 				<p class="droid text-normal">
-				<a href="gameteam.php">Vem vi är</a><br>
-				<a href="#">Robert</a><br>
-				<a href="#">Dorte</a><br>
-				<a href="#">Maria</a><br>
-				<a href="#">Malena</a>
+				<a href="gameteam.php">
+					Robert<br>
+					Dorte<br>
+					Maria<br>
+					Malena
+				</a>
 				</p>				
 			</div>
 			</div><!-- col md 3 sociala media -->
@@ -334,4 +335,5 @@ $footer = <<<END
 </html>
 END;
 
+//<a href="gameteam.php">Vem vi är</a><br>
 ?>
