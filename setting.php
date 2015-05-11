@@ -57,10 +57,14 @@ $content = <<<END
 				
 					<h4 class="quicksand text-bold">Profilbild</h4>
 					
-					<div class="profil_bild border-radius-3px pull-left">
-						{$profil_bild}
-					</div>
-					<br><br><br><br><br><br><br><br><br><br><br><br>
+					<div class="profil_bild_container pull-left">
+					
+						<div class="profil_bild pull-left">
+							{$profil_bild}
+						</div>
+					</div><!-- profil bild container -->
+					
+					<br><br><br><br><br><br><br>
 					<div class="pull-left text-bold">
 						{$keepername}
 					</div>

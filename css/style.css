@@ -1493,8 +1493,10 @@ height: 100%;
 overflow: hidden;
 border-top-left-radius: 60px;
 border-top-right-radius: 60px;
+}
 
-
+.border-radius-3px > img{
+border-radius: 3px;
 }
 
 span .pen {
