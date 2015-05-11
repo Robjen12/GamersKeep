@@ -45,7 +45,7 @@ END;
 
 					$_SESSION["keepername"] =	$keepername;
 					$_SESSION['start'] = time();
-					$_SESSION['expire'] = $_SESSION['start'] + (15 * 60);
+					$_SESSION['expire'] = $_SESSION['start'] + (60 * 60);
 					$_SESSION["keeperid"] 	= 	$row->keeperid;
 					$_SESSION["roletype"] 	=	$row->roletype;
 
