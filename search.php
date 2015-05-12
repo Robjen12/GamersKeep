@@ -108,11 +108,12 @@ $content = <<<END
 	  			<div class="panel-heading panel-heading-560px">Sökresultat</div>
 
   					<div class="panel-body height-410px">
-							
-						{$users}
+						
+						<li class="media">
+						{$users}<br>
 						{$article}
 						{$feedback}
-
+						</li>
   					</div><!-- panel body -->
 
 				</div><!-- panel heading -->
