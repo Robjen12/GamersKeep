@@ -436,8 +436,8 @@ $query = <<<END
 			   ON message.keeperid = user.keeperid 
 			   OR message.keeperid2 = user.keeperid 
 			   WHERE message.keeperid = '{$keeperid}'
-               OR message.keeperid2 = '{$keeperid}'
-			   GROUP BY keeperid2;
+               OR message.keeperid2 = '{$keeperid}';
+			  
 END;
 
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
