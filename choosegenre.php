@@ -44,8 +44,8 @@ if($result->num_rows > 0)
 	{
 		
 		$grid = $row->grid;
-		$title	= utf8_decode(htmlspecialchars($row->title));
-		$text 	= utf8_decode(htmlspecialchars($row->text));
+		$title	= utf8_decode($row->title);
+		$text 	= utf8_decode($row->text);
 		$subtext = substr($text, 0, 160);
 		$grade = $row->grade;
 		$date 	= strtotime($row->timestamp);
@@ -94,8 +94,8 @@ if($result->num_rows > 0)
 	while($row = $result->fetch_object())
 	{
 		$grid = $row->grid;
-		$title	= utf8_decode(htmlspecialchars($row->title));
-		$text 	= utf8_decode(htmlspecialchars($row->text));
+		$title	= utf8_decode($row->title);
+		$text 	= utf8_decode($row->text);
 		$subtext = substr($text, 0, 160);
 		$grade = $row->grade;
 		$date 	= strtotime($row->timestamp);
@@ -145,8 +145,8 @@ if($result->num_rows > 0)
 	while($row = $result->fetch_object())
 	{
 		$grid = $row->grid;
-		$title = utf8_decode(htmlspecialchars($row->title));
-		$text = utf8_decode(htmlspecialchars($row->text));
+		$title = utf8_decode($row->title);
+		$text = utf8_decode($row->text);
 		$subtext = substr($text, 0, 160);
 		$grade = $row->grade;
 
@@ -194,8 +194,8 @@ if($result->num_rows >0)
 	{
 
 		$grid = $row->grid;
-		$title = utf8_decode(htmlspecialchars($row->title));
-		$text = utf8_decode(htmlspecialchars($row->text));
+		$title = utf8_decode($row->title);
+		$text = utf8_decode($row->text);
 		$subtext = substr($text, 0, 160);
 		$grade = $row->grade;
 
