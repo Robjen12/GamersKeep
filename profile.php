@@ -289,6 +289,32 @@ END;
 	<a href="#"><img src="images/pen.png" width="30px" id="pen2" class="pull-right" title="Redigera"></a>
 END;
 
+
+if(isset($_POST['update']))
+{
+	$about = $_POST['updateinfo'];
+	$query = <<<END
+
+		UPDATE user SET about ='$about'
+		WHERE keeperid = '{$keeperid}'
+END;
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+}
+if(isset($_POST['updateothers']))
+{
+	$other = $_POST['updateother'];
+
+	$query = <<<END
+
+		UPDATE user SET other = '$other'
+		WHERE keeperid = '{$keeperid}';
+END;
+		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+}
+
+
 $profileinfo = <<<END
 
 	SELECT keepername, fname, lname, about, other
@@ -326,29 +352,6 @@ END;
 		
 END;
 
-if(isset($_POST['update']))
-{
-	$about = $_POST['updateinfo'];
-	$query = <<<END
-
-		UPDATE user SET about ='$about'
-		WHERE keeperid = '{$keeperid}'
-END;
-		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-	  " : " . $mysqli->error);
-}
-if(isset($_POST['updateothers']))
-{
-	$other = $_POST['updateother'];
-
-	$query = <<<END
-
-		UPDATE user SET other = '$other'
-		WHERE keeperid = '{$keeperid}';
-END;
-		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
-	  " : " . $mysqli->error);
-}
 // Hämtar ut om användaren
 $profileinfo = <<<END
 
