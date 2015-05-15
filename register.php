@@ -8,6 +8,10 @@ $feedback3 = '';
 $feedback4 = '';
 $feedback5 = '';
 $policy = '';
+$keepername = '';
+$fname = '';
+$lname = '';
+$email = '';
 
 $policy = <<<END
 
@@ -135,14 +139,14 @@ $content = <<<END
 					<div class="form-group col-lg-12">
 					{$feedback1}
 						<label for="keepername">Användarnamn</label></br>
-						<input type="text" class="form-control" id="keepername" name="keepername" value="" placeholder="Användarnamn"></br>
+						<input type="text" class="form-control" id="keepername" name="keepername" value="{$keepername}" placeholder="Användarnamn"></br>
 						<label for="fname">Förnamn</label></br>
-						<input type="text" class="form-control" id="fname" name="fname" value"" placeholder="Förnamn"></br>
+						<input type="text" class="form-control" id="fname" name="fname" value="{$fname}" placeholder="Förnamn"></br>
 						<label for="lname">Efternamn</label></br>
-						<input type="lname" class="form-control" id="lname" name="lname" value="" placeholder="Efternamn"></br>
+						<input type="lname" class="form-control" id="lname" name="lname" value="{$lname}" placeholder="Efternamn"></br>
 						{$feedback2}
 						<label for="email">E-post</label></br>
-						<input type="text" class="form-control" id="email" name="email" value="" placeholder="E-post"></br>
+						<input type="text" class="form-control" id="email" name="email" value="{$email}" placeholder="E-post"></br>
 						{$feedback3}
 						<label for="pw">Lösenord</label></br>
 						<input type="password" class="form-control" id="pw" name="pw" value="" placeholder="Lösenord"><br>
