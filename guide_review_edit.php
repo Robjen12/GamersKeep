@@ -172,7 +172,7 @@ $content = <<<END
 		<script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> <script type="text/javascript">
 
  		 bkLib.onDomLoaded(function() {
-       		 new nicEditor({fullPanel : true}).panelInstance('nicEdit');
+       		 new nicEditor({buttonList : ['bold','italic','underline', 'center', 'left', 'right']}).panelInstance('nicEdit');
        
   });
  
