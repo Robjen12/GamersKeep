@@ -9,11 +9,17 @@ $keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
 $guestbook = "";
 $feedback = "";
 
+//Hindrar SQL injections
+//$postId		= $mysqli->real_escape_string($postId);
+//Hindrar XSS-attack
+//$name	= htmlspecialchars($name);
+//$msg	= htmlspecialchars($msg);
 
 if(!empty($_POST))
 {
 
 	if(isset($_POST['friendmessage']))
+		
 	{
 		$msg = $_POST['msg'];
 
@@ -77,7 +83,7 @@ END;
 					$guestbook .= <<<END
 					<b>{$keepername}</b><br>
 					{$msgs}<br>
-					<p class="sendwhen">Skickat den: {$date}<br></p>
+					<p class="sendwhen text-muted">Skickat den: {$date}<br></p>
 END;
 				}
 			}
@@ -88,28 +94,43 @@ END;
 $content = <<<END
 
 		<div class="row margin-top-100">
-
-			<div class="row">
-
-				<div class="col-md-8">
-
-					<div class="guestbook">
-						<h3>Meddelande</h3><br><br>
-						{$guestbook}
-					</div>
-					<div class="guestbookreplys"><br>
-					{$feedback}
-							<form action="chatcom.php?keeperid={$keeperid2}" method="post" id="send">
-								<textarea id="msg" name="msg" cols="121" rows="5"></textarea></br>
-								<input type="submit" id="submit" name="friendmessage" value="Skicka">
-							</form>
-						</div>
-
-				</div>
-
+		
+			<div class="col-md-2 col-sm-2">
 			</div>
 
-		</div>
+			<div class="col-md-6 col-sm-6 margin-top-100 setting panel-width-550px panel panel-default">
+
+				<div class="panel-heading panel-heading-560px">
+					Meddelande
+				</div><!-- panel heading -->
+					
+					<div class="panel-body height-410px pull-left">
+					
+						<h4 class="quicksand text-bold">Konversation</h4>
+						<p class="droid">
+							{$guestbook}
+						</p>
+					</div><!-- panel body -->	
+					
+			</div><!-- col md 6 panel -->
+			
+			</div>
+			<div class="col-md-6 panel-width-550px panel panel-default">
+			
+			<div class="panel-heading panel-heading-560px">
+					Svara
+				</div><!-- panel heading -->
+			<br>
+				{$feedback}
+				<form action="chatcom.php?keeperid={$keeperid2}" method="post" id="send">
+					<textarea id="msg" name="msg" cols="121" rows="5"></textarea></br>
+					<input type="submit" id="submit" name="friendmessage" value="Skicka">
+				</form>
+			</div><!-- guestbookreplies -->
+
+		</div><!-- row margin top 100 -->
+
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script>
 	$(document).ready(function(){

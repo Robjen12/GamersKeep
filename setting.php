@@ -49,7 +49,7 @@ $content = <<<END
 		<div class="col-md-2 col-sm-2">
 		</div>
 		
-				<div class="col-md-6 col-sm-6 margin-top-100 setting panel-width-550px panel panel-default">
+			<div class="col-md-6 col-sm-6 margin-top-100 setting panel-width-550px panel panel-default">
 
 			<div class="panel-heading panel-heading-560px">Inställningar</div>
 			
