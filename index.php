@@ -160,10 +160,10 @@ END;
 						<div class="media-left">
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
-							<li class="views">{$row->counter}</li>
+							<h4 class="media-heading pull-right"><a href="genre.php?grid={$grid}">{$title}</a>
+							<li class="pull-left">{$row->counter}</li>
 							<br>
-							<h5 class="media-heading">{$subtext}</h5>
+							<h5 class="media-heading pull-left text-justify">{$subtext}</h5>
 						</div><!-- media body -->
 					</li><!-- media -->
 				</ul><!-- media list -->
