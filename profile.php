@@ -699,7 +699,7 @@ END;
 
 
 $v = "<span class=\"glyphicon glyphicon-user pull-left\" aria-hidden=\"true\">&nbsp;</span>";
-$k = "<span class=\"glyphicon glyphicon-comment pull-left\" aria-hidden=\"true\">&nbsp;</span>";
+$k = "<span class=\"glyphicon glyphicon-envelope pull-left\" aria-hidden=\"true\">&nbsp;</span>";
 
 $content = <<<END
 
@@ -756,7 +756,7 @@ $content = <<<END
 												{$yourfriends}
 											</div>
 									
-											{$k}  Chat konversation <span class="badge badge-success pull-right">{$chat_count}</span>	
+											{$k} Mejl konversation <span class="badge badge-success pull-right">{$chat_count}</span>	
 											<div class="latestmessage">
 												
 												{$chatmess}		
