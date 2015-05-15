@@ -1261,6 +1261,7 @@ color: white;
   width: 400px;
  }
  
+ 
 #updateform,
 #updateformother {
  /*margin-top: 130px; */
@@ -1377,6 +1378,7 @@ background-color: Transparent;
   display: inline-block;
   vertical-align: middle;
 }
+
 .sendwhen
 {
   font-size: 10px;
@@ -1688,4 +1690,49 @@ color: #000;
 .margin-left-zero > li {
 margin-left: -80px;
 margin-right: 10px;
+}
+
+/* chatcom farger */
+.guestbook_feed {
+border-radius: 3px;
+background-color: #eee;
+border: 1px solid #337ab7;
+padding: 8px;
+width: 100%;
+height: auto;
+margin-bottom: 10px;
+color: #000;
+
+}
+
+/* chatcom farger satt lika rader med bakgrundsfarg ljusgraa */
+.row .guestbook_feed:nth-child(even){
+  background-color: #efefef;
+  border: 1px solid #ddd;
+  color: #269abc;
+}
+
+/* chatcom farger satt lika rader med bakgrundsfarg vit */
+.row .guestbook_feed:nth-child(odd){
+  background-color: #fff;
+  border: 1px solid #eee;
+  color: #bbb;
+}
+
+h4.row .guestbook_feed:nth-child(even){
+	color: #000;
+}
+
+h4.row .guestbook_feed:nth-child(odd){
+	color: #fff;
+}
+span.media-top {
+margin-right: 10px;
+margin-left: 0;
+}
+
+form.textarea-width-100 {
+color: #000;
+width: 100%;
+
 }

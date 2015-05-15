@@ -8,6 +8,8 @@ $keeperid = $_SESSION['keeperid'];
 $keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
 $guestbook = "";
 $feedback = "";
+$msg = "";
+$namecolor_first = "";
 
 //Hindrar SQL injections
 //$postId		= $mysqli->real_escape_string($postId);
@@ -76,14 +78,23 @@ END;
 				{
 					
 					$keepername = $row->keepername;
-					$msgs = $row->msg;
+					$msg = $row->msg;
 					$date 	= strtotime($row->timestamp);
 					$date	= date("d M Y H:i", $date);
 
+
+// http://stackoverflow.com/questions/25121144/alternating-row-colors-in-bootstrap-3-no-table
+
 					$guestbook .= <<<END
-					<b>{$keepername}</b><br>
-					{$msgs}<br>
-					<p class="sendwhen text-muted">Skickat den: {$date}<br></p>
+					<div class="guestbook_feed">
+					<span class="glyphicon glyphicon-user media-top pull-left" aria-hidden="true"></span>
+					<h4 class="media-heading media-top pull-left">{$keepername}</h4>
+					<br><br>
+					<p class="media-body quicksand text-normal" pull-left>{$msg}</p>
+					<br>
+					<p class="text-muted text-size-8px pull-right">{$date}</p>
+					<br>
+					</div>
 END;
 				}
 			}
@@ -107,27 +118,32 @@ $content = <<<END
 					<div class="panel-body height-410px pull-left">
 					
 						<h4 class="quicksand text-bold">Konversation</h4>
-						<p class="droid">
-							{$guestbook}
-						</p>
-					</div><!-- panel body -->	
+							<p class="quicksand text-normal">
+								{$guestbook}
+							</p>
+			
+			
 					
+						<h4 class="quicksand text-bold">Svara</h4>
+						
+							<p class="quicksand text-normal">
+			
+								{$feedback}
+								
+								<form role="form" class="form textarea-width-100">
+								<div class="form-group textarea-width-100">
+								<form action="chatcom.php?keeperid={$keeperid2}" method="post" id="send" class="textarea-width-100">
+									<textarea id="msg" name="msg" rows="5" class="form-control textarea-width-100"></textarea></br>
+									<input type="submit" id="submit" name="friendmessage" value="Skicka" role="button" class="btn btn-primary btn-sm text-info">
+									<input type="reset" id="reset" value="Ångra" role="button" class="btn btn-default btn-sm pull-right">
+								</form>
+								</div><!-- form group -->
+							</p>
+			</div><!-- guestbookreplies -->
+			</div><!-- panel body -->
+			</div><!-- panel body -->
 			</div><!-- col md 6 panel -->
 			
-			</div>
-			<div class="col-md-6 panel-width-550px panel panel-default">
-			
-			<div class="panel-heading panel-heading-560px">
-					Svara
-				</div><!-- panel heading -->
-			<br>
-				{$feedback}
-				<form action="chatcom.php?keeperid={$keeperid2}" method="post" id="send">
-					<textarea id="msg" name="msg" cols="121" rows="5"></textarea></br>
-					<input type="submit" id="submit" name="friendmessage" value="Skicka">
-				</form>
-			</div><!-- guestbookreplies -->
-
 		</div><!-- row margin top 100 -->
 
 		
