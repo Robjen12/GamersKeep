@@ -1525,6 +1525,9 @@ margin-bottom: 30px;
   background-color: #333333;
 }
 
+.badge-primary {
+	background-color: #337ab7;
+}
 .header_ikoner {
 width: 36px;
 height: 36px;
@@ -1600,6 +1603,14 @@ margin-bottom: 20px;
 margin-top: 10px;
 }
 
+
+ol.topp {
+margin-left: 0;
+margin-right: auto;
+color: Red;
+background-color: #000;
+}
+
 .span-color-red {
 color: #d43f3a;
 }
@@ -1673,4 +1684,8 @@ color: #d43f3a;
 }
 .red-a-text a:hover {
 color: #000;
+}
+.margin-left-zero > li {
+margin-left: -80px;
+margin-right: 10px;
 }

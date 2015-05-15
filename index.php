@@ -18,6 +18,8 @@ $admindelete = "";
 //test
 $genretype = "";
 $genre = "";
+$topplistreview_nummer = "";
+$topplistguide_nummer = "";
 
 
 $query = <<<END
@@ -153,6 +155,9 @@ if($result->num_rows > 0)
 				<button class="delete"><a href="delete.php?grid={$grid}">x</a></button>
 END;
 			}
+			//Adderar 1 till topplistguide numret
+			$topplistguide_nummer = $topplistguide_nummer+1;
+			
                 $toplistguide .=<<<END
 
                 <ul class="media-list margin-left-topplista">
@@ -160,8 +165,15 @@ END;
 						<div class="media-left">
 						</div>
 						<div class="media-body">
+							<ul class="list style margin-left-zero">
+								<ol class="margin-left-zero">
+									<li class="list-style pull-left"><span class="badge text-white" aria-hidden="true">{$topplistguide_nummer}</span></li>
+								</ol>
+							</ul>
 							<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
-							<li class="views">{$row->counter}</li>
+							<ol class="pull-left">
+								<li><span class="badge primary pull-left"></span></li>
+							</ol>
 							<br>
 							<h5 class="media-heading">{$subtext}</h5>
 						</div><!-- media body -->
@@ -202,16 +214,25 @@ if($res->num_rows > 0){
 END;
 	}
 
+	//Adderar 1 till topplistrecension numret
+	$topplistreview_nummer = $topplistreview_nummer+1;
+
 	$toplistreview .= <<<END
 
 			<ul class="media-list">
  				<ul class="media-list margin-left-topplista">
 					<li class="media">
 						<div class="media-left">
-						</div>
+							
+						</div><!-- media left -->
 						<div class="media-body">
+							<ul class="list style margin-left-zero">
+								<ol class="margin-left-zero">
+									<li class="list-style pull-left"><span class="badge badge-info text-white" aria-hidden="true">{$topplistreview_nummer}</span></li>
+								</ol>
+							</ul>
 							<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
-							<li class="views">{$row->counter}</li>
+							
 							<br>
 							<h5 class="media-heading">{$subtext}</h5>
 						</div><!-- media body -->
