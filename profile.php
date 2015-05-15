@@ -723,7 +723,7 @@ $content = <<<END
 								<div class="profil_bild_container">
 								
 									<div class="profil_bild">
-									{$profil_bild}	  							
+									<a href="setting.php" class="profil_bild_container profil_bild">{$profil_bild}</a>	  							
 									</div>
 								
 								</div>
