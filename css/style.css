@@ -1256,6 +1256,12 @@ color: white;
   padding-top: 10px;
   padding-left: 10px;
 }
+.guestbook
+{
+  
+  overflow-y: scroll;
+ 
+}
  #send {
   margin-top: 20px;
   width: 400px;
@@ -1731,8 +1737,11 @@ margin-right: 10px;
 margin-left: 0;
 }
 
-form.textarea-width-100 {
+.textarea-width-498 {
 color: #000;
-width: 100%;
-
+width: 498px;
+}
+.right {
+float:right;
+margin-right: -98px;
 }

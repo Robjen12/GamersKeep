@@ -51,7 +51,13 @@ END;
 
 		
 }
-
+//<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+//<script>
+//	$(document).ready(function(){
+	// set the default scroll bar to bottom of chat box
+//	$(".guestbook").scrollTop($(".guestbook")[0].scrollHeight);
+//	});
+//</script>
 
 if(!empty($_GET))
 {
@@ -87,14 +93,15 @@ END;
 
 					$guestbook .= <<<END
 					<div class="guestbook_feed">
-					<span class="glyphicon glyphicon-user media-top pull-left" aria-hidden="true"></span>
-					<h4 class="media-heading media-top pull-left">{$keepername}</h4>
-					<br><br>
-					<p class="media-body quicksand text-normal" pull-left>{$msg}</p>
-					<br>
-					<p class="text-muted text-size-8px pull-right">{$date}</p>
-					<br>
-					</div>
+						<span class="glyphicon glyphicon-user media-top pull-left" aria-hidden="true"></span>
+						<h4 class="media-heading media-top pull-left">{$keepername}</h4>
+						<br>
+						<br>
+						<p class="media-body quicksand text-normal" pull-left>{$msg}</p>
+						<br>
+						<p class="text-muted text-size-8px pull-right">{$date}</p>
+						<br>
+					</div><!-- guestbook feed -->
 END;
 				}
 			}
@@ -122,23 +129,16 @@ $content = <<<END
 								{$guestbook}
 							</p>
 			
-			
-					
-						<h4 class="quicksand text-bold">Svara</h4>
-						
-							<p class="quicksand text-normal">
-			
+						<h4 class="quicksand text-bold">Svara</h4>						
 								{$feedback}
-								
-								<form role="form" class="form textarea-width-100">
-								<div class="form-group textarea-width-100">
-								<form action="chatcom.php?keeperid={$keeperid2}" method="post" id="send" class="textarea-width-100">
-									<textarea id="msg" name="msg" rows="5" class="form-control textarea-width-100"></textarea></br>
-									<input type="submit" id="submit" name="friendmessage" value="Skicka" role="button" class="btn btn-primary btn-sm text-info">
-									<input type="reset" id="reset" value="Ångra" role="button" class="btn btn-default btn-sm pull-right">
+								<form action="chatcom.php?keeperid={$keeperid2}" method="post" id="send" class="textarea-width-498">
+									<textarea id="msg" name="msg" rows="5" class="form-control textarea-width-498 quicksand">
+									</textarea>									
+									<input type="submit" id="submit" name="friendmessage" value="Skicka" role="button"
+									class="btn btn-primary btn-sm text-info">
+									<input type="reset" id="reset" value="Ångra" role="button" class="btn btn-default btn-sm right">
 								</form>
-								</div><!-- form group -->
-							</p>
+	
 			</div><!-- guestbookreplies -->
 			</div><!-- panel body -->
 			</div><!-- panel body -->
@@ -146,14 +146,6 @@ $content = <<<END
 			
 		</div><!-- row margin top 100 -->
 
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script>
-	$(document).ready(function(){
-    // set the default scroll bar to bottom of chat box
-    $(".guestbook").scrollTop($(".guestbook")[0].scrollHeight);
-});
-	</script>
 END;
 echo $header;
 echo $content;
