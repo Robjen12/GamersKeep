@@ -1796,10 +1796,23 @@ margin-left: 40px;
 
 .margin-top-register{ 
 	margin-top: -75px;
-	margin-left: -25px;
+	margin-left: -125px;
 }
+.register-container {
+
+}
+.register-policy {
+	
+}
+
 .register-right {
-	margin-right: 25px;
+	margin-right: -75px;
+	
 
 }
+.register-left {
+	margin-left: -100px;
+}
+a.a {
 
+}

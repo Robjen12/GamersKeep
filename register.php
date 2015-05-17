@@ -119,17 +119,28 @@ $content = <<<END
 	<title>GamersKeep - Registrering</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	
-	<link rel="stylesheet" href="css/style.css">	
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	
 </head>
 
 <body class="register">
-	
+	<div class="container">
 		<div class="row margin-top-75">
 			<div class="col-md-6 pull-left margin-top-register">
 				<img src="images/logo.png" width="50%">
-			</div><!-- col md 6 -->
+			</div>
+			
+			<div class="col-md-6 col-sm-6 register-left panel-width-550px panel panel-default pull-left collapse">
+			
+				
+					<div class="collapse">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</div>
+			</div><!-- col md 6 -->		
 			
 			<div class="col-md-6 col-sm-6 register-right panel-width-550px panel panel-default pull-right">
 				
@@ -157,7 +168,7 @@ $content = <<<END
 							<input type="password" class="form-control" id="pw2" name="pw2" value="" placeholder="Lösenord"><br><br>
 							{$feedback5}
 							<input type="checkbox" id="policy" name="policy" value=""> Jag har läst och accepterat
-							<A HREF="popup.html" onClick="return popup(this, 'stevie')">villkoren</a> för sidan
+							<a href="#" class="a">villkoren</a>för sidan
 							<br>
 							<br>
 							<button type="submit" class="btn btn-primary btn-sm pull-left text-bold" value="submit" name="registeraccount"
@@ -177,26 +188,16 @@ $content = <<<END
 			</div>
 		</div>
 	</div>
+<script>
+$(document).ready(function(){
+    $(".a").click(function(){
+        $(".collapse").collapse('toggle');
+    });
+});
+</script>
 </body>
-
-
 </html>
 
-<SCRIPT TYPE="text/javascript">
-
-function popup(mylink, windowname)
-{
-if (! window.focus)return true;
-var href;
-if (typeof(mylink) == 'string')
-   href=mylink;
-else
-   href=mylink.href;
-window.open(href, windowname, 'width=600,height=300,scrollbars=yes');
-return false;
-}
-
-</SCRIPT>
 END;
 
 echo $content;
