@@ -292,8 +292,7 @@ END;
 
 if(isset($_POST['update']))
 {
-	$about = $_POST['updateinfo'];
-	$about = $mysqli->real_escape_string($about);
+	$about = $mysqli->real_escape_string($_POST['updateinfo']);
 	$query = <<<END
 
 		UPDATE user SET about ='$about'
@@ -304,8 +303,7 @@ END;
 }
 if(isset($_POST['updateothers']))
 {
-	$other = $_POST['updateother'];
-	$other = $mysqli->real_escape_string($other);
+	$other = $mysqli->real_escape_string($_POST['updateother']);
 	$query = <<<END
 
 		UPDATE user SET other = '$other'
