@@ -696,7 +696,8 @@ END;
 
 }
 
-
+$r = "<span class=\"glyphicon glyphicon-edit pull-left\" aria-hidden=\"true\">&nbsp;</span>";
+$g = "<span class=\"glyphicon glyphicon-book pull-left\" aria-hidden=\"true\">&nbsp;</span>";
 $v = "<span class=\"glyphicon glyphicon-user pull-left\" aria-hidden=\"true\">&nbsp;</span>";
 $k = "<span class=\"glyphicon glyphicon-envelope pull-left\" aria-hidden=\"true\">&nbsp;</span>";
 
@@ -738,8 +739,8 @@ $content = <<<END
 		  						<div class="profileinformation text-left text-black">
 									
 		  								<p class="text-left">
-											{$r} Recensioner <span class="badge badge-info pull-right">15</span><br>
-											{$g} Guider <span class="badge primary pull-right">7</span><br>
+											{$r} Recensioner <br>
+											{$g} Guider <br>
 
 											<div class="almostfriends">
 
