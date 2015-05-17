@@ -124,51 +124,54 @@ $content = <<<END
 	
 </head>
 
-<body class="register-forgot-background">
-	<div id="container-fluid">
-		<div class="row">
-			<div class="col-md-4 pull-left">
-				<img src="images/logo.png">		
-			</div><!-- col md 4 -->
+<body class="register">
+	
+		<div class="row margin-top-75">
+			<div class="col-md-6 pull-left margin-top-register">
+				<img src="images/logo.png" width="50%">
+			</div><!-- col md 6 -->
 			
-			<div class="col-md-8 pull-right">
-				<div class="register">
+			<div class="col-md-6 col-sm-6 register-right panel-width-550px panel panel-default pull-right">
+				
 				{$feedback4}
-					<h3 class="">Registrering</h3>
-					<form action="register.php" method="post" id="register-form" class="form-inline">
-					<div class="form-group col-lg-12">
-					{$feedback1}
-						<label for="keepername">Användarnamn</label></br>
-						<input type="text" class="form-control" id="keepername" name="keepername" value="{$keepername}" placeholder="Användarnamn"></br>
-						<label for="fname">Förnamn</label></br>
-						<input type="text" class="form-control" id="fname" name="fname" value="{$fname}" placeholder="Förnamn"></br>
-						<label for="lname">Efternamn</label></br>
-						<input type="lname" class="form-control" id="lname" name="lname" value="{$lname}" placeholder="Efternamn"></br>
-						{$feedback2}
-						<label for="email">E-post</label></br>
-						<input type="text" class="form-control" id="email" name="email" value="{$email}" placeholder="E-post"></br>
-						{$feedback3}
-						<label for="pw">Lösenord</label></br>
-						<input type="password" class="form-control" id="pw" name="pw" value="" placeholder="Lösenord"><br>
-						<label for="pw">Ange Lösenord igen</label></br>
-						<input type="password" class="form-control" id="pw2" name="pw2" value="" placeholder="Lösenord"><br><br>
-						{$feedback5}
-						<input type="checkbox" id="policy" name="policy" value=""> Jag har läst och accepterat
-						<A HREF="popup.html" onClick="return popup(this, 'stevie')">villkoren</a> för sidan
-						<br>
-						<br>
-						<button type="submit" class="btn btn-primary btn-sm pull-left text-bold" value="submit" name="registeraccount"
-						value="Skapa konto">
-							Skapa Konto
-						</button>
-						
-						<div class="pull-right a text-white">							
-							<a href="login.php" class="btn btn-default btn-sm text-bold login-text" role="button">																
-								Tillbaka till login
-							</a>
-						</div>
-						</div><!-- form group -->	
-				</form>
+					<div class="panel-heading panel-heading-560px">Registrering</div>
+					
+					<div class="panel-body height-410px pull-left">
+					
+						<form action="register.php" method="post" id="register-form" class="form-inline">
+						<div class="form-group">
+						{$feedback1}
+							<label for="keepername">Användarnamn</label></br>
+							<input type="text" class="form-control" id="keepername" name="keepername" value="{$keepername}" placeholder="Användarnamn"></br>
+							<label for="fname">Förnamn</label></br>
+							<input type="text" class="form-control" id="fname" name="fname" value="{$fname}" placeholder="Förnamn"></br>
+							<label for="lname">Efternamn</label></br>
+							<input type="lname" class="form-control" id="lname" name="lname" value="{$lname}" placeholder="Efternamn"></br>
+							{$feedback2}
+							<label for="email">E-post</label></br>
+							<input type="text" class="form-control" id="email" name="email" value="{$email}" placeholder="E-post"></br>
+							{$feedback3}
+							<label for="pw">Lösenord</label></br>
+							<input type="password" class="form-control" id="pw" name="pw" value="" placeholder="Lösenord"><br>
+							<label for="pw">Ange Lösenord igen</label></br>
+							<input type="password" class="form-control" id="pw2" name="pw2" value="" placeholder="Lösenord"><br><br>
+							{$feedback5}
+							<input type="checkbox" id="policy" name="policy" value=""> Jag har läst och accepterat
+							<A HREF="popup.html" onClick="return popup(this, 'stevie')">villkoren</a> för sidan
+							<br>
+							<br>
+							<button type="submit" class="btn btn-primary btn-sm pull-left text-bold" value="submit" name="registeraccount"
+							value="Skapa konto">
+								Skapa Konto
+							</button>
+							
+							<div class="pull-right a text-white">							
+								<a href="login.php" class="btn btn-default btn-sm text-bold login-text" role="button">																
+									Tillbaka till login
+								</a>
+							</div>
+							</div><!-- form group -->	
+						</form>
 				</div><!-- register -->
 				
 			</div>
