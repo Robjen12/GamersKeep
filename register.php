@@ -133,14 +133,37 @@ $content = <<<END
 			</div>
 			
 			<div class="col-md-6 col-sm-6 register-left panel-width-550px panel panel-default pull-left collapse">
-			
 				
-					<div class="collapse">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					</div>
-			</div><!-- col md 6 -->		
+					<div class="panel-heading panel-heading-560px collapse">Policy</div>
+					
+						<div class="panel-body height-410px pull-left quicksand">
+					
+							För allas trivsel har vi skapat en policy, som innehåller några enkla regler. Detta för att vi gärna
+							vill dela vår spelglädje med andra likasinnade utan att någon ska bli påhoppade. Vi förväntar därför
+							att våra med-gamers delar med sig
+							av sin spelglädje på ett sätt som:
+							<br><br>
+							<span class="badge badge-info">1</span> Gynnar alla oavsett ras, kön, religion eller sexuell orientering.
+							<br><br>
+							<span class="badge badge-info">2</span> Med ömsesidigt respekt.
+							<br><br>
+							<span class="badge badge-info">3</span> Erfarna användare utmanas att välkomma nybörjare.
+							<br><br>
+							<span class="badge badge-info">4</span> Inga spelgenrer är bättre än andra.
+							<br><br>
+							<span class="badge badge-info">5</span> Personliga påhopp tolereras ej. Alla stötliga inlägg rapporteras till moderatorer
+							som hanterar busar.							
+							<br><br>
+							<span class="badge badge-info">6</span> Ha roligt och prata entusiastiskt om dina favoritspel.
+							Argumentera gärna varför de är dina favoriter!							
+							<br><br>
+							<span class="badge badge-info">7</span> Din mejl address samt namn distribuerar vi ej vidare till tredje part, den
+							hanteras enligt PUL.
+							<br>
+				
+						</div><!-- panel body -->
+						
+			</div><!-- col md 6 -->
 			
 			<div class="col-md-6 col-sm-6 register-right panel-width-550px panel panel-default pull-right">
 				
@@ -149,7 +172,7 @@ $content = <<<END
 					
 					<div class="panel-body height-410px pull-left">
 					
-						<form action="register.php" method="post" id="register-form" class="form-inline">
+						<form action="register.php" method="post" id="register-form" class="form-inline quicksand">
 						<div class="form-group">
 						{$feedback1}
 							<label for="keepername">Användarnamn</label></br>
@@ -168,7 +191,7 @@ $content = <<<END
 							<input type="password" class="form-control" id="pw2" name="pw2" value="" placeholder="Lösenord"><br><br>
 							{$feedback5}
 							<input type="checkbox" id="policy" name="policy" value=""> Jag har läst och accepterat
-							<a href="#" class="a">villkoren</a>för sidan
+							<a href="#" class="a policy">villkoren</a> för sidan.
 							<br>
 							<br>
 							<button type="submit" class="btn btn-primary btn-sm pull-left text-bold" value="submit" name="registeraccount"
@@ -190,7 +213,7 @@ $content = <<<END
 	</div>
 <script>
 $(document).ready(function(){
-    $(".a").click(function(){
+    $(".a.policy").click(function(){
         $(".collapse").collapse('toggle');
     });
 });

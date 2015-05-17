@@ -1813,6 +1813,6 @@ margin-left: 40px;
 .register-left {
 	margin-left: -100px;
 }
-a.a {
-
+/* toggles policy collapse as href */
+a.policy {
 }
