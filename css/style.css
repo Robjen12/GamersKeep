@@ -1805,14 +1805,50 @@ margin-left: 40px;
 	
 }
 
+/* register panel heading width 415px */
+.panel-default > .panel-heading-415px {
+  width: 415px;
+}
+
+/* register panel width 405px */
+.panel-width-405px {
+  width: 405px;
+}
+
+/* register right margins */
 .register-right {
 	margin-right: -75px;
-	
-
+	margin-left: 10px;
 }
+
+/* register left margins */
 .register-left {
 	margin-left: -100px;
+	margin-right: 50px;
 }
-/* toggles policy collapse as href */
-a.policy {
+
+/* register policy height 513px */
+.policy-height-600px {
+min-height: 513px;
+}
+
+/* media queries for register.php ska pillas mer med sen */
+@media (max-width: 1024px),
+@media (max-width: 767px) {
+    body.register {
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-top: 0;
+	margin-bottom: 0;
+	overflow: scroll;
+
+	}
+	.register-right {
+	margin-right: 0;
+	margin-left: 10px;
+	}
+	.register-left {
+	margin-left: 0;
+	margin-right: 10px;
+	}
 }
