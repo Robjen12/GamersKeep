@@ -120,8 +120,6 @@ $content = <<<END
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	
 </head>
 
@@ -132,9 +130,9 @@ $content = <<<END
 				<img src="images/logo.png" width="50%">
 			</div>
 			
-			<div class="col-md-6 col-sm-6 register-left panel-width-550px panel panel-default pull-left collapse">
+			<div class="col-md-6 col-sm-6 register-left panel-width-550px panel panel-default policy-height-600px pull-left">
 				
-					<div class="panel-heading panel-heading-560px collapse">Policy</div>
+					<div class="panel-heading panel-heading-560px">Policy</div>
 					
 						<div class="panel-body height-410px pull-left quicksand">
 					
@@ -165,10 +163,10 @@ $content = <<<END
 						
 			</div><!-- col md 6 -->
 			
-			<div class="col-md-6 col-sm-6 register-right panel-width-550px panel panel-default pull-right">
+			<div class="col-md-6 col-sm-6 register-right panel-width-405px panel panel-default pull-left">
 				
 				{$feedback4}
-					<div class="panel-heading panel-heading-560px">Registrering</div>
+					<div class="panel-heading panel-heading-415px">Registrering</div>
 					
 					<div class="panel-body height-410px pull-left">
 					
@@ -191,7 +189,7 @@ $content = <<<END
 							<input type="password" class="form-control" id="pw2" name="pw2" value="" placeholder="Lösenord"><br><br>
 							{$feedback5}
 							<input type="checkbox" id="policy" name="policy" value=""> Jag har läst och accepterat
-							<a href="#" class="a policy">villkoren</a> för sidan.
+							villkoren för sidan.
 							<br>
 							<br>
 							<button type="submit" class="btn btn-primary btn-sm pull-left text-bold" value="submit" name="registeraccount"
@@ -211,13 +209,6 @@ $content = <<<END
 			</div>
 		</div>
 	</div>
-<script>
-$(document).ready(function(){
-    $(".a.policy").click(function(){
-        $(".collapse").collapse('toggle');
-    });
-});
-</script>
 </body>
 </html>
 
