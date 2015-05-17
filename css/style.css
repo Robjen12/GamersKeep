@@ -1000,6 +1000,10 @@ color: Black;
   width: 550px;
 }
 
+.panel-width-560px {
+  width: 560px;
+}
+
 /* unvisited link */
 a:link .login-text {
     color: #fff;
@@ -1246,6 +1250,7 @@ p .danger {
 background-color: red;
 color: white;
 }
+/*
 .guestbook
 {
   
@@ -1256,12 +1261,9 @@ color: white;
   padding-top: 10px;
   padding-left: 10px;
 }
-.guestbook
-{
-  
-  overflow-y: scroll;
- 
-}
+*/
+
+
  #send {
   margin-top: 20px;
   width: 400px;
@@ -1315,8 +1317,8 @@ color: white;
 	
 }
 .height-410px {
-	min-height: 410px;
 	height: auto;
+	min-height: auto;
 }
 a.deletelink
 {
@@ -1470,6 +1472,18 @@ float: right;
 .setting {
 	margin-left: -30px;
 	margin-right: auto;
+}
+
+.chatcom {
+	margin-left: -30px;
+	margin-right: auto;
+	
+}
+.chatcom_bottom {
+	width: 511px;
+	margin-bottom: 15px;
+	margin-top: -20px;
+	background-color: #fff;	
 }
 .margin-top-10px {
 	margin-top: 10px;
@@ -1739,9 +1753,38 @@ margin-left: 0;
 
 .textarea-width-498 {
 color: #000;
-width: 498px;
+width: 490px;
 }
+
+/* reset button margin right in chatcom */
 .right {
 float:right;
-margin-right: -98px;
+margin-right: -89px;
+}
+
+.chatcom {
+	margin-left: -30px;
+	margin-right: auto;
+	
+}
+
+.fixed {
+position: fixed;
+overflow-y: auto;
+
+}
+
+.guestbook
+{
+  height: 320px;
+  overflow-y: auto;
+  border-color: Transparent Transparent Transparent;
+ 
+}
+.guestbook_bottom {
+height: 150px;
+margin-left: 40px;
+}
+.panel-default .panel-height-200px {
+height: 200px;
 }

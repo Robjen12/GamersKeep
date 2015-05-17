@@ -51,13 +51,6 @@ END;
 
 		
 }
-//<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-//<script>
-//	$(document).ready(function(){
-	// set the default scroll bar to bottom of chat box
-//	$(".guestbook").scrollTop($(".guestbook")[0].scrollHeight);
-//	});
-//</script>
 
 if(!empty($_GET))
 {
@@ -116,19 +109,21 @@ $content = <<<END
 			<div class="col-md-2 col-sm-2">
 			</div>
 
-			<div class="col-md-6 col-sm-6 margin-top-100 setting panel-width-550px panel panel-default">
+			<div class="col-md-6 col-sm-6 margin-top-100 chatcom panel-width-550px panel panel-default">
 
 				<div class="panel-heading panel-heading-560px">
 					Meddelande
 				</div><!-- panel heading -->
-					
+				
+				<div class="guestbook">
 					<div class="panel-body height-410px pull-left">
 					
 						<h4 class="quicksand text-bold">Konversation</h4>
-							<p class="quicksand text-normal">
-								{$guestbook}
-							</p>
-			
+							<p class="quicksand text-normal">{$guestbook}</p>
+				</div><!-- guestbook -->
+			</div><!-- col -->
+			<div class="col-md-6 col-sm-6 margin-top-100 chatcom_bottom">
+					
 						<h4 class="quicksand text-bold">Svara</h4>						
 								{$feedback}
 								<form action="chatcom.php?keeperid={$keeperid2}" method="post" id="send" class="textarea-width-498">
@@ -143,9 +138,18 @@ $content = <<<END
 			</div><!-- panel body -->
 			</div><!-- panel body -->
 			</div><!-- col md 6 panel -->
+			</div><!-- col md 6 panel -->
+			
+	
 			
 		</div><!-- row margin top 100 -->
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		set the default scroll bar to bottom of chat box
+	$(".guestbook").scrollTop($(".guestbook")[0].scrollHeight);
+	});
+</script>
 END;
 echo $header;
 echo $content;
