@@ -336,8 +336,13 @@ END;
 
 		<form action="profile.php" method="post" id="updateform" class="form control">
 			<textarea id="updateinfo" name="updateinfo" class="col-md-12" rows="6">{$profileabout}</textarea>
+			<button class="btn btn-sm-span span-color-red pull-right text-16px" input name="reset" title="Ångra uppdatering" value="">
+				<span class="glyphicon glyphicon-remove pull-right" aria-hidden="true">
+				</span>
+			</button>
 			</br>
 			<input type="submit" id="submit" name="update" value="Uppdatera info" class="btn btn-xs btn-primary">
+			
 		</form>
 END;
 
@@ -345,6 +350,10 @@ END;
 
 		<form action="profile.php" method="post" id="updateformother" class="form control">
 			<textarea id="updateother" name="updateother" class="col-md-12" rows="9">{$profileother}</textarea>
+			<button class="btn btn-sm-span span-color-red pull-right text-16px" input name="reset" title="Ångra uppdatering" value="">
+				<span class="glyphicon glyphicon-remove pull-right" aria-hidden="true">
+				</span>
+			</button>
 			</br>
 			<input type="submit" id="submit" name="updateothers" value="Uppdatera info" class="btn btn-xs btn-primary">
 		</form>
