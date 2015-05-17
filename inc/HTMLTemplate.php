@@ -271,7 +271,7 @@ $footer = <<<END
 					GAMERSKEEP
 					<p class="droid text-normal">
 					Syfte<br>
-					Policy<br>
+					<a href="policy.php">Policy</a><br>
 					FAQ<br>
 					</p>										
 				</div>
