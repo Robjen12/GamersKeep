@@ -107,7 +107,7 @@ $content = <<<END
 		<div class="row margin-top-100">
 		
 			<div class="col-md-2 col-sm-2">
-			</div>
+			</div><!-- col md 2 -->
 
 			<div class="col-md-6 col-sm-6 margin-top-100 chatcom panel-width-550px panel panel-default">
 
@@ -121,7 +121,8 @@ $content = <<<END
 						<h4 class="quicksand text-bold">Konversation</h4>
 							<p class="quicksand text-normal">{$guestbook}</p>
 				</div><!-- guestbook -->
-			</div><!-- col -->
+			</div><!-- col md 6-->
+			
 			<div class="col-md-6 col-sm-6 margin-top-100 chatcom_bottom">
 					
 						<h4 class="quicksand text-bold">Svara</h4>						
@@ -133,15 +134,9 @@ $content = <<<END
 									class="btn btn-primary btn-sm text-info">
 									<input type="reset" id="reset" value="Ångra" role="button" class="btn btn-default btn-sm right">
 								</form>
-	
-			</div><!-- guestbookreplies -->
+					</div><!-- panel body -->					
 			</div><!-- panel body -->
-			</div><!-- panel body -->
-			</div><!-- col md 6 panel -->
-			</div><!-- col md 6 panel -->
-			
-	
-			
+			</div><!-- col md 6 panel chatcom bottom -->		
 		</div><!-- row margin top 100 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
