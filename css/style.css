@@ -1317,8 +1317,8 @@ color: white;
 	
 }
 .height-410px {
+	min-height: 410px;
 	height: auto;
-	min-height: auto;
 }
 a.deletelink
 {
@@ -1784,7 +1784,4 @@ overflow-y: auto;
 .guestbook_bottom {
 height: 150px;
 margin-left: 40px;
-}
-.panel-default .panel-height-200px {
-height: 200px;
 }
