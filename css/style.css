@@ -1734,18 +1734,19 @@ color: #000;
 }
 
 /* chatcom farger satt lika rader med bakgrundsfarg ljusgraa */
-.row .guestbook_feed:nth-child(even){
+.row .guestbook_feed{
   background-color: #efefef;
   border: 1px solid #ddd;
   color: #269abc;
 }
 
-/* chatcom farger satt lika rader med bakgrundsfarg vit */
+/* chatcom farger satt lika rader med bakgrundsfarg vit 
 .row .guestbook_feed:nth-child(odd){
   background-color: #fff;
   border: 1px solid #eee;
   color: #bbb;
 }
+*/
 
 h4.row .guestbook_feed:nth-child(even){
 	color: #000;
