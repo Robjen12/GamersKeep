@@ -228,7 +228,7 @@ $(document).ready(function(){
 								<button class="soek_button pull-right" type="Submit" value="Sök" alt="Sök" title="Sök">
 								
 								</button>
-								<input type="text" class="form-control-search pull-right" id="searchfield" name="search" placeholder="Sök...">
+								<input type="text" class="form-control-search pull-right" id="searchfield" name="search" placeholder="Sök..." required>
 								</form>
 					
 				</ul>
