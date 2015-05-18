@@ -870,6 +870,7 @@ a.text-primary:hover {
 
 .ovrigt {
   width: 300px;
+  clear: both;
 }
 
 .panel-default > .ovrigt-heading {
