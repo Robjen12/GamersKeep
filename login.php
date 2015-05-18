@@ -83,17 +83,17 @@ $content = <<<END
 			<div id="container" class="login-logo">
 				<div class="row">
 					<div class="col-xs-12">
-						<img src="images/logo.png">
+						<img src="images/logo.png" alt="logotype">
 						<h2 class="login-font"><b>Ett community för gamers av gamers</b></h2>
 					</div>
 				</div>
 			</div>
 			<div class="login-graphics">
 				<div class="login-person">
-					<img src="images/profile.png" />
+					<img src="images/profile.png" alt="profile" />
 				</div>
 				<div class="login-computer">
-					<img src="images/tv.png" />
+					<img src="images/tv.png" alt="tv" />
 				</div>
 				<div class="login-bubble1">
 				</div>
