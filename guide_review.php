@@ -155,12 +155,12 @@ $content = <<<END
 										<div class="panel-heading panel-heading-guide-review">Skriva recension eller guide
 										</div><!-- panel heading -->
 						
-										<div class="panel body panel-guide-review margin-skriva skriva">
+										<div class="panel body panel-guide-review margin-skriva skriva quicksand text-black text-14px">
 										<label for="title"><h3 class="quicksand">Titel</h3></label>
 										<br>
 										<input type="text" class="form-control" id="title" name="title" value="{$title}" placeholder="Ange titeln"></br></br>
 										<input type="radio" id="guidecheck" name="guide" value="Guide">Guide
-										<input type="radio" id="reviewcheck" name="review" value="Review">Recension</br></br>
+										<input type="radio" id="reviewcheck" name="review" value="Review" class="quicksand">Recension</br></br>
 										{$feedback}
 										<label for="genretype">Genre</label><br>
 										{$dropdown}<br><br>
