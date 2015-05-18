@@ -10,6 +10,7 @@ END;
 $keeperid = $_SESSION['keeperid'];
 $keepername = $_SESSION['keepername'];
 
+// Hämtar ut bild från databasen kopplat till användaren.
 $query = <<< END
 	
 	SELECT picname, type, size, link
@@ -22,23 +23,23 @@ END;
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 	  " : " . $mysqli->error);
 
-	
+// Om resultatet är större än noll utförs blocket.	
 			if($res->num_rows > 0)
-				{
+			{
 					if($row = $res->fetch_object())
 					{
 						$link = $row->link;
-
+// Om filen existerar visas den
 						if(file_exists($link))
 						{
 							$profil_bild = <<<END
 						<img src="{$link}">
 END;
-			}
+						}
 	
 
-		}
-	}
+					}
+			}
 	
 $content = <<<END
 
