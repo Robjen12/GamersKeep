@@ -181,7 +181,7 @@ $content = <<<END
 							<input type="lname" class="form-control" id="lname" name="lname" value="{$lname}" placeholder="Efternamn"></br>
 							{$feedback2}
 							<label for="email">E-post</label></br>
-							<input type="text" class="form-control" id="email" name="email" value="{$email}" placeholder="E-post"></br>
+							<input type="email" class="form-control" id="email" name="email" value="{$email}" placeholder="E-post"></br>
 							{$feedback3}
 							<label for="pw">Lösenord</label></br>
 							<input type="password" class="form-control" id="pw" name="pw" value="" placeholder="Lösenord"><br>
