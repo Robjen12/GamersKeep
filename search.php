@@ -97,15 +97,14 @@ END;
 }
 $content = <<<END
 
-
-		<div class="row margin-top-100">
+<div class="row margin-top-100">
 			
-			<div class="col-md-2 col-sm-2">
-			</div>
+	<div class="col-md-2 col-sm-2">
+	</div>
 			
-			<div class="col-md-6 col-sm-6 search-content panel-width-550px panel panel-default">
+		<div class="col-md-6 col-sm-6 search-content panel-width-550px panel panel-default">
 
-	  			<div class="panel-heading panel-heading-560px">Sökresultat</div>
+	  		<div class="panel-heading panel-heading-560px">Sökresultat</div>
 
   					<div class="panel-body height-410px">
 						
@@ -115,22 +114,18 @@ $content = <<<END
 						{$feedback}
 						</li>
   					</div><!-- panel body -->
-
-				</div><!-- panel heading -->
-
 					
 				<!-- right column -->
-						<div class="col-md-3 margin-right-search pull-right">
+			<div class="col-md-3 margin-right-search pull-right">
 
-							<div class ="ads">
+					<div class ="ads">
+						<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
 
-								<img src="images/ad_req.jpg" class="ads pull-right" width="300px">
+					</div><!-- ads -->
+			</div><!-- col md 3 -->
+		</div><!-- col md 6 -->		
+</div>
 
-							</div><!-- ads -->
-				</div><!-- col md 3 -->
-				</div><!-- col md 6 -->
-		</div>
-	</div>
 END;
 
 // Namn: {$row->fname}
