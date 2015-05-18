@@ -105,13 +105,10 @@ END;
 $content = <<<END
 
 		<div class="row margin-top-100">
-		
-			<div class="col-md-2 col-sm-2">
-			</div><!-- col md 2 -->
 
-			<div class="col-md-6 col-sm-6 margin-top-100 chatcom panel-width-550px panel panel-default">
+			<div class="col-md-8 col-sm-8 margin-top-100 panel panel-default panel-guide-review">
 
-				<div class="panel-heading panel-heading-560px">
+				<div class="panel-heading panel-heading-guide-review">
 					Meddelande
 				</div><!-- panel heading -->
 				
@@ -121,9 +118,9 @@ $content = <<<END
 						<h4 class="quicksand text-bold">Konversation</h4>
 							<p class="quicksand text-normal">{$guestbook}</p>
 				</div><!-- guestbook -->
-			</div><!-- col md 6-->
+			</div><!-- col md 8-->
 			
-			<div class="col-md-6 col-sm-6 margin-top-100 chatcom_bottom">
+			<div class="col-md-8 col-sm-8 margin-top-100 chatcom_bottom">
 					
 						<h4 class="quicksand text-bold">Svara</h4>						
 								{$feedback}
