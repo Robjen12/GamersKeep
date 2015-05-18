@@ -13,6 +13,8 @@ $latestgenreguide = "";
 $latestgenrereview = "";
 $toplistgenreguide = "";
 $toplistgenrereview = "";
+$toplistgenrereview_nummer = "";
+$topplistgenreguide_nummer ="";
 $title	= htmlspecialchars($title);
 $text	= htmlspecialchars($text);
 
@@ -59,10 +61,10 @@ if($result->num_rows > 0)
 					<div class="media-left">
 				</div>
     			<div class="media-body">
-      					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
+      					<h4 class="media-heading quicksand text-bold"><a href="genre.php?grid={$grid}">{$title}</a>
 						<li class="views"></li>
 						<br>
-						<h5 class="media-heading">{$subtext}...<a href="genre.php?grid={$grid}">Läs mer</a></h5>
+						<h5 class="media-heading quicksand text-14px text-black">{$subtext}...</h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
@@ -109,10 +111,10 @@ if($result->num_rows > 0)
 					<div class="media-left">
 				</div>
     			<div class="media-body">
-      					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
+      					<h4 class="media-heading quicksand text-bold"><a href="genre.php?grid={$grid}">{$title}</a>
 						<li class="views"></li>
 						<br>
-						<h5 class="media-heading">{$subtext}...<a href="genre.php?grid={$grid}">Läs mer</a></h5>
+						<h5 class="media-heading quicksand text-14px text-black">{$subtext}...</h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
@@ -150,6 +152,9 @@ if($result->num_rows > 0)
 		$subtext = substr($text, 0, 160);
 		$grade = $row->grade;
 
+		//Adderar 1 till topplistgenreguide numret
+		$topplistgenreguide_nummer = $topplistgenreguide_nummer+1;
+			
 		$toplistgenreguide .= <<<END
 
 			<ul class="media-list margin-left-topplista">
@@ -157,10 +162,15 @@ if($result->num_rows > 0)
 					<div class="media-left">
 				</div>
     			<div class="media-body">
-      					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
-						<li class="views">{$row->counter}</li>
+					<ul class="list style margin-left-zero">
+						<ol class="margin-left-zero">
+							<li class="list-style pull-left"><span class="badge text-white" aria-hidden="true">{$topplistgenreguide_nummer}</span></li>
+						</ol>
+					</ul>
+      					<h4 class="media-heading quicksand text-bold"><a href="genre.php?grid={$grid}">{$title}</a>
+						<li class="views"></li>
 						<br>
-						<h5 class="media-heading">{$subtext}...<a href="genre.php?grid={$grid}">Läs mer</a></h5>
+						<h5 class="media-heading quicksand text-14px text-black">{$subtext}...</h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
@@ -198,7 +208,10 @@ if($result->num_rows >0)
 		$text = utf8_decode($row->text);
 		$subtext = substr($text, 0, 160);
 		$grade = $row->grade;
-
+		
+		//Adderar 1 till topplistgenrerecension numret
+		$toplistgenrereview_nummer = $toplistgenrereview_nummer+1;
+	
 		$toplistgenrereview .= <<<END
 
 		<ul class="media-list margin-left-topplista">
@@ -206,10 +219,17 @@ if($result->num_rows >0)
 					<div class="media-left">
 				</div>
     			<div class="media-body">
-      					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
-						<li class="views">{$row->counter}</li>
+					<ul class="list style margin-left-zero">
+						<ol class="margin-left-zero">
+							<li class="list-style pull-left"><span class="badge badge-info text-white" aria-hidden="true">
+							{$toplistgenrereview_nummer}</span>
+							</li>
+						</ol>
+					</ul>
+     					<h4 class="media-heading quicksand text-bold"><a href="genre.php?grid={$grid}">{$title}</a>
+						<li class="views"></li>
 						<br>
-						<h5 class="media-heading">{$subtext}...<a href="genre.php?grid={$grid}">Läs mer</a></h5>
+						<h5 class="media-heading quicksand text-14px text-black">{$subtext}...</h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
