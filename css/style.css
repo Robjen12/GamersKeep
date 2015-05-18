@@ -1652,7 +1652,7 @@ color: #398439;
 background-color: #398439;
 color: #fff; 
 }
-.flag-red {
+/*.flag-red {
 color: Red;
 }
 
@@ -1663,6 +1663,7 @@ color: Green;
 .flag-black {
 color: #000;
 }
+*/
 
 .flag > .btn {
 
