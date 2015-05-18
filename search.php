@@ -13,13 +13,14 @@ $title	= htmlspecialchars($title);
 $text	= htmlspecialchars($text);
 $article = "";
 $users = "";
-
+// Om get är satt så utförs detta
 if(isset($_GET['search']))
 {
 
 	$search = $_GET['search'];
 	$search = str_replace("'", "''", $search);	
 
+// Hämtar ut användare som liknar sökordet
 			$query = <<<END
 
 				SELECT * FROM user
@@ -36,7 +37,7 @@ END;
 		{
 
 			$keeperid2 = $row->keeperid;
-
+// Kollar om användaren är samma som keeperid2
 			if($keeperid2 == $keeperid){
 				$users = <<<END
 			
@@ -48,6 +49,7 @@ END;
 			}
 			else
 			{
+// Om keeperid2 inte är samma som keeperid utförs detta
 					$users = <<<END
 			
 			<p class="droid">Användarnamn: <a href="profile.php?keeperid={$keeperid2}">{$row->keepername}</a><br>
@@ -64,14 +66,10 @@ END;
 	}
 }
 
-// Namn: {$row->fname}
-//{$row->lname}
-// Namn: {$row->fname}{$row->lname}<br>
-//Email: {$row->email}
 
 if(isset($_GET['search']))
 {
-
+// Hämtar ut från guidereviewinfo där titlar liknar sökordet
 	$query = <<<END
 		SELECT * FROM guidereviewinfo
 		WHERE title LIKE '%{$search}%';
