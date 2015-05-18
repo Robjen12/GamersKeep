@@ -18,6 +18,7 @@ $topplistgenreguide_nummer ="";
 $title	= htmlspecialchars($title);
 $text	= htmlspecialchars($text);
 
+// kollar om posten inte är tom och hämtar ut allt från vald genre inom guider
 if(!empty($_GET))
 {
 
@@ -37,7 +38,7 @@ END;
 	$result = $mysqli->query($query) or die();
 
 	date_default_timezone_set("Europe/Stockholm");
-
+// Om raden är större än noll hämtas innehållet ut
 if($result->num_rows > 0)
 {
 
@@ -73,6 +74,7 @@ END;
 
 	}
 }
+// kollar om posten inte är tom och hämtar ut allt från vald genre inom recensioner
 	$query = <<<END
 
 	SELECT * FROM guidereviewinfo
@@ -88,7 +90,7 @@ END;
 	$result = $mysqli->query($query) or die();
 
 	date_default_timezone_set("Europe/Stockholm");
-
+// Om raden är större än noll hämtas innehållet ut
 if($result->num_rows > 0)
 {
 
@@ -123,7 +125,7 @@ END;
 
 
 }
-
+// Hämtar ut alla guider som placeras på topplistan
 $query = <<<END
 
 	SELECT *, COUNT(userclick.grid) AS counter 
@@ -179,7 +181,7 @@ END;
 	}
 
 }
-
+//Hämtar ut alla recensioner som placerar sig på topplistan
 $query = <<<END
 	
 	SELECT *, COUNT(userclick.grid) AS counter
