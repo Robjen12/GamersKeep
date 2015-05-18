@@ -21,7 +21,7 @@ $title = "";
 		$title = utf8_encode($mysqli->real_escape_string($title));
 		$text  = utf8_encode($mysqli->real_escape_string($text));
 		$grade = utf8_encode($mysqli->real_escape_string($grade));
-
+// Kollar om guide/recensionen är mindre än 200 bokstäver
 	if (strlen($text)<200) 
 	{
   		$feedback = "<p class=\"text-yellow\">Du måste skriva minst 200 bokstäver</p>";
@@ -31,15 +31,15 @@ $title = "";
 
 		if(isset($_POST['guide']))
 		{
-
+// Kollar om title och text är tomma
 			if($title == "" || $text == "")
 			{
 				$feedback = "<p class=\"text-yellow\">Fyll i alla fält</p>";
 			}
-			
+// Om inte tomma utförs detta			
 			else
 			{
-
+// sätter in guide i databasen
 				$query = <<<END
 
 					INSERT INTO {$table}(title, text, timestamp)
@@ -76,7 +76,7 @@ END;
 
 		else if(isset($_POST['review']))
 		{
-
+// Kollar om nån av title, text eller grade är tomma
 			if($title == "" || $text == "" || $grade == "")
 			{
 				$feedback = "<p class=\"text-red\">Fyll i alla fält</p>";
@@ -84,7 +84,7 @@ END;
 
 			else
 			{
-
+// Sätter in recensioner i databasen
 				$query = <<<END
 
 					INSERT INTO {$table}(title, text, timestamp, grade)
@@ -122,7 +122,7 @@ END;
 	}
 	}
 
-
+// Lägger till en dropdown meny där det går och välja vilken genrer som den ska sparas som.
 $query = <<<END
 
  	SELECT * FROM genre
