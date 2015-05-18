@@ -62,10 +62,10 @@ END;
     				<div class="media-left">
       				</div>
     				<div class="media-body">
-      					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
+      					<h4 class="media-heading quicksand text-bold"><a href="genre.php?grid={$grid}">{$title}</a>
 						<li class="views">{$admindelete}</li>
 						<br>
-						<h5 class="media-heading">{$subtext}</h5>
+						<h5 class="media-heading quicksand text-14px text-black">{$subtext}...</h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
@@ -113,10 +113,10 @@ END;
     				<div class="media-left">
       				</div>
     				<div class="media-body">
-      					<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
+      					<h4 class="media-heading quicksand text-bold"><a href="genre.php?grid={$grid}">{$title}</a>
 						<li class="views">{$admindelete}</li>
 						<br>
-						<h5 class="media-heading">{$subtext}</h5>
+						<h5 class="media-heading quicksand text-14px text-black">{$subtext}...</h5>
     				</div><!-- media body -->
   				</li><!-- media -->
 			</ul><!-- media list -->
@@ -170,12 +170,12 @@ END;
 									<li class="list-style pull-left"><span class="badge text-white" aria-hidden="true">{$topplistguide_nummer}</span></li>
 								</ol>
 							</ul>
-							<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
+							<h4 class="media-heading quicksand text-bold"><a href="genre.php?grid={$grid}">{$title}</a>
 							<ol class="pull-left">
 								<li><span class="badge primary pull-left"></span></li>
 							</ol>
 							<br>
-							<h5 class="media-heading">{$subtext}</h5>
+							<h5 class="media-heading quicksand text-14px text-black">{$subtext}...</h5>
 						</div><!-- media body -->
 					</li><!-- media -->
 				</ul><!-- media list -->
@@ -228,13 +228,14 @@ END;
 						<div class="media-body">
 							<ul class="list style margin-left-zero">
 								<ol class="margin-left-zero">
-									<li class="list-style pull-left"><span class="badge badge-info text-white" aria-hidden="true">{$topplistreview_nummer}</span></li>
+									<li class="list-style pull-left"><span class="badge badge-info text-white" aria-hidden="true">
+									{$topplistreview_nummer}</span>
+									</li>
 								</ol>
 							</ul>
-							<h4 class="media-heading"><a href="genre.php?grid={$grid}">{$title}</a>
-							
+							<h4 class="media-heading quicksand text-bold"><a href="genre.php?grid={$grid}">{$title}</a>							
 							<br>
-							<h5 class="media-heading">{$subtext}</h5>
+							<h5 class="media-heading quicksand text-14px text-black">{$subtext}...</h5>
 						</div><!-- media body -->
 					</li><!-- media -->
 				</ul><!-- media list -->
