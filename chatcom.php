@@ -17,6 +17,7 @@ $namecolor_first = "";
 //$name	= htmlspecialchars($name);
 //$msg	= htmlspecialchars($msg);
 
+// Om posten inte är tom så utförs detta.
 if(!empty($_POST))
 {
 
@@ -25,13 +26,14 @@ if(!empty($_POST))
 	{
 		$msg = $_POST['msg'];
 
+		// Kollar om variabeln msg är tom
 		if($msg == "")
 		{
 			$feedback = "<p class=\"text-red\">Du måste skriva ett meddelande!</p>";
 		}
 		else
 		{
-		
+		// Kollar om keeperid inte är likamed keeperid2
 			if($keeperid != $keeperid2)
 			{
 
@@ -52,6 +54,7 @@ END;
 		
 }
 
+// Hämtar ut alla meddelanden mellan 2 personer
 if(!empty($_GET))
 {
 
