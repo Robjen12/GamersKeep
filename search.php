@@ -116,6 +116,7 @@ $content = <<<END
   					</div><!-- panel body -->
 					
 				<!-- right column -->
+			</div><!-- col md 6 -->
 			<div class="col-md-3 margin-right-search pull-right">
 
 					<div class ="ads">
@@ -123,7 +124,7 @@ $content = <<<END
 
 					</div><!-- ads -->
 			</div><!-- col md 3 -->
-		</div><!-- col md 6 -->		
+				
 </div>
 
 END;
