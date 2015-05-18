@@ -17,11 +17,13 @@ $users = "";
 if(isset($_GET['search']))
 {
 
-		
+	$search = $_GET['search'];
+	$search = str_replace("'", "''", $search);	
+
 			$query = <<<END
 
 				SELECT * FROM user
-				WHERE keepername LIKE '%{$_GET['search']}%'
+				WHERE keepername LIKE '%{$search}%'
 				AND roletype = 0;
 END;
 	
@@ -72,7 +74,7 @@ if(isset($_GET['search']))
 
 	$query = <<<END
 		SELECT * FROM guidereviewinfo
-		WHERE title LIKE '%{$_GET['search']}%';
+		WHERE title LIKE '%{$search}%';
 END;
 	$result = $mysqli->query($query) or die();
 
@@ -124,7 +126,7 @@ $content = <<<END
 
 					</div><!-- ads -->
 			</div><!-- col md 3 -->
-				
+		</div>		
 </div>
 
 END;
