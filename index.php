@@ -21,7 +21,7 @@ $genre = "";
 $topplistreview_nummer = "";
 $topplistguide_nummer = "";
 
-
+// Hämtar ut fem poster där grade är NULL 
 $query = <<<END
 
 	SELECT * 
@@ -74,6 +74,7 @@ END;
 END;
 
 }
+// Hämtar ut fem poster där grade är större än 0
 $query = <<<END
 
 	SELECT *, SUBSTRING(text,0,20)
@@ -125,7 +126,7 @@ END;
 
 
 
-
+// Hämtar ut fem poster där grade är NULL och de grid som förekommer mest i tabellen userclick visas.
 
 $query = <<<END
 
@@ -183,6 +184,7 @@ END;
         }
 }
 
+// Hämtar ut fem poster där grade är större än 0 och de grid som förekommer mest i tabellen userclick visas.
 $query = <<<END
 
 	SELECT userclick.grid, count(userclick.grid) AS counter, guidereviewinfo.title, guidereviewinfo.text, guidereviewinfo.grade
