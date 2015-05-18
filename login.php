@@ -12,6 +12,8 @@ if(isset($_POST["logintosite"]))
 		$keepername = isset($_POST['keepername']) ? $_POST['keepername'] : '';
 		$password = isset($_POST['pw']) ? $_POST['pw'] : '';
 
+// Kollar om något av användarnamnet eller lösenordsfälten är tomma
+
 		if($keepername == '' || $password == '' || $keepername == '' && $password == '' )
 		{
 			$feedback = "<p class=\"text-yellow\">Fyll i alla fält</p>";
@@ -22,6 +24,7 @@ if(isset($_POST["logintosite"]))
 			$keepername = $mysqli->real_escape_string($keepername);
 			$password = $mysqli->real_escape_string($password);
 
+// Hämtar ut användaren från databasen
 			$query = <<<END
 
 			
@@ -38,7 +41,7 @@ END;
 				$row = $res->fetch_object();
 				if($row->pw == $pwmd5)
 				{
-
+// Startar sessionen och skickar in vidare till index.php
 					session_start();
 					session_regenerate_id();
 
