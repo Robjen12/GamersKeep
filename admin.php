@@ -62,7 +62,7 @@ END;
 		}
 	}
 
-
+// Sätter flaggan till 0 om den är inte olämplig
 if(isset($_POST['okcomment']))
 {
 	$admit = <<<END
