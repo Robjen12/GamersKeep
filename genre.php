@@ -17,7 +17,7 @@ $getflag = "";
 $commentid = "";
 $feedback = "";
 $grbutton = "";
-
+// Sätter in användarid och guide/recensionid i userclick tabellen
 	$query = <<<END
 
 		INSERT INTO userclick (grid, keeperid)
@@ -25,7 +25,7 @@ $grbutton = "";
 END;
 
 $res = $mysqli->query($query);
-
+// Om man flaggar något som olämpligt
 if(isset($_POST['unappropriate']))
 {
 	
@@ -38,6 +38,7 @@ END;
 	
 	
 }
+// Hämtar ut vald recension/guide 
 $query = <<<END
 
 	SELECT *
@@ -66,6 +67,18 @@ if($res->num_rows ==1)
 	$grade = $row->grade;
 	$flag = $row->flag;
 
+	if($keeperid != $keeper)
+	{
+		$profile_link = <<<END
+		<a href="profile.php?keeperid={$keeperid}">{$keepername}</a>
+END;
+	}
+	else
+	{
+		$profile_link = <<<END
+		<a href="profile.php">{$keepername}</a>
+END;
+	}
 	if($flag == 0)
 	{
 		$grbutton = <<<END
@@ -97,7 +110,7 @@ END;
 	}
 }
 
-
+// När användaren flaggar något som olämpligt
 if(isset($_POST['unappropriatecomments']))
 {
 	$flaggedCommentId = $_GET["commentid"];
@@ -110,7 +123,7 @@ END;
 		        " : " . $mysqli->error);
 
 }
-
+// Publicerar en kommentar
 if(!empty($_POST))
 {
 	if(isset($_POST['publishcomment']))
@@ -142,7 +155,7 @@ END;
 		}
 	}
 }
-
+// Hämtar ut alla kommentarer kopplade till grid
 $query = <<<END
 	
 	SELECT * FROM comment
@@ -164,6 +177,18 @@ END;
 		$date = date("d M Y H:i", $date);
 		$commentflag = $row->flag;
 
+		if($commentkeeperid != $keeper)
+	{
+		$comment_link = <<<END
+		<a href="profile.php?keeperid={$commentkeeperid}">{$commentkeepername}</a>
+END;
+	}
+	else
+	{
+		$comment_link = <<<END
+		<a href="profile.php">{$commentkeepername}</a>
+END;
+	}
 		if($commentflag == 0)
 		{
 			$buttons = <<<END
@@ -192,7 +217,7 @@ END;
 			<form action="genre.php?grid={$grid}&commentid={$commentid}" method="post">
 				{$buttons}
 			</form>
-			Skriven av: <a href="profile.php?keeperid={$keeperid}">{$commentkeepername}</a>
+			Skriven av: {$comment_link}
 		
 			<br>
 			Datum: {$date}<br>
@@ -221,7 +246,7 @@ $content = <<<END
 									<form action="genre.php?grid={$grid}" method="post">
 										{$grbutton}
 									</form>
-									Skriven av: <a href="profile.php?keeperid={$keeperid}">{$keepername}</a>
+									Skriven av: {$profile_link}
 									
 									
 									</br>
