@@ -67,6 +67,18 @@ if($res->num_rows ==1)
 	$grade = $row->grade;
 	$flag = $row->flag;
 
+	if($keeperid != $keeper)
+	{
+		$profile_link = <<<END
+		<a href="profile.php?keeperid={$keeperid}">{$keepername}</a>
+END;
+	}
+	else
+	{
+		$profile_link = <<<END
+		<a href="profile.php">{$keepername}</a>
+END;
+	}
 	if($flag == 0)
 	{
 		$grbutton = <<<END
@@ -222,7 +234,7 @@ $content = <<<END
 									<form action="genre.php?grid={$grid}" method="post">
 										{$grbutton}
 									</form>
-									Skriven av: <a href="profile.php?keeperid={$keeperid}">{$keepername}</a>
+									Skriven av: {$profile_link}
 									
 									
 									</br>
