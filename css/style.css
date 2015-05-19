@@ -1181,6 +1181,13 @@ li > a:visited {
 }
 /* unvisited link */
 
+li.media > a:link,
+li.media > a:hover,
+li.media > a:focus,
+li.media > a:visited {
+  color: #667094;
+  text-decoration: none;
+}
 btn > a:link,
 btn > a:hover,
 btn > a:active,
