@@ -192,7 +192,7 @@ END;
 			<form action="genre.php?grid={$grid}&commentid={$commentid}" method="post">
 				{$buttons}
 			</form>
-			Skriven av: <a href="profile.php?keeperid={$keeperid}">{$commentkeepername}</a>
+			Skriven av: <a href="profile.php?keeperid={$commentkeeperid}">{$commentkeepername}</a>
 		
 			<br>
 			Datum: {$date}<br>
