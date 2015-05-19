@@ -208,12 +208,16 @@ body {
   margin-top: 0;             /* Sets top margin to zero */
 	height: 80px;              /* Sets height to 80 pixels */ 
 	width: 100%;
+	outline: 0;
 
 }
 
 .header-bg {
-	background: url("../images/header_bg_l.png") repeat-x top left;	/* header bakgrundsbild */}
-}
+	background: url("../images/header_bg_l.png") repeat-x top left;	/* header bakgrundsbild */
+	outline: 0;
+	}
+	
+
 
 /* left column in the header */
 #header > .column-left {
@@ -221,6 +225,7 @@ body {
     height: 60px;
 	border: none;
 }
+
 .no-border {
 	border: none;
 }
@@ -314,7 +319,7 @@ border: none;
 	height: 20px;
 	margin-right: 0;
 	margin-left: 0;
-
+	outline: 0;
 }
 
 #header > .column-right-row2 {
@@ -322,6 +327,7 @@ border: none;
 	height: 20px;
 	margin-right: 0;
 	margin-left: 0;
+	outline: 0;
 }
 
 .search-center {
@@ -356,6 +362,7 @@ margin-left:0;
 	background: url("../images/footer_bg.png") repeat-x bottom left;	/*  footer background img */
 	height: 200px;              /* Sets height to 200 pixels */
 	width: 100%;
+	outline: 0;
 }
 
 /* left column in the footer */
@@ -364,6 +371,7 @@ margin-left:0;
 	background: url("../images/footer_bg_tri.png") no-repeat top right;	/* left row triangle img */
 	height: 20px;
 	margin-right: 0;
+	outline: 0;
 }
 /* center column in the footer */
 /* not used anymore delete this
@@ -377,6 +385,7 @@ margin-left:0;
 	height: 20px;
 	margin-right: 0;
 	margin-left: 0;
+	outline: 0;
 }
 
 .column-right-row2 {
@@ -386,6 +395,7 @@ margin-left:0;
 	height: 20px;
 	margin-right: 0;
 	margin-left: 0;
+	outline: 0;
 }
 
 #footer > .column-left-row2 {
@@ -400,6 +410,7 @@ margin-left:0;
   background-image: url("../images/hh.png");
   background-position: right top;
   background-repeat: no-repeat;
+  outline: 0;
 }
 /* puts white triangel as css3 fgfx in right column second row in the footer */
 /* not used anymore
@@ -599,6 +610,7 @@ margin-left:0;
   margin-bottom: 0;
   text-align: center;
   padding-top: 40px;
+  outline: 0;
 }
 
 .margin-left-15px {
@@ -614,7 +626,7 @@ margin-left:0;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 25px;
-
+outline: 0;
 }
 
 .profil > .column-left-bottom {
@@ -629,6 +641,7 @@ margin-left:0;
   background-repeat: repeat-y;
   background-color: #c7ccc8;
   height: auto;
+  outline: 0;
 }
 
 
@@ -637,6 +650,7 @@ margin-left:0;
 .column-left-center > img {
     margin: 0 auto;
     width: 85px;
+	outline: 0;
   
 }
 
@@ -646,6 +660,7 @@ margin-left:0;
     padding-left: 5px;
     padding-right: 5px;
     margin: 0 auto;
+	outline: 0;
   
 }
 
@@ -688,7 +703,6 @@ margin-top: 10px;
 display: block;
   float: right;
   list-style: none;
-
 }
 
 /* dortes andringar från dorte2 branch */
@@ -1578,6 +1592,7 @@ background-repeat: no-repeat;
 .header_ikoner.header_profil {
 background-image: url("../images/profil2.png");
 margin-right: -9px;
+
 }
 
 .header_ikoner.header_genrer {
@@ -1750,13 +1765,6 @@ color: #000;
 }
 */
 
-h4.row .guestbook_feed:nth-child(even){
-	color: #000;
-}
-
-h4.row .guestbook_feed:nth-child(odd){
-	color: #fff;
-}
 span.media-top {
 margin-right: 10px;
 margin-left: 0;

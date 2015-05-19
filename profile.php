@@ -119,6 +119,7 @@ while($row = $res->fetch_object())
 		$latestactivity .= <<<END
 		 
 			{$r}<a href="genre.php?grid={$grid}">{$subtitle}</a>
+			<br>
 		
 
 END;
@@ -129,6 +130,7 @@ END;
 		$latestactivity .= <<<END
 		 
 			{$g}<a href="genre.php?grid={$grid}">{$subtitle}</a>
+			<br>
 		
 
 END;
@@ -209,7 +211,9 @@ END;
 					$button = <<<END
 						<div class="pull-left">
 							<form action="profile.php?keeperid={$keeperid2}" method="post">
-							<button type="submit" class="btn btn-xs btn-danger pull-left margin-left-50px" onclick="return confirm('Är du säker på att du vill ta bort vännen?')" name="removefriend" value="Ta bort" title="Ta bort vän">Ta bort vän&nbsp;
+							<button type="submit" class="btn btn-xs btn-danger pull-left margin-left-50px"
+							onclick="return confirm('Är du säker på att du vill ta bort vännen?')" name="removefriend"
+							value="Ta bort" title="Ta bort vän">Ta bort vän&nbsp;
 							</button>
 							</form>
 						</div>
@@ -380,7 +384,7 @@ END;
 
 	}
 
-// Hämtar ut senaste aktiviteterna för anvnändaren
+// Hämtar ut senaste aktiviteterna för anvandaren
 $latestact = <<<END
 
 	SELECT guidereviewinfo.grid, guidereviewinfo.title, guidereviewinfo.timestamp, guidereviewinfo.grade, userguidereview.grid
@@ -428,12 +432,21 @@ END;
 		$latestactivity .= <<<END
 		 
 			
-			<button class="btn btn-sm-span btn-default-span delete"><a href="delete.php?grid={$grid}" onclick="return confirm('Är du säker på att du vill ta bort inlägget?')"><span class="glyphicon glyphicon-remove pull-right pen" aria-hidden="true"></span></a></button>
-			<button class="btn btn-sm-span btn-default-span edit"><a href="guide_review_edit.php?grid={$grid}"><span class="glyphicon glyphicon-pencil pull-right pen" aria-hidden="true"></span></a></button>
+			<button class="btn btn-sm-span btn-default-span delete">
+				<a href="delete.php?grid={$grid}" onclick="return confirm('Är du säker på att du vill ta bort inlägget?')">
+				<span class="glyphicon glyphicon-remove pull-right pen" aria-hidden="true"></span>
+				</a>
+			</button>
+			<button class="btn btn-sm-span btn-default-span edit">
+				<a href="guide_review_edit.php?grid={$grid}">
+				<span class="glyphicon glyphicon-pencil pull-right pen" aria-hidden="true"></span>
+				</a>
+			</button>
 			</li>{$g}
 			
 			<a href="genre.php?grid={$grid}">{$subtitle}</a>
-			<br><br>
+			<br>
+			<br>
 		
 END;
 	}
@@ -604,7 +617,9 @@ END;
 									<span class="glyphicon glyphicon-ok pull-left" aria-hidden="true"></span>
 									</button>
 									&nbsp;
-									<button type="submit" class="btn btn-sm-span span-color-red" name="no" value=""><span class="glyphicon glyphicon-remove pull-left" aria-hidden="true"></span></button>
+									<button type="submit" class="btn btn-sm-span span-color-red" name="no" value="">
+										<span class="glyphicon glyphicon-remove pull-left" aria-hidden="true"></span>
+									</button>
 								</form>
 								<br>
 END;
