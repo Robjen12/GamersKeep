@@ -177,6 +177,18 @@ END;
 		$date = date("d M Y H:i", $date);
 		$commentflag = $row->flag;
 
+		if($commentkeeperid != $keeper)
+	{
+		$comment_link = <<<END
+		<a href="profile.php?keeperid={$commentkeeperid}">{$commentkeepername}</a>
+END;
+	}
+	else
+	{
+		$comment_link = <<<END
+		<a href="profile.php">{$commentkeepername}</a>
+END;
+	}
 		if($commentflag == 0)
 		{
 			$buttons = <<<END
@@ -205,7 +217,7 @@ END;
 			<form action="genre.php?grid={$grid}&commentid={$commentid}" method="post">
 				{$buttons}
 			</form>
-			Skriven av: <a href="profile.php?keeperid={$commentkeeperid}">{$commentkeepername}</a>
+			Skriven av: {$comment_link}
 		
 			<br>
 			Datum: {$date}<br>
