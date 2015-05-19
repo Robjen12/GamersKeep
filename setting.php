@@ -3,6 +3,67 @@
 include_once("inc/HTMLTemplate.php");
 include_once("inc/Connstring.php");
 
+$keeperid = $_SESSION['keeperid'];
+$feedback = "";
+
+$uploadDir = 'pictures/';
+
+if(isset($_POST['upload']))
+{
+$fileName = $_FILES['userfile']['name'];
+$tmpName = $_FILES['userfile']['tmp_name'];
+$fileSize = $_FILES['userfile']['size'];
+$fileType = $_FILES['userfile']['type'];
+
+// get the file extension first
+$ext = substr(strrchr($fileName, "."), 1); 
+
+// make the random file name
+$randName = md5(rand() * time());
+
+$filePath = $uploadDir . $randName . '.' . $ext;
+
+$result = move_uploaded_file($tmpName, $filePath);
+if (!$result) {
+echo "Något gick snett med uppladdningen.";
+exit;
+}
+
+if(!get_magic_quotes_gpc())
+{
+$fileName = addslashes($fileName);
+$filePath = addslashes($filePath);
+}
+
+if(isset($filePath))
+{
+	$query = <<<END
+
+	DELETE FROM userpic
+	WHERE keeperid = '{$keeperid}'
+END;
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+}
+
+$query = <<<END
+	INSERT INTO picture (picname, size, type, link )
+	VALUES ('$fileName', '$fileSize', '$fileType', '$filePath');
+END;
+ 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+ $query = <<<END
+ 	INSERT INTO userpic(picid, keeperid)
+ 	VALUES (LAST_INSERT_ID(), '{$keeperid}');
+END;
+	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
+	  " : " . $mysqli->error);
+
+
+
+$feedback = "<p class=\"text-green pull-left\">uppladdad</p>";
+}
+
 $profil_bild = <<<END
 			<img src="images/profil_bild.png">	
 END;
@@ -59,7 +120,7 @@ $content = <<<END
 					<h4 class="quicksand text-bold">Profilbild</h4>
 					
 					<div class="profil_bild_container pull-left">
-					
+					{$feedback}
 						<div class="profil_bild pull-left">
 							{$profil_bild}
 						</div>
@@ -70,7 +131,7 @@ $content = <<<END
 						{$keepername}
 					</div>
 					<br><br>
-						<form action="upload.php" method="post" enctype="multipart/form-data">
+						<form action="setting.php" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
 						<input name="userfile" type="file" id="userfile">	
 										

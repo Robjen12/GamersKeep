@@ -7,6 +7,7 @@ $feedback2 = '';
 $feedback3 = '';
 $feedback4 = '';
 $feedback5 = '';
+$feedback6 = '';
 $policy = '';
 $keepername = '';
 $fname = '';
@@ -96,7 +97,7 @@ END;
 END;
 				$res2 = $mysqli->query($query2) or die("Could not query database" . $mysqli->errno . " : " . $mysqli->error);
 
-				header("Location: login.php");
+				$feedback6 = "<p class=\"text-green\">Konto skapat. Nu kan du logga in.</p>";
 
 						
 						
@@ -165,13 +166,14 @@ $content = <<<END
 			
 			<div class="col-md-6 col-sm-6 register-right panel-width-405px panel panel-default pull-left">
 				
-				{$feedback4}
 					<div class="panel-heading panel-heading-415px">Registrering</div>
 					
 					<div class="panel-body height-410px pull-left">
 					
 						<form action="register.php" method="post" id="register-form" class="form-inline quicksand">
 						<div class="form-group">
+						{$feedback6}
+						{$feedback4}
 						{$feedback1}
 							<label for="keepername">Användarnamn</label></br>
 							<input type="text" class="form-control" id="keepername" name="keepername" value="{$keepername}" placeholder="Användarnamn"></br>
