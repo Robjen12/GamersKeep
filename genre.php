@@ -17,7 +17,7 @@ $getflag = "";
 $commentid = "";
 $feedback = "";
 $grbutton = "";
-
+// Sätter in användarid och guide/recensionid i userclick tabellen
 	$query = <<<END
 
 		INSERT INTO userclick (grid, keeperid)
@@ -25,7 +25,7 @@ $grbutton = "";
 END;
 
 $res = $mysqli->query($query);
-
+// Om man flaggar något som olämpligt
 if(isset($_POST['unappropriate']))
 {
 	
@@ -38,6 +38,7 @@ END;
 	
 	
 }
+// Hämtar ut vald recension/guide 
 $query = <<<END
 
 	SELECT *
@@ -97,7 +98,7 @@ END;
 	}
 }
 
-
+// När användaren flaggar något som olämpligt
 if(isset($_POST['unappropriatecomments']))
 {
 	$flaggedCommentId = $_GET["commentid"];
@@ -110,7 +111,7 @@ END;
 		        " : " . $mysqli->error);
 
 }
-
+// Publicerar en kommentar
 if(!empty($_POST))
 {
 	if(isset($_POST['publishcomment']))
@@ -142,7 +143,7 @@ END;
 		}
 	}
 }
-
+// Hämtar ut alla kommentarer kopplade till grid
 $query = <<<END
 	
 	SELECT * FROM comment
