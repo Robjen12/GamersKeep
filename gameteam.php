@@ -30,7 +30,7 @@ $content = <<<END
 						<li class="media">
    							
 							<div class="media-left white-a-text">	
-        						<img class="media-object img-rounded" src="http://placehold.it/128x128" class="ads" alt="Robert">
+        						<img class="media-object img-rounded" src="images/robert.jpg" width="128" class="ads" alt="Robert">
 								<br>
 								<a href="mailto:robjn@home.se" class="btn btn-sm btn-primary btn-block media-center text-center" role="button">
 									<span class="glyphicon glyphicon-envelope" aria-hidden="true" class="pull-left"></span>&nbsp;Kontakt
@@ -63,7 +63,7 @@ $content = <<<END
 					<ul class="media-list">
 						<li class="media">
    							<div class="media-left white-a-text">	
-	       						<img class="media-object img-rounded" src="http://placehold.it/128x128" class="ads" alt="Dorte">
+	       						<img class="media-object img-rounded" src="images/dorte.jpg" width="128" class="ads" alt="Dorte">
 								<br>
 								<a href="mailto:dorand@home.se" class="btn btn-sm btn-primary btn-block media-center text-center" role="button">
 									<span class="glyphicon glyphicon-envelope" aria-hidden="true" class="span-bottom"></span>&nbsp;Kontakt
@@ -96,7 +96,7 @@ $content = <<<END
 					<ul class="media-list">
   						<li class="media">
     						<div class="media-left white-a-text">	
-	        					<img class="media-object img-rounded" src="http://placehold.it/128x128" class="ads" alt="Maria">
+	        					<img class="media-object img-rounded" src="images/maria.jpg" width="128" class="ads" alt="Maria">
 								<br>
 								<a href="mailto:mardro@gameteam.se" class="btn btn-sm btn-primary btn-block media-center text-center" role="button">
 									<span class="glyphicon glyphicon-envelope" aria-hidden="true" class="span-bottom"></span>&nbsp;Kontakt
@@ -128,7 +128,7 @@ $content = <<<END
 					<ul class="media-list">
   						<li class="media">
     						<div class="media-left white-a-text">	
-	        					<img class="media-object img-rounded" src="http://placehold.it/128x128" class="ads" alt="Malena">
+	        					<img class="media-object img-rounded" src="images/malena.jpg" width="128" class="ads" alt="Malena">
 								<br>
 								<a href="mailto:maljan@gameteam.se" class="btn btn-sm btn-primary btn-block media-center text-center" role="button">
 									<span class="glyphicon glyphicon-envelope" aria-hidden="true" class="span-bottom"></span>&nbsp;Kontakt
