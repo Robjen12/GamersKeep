@@ -475,6 +475,7 @@ margin-left:0;
 	margin-right: 10px;
 	margin-bottom: 15px;
 	margin-top: 0;
+	margin-left: 15px;
 }
 
 .margin-right-7px {
@@ -914,6 +915,13 @@ a.text-primary:hover {
 .margin-guide-review-ads {
 	margin-right: -15px;
 	border: none;
+
+}
+
+.margin-ads {
+	margin-right: auto;
+	border: none;
+	margin-left: 50px;
 
 }
 /* forms */
