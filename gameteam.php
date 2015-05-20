@@ -44,6 +44,7 @@ $content = <<<END
    								<p class="text-normal quicksand">
 									Gameteams Back-end programmör.
 									Programmeringsspråk: PHP, MySQL, Javascript, jQuery, HTML5 och CSS3.
+									Andra verktyg: Sublime Texteditor2 och GitHub.
 									<br>
 									<br>
 									Favoritspel: World of Warcraft, Monster Hunter och Phoenix Wright: Ace Attorney.
@@ -75,8 +76,9 @@ $content = <<<END
 									Dorte
 								</h4>
 								<p class="text-normal quicksand">
-									Gameteams Front-end programmör.
+									Gameteams Front-end programmör samt co-grafiker.
 									Programmeringsspråk: PHP, SQL, javascript, jQuery, HTML5 och CSS3.
+									Andra verktyg: Notepad++ Photoshop, Fireworks och GitHub.
 									<br>
 									<br>
 									Favoritspel: Dragon Age serien och The Settlers serien.
@@ -112,6 +114,7 @@ $content = <<<END
 									<br>
 									Designer i: Photoshop och Illustrator.
 									<br><br>
+									Andra verktyg: Sublime Texteditor2 och GitHub.
 									Favoritspel: Halo.
 									<br>
 									Övrigt: Har blivit beroende på danska fläskesvål! De är dejlige!
@@ -142,6 +145,7 @@ $content = <<<END
 								
 								<p class="quicksand text-normal">Gameteams Scrum-ledare, huvudansvarlig för databas, samt co-backend programmör.
 								Programmeringsspråk: C++, SQL, PHP.
+								Andra verktyg: Notepad++ Illustrator och GitHub.
 								<br>
 								<br>
 								Favoritspel: World of Warcraft och Diablo III.								
