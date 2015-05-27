@@ -256,9 +256,9 @@ $content = <<<END
 						<!-- left column -->
 						<div class="content-left pull-left">
 
-							<div class ="panel panel-default panel-width-240px pull-left">
+							<div class ="panel panel-default panel-width-428px pull-left">
 
-								<div class="panel-heading panel-heading-250px quicksand">Topplista guider</div>
+								<div class="panel-heading panel-heading-438px quicksand">Topplista guider</div>
 
 				  					<div class="panel-body height-410px">
 
@@ -274,9 +274,9 @@ $content = <<<END
 		  				<!-- center column -->
 						<div class="content-center pull-left">
 
-							<div class ="panel panel-default panel-width-240px pull-left">
+							<div class ="panel panel-default panel-width-428px pull-left">
 
-								<div class="panel-heading panel-heading-250px">Topplista recensioner</div>
+								<div class="panel-heading panel-heading-438px">Topplista recensioner</div>
 
 				  					<div class="panel-body height-410px">
 
@@ -309,9 +309,9 @@ $content = <<<END
 						<!-- left column row 2 -->
 						<div class="content-left pull-left">
 
-							<div class ="panel panel-default panel-width-240px pull-left">
+							<div class ="panel panel-default panel-width-428px pull-left">
 
-								<div class="panel-heading panel-heading-250px">Senaste guider</div>
+								<div class="panel-heading panel-heading-438px">Senaste guider</div>
 
 				  					<div class="panel-body height-410px">
 
@@ -325,9 +325,9 @@ $content = <<<END
 		  				<!-- center column  row 2 -->
 						<div class="content-center pull-left">
 
-							<div class ="panel panel-default panel-width-240px pull-left">
+							<div class ="panel panel-default panel-width-428px pull-left">
 
-								<div class="panel-heading panel-heading-250px">Senaste recensioner</div>
+								<div class="panel-heading panel-heading-438px">Senaste recensioner</div>
 
 				  					<div class="panel-body height-410px">
 

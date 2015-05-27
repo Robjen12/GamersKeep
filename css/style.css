@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Quicksand:400,700");
+@import url("http://fonts.googleapis.com/css?family=Quicksand:300,400,700");
 @import url("http://fonts.googleapis.com/css?family=Droid+Sans:400,700");
 
 .register-forgot-background{
@@ -876,11 +876,20 @@ a.text-primary:hover {
   
   
 }
-.panel-width-240px {
-  width: 400px;
+/*
+.panel-default .panel-width-400px {
+  width: 540px;
 }
-.panel-default > .panel-heading-250px {
-  width: 410px;
+.panel-default .panel-heading-410px {
+  width: 450px;
+}
+*/
+
+.panel-default.panel-width-428px {
+  width: 428px;
+}
+.panel-heading.panel-heading-438px {
+  width: 438px;
 }
 
 .profile-tower {
@@ -1738,7 +1747,7 @@ color: #000;
 
 }
 
-/* chatcom farger satt lika rader med bakgrundsfarg ljusgraa */
+/* chatcom farger satt rader med bakgrundsfarg ljusgraa och blaa kant */
 .row .guestbook_feed{
   background-color: #efefef;
   border: 1px solid #ddd;
@@ -1833,7 +1842,7 @@ min-height: 513px;
 }
 
 /* media queries for register.php ska pillas mer med sen */
-@media (max-width: 1024px),
+
 @media (max-width: 767px) {
     body.register {
 	margin-left: -10px;
@@ -1843,6 +1852,8 @@ min-height: 513px;
 	overflow: scroll;
 
 	}
+
+
 	.register-right {
 	margin-right: 0;
 	margin-left: 10px;
@@ -1851,4 +1862,25 @@ min-height: 513px;
 	margin-left: 0;
 	margin-right: 10px;
 	}
+}
+
+@media (max-width: 1024px) {
+    body.register {
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: scroll;
+
+  }
+
+  
+  .register-right {
+  margin-right: 0;
+  margin-left: 10px;
+  }
+  .register-left {
+  margin-left: 0;
+  margin-right: 10px;
+  }
 }

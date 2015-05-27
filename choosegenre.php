@@ -253,9 +253,9 @@ $content = <<<END
 					
 						<div class="content-left pull-left">
 					
-						<div class="panel panel-default panel-width-240px pull-left">
+						<div class="panel panel-default panel-width-428px pull-left">
 
-	  					<div class="panel-heading panel-heading-250px quicksand">
+	  					<div class="panel-heading panel-heading-438px quicksand">
 							Topplista guider <li class="views">{$genretype}</li>
 						</div><!-- panel heading -->
 
@@ -272,9 +272,9 @@ $content = <<<END
 					<!-- center column -->
 					<div class="content-center pull-left">
 
-					<div class="panel panel-default panel-width-240px pull-left">
+					<div class="panel panel-default panel-width-428px pull-left">
 
-	  					<div class="panel-heading panel-heading-250px">
+	  					<div class="panel-heading panel-heading-438px">
 							Topplista recensioner<li class="views">{$genretype}</li>
 						</div><!-- panel heading -->
 
@@ -307,9 +307,9 @@ $content = <<<END
 					<!-- left column row 2 -->
 				
 					<div class="content-left pull-left">
-						<div class="panel panel-default panel-width-240px pull-left">
+						<div class="panel panel-default panel-width-428px pull-left">
 
-		  					<div class="panel-heading panel-heading-250px">
+		  					<div class="panel-heading panel-heading-438px">
 								 Senaste guider<li class="views">{$genretype}</li>
 							</div><!-- panel heading -->
 
@@ -324,9 +324,9 @@ $content = <<<END
 					<!-- center column  row 2 -->
 					<div class="content-center pull-left">					
 
-					<div class="panel panel-default panel-width-240px pull-left">
+					<div class="panel panel-default panel-width-428px pull-left">
 
-		  					<div class="panel-heading panel-heading-250px">
+		  					<div class="panel-heading panel-heading-438px">
 								Senaste recensioner<li class="views">{$genretype}</li>
 							</div><!-- panel heading -->
 
