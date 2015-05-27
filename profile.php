@@ -780,7 +780,7 @@ $content = <<<END
 												{$yourfriends}
 											</div>
 									
-											{$k} Mejl konversation <span class="badge badge-success pull-right">{$chat_count}</span>	
+											{$k} Meddelande konversation <span class="badge badge-success pull-right">{$chat_count}</span>	
 											<div class="latestmessage">
 												
 												{$chatmess}		
